@@ -1,0 +1,6 @@
+{
+	Actions = {};
+	Outlets = {};
+	ClassName = NCPathControl;
+	SuperClass = NSPathControl;
+}

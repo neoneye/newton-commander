@@ -1,0 +1,1106 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		53DF6901067E5B8E0090B5B0 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C056398708A954F8003078D8 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				53DF6903067E5B930090B5B0 /* PBXTargetDependency */,
+				53DF6905067E5B930090B5B0 /* PBXTargetDependency */,
+				3767A65D0A2D0C5C005F7522 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		148279B50B8B6F1800076718 /* TabClose_Dirty_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 148279B20B8B6F1800076718 /* TabClose_Dirty_Pressed.png */; };
+		148279B60B8B6F1800076718 /* TabClose_Dirty_Rollover.png in Resources */ = {isa = PBXBuildFile; fileRef = 148279B30B8B6F1800076718 /* TabClose_Dirty_Rollover.png */; };
+		148279B70B8B6F1800076718 /* TabClose_Dirty.png in Resources */ = {isa = PBXBuildFile; fileRef = 148279B40B8B6F1800076718 /* TabClose_Dirty.png */; };
+		317A8F260C7BF0C20019DEC6 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 317A8F240C7BF0C20019DEC6 /* MainMenu.nib */; };
+		318F2E330C7D17E300DE79A7 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F2E320C7D17E300DE79A7 /* Carbon.framework */; };
+		3437A2EA0BC8E86F003A0BAE /* largeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3437A2E90BC8E86F003A0BAE /* largeImage.png */; };
+		346373660BCA21F800AD57AD /* NSBezierPath_AMShading.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D98B0F0A2B43FA0064C6F8 /* NSBezierPath_AMShading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		346A5E080C58E38B004563F0 /* Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82790BAC685B00BBAA24 /* Folder.png */; };
+		346A5E100C58E3C5004563F0 /* Globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82860BAC685B00BBAA24 /* Globe.png */; };
+		346A5E110C58E3C5004563F0 /* Warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD827C0BAC685B00BBAA24 /* Warning.png */; };
+		347545B00C4944DA003E81B8 /* NSString_AITruncation.h in Headers */ = {isa = PBXBuildFile; fileRef = 347545AE0C4944DA003E81B8 /* NSString_AITruncation.h */; };
+		347545B10C4944DB003E81B8 /* NSString_AITruncation.m in Sources */ = {isa = PBXBuildFile; fileRef = 347545AF0C4944DA003E81B8 /* NSString_AITruncation.m */; };
+		3482DF100C5BF90700426F15 /* PSMAdiumTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3767A7560A2D449B005F7522 /* PSMAdiumTabStyle.m */; };
+		3482DF150C5BF90E00426F15 /* PSMAdiumTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3767A7560A2D449B005F7522 /* PSMAdiumTabStyle.m */; };
+		34FD82880BAC685B00BBAA24 /* AquaTabsSeparator.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82620BAC685B00BBAA24 /* AquaTabsSeparator.png */; };
+		34FD828B0BAC685B00BBAA24 /* AquaTabsDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82650BAC685B00BBAA24 /* AquaTabsDown.png */; };
+		34FD828C0BAC685B00BBAA24 /* pi.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82660BAC685B00BBAA24 /* pi.png */; };
+		34FD828F0BAC685B00BBAA24 /* overflowImagePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82690BAC685B00BBAA24 /* overflowImagePressed.png */; };
+		34FD82900BAC685B00BBAA24 /* AquaTabsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD826A0BAC685B00BBAA24 /* AquaTabsBackground.png */; };
+		34FD82910BAC685B00BBAA24 /* AquaTabNewRollover.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD826B0BAC685B00BBAA24 /* AquaTabNewRollover.png */; };
+		34FD82920BAC685B00BBAA24 /* 32x32cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD826C0BAC685B00BBAA24 /* 32x32cancel.png */; };
+		34FD82930BAC685B00BBAA24 /* AquaTabClose_Front_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD826D0BAC685B00BBAA24 /* AquaTabClose_Front_Pressed.png */; };
+		34FD82940BAC685B00BBAA24 /* TabNewMetalPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD826E0BAC685B00BBAA24 /* TabNewMetalPressed.png */; };
+		34FD82950BAC685B00BBAA24 /* AquaTabNewPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD826F0BAC685B00BBAA24 /* AquaTabNewPressed.png */; };
+		34FD82960BAC685B00BBAA24 /* AquaTabClose_Front.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82700BAC685B00BBAA24 /* AquaTabClose_Front.png */; };
+		34FD82970BAC685B00BBAA24 /* 32x32_log.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82710BAC685B00BBAA24 /* 32x32_log.png */; };
+		34FD82980BAC685B00BBAA24 /* TabNewMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82720BAC685B00BBAA24 /* TabNewMetal.png */; };
+		34FD82990BAC685B00BBAA24 /* AquaTabsDownGraphite.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82730BAC685B00BBAA24 /* AquaTabsDownGraphite.png */; };
+		34FD829A0BAC685B00BBAA24 /* TabClose_Front_Rollover.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82740BAC685B00BBAA24 /* TabClose_Front_Rollover.png */; };
+		34FD829B0BAC685B00BBAA24 /* overflowImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82750BAC685B00BBAA24 /* overflowImage.png */; };
+		34FD829C0BAC685B00BBAA24 /* AquaTabClose_Front_Rollover.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82760BAC685B00BBAA24 /* AquaTabClose_Front_Rollover.png */; };
+		34FD829D0BAC685B00BBAA24 /* AquaTabsDownNonKey.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82770BAC685B00BBAA24 /* AquaTabsDownNonKey.png */; };
+		34FD829E0BAC685B00BBAA24 /* AquaTabsSeparatorDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82780BAC685B00BBAA24 /* AquaTabsSeparatorDown.png */; };
+		34FD82A10BAC685B00BBAA24 /* AquaTabCloseDirty_Front.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD827B0BAC685B00BBAA24 /* AquaTabCloseDirty_Front.png */; };
+		34FD82A30BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD827D0BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Pressed.png */; };
+		34FD82A50BAC685B00BBAA24 /* AquaTabNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD827F0BAC685B00BBAA24 /* AquaTabNew.png */; };
+		34FD82A60BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Rollover.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82800BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Rollover.png */; };
+		34FD82A70BAC685B00BBAA24 /* TabNewMetalRollover.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82810BAC685B00BBAA24 /* TabNewMetalRollover.png */; };
+		34FD82A80BAC685B00BBAA24 /* TabClose_Front_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82820BAC685B00BBAA24 /* TabClose_Front_Pressed.png */; };
+		34FD82A90BAC685B00BBAA24 /* AdiumGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82830BAC685B00BBAA24 /* AdiumGradient.png */; };
+		34FD82AB0BAC685B00BBAA24 /* TabClose_Front.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82850BAC685B00BBAA24 /* TabClose_Front.png */; };
+		34FD82B00BAC686D00BBAA24 /* mater_large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34FD827E0BAC685B00BBAA24 /* mater_large.jpg */; };
+		34FD82B10BAC686D00BBAA24 /* mcqueen_large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82840BAC685B00BBAA24 /* mcqueen_large.jpg */; };
+		34FD82B20BAC686D00BBAA24 /* sally_large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82670BAC685B00BBAA24 /* sally_large.jpg */; };
+		34FD82B70BAC687900BBAA24 /* TabControlRep.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82610BAC685B00BBAA24 /* TabControlRep.png */; };
+		34FD82C00BAC688500BBAA24 /* TabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FD82680BAC685B00BBAA24 /* TabIcon.png */; };
+		3748D19D0B17834D002D71C0 /* PSMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748D19C0B17834D002D71C0 /* PSMTabBarController.m */; };
+		3748D19E0B17834D002D71C0 /* PSMTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3748D19B0B17834D002D71C0 /* PSMTabBarController.h */; };
+		3748D19F0B17834D002D71C0 /* PSMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748D19C0B17834D002D71C0 /* PSMTabBarController.m */; };
+		3767A7590A2D449B005F7522 /* PSMAdiumTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 3767A7550A2D449B005F7522 /* PSMAdiumTabStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3767A91D0A2F7A11005F7522 /* PSMTabDragWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3767A91A0A2F7A11005F7522 /* PSMTabDragWindow.m */; };
+		3767A91E0A2F7A11005F7522 /* PSMTabDragWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3767A91A0A2F7A11005F7522 /* PSMTabDragWindow.m */; };
+		3769D0850A349FCD00D71EDA /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* PSMTabBarControl.framework */; };
+		3769D08A0A349FDD00D71EDA /* PSMTabBarControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* PSMTabBarControl.framework */; };
+		37A9009E0C279CAD0062045C /* PSMTabDragWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9009D0C279CAD0062045C /* PSMTabDragWindowController.m */; };
+		37A9009F0C279CAD0062045C /* PSMTabDragWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A9009C0C279CAD0062045C /* PSMTabDragWindowController.h */; };
+		37A900A00C279CAD0062045C /* PSMTabDragWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9009D0C279CAD0062045C /* PSMTabDragWindowController.m */; };
+		37A9FB6E0C25FE2B0062045C /* PSMTabDragView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A9FB6C0C25FE2B0062045C /* PSMTabDragView.h */; };
+		37A9FB6F0C25FE2B0062045C /* PSMTabDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9FB6D0C25FE2B0062045C /* PSMTabDragView.m */; };
+		37A9FB700C25FE2B0062045C /* PSMTabDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9FB6D0C25FE2B0062045C /* PSMTabDragView.m */; };
+		37AF9DE10C945DC8003CAABC /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318F2E320C7D17E300DE79A7 /* Carbon.framework */; };
+		423C9F8B1104EC7100B7ED99 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423C9F8A1104EC7100B7ED99 /* InterfaceBuilderKit.framework */; };
+		546DEAF1067F63070098DCC4 /* PSMTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* PSMTabBarControl.m */; };
+		546DEAF2067F630E0098DCC4 /* PSMTabBarControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57AFE90428111CA0C5A /* PSMTabBarControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54D33B2906778E3300C9C163 /* PSMTabBarControl.ibclassdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* PSMTabBarControl.ibclassdescription */; };
+		8D1AC9670486D14A00FE50C9 /* PSMTabBarControlInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0259C57EFE90428111CA0C5A /* PSMTabBarControlInspector.nib */; };
+		8D1AC9680486D14A00FE50C9 /* PSMTabBarControlPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0259C580FE90428111CA0C5A /* PSMTabBarControlPalette.nib */; };
+		8D1AC9690486D14A00FE50C9 /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = 0259C583FE90428111CA0C5A /* palette.table */; };
+		8D1AC96C0486D14A00FE50C9 /* PSMTabBarControlInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* PSMTabBarControlInspector.m */; settings = {ATTRIBUTES = (); }; };
+		8D1AC96D0486D14A00FE50C9 /* PSMTabBarControlPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C578FE90428111CA0C5A /* PSMTabBarControlPalette.m */; settings = {ATTRIBUTES = (); }; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
+		A2082A9109EAEB34009AC8BE /* PSMTabDragAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = A2082A8E09EAEB33009AC8BE /* PSMTabDragAssistant.m */; };
+		A2082A9209EAEB34009AC8BE /* PSMTabDragAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = A2082A8E09EAEB33009AC8BE /* PSMTabDragAssistant.m */; };
+		A2129BB309AEB58F00724E6C /* PSMProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A2129BB009AEB58F00724E6C /* PSMProgressIndicator.m */; };
+		A251BE850959A1B90058BC7F /* PSMOverflowPopUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A251BE810959A1B90058BC7F /* PSMOverflowPopUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A251BE860959A1B90058BC7F /* PSMOverflowPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE820959A1B90058BC7F /* PSMOverflowPopUpButton.m */; };
+		A251BE870959A1B90058BC7F /* PSMTabBarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A251BE830959A1B90058BC7F /* PSMTabBarCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A251BE880959A1B90058BC7F /* PSMTabBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE840959A1B90058BC7F /* PSMTabBarCell.m */; };
+		A251BEBA0959BBDF0058BC7F /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE8A0959A1EA0058BC7F /* AppController.m */; };
+		A251BEBE0959BBE60058BC7F /* FakeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE8C0959A1EA0058BC7F /* FakeModel.m */; };
+		A251BEC10959BBEC0058BC7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE8D0959A1EA0058BC7F /* main.m */; };
+		A268EA6209A9831800E082AA /* PSMRolloverButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A268EA5F09A9831800E082AA /* PSMRolloverButton.h */; };
+		A268EA6309A9831800E082AA /* PSMRolloverButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A268EA6009A9831800E082AA /* PSMRolloverButton.m */; };
+		A2A711BB09E5AE1E00D0089B /* Window.nib in Resources */ = {isa = PBXBuildFile; fileRef = A2A711B909E5AE1E00D0089B /* Window.nib */; };
+		A2A711BF09E5BF0500D0089B /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A711BE09E5BF0500D0089B /* WindowController.m */; };
+		A2BEC7DD09C1E80400B8B4B6 /* PSMTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* PSMTabBarControl.m */; };
+		A2BEC7DE09C1E80400B8B4B6 /* PSMTabBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE840959A1B90058BC7F /* PSMTabBarCell.m */; };
+		A2BEC7DF09C1E80400B8B4B6 /* PSMAquaTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D32EE709A6399300EC8662 /* PSMAquaTabStyle.m */; };
+		A2BEC7E009C1E80400B8B4B6 /* PSMMetalTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D32EFF09A63D7A00EC8662 /* PSMMetalTabStyle.m */; };
+		A2BEC7E109C1E80400B8B4B6 /* PSMRolloverButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A268EA6009A9831800E082AA /* PSMRolloverButton.m */; };
+		A2BEC7E209C1E80400B8B4B6 /* PSMOverflowPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A251BE820959A1B90058BC7F /* PSMOverflowPopUpButton.m */; };
+		A2BEC7E309C1E80400B8B4B6 /* PSMProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A2129BB009AEB58F00724E6C /* PSMProgressIndicator.m */; };
+		A2D32EDC09A634C900EC8662 /* PSMTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D32EDA09A634C900EC8662 /* PSMTabStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2D32EE809A6399300EC8662 /* PSMAquaTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D32EE609A6399300EC8662 /* PSMAquaTabStyle.h */; };
+		A2D32EE909A6399300EC8662 /* PSMAquaTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D32EE709A6399300EC8662 /* PSMAquaTabStyle.m */; };
+		A2D32F0009A63D7A00EC8662 /* PSMMetalTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D32EFE09A63D7A00EC8662 /* PSMMetalTabStyle.h */; };
+		A2D32F0109A63D7A00EC8662 /* PSMMetalTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D32EFF09A63D7A00EC8662 /* PSMMetalTabStyle.m */; };
+		A2D98B0A0A2B432C0064C6F8 /* PSMUnifiedTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D98B070A2B432C0064C6F8 /* PSMUnifiedTabStyle.h */; };
+		A2D98B0B0A2B432C0064C6F8 /* PSMUnifiedTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D98B080A2B432C0064C6F8 /* PSMUnifiedTabStyle.m */; };
+		A2D98B0C0A2B432C0064C6F8 /* PSMUnifiedTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D98B080A2B432C0064C6F8 /* PSMUnifiedTabStyle.m */; };
+		A2D98B130A2B43FA0064C6F8 /* NSBezierPath_AMShading.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D98B100A2B43FA0064C6F8 /* NSBezierPath_AMShading.m */; };
+		A2D98B140A2B43FA0064C6F8 /* NSBezierPath_AMShading.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D98B100A2B43FA0064C6F8 /* NSBezierPath_AMShading.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34FD7C080BA9FB5900BBAA24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = PSMTabBarControlFramework;
+		};
+		3767A65C0A2D0C5C005F7522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A251BE9F0959BB5B0058BC7F;
+			remoteInfo = TabBarControlDemo;
+		};
+		53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = PSMTabBarControl;
+		};
+		53DF6904067E5B930090B5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = PSMTabBarControlFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3769D0860A349FD200D71EDA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3769D08A0A349FDD00D71EDA /* PSMTabBarControl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0259C576FE90428111CA0C5A /* PSMTabBarControl.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMTabBarControl.m; path = source/PSMTabBarControl.m; sourceTree = "<group>"; };
+		0259C577FE90428111CA0C5A /* PSMTabBarControlInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMTabBarControlInspector.m; path = source/PSMTabBarControlInspector.m; sourceTree = "<group>"; };
+		0259C578FE90428111CA0C5A /* PSMTabBarControlPalette.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMTabBarControlPalette.m; path = source/PSMTabBarControlPalette.m; sourceTree = "<group>"; };
+		0259C57AFE90428111CA0C5A /* PSMTabBarControl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMTabBarControl.h; path = source/PSMTabBarControl.h; sourceTree = "<group>"; };
+		0259C57BFE90428111CA0C5A /* PSMTabBarControlInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMTabBarControlInspector.h; path = source/PSMTabBarControlInspector.h; sourceTree = "<group>"; };
+		0259C57CFE90428111CA0C5A /* PSMTabBarControlPalette.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMTabBarControlPalette.h; path = source/PSMTabBarControlPalette.h; sourceTree = "<group>"; };
+		0259C57FFE90428111CA0C5A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PSMTabBarControlInspector.nib; sourceTree = "<group>"; };
+		0259C581FE90428111CA0C5A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PSMTabBarControlPalette.nib; sourceTree = "<group>"; };
+		0259C583FE90428111CA0C5A /* palette.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = palette.table; sourceTree = "<group>"; };
+		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		148279B20B8B6F1800076718 /* TabClose_Dirty_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabClose_Dirty_Pressed.png; path = images/TabClose_Dirty_Pressed.png; sourceTree = "<group>"; };
+		148279B30B8B6F1800076718 /* TabClose_Dirty_Rollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabClose_Dirty_Rollover.png; path = images/TabClose_Dirty_Rollover.png; sourceTree = "<group>"; };
+		148279B40B8B6F1800076718 /* TabClose_Dirty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabClose_Dirty.png; path = images/TabClose_Dirty.png; sourceTree = "<group>"; };
+		317A8F250C7BF0C20019DEC6 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		318F2E320C7D17E300DE79A7 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		318F2ED20C7D185700DE79A7 /* Framework_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Framework_Prefix.pch; path = source/Framework_Prefix.pch; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* PSMTabBarControl_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabBarControl_Prefix.pch; path = source/PSMTabBarControl_Prefix.pch; sourceTree = "<group>"; };
+		3437A2E90BC8E86F003A0BAE /* largeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = largeImage.png; path = images/largeImage.png; sourceTree = "<group>"; };
+		347545AE0C4944DA003E81B8 /* NSString_AITruncation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSString_AITruncation.h; path = source/NSString_AITruncation.h; sourceTree = "<group>"; };
+		347545AF0C4944DA003E81B8 /* NSString_AITruncation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSString_AITruncation.m; path = source/NSString_AITruncation.m; sourceTree = "<group>"; };
+		34FD82610BAC685B00BBAA24 /* TabControlRep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabControlRep.png; path = images/TabControlRep.png; sourceTree = "<group>"; };
+		34FD82620BAC685B00BBAA24 /* AquaTabsSeparator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabsSeparator.png; path = images/AquaTabsSeparator.png; sourceTree = "<group>"; };
+		34FD82650BAC685B00BBAA24 /* AquaTabsDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabsDown.png; path = images/AquaTabsDown.png; sourceTree = "<group>"; };
+		34FD82660BAC685B00BBAA24 /* pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pi.png; path = images/pi.png; sourceTree = "<group>"; };
+		34FD82670BAC685B00BBAA24 /* sally_large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sally_large.jpg; path = images/sally_large.jpg; sourceTree = "<group>"; };
+		34FD82680BAC685B00BBAA24 /* TabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabIcon.png; path = images/TabIcon.png; sourceTree = "<group>"; };
+		34FD82690BAC685B00BBAA24 /* overflowImagePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overflowImagePressed.png; path = images/overflowImagePressed.png; sourceTree = "<group>"; };
+		34FD826A0BAC685B00BBAA24 /* AquaTabsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabsBackground.png; path = images/AquaTabsBackground.png; sourceTree = "<group>"; };
+		34FD826B0BAC685B00BBAA24 /* AquaTabNewRollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabNewRollover.png; path = images/AquaTabNewRollover.png; sourceTree = "<group>"; };
+		34FD826C0BAC685B00BBAA24 /* 32x32cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 32x32cancel.png; path = images/32x32cancel.png; sourceTree = "<group>"; };
+		34FD826D0BAC685B00BBAA24 /* AquaTabClose_Front_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabClose_Front_Pressed.png; path = images/AquaTabClose_Front_Pressed.png; sourceTree = "<group>"; };
+		34FD826E0BAC685B00BBAA24 /* TabNewMetalPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabNewMetalPressed.png; path = images/TabNewMetalPressed.png; sourceTree = "<group>"; };
+		34FD826F0BAC685B00BBAA24 /* AquaTabNewPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabNewPressed.png; path = images/AquaTabNewPressed.png; sourceTree = "<group>"; };
+		34FD82700BAC685B00BBAA24 /* AquaTabClose_Front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabClose_Front.png; path = images/AquaTabClose_Front.png; sourceTree = "<group>"; };
+		34FD82710BAC685B00BBAA24 /* 32x32_log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 32x32_log.png; path = images/32x32_log.png; sourceTree = "<group>"; };
+		34FD82720BAC685B00BBAA24 /* TabNewMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabNewMetal.png; path = images/TabNewMetal.png; sourceTree = "<group>"; };
+		34FD82730BAC685B00BBAA24 /* AquaTabsDownGraphite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabsDownGraphite.png; path = images/AquaTabsDownGraphite.png; sourceTree = "<group>"; };
+		34FD82740BAC685B00BBAA24 /* TabClose_Front_Rollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabClose_Front_Rollover.png; path = images/TabClose_Front_Rollover.png; sourceTree = "<group>"; };
+		34FD82750BAC685B00BBAA24 /* overflowImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overflowImage.png; path = images/overflowImage.png; sourceTree = "<group>"; };
+		34FD82760BAC685B00BBAA24 /* AquaTabClose_Front_Rollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabClose_Front_Rollover.png; path = images/AquaTabClose_Front_Rollover.png; sourceTree = "<group>"; };
+		34FD82770BAC685B00BBAA24 /* AquaTabsDownNonKey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabsDownNonKey.png; path = images/AquaTabsDownNonKey.png; sourceTree = "<group>"; };
+		34FD82780BAC685B00BBAA24 /* AquaTabsSeparatorDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabsSeparatorDown.png; path = images/AquaTabsSeparatorDown.png; sourceTree = "<group>"; };
+		34FD82790BAC685B00BBAA24 /* Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Folder.png; path = images/Folder.png; sourceTree = "<group>"; };
+		34FD827B0BAC685B00BBAA24 /* AquaTabCloseDirty_Front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabCloseDirty_Front.png; path = images/AquaTabCloseDirty_Front.png; sourceTree = "<group>"; };
+		34FD827C0BAC685B00BBAA24 /* Warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Warning.png; path = images/Warning.png; sourceTree = "<group>"; };
+		34FD827D0BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabCloseDirty_Front_Pressed.png; path = images/AquaTabCloseDirty_Front_Pressed.png; sourceTree = "<group>"; };
+		34FD827E0BAC685B00BBAA24 /* mater_large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mater_large.jpg; path = images/mater_large.jpg; sourceTree = "<group>"; };
+		34FD827F0BAC685B00BBAA24 /* AquaTabNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabNew.png; path = images/AquaTabNew.png; sourceTree = "<group>"; };
+		34FD82800BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Rollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AquaTabCloseDirty_Front_Rollover.png; path = images/AquaTabCloseDirty_Front_Rollover.png; sourceTree = "<group>"; };
+		34FD82810BAC685B00BBAA24 /* TabNewMetalRollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabNewMetalRollover.png; path = images/TabNewMetalRollover.png; sourceTree = "<group>"; };
+		34FD82820BAC685B00BBAA24 /* TabClose_Front_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabClose_Front_Pressed.png; path = images/TabClose_Front_Pressed.png; sourceTree = "<group>"; };
+		34FD82830BAC685B00BBAA24 /* AdiumGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AdiumGradient.png; path = images/AdiumGradient.png; sourceTree = "<group>"; };
+		34FD82840BAC685B00BBAA24 /* mcqueen_large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mcqueen_large.jpg; path = images/mcqueen_large.jpg; sourceTree = "<group>"; };
+		34FD82850BAC685B00BBAA24 /* TabClose_Front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabClose_Front.png; path = images/TabClose_Front.png; sourceTree = "<group>"; };
+		34FD82860BAC685B00BBAA24 /* Globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Globe.png; path = images/Globe.png; sourceTree = "<group>"; };
+		3748D19B0B17834D002D71C0 /* PSMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabBarController.h; path = source/PSMTabBarController.h; sourceTree = "<group>"; };
+		3748D19C0B17834D002D71C0 /* PSMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMTabBarController.m; path = source/PSMTabBarController.m; sourceTree = "<group>"; };
+		3767A7550A2D449B005F7522 /* PSMAdiumTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMAdiumTabStyle.h; path = source/PSMAdiumTabStyle.h; sourceTree = "<group>"; };
+		3767A7560A2D449B005F7522 /* PSMAdiumTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMAdiumTabStyle.m; path = source/PSMAdiumTabStyle.m; sourceTree = "<group>"; };
+		3767A9190A2F7A11005F7522 /* PSMTabDragWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabDragWindow.h; path = source/PSMTabDragWindow.h; sourceTree = "<group>"; };
+		3767A91A0A2F7A11005F7522 /* PSMTabDragWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMTabDragWindow.m; path = source/PSMTabDragWindow.m; sourceTree = "<group>"; };
+		37A9009C0C279CAD0062045C /* PSMTabDragWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabDragWindowController.h; path = source/PSMTabDragWindowController.h; sourceTree = "<group>"; };
+		37A9009D0C279CAD0062045C /* PSMTabDragWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMTabDragWindowController.m; path = source/PSMTabDragWindowController.m; sourceTree = "<group>"; };
+		37A9FB6C0C25FE2B0062045C /* PSMTabDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabDragView.h; path = source/PSMTabDragView.h; sourceTree = "<group>"; };
+		37A9FB6D0C25FE2B0062045C /* PSMTabDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMTabDragView.m; path = source/PSMTabDragView.m; sourceTree = "<group>"; };
+		423C9F8A1104EC7100B7ED99 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
+		53DF68FD067E5B5A0090B5B0 /* PSMTabBarControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSMTabBarControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DF68FE067E5B5A0090B5B0 /* PSMTabBarControlFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PSMTabBarControlFramework-Info.plist"; sourceTree = "<group>"; };
+		54D33B2806778E3300C9C163 /* PSMTabBarControl.ibclassdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PSMTabBarControl.ibclassdescription; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* PSMTabBarControl.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSMTabBarControl.palette; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A2082A8D09EAEB33009AC8BE /* PSMTabDragAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabDragAssistant.h; path = source/PSMTabDragAssistant.h; sourceTree = "<group>"; };
+		A2082A8E09EAEB33009AC8BE /* PSMTabDragAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMTabDragAssistant.m; path = source/PSMTabDragAssistant.m; sourceTree = "<group>"; };
+		A2129BAF09AEB58F00724E6C /* PSMProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMProgressIndicator.h; path = source/PSMProgressIndicator.h; sourceTree = "<group>"; };
+		A2129BB009AEB58F00724E6C /* PSMProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMProgressIndicator.m; path = source/PSMProgressIndicator.m; sourceTree = "<group>"; };
+		A246FB040A2BD6F9005BDF7B /* PSMTabBarControlDoc.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html.documentation; name = PSMTabBarControlDoc.html; path = documentation/PSMTabBarControlDoc.html; sourceTree = "<group>"; };
+		A251BE810959A1B90058BC7F /* PSMOverflowPopUpButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PSMOverflowPopUpButton.h; path = source/PSMOverflowPopUpButton.h; sourceTree = "<group>"; };
+		A251BE820959A1B90058BC7F /* PSMOverflowPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMOverflowPopUpButton.m; path = source/PSMOverflowPopUpButton.m; sourceTree = "<group>"; };
+		A251BE830959A1B90058BC7F /* PSMTabBarCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMTabBarCell.h; path = source/PSMTabBarCell.h; sourceTree = "<group>"; };
+		A251BE840959A1B90058BC7F /* PSMTabBarCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMTabBarCell.m; path = source/PSMTabBarCell.m; sourceTree = "<group>"; };
+		A251BE890959A1EA0058BC7F /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = source/AppController.h; sourceTree = "<group>"; };
+		A251BE8A0959A1EA0058BC7F /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = source/AppController.m; sourceTree = "<group>"; };
+		A251BE8B0959A1EA0058BC7F /* FakeModel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FakeModel.h; path = source/FakeModel.h; sourceTree = "<group>"; };
+		A251BE8C0959A1EA0058BC7F /* FakeModel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FakeModel.m; path = source/FakeModel.m; sourceTree = "<group>"; };
+		A251BE8D0959A1EA0058BC7F /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = source/main.m; sourceTree = "<group>"; };
+		A251BE9B0959A2530058BC7F /* ReadMe.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = ReadMe.rtfd; sourceTree = "<group>"; };
+		A251BEA00959BB5B0058BC7F /* TabBarControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A251BEA20959BB5B0058BC7F /* TabBarControlDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TabBarControlDemo-Info.plist"; sourceTree = "<group>"; };
+		A268EA5F09A9831800E082AA /* PSMRolloverButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMRolloverButton.h; path = source/PSMRolloverButton.h; sourceTree = "<group>"; };
+		A268EA6009A9831800E082AA /* PSMRolloverButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMRolloverButton.m; path = source/PSMRolloverButton.m; sourceTree = "<group>"; };
+		A2A711BA09E5AE1E00D0089B /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Window.nib; sourceTree = "<group>"; };
+		A2A711BD09E5BF0500D0089B /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowController.h; path = source/WindowController.h; sourceTree = "<group>"; };
+		A2A711BE09E5BF0500D0089B /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowController.m; path = source/WindowController.m; sourceTree = "<group>"; };
+		A2D32EDA09A634C900EC8662 /* PSMTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabStyle.h; path = source/PSMTabStyle.h; sourceTree = "<group>"; };
+		A2D32EE609A6399300EC8662 /* PSMAquaTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMAquaTabStyle.h; path = source/PSMAquaTabStyle.h; sourceTree = "<group>"; };
+		A2D32EE709A6399300EC8662 /* PSMAquaTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMAquaTabStyle.m; path = source/PSMAquaTabStyle.m; sourceTree = "<group>"; };
+		A2D32EFE09A63D7A00EC8662 /* PSMMetalTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMMetalTabStyle.h; path = source/PSMMetalTabStyle.h; sourceTree = "<group>"; };
+		A2D32EFF09A63D7A00EC8662 /* PSMMetalTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSMMetalTabStyle.m; path = source/PSMMetalTabStyle.m; sourceTree = "<group>"; };
+		A2D98B070A2B432C0064C6F8 /* PSMUnifiedTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PSMUnifiedTabStyle.h; path = source/PSMUnifiedTabStyle.h; sourceTree = "<group>"; };
+		A2D98B080A2B432C0064C6F8 /* PSMUnifiedTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PSMUnifiedTabStyle.m; path = source/PSMUnifiedTabStyle.m; sourceTree = "<group>"; };
+		A2D98B0F0A2B43FA0064C6F8 /* NSBezierPath_AMShading.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSBezierPath_AMShading.h; path = source/NSBezierPath_AMShading.h; sourceTree = "<group>"; };
+		A2D98B100A2B43FA0064C6F8 /* NSBezierPath_AMShading.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = NSBezierPath_AMShading.m; path = source/NSBezierPath_AMShading.m; sourceTree = "<group>"; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53DF68FB067E5B5A0090B5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */,
+				318F2E330C7D17E300DE79A7 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				37AF9DE10C945DC8003CAABC /* Carbon.framework in Frameworks */,
+				423C9F8B1104EC7100B7ED99 /* InterfaceBuilderKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A251BE9E0959BB5B0058BC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3769D0850A349FCD00D71EDA /* PSMTabBarControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* PSMTabBarControl */ = {
+			isa = PBXGroup;
+			children = (
+				A251BE9B0959A2530058BC7F /* ReadMe.rtfd */,
+				A246FADE0A2BD446005BDF7B /* Documentation */,
+				32DBCF9E0370C38000C91783 /* Palette */,
+				54D33B2C06778E4400C9C163 /* Framework */,
+				A251BE590959A0550058BC7F /* Demo App */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = PSMTabBarControl;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3437A2E90BC8E86F003A0BAE /* largeImage.png */,
+				148279B20B8B6F1800076718 /* TabClose_Dirty_Pressed.png */,
+				148279B30B8B6F1800076718 /* TabClose_Dirty_Rollover.png */,
+				148279B40B8B6F1800076718 /* TabClose_Dirty.png */,
+				317A8F240C7BF0C20019DEC6 /* MainMenu.nib */,
+				A251BE8E0959A21A0058BC7F /* Images */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				53DF68FE067E5B5A0090B5B0 /* PSMTabBarControlFramework-Info.plist */,
+				A251BEA20959BB5B0058BC7F /* TabBarControlDemo-Info.plist */,
+				8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */,
+				A2A711B909E5AE1E00D0089B /* Window.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		131E8FE8067F80F40006E0CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34FD82610BAC685B00BBAA24 /* TabControlRep.png */,
+				34FD82680BAC685B00BBAA24 /* TabIcon.png */,
+				0259C57EFE90428111CA0C5A /* PSMTabBarControlInspector.nib */,
+				0259C580FE90428111CA0C5A /* PSMTabBarControlPalette.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		13F8B6FD07B43410008AE28D /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				318F2E320C7D17E300DE79A7 /* Carbon.framework */,
+				423C9F8A1104EC7100B7ED99 /* InterfaceBuilderKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		13F8B70407B43425008AE28D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B88807B434F6008AE28D /* AppKit.framework */,
+				13F8B88A07B434F6008AE28D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* PSMTabBarControl.palette */,
+				53DF68FD067E5B5A0090B5B0 /* PSMTabBarControl.framework */,
+				A251BEA00959BB5B0058BC7F /* TabBarControlDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B6FD07B43410008AE28D /* Linked Frameworks */,
+				13F8B70407B43425008AE28D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				54D33B2406778DD400C9C163 /* Undo Support */,
+				54D33B2506778DF000C9C163 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				131E8FE8067F80F40006E0CE /* Resources */,
+				0259C583FE90428111CA0C5A /* palette.table */,
+			);
+			name = Palette;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* PSMTabBarControl_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		3767A55A0A2C0449005F7522 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				A2D32EDA09A634C900EC8662 /* PSMTabStyle.h */,
+				3767A7550A2D449B005F7522 /* PSMAdiumTabStyle.h */,
+				3767A7560A2D449B005F7522 /* PSMAdiumTabStyle.m */,
+				A2D32EE609A6399300EC8662 /* PSMAquaTabStyle.h */,
+				A2D32EE709A6399300EC8662 /* PSMAquaTabStyle.m */,
+				A2D32EFE09A63D7A00EC8662 /* PSMMetalTabStyle.h */,
+				A2D32EFF09A63D7A00EC8662 /* PSMMetalTabStyle.m */,
+				A2D98B070A2B432C0064C6F8 /* PSMUnifiedTabStyle.h */,
+				A2D98B080A2B432C0064C6F8 /* PSMUnifiedTabStyle.m */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
+		54D33B2406778DD400C9C163 /* Undo Support */ = {
+			isa = PBXGroup;
+			children = (
+				54D33B2806778E3300C9C163 /* PSMTabBarControl.ibclassdescription */,
+			);
+			name = "Undo Support";
+			sourceTree = "<group>";
+		};
+		54D33B2506778DF000C9C163 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0259C57BFE90428111CA0C5A /* PSMTabBarControlInspector.h */,
+				0259C577FE90428111CA0C5A /* PSMTabBarControlInspector.m */,
+				0259C57CFE90428111CA0C5A /* PSMTabBarControlPalette.h */,
+				0259C578FE90428111CA0C5A /* PSMTabBarControlPalette.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		54D33B2C06778E4400C9C163 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				318F2ED20C7D185700DE79A7 /* Framework_Prefix.pch */,
+				3767A55A0A2C0449005F7522 /* Styles */,
+				0259C57AFE90428111CA0C5A /* PSMTabBarControl.h */,
+				0259C576FE90428111CA0C5A /* PSMTabBarControl.m */,
+				3748D19B0B17834D002D71C0 /* PSMTabBarController.h */,
+				3748D19C0B17834D002D71C0 /* PSMTabBarController.m */,
+				A251BE830959A1B90058BC7F /* PSMTabBarCell.h */,
+				A251BE840959A1B90058BC7F /* PSMTabBarCell.m */,
+				A268EA5F09A9831800E082AA /* PSMRolloverButton.h */,
+				A268EA6009A9831800E082AA /* PSMRolloverButton.m */,
+				A251BE810959A1B90058BC7F /* PSMOverflowPopUpButton.h */,
+				A251BE820959A1B90058BC7F /* PSMOverflowPopUpButton.m */,
+				A2129BAF09AEB58F00724E6C /* PSMProgressIndicator.h */,
+				A2129BB009AEB58F00724E6C /* PSMProgressIndicator.m */,
+				A2082A8D09EAEB33009AC8BE /* PSMTabDragAssistant.h */,
+				A2082A8E09EAEB33009AC8BE /* PSMTabDragAssistant.m */,
+				37A9009C0C279CAD0062045C /* PSMTabDragWindowController.h */,
+				37A9009D0C279CAD0062045C /* PSMTabDragWindowController.m */,
+				3767A9190A2F7A11005F7522 /* PSMTabDragWindow.h */,
+				3767A91A0A2F7A11005F7522 /* PSMTabDragWindow.m */,
+				37A9FB6C0C25FE2B0062045C /* PSMTabDragView.h */,
+				37A9FB6D0C25FE2B0062045C /* PSMTabDragView.m */,
+				A2D98B0F0A2B43FA0064C6F8 /* NSBezierPath_AMShading.h */,
+				A2D98B100A2B43FA0064C6F8 /* NSBezierPath_AMShading.m */,
+				347545AE0C4944DA003E81B8 /* NSString_AITruncation.h */,
+				347545AF0C4944DA003E81B8 /* NSString_AITruncation.m */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		A246FADE0A2BD446005BDF7B /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				A246FB040A2BD6F9005BDF7B /* PSMTabBarControlDoc.html */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		A251BE590959A0550058BC7F /* Demo App */ = {
+			isa = PBXGroup;
+			children = (
+				A251BE890959A1EA0058BC7F /* AppController.h */,
+				A251BE8A0959A1EA0058BC7F /* AppController.m */,
+				A2A711BD09E5BF0500D0089B /* WindowController.h */,
+				A2A711BE09E5BF0500D0089B /* WindowController.m */,
+				A251BE8B0959A1EA0058BC7F /* FakeModel.h */,
+				A251BE8C0959A1EA0058BC7F /* FakeModel.m */,
+				A251BE8D0959A1EA0058BC7F /* main.m */,
+			);
+			name = "Demo App";
+			sourceTree = "<group>";
+		};
+		A251BE8E0959A21A0058BC7F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				34FD82710BAC685B00BBAA24 /* 32x32_log.png */,
+				34FD826C0BAC685B00BBAA24 /* 32x32cancel.png */,
+				34FD82830BAC685B00BBAA24 /* AdiumGradient.png */,
+				34FD82700BAC685B00BBAA24 /* AquaTabClose_Front.png */,
+				34FD826D0BAC685B00BBAA24 /* AquaTabClose_Front_Pressed.png */,
+				34FD82760BAC685B00BBAA24 /* AquaTabClose_Front_Rollover.png */,
+				34FD827B0BAC685B00BBAA24 /* AquaTabCloseDirty_Front.png */,
+				34FD827D0BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Pressed.png */,
+				34FD82800BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Rollover.png */,
+				34FD827F0BAC685B00BBAA24 /* AquaTabNew.png */,
+				34FD826F0BAC685B00BBAA24 /* AquaTabNewPressed.png */,
+				34FD826B0BAC685B00BBAA24 /* AquaTabNewRollover.png */,
+				34FD826A0BAC685B00BBAA24 /* AquaTabsBackground.png */,
+				34FD82650BAC685B00BBAA24 /* AquaTabsDown.png */,
+				34FD82730BAC685B00BBAA24 /* AquaTabsDownGraphite.png */,
+				34FD82770BAC685B00BBAA24 /* AquaTabsDownNonKey.png */,
+				34FD82620BAC685B00BBAA24 /* AquaTabsSeparator.png */,
+				34FD82780BAC685B00BBAA24 /* AquaTabsSeparatorDown.png */,
+				34FD82790BAC685B00BBAA24 /* Folder.png */,
+				34FD82860BAC685B00BBAA24 /* Globe.png */,
+				34FD827E0BAC685B00BBAA24 /* mater_large.jpg */,
+				34FD82840BAC685B00BBAA24 /* mcqueen_large.jpg */,
+				34FD82750BAC685B00BBAA24 /* overflowImage.png */,
+				34FD82690BAC685B00BBAA24 /* overflowImagePressed.png */,
+				34FD82660BAC685B00BBAA24 /* pi.png */,
+				34FD82670BAC685B00BBAA24 /* sally_large.jpg */,
+				34FD82850BAC685B00BBAA24 /* TabClose_Front.png */,
+				34FD82820BAC685B00BBAA24 /* TabClose_Front_Pressed.png */,
+				34FD82740BAC685B00BBAA24 /* TabClose_Front_Rollover.png */,
+				34FD82720BAC685B00BBAA24 /* TabNewMetal.png */,
+				34FD826E0BAC685B00BBAA24 /* TabNewMetalPressed.png */,
+				34FD82810BAC685B00BBAA24 /* TabNewMetalRollover.png */,
+				34FD827C0BAC685B00BBAA24 /* Warning.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53DF68F8067E5B5A0090B5B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546DEAF2067F630E0098DCC4 /* PSMTabBarControl.h in Headers */,
+				A251BE850959A1B90058BC7F /* PSMOverflowPopUpButton.h in Headers */,
+				A251BE870959A1B90058BC7F /* PSMTabBarCell.h in Headers */,
+				A2D32EDC09A634C900EC8662 /* PSMTabStyle.h in Headers */,
+				A2D32EE809A6399300EC8662 /* PSMAquaTabStyle.h in Headers */,
+				A2D32F0009A63D7A00EC8662 /* PSMMetalTabStyle.h in Headers */,
+				A268EA6209A9831800E082AA /* PSMRolloverButton.h in Headers */,
+				A2D98B0A0A2B432C0064C6F8 /* PSMUnifiedTabStyle.h in Headers */,
+				3767A7590A2D449B005F7522 /* PSMAdiumTabStyle.h in Headers */,
+				3748D19E0B17834D002D71C0 /* PSMTabBarController.h in Headers */,
+				346373660BCA21F800AD57AD /* NSBezierPath_AMShading.h in Headers */,
+				37A9FB6E0C25FE2B0062045C /* PSMTabDragView.h in Headers */,
+				37A9009F0C279CAD0062045C /* PSMTabDragWindowController.h in Headers */,
+				347545B00C4944DA003E81B8 /* NSString_AITruncation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		53DF68FC067E5B5A0090B5B0 /* PSMTabBarControlFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "PSMTabBarControlFramework" */;
+			buildPhases = (
+				53DF68F8067E5B5A0090B5B0 /* Headers */,
+				53DF68F9067E5B5A0090B5B0 /* Resources */,
+				53DF68FA067E5B5A0090B5B0 /* Sources */,
+				53DF68FB067E5B5A0090B5B0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PSMTabBarControlFramework;
+			productName = PSMTabBarControlFramework;
+			productReference = 53DF68FD067E5B5A0090B5B0 /* PSMTabBarControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D1AC9600486D14A00FE50C9 /* PSMTabBarControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C056398308A954F8003078D8 /* Build configuration list for PBXNativeTarget "PSMTabBarControl" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PSMTabBarControl;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = PSMTabBarControl;
+			productReference = 8D1AC9740486D14A00FE50C9 /* PSMTabBarControl.palette */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A251BE9F0959BB5B0058BC7F /* TabBarControlDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A251BEA30959BB5C0058BC7F /* Build configuration list for PBXNativeTarget "TabBarControlDemo" */;
+			buildPhases = (
+				A251BE9C0959BB5B0058BC7F /* Resources */,
+				A251BE9D0959BB5B0058BC7F /* Sources */,
+				A251BE9E0959BB5B0058BC7F /* Frameworks */,
+				3769D0860A349FD200D71EDA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34FD7C090BA9FB5900BBAA24 /* PBXTargetDependency */,
+			);
+			name = TabBarControlDemo;
+			productName = TabBarControlDemo;
+			productReference = A251BEA00959BB5B0058BC7F /* TabBarControlDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "PSMTabBarControl" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* PSMTabBarControl */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* PSMTabBarControl */,
+				A251BE9F0959BB5B0058BC7F /* TabBarControlDemo */,
+				53DF68FC067E5B5A0090B5B0 /* PSMTabBarControlFramework */,
+				53DF6901067E5B8E0090B5B0 /* All */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53DF68F9067E5B5A0090B5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148279B50B8B6F1800076718 /* TabClose_Dirty_Pressed.png in Resources */,
+				148279B60B8B6F1800076718 /* TabClose_Dirty_Rollover.png in Resources */,
+				148279B70B8B6F1800076718 /* TabClose_Dirty.png in Resources */,
+				34FD82880BAC685B00BBAA24 /* AquaTabsSeparator.png in Resources */,
+				34FD828B0BAC685B00BBAA24 /* AquaTabsDown.png in Resources */,
+				34FD828C0BAC685B00BBAA24 /* pi.png in Resources */,
+				34FD828F0BAC685B00BBAA24 /* overflowImagePressed.png in Resources */,
+				34FD82900BAC685B00BBAA24 /* AquaTabsBackground.png in Resources */,
+				34FD82910BAC685B00BBAA24 /* AquaTabNewRollover.png in Resources */,
+				34FD82920BAC685B00BBAA24 /* 32x32cancel.png in Resources */,
+				34FD82930BAC685B00BBAA24 /* AquaTabClose_Front_Pressed.png in Resources */,
+				34FD82940BAC685B00BBAA24 /* TabNewMetalPressed.png in Resources */,
+				34FD82950BAC685B00BBAA24 /* AquaTabNewPressed.png in Resources */,
+				34FD82960BAC685B00BBAA24 /* AquaTabClose_Front.png in Resources */,
+				34FD82970BAC685B00BBAA24 /* 32x32_log.png in Resources */,
+				34FD82980BAC685B00BBAA24 /* TabNewMetal.png in Resources */,
+				34FD82990BAC685B00BBAA24 /* AquaTabsDownGraphite.png in Resources */,
+				34FD829A0BAC685B00BBAA24 /* TabClose_Front_Rollover.png in Resources */,
+				34FD829B0BAC685B00BBAA24 /* overflowImage.png in Resources */,
+				34FD829C0BAC685B00BBAA24 /* AquaTabClose_Front_Rollover.png in Resources */,
+				34FD829D0BAC685B00BBAA24 /* AquaTabsDownNonKey.png in Resources */,
+				34FD829E0BAC685B00BBAA24 /* AquaTabsSeparatorDown.png in Resources */,
+				34FD82A10BAC685B00BBAA24 /* AquaTabCloseDirty_Front.png in Resources */,
+				34FD82A30BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Pressed.png in Resources */,
+				34FD82A50BAC685B00BBAA24 /* AquaTabNew.png in Resources */,
+				34FD82A60BAC685B00BBAA24 /* AquaTabCloseDirty_Front_Rollover.png in Resources */,
+				34FD82A70BAC685B00BBAA24 /* TabNewMetalRollover.png in Resources */,
+				34FD82A80BAC685B00BBAA24 /* TabClose_Front_Pressed.png in Resources */,
+				34FD82A90BAC685B00BBAA24 /* AdiumGradient.png in Resources */,
+				34FD82AB0BAC685B00BBAA24 /* TabClose_Front.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9670486D14A00FE50C9 /* PSMTabBarControlInspector.nib in Resources */,
+				8D1AC9680486D14A00FE50C9 /* PSMTabBarControlPalette.nib in Resources */,
+				8D1AC9690486D14A00FE50C9 /* palette.table in Resources */,
+				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
+				54D33B2906778E3300C9C163 /* PSMTabBarControl.ibclassdescription in Resources */,
+				34FD82B70BAC687900BBAA24 /* TabControlRep.png in Resources */,
+				34FD82C00BAC688500BBAA24 /* TabIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A251BE9C0959BB5B0058BC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A711BB09E5AE1E00D0089B /* Window.nib in Resources */,
+				34FD82B00BAC686D00BBAA24 /* mater_large.jpg in Resources */,
+				34FD82B10BAC686D00BBAA24 /* mcqueen_large.jpg in Resources */,
+				34FD82B20BAC686D00BBAA24 /* sally_large.jpg in Resources */,
+				3437A2EA0BC8E86F003A0BAE /* largeImage.png in Resources */,
+				346A5E080C58E38B004563F0 /* Folder.png in Resources */,
+				346A5E100C58E3C5004563F0 /* Globe.png in Resources */,
+				346A5E110C58E3C5004563F0 /* Warning.png in Resources */,
+				317A8F260C7BF0C20019DEC6 /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53DF68FA067E5B5A0090B5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546DEAF1067F63070098DCC4 /* PSMTabBarControl.m in Sources */,
+				A251BE860959A1B90058BC7F /* PSMOverflowPopUpButton.m in Sources */,
+				A251BE880959A1B90058BC7F /* PSMTabBarCell.m in Sources */,
+				A2D32EE909A6399300EC8662 /* PSMAquaTabStyle.m in Sources */,
+				A2D32F0109A63D7A00EC8662 /* PSMMetalTabStyle.m in Sources */,
+				A268EA6309A9831800E082AA /* PSMRolloverButton.m in Sources */,
+				A2129BB309AEB58F00724E6C /* PSMProgressIndicator.m in Sources */,
+				A2082A9109EAEB34009AC8BE /* PSMTabDragAssistant.m in Sources */,
+				A2D98B0B0A2B432C0064C6F8 /* PSMUnifiedTabStyle.m in Sources */,
+				A2D98B130A2B43FA0064C6F8 /* NSBezierPath_AMShading.m in Sources */,
+				3767A91D0A2F7A11005F7522 /* PSMTabDragWindow.m in Sources */,
+				3748D19F0B17834D002D71C0 /* PSMTabBarController.m in Sources */,
+				37A9FB6F0C25FE2B0062045C /* PSMTabDragView.m in Sources */,
+				37A900A00C279CAD0062045C /* PSMTabDragWindowController.m in Sources */,
+				347545B10C4944DB003E81B8 /* NSString_AITruncation.m in Sources */,
+				3482DF100C5BF90700426F15 /* PSMAdiumTabStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC96C0486D14A00FE50C9 /* PSMTabBarControlInspector.m in Sources */,
+				8D1AC96D0486D14A00FE50C9 /* PSMTabBarControlPalette.m in Sources */,
+				A2BEC7DD09C1E80400B8B4B6 /* PSMTabBarControl.m in Sources */,
+				A2BEC7DE09C1E80400B8B4B6 /* PSMTabBarCell.m in Sources */,
+				A2BEC7DF09C1E80400B8B4B6 /* PSMAquaTabStyle.m in Sources */,
+				A2BEC7E009C1E80400B8B4B6 /* PSMMetalTabStyle.m in Sources */,
+				A2BEC7E109C1E80400B8B4B6 /* PSMRolloverButton.m in Sources */,
+				A2BEC7E209C1E80400B8B4B6 /* PSMOverflowPopUpButton.m in Sources */,
+				A2BEC7E309C1E80400B8B4B6 /* PSMProgressIndicator.m in Sources */,
+				A2082A9209EAEB34009AC8BE /* PSMTabDragAssistant.m in Sources */,
+				A2D98B0C0A2B432C0064C6F8 /* PSMUnifiedTabStyle.m in Sources */,
+				A2D98B140A2B43FA0064C6F8 /* NSBezierPath_AMShading.m in Sources */,
+				3767A91E0A2F7A11005F7522 /* PSMTabDragWindow.m in Sources */,
+				3748D19D0B17834D002D71C0 /* PSMTabBarController.m in Sources */,
+				37A9FB700C25FE2B0062045C /* PSMTabDragView.m in Sources */,
+				37A9009E0C279CAD0062045C /* PSMTabDragWindowController.m in Sources */,
+				3482DF150C5BF90E00426F15 /* PSMAdiumTabStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A251BE9D0959BB5B0058BC7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A251BEBA0959BBDF0058BC7F /* AppController.m in Sources */,
+				A251BEBE0959BBE60058BC7F /* FakeModel.m in Sources */,
+				A251BEC10959BBEC0058BC7F /* main.m in Sources */,
+				A2A711BF09E5BF0500D0089B /* WindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34FD7C090BA9FB5900BBAA24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* PSMTabBarControlFramework */;
+			targetProxy = 34FD7C080BA9FB5900BBAA24 /* PBXContainerItemProxy */;
+		};
+		3767A65D0A2D0C5C005F7522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A251BE9F0959BB5B0058BC7F /* TabBarControlDemo */;
+			targetProxy = 3767A65C0A2D0C5C005F7522 /* PBXContainerItemProxy */;
+		};
+		53DF6903067E5B930090B5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1AC9600486D14A00FE50C9 /* PSMTabBarControl */;
+			targetProxy = 53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */;
+		};
+		53DF6905067E5B930090B5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* PSMTabBarControlFramework */;
+			targetProxy = 53DF6904067E5B930090B5B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0259C57EFE90428111CA0C5A /* PSMTabBarControlInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0259C57FFE90428111CA0C5A /* English */,
+			);
+			name = PSMTabBarControlInspector.nib;
+			sourceTree = "<group>";
+		};
+		0259C580FE90428111CA0C5A /* PSMTabBarControlPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0259C581FE90428111CA0C5A /* English */,
+			);
+			name = PSMTabBarControlPalette.nib;
+			sourceTree = "<group>";
+		};
+		317A8F240C7BF0C20019DEC6 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				317A8F250C7BF0C20019DEC6 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D1AC97B0486D23100FE50C9 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A2A711B909E5AE1E00D0089B /* Window.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2A711BA09E5AE1E00D0089B /* English */,
+			);
+			name = Window.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A251BEA40959BB5C0058BC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TabBarControlDemo-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TabBarControlDemo;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		A251BEA50959BB5C0058BC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TabBarControlDemo-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TabBarControlDemo;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C056398008A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = source/Framework_Prefix.pch;
+				INFOPLIST_FILE = "PSMTabBarControlFramework-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = PSMTabBarControl;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		C056398108A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = source/Framework_Prefix.pch;
+				INFOPLIST_FILE = "PSMTabBarControlFramework-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0xb0000000,
+				);
+				PRODUCT_NAME = PSMTabBarControl;
+			};
+			name = Release;
+		};
+		C056398408A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../../../Library/Frameworks",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = source/PSMTabBarControl_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Palettes";
+				PRODUCT_NAME = PSMTabBarControl;
+				WRAPPER_EXTENSION = palette;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		C056398508A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = source/PSMTabBarControl_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Palettes";
+				PRODUCT_NAME = PSMTabBarControl;
+				SDKROOT = macosx10.4;
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Release;
+		};
+		C056398808A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C056398908A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = All;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C056398C08A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C056398D08A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+					x86_64,
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A251BEA30959BB5C0058BC7F /* Build configuration list for PBXNativeTarget "TabBarControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A251BEA40959BB5C0058BC7F /* Debug */,
+				A251BEA50959BB5C0058BC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "PSMTabBarControlFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398008A954F8003078D8 /* Debug */,
+				C056398108A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398308A954F8003078D8 /* Build configuration list for PBXNativeTarget "PSMTabBarControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398408A954F8003078D8 /* Debug */,
+				C056398508A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398708A954F8003078D8 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398808A954F8003078D8 /* Debug */,
+				C056398908A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398B08A954F8003078D8 /* Build configuration list for PBXProject "PSMTabBarControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398C08A954F8003078D8 /* Debug */,
+				C056398D08A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

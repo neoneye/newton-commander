@@ -1,0 +1,1521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4204241F10443D9900B2054A /* info_emptydir.png in Resources */ = {isa = PBXBuildFile; fileRef = 4204241C10443D9900B2054A /* info_emptydir.png */; };
+		4204242010443D9900B2054A /* info_fsbusy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4204241D10443D9900B2054A /* info_fsbusy.png */; };
+		4204242110443D9900B2054A /* info_install.png in Resources */ = {isa = PBXBuildFile; fileRef = 4204241E10443D9900B2054A /* info_install.png */; };
+		4204BEF71034331F0013A695 /* AboutPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4204BEF51034331F0013A695 /* AboutPanel.xib */; };
+		42150E5C1052861B009A86E9 /* joseph_wain_eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 42150E5A10528616009A86E9 /* joseph_wain_eye.png */; };
+		421CF28F1049EA0100D41B61 /* Report.app in Resources */ = {isa = PBXBuildFile; fileRef = 423564610FAF4887008EB6C3 /* Report.app */; };
+		423B111A1038AFBC0069EC82 /* JFCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 423B11161038AF990069EC82 /* JFCore.bundle */; };
+		423B111D1038AFC70069EC82 /* JFCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423B10611038AE720069EC82 /* JFCore.mm */; };
+		423B11301038BAE70069EC82 /* JFMainWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423B112F1038BAE70069EC82 /* JFMainWindowController.mm */; };
+		423B11441038C5240069EC82 /* JFMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423B11431038C5240069EC82 /* JFMain.mm */; };
+		423B114E1038C7D60069EC82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423B114A1038C7D60069EC82 /* MainMenu.xib */; };
+		423B114F1038C7D60069EC82 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423B114C1038C7D60069EC82 /* MainWindow.xib */; };
+		423B11591038CB170069EC82 /* OFMPane.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4238D1E40F9FE2C10014E2CB /* OFMPane.mm */; };
+		423B115A1038CB170069EC82 /* OFMTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 421022400F99019300DB40DF /* OFMTableView.mm */; };
+		423B115B1038CB170069EC82 /* OPPartialSearch.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42CD57CB0F9CD78700294526 /* OPPartialSearch.mm */; };
+		423B115C1038CB170069EC82 /* PanelTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42CC2770101B7A1F0076E918 /* PanelTable.mm */; };
+		423B115D1038CB170069EC82 /* system_GDE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC26F4101A04360076E918 /* system_GDE.cpp */; };
+		423B115E1038CB280069EC82 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 421021F10F98D5EE00DB40DF /* AppDelegate.mm */; };
+		423B115F1038CB280069EC82 /* BetterAuthorizationSampleLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E9687F1014994D0039EC40 /* BetterAuthorizationSampleLib.c */; };
+		423B11601038CB280069EC82 /* DirCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42D89BF80FAA009F00754F5E /* DirCache.mm */; };
+		423B11611038CB280069EC82 /* JFActionMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42B1CA1B1035C33A002B83BB /* JFActionMenu.mm */; };
+		423B11621038CB280069EC82 /* JFActionPrefController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42E839B41034836D00F07152 /* JFActionPrefController.mm */; };
+		423B11631038CB280069EC82 /* JFBookmarkPrefController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42EE8BA810378A92001190C1 /* JFBookmarkPrefController.mm */; };
+		423B11641038CB280069EC82 /* JFDateInfoCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 420C4727102E9E3B00CDB2DF /* JFDateInfoCell.mm */; };
+		423B11651038CB280069EC82 /* JFGeneralPrefController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42E839AA1034807300F07152 /* JFGeneralPrefController.mm */; };
+		423B11661038CB470069EC82 /* JFPermissionInfoCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42D1D3D4102F728200D755A0 /* JFPermissionInfoCell.mm */; };
+		423B11671038CB470069EC82 /* JFSizeInfoCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 420C4752102EB7DC00CDB2DF /* JFSizeInfoCell.mm */; };
+		423B11681038CB470069EC82 /* KCCopy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42A85A900FB62FE800FA11B8 /* KCCopy.mm */; };
+		423B11691038CB470069EC82 /* KCCopyParent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42A85A880FB62E0400FA11B8 /* KCCopyParent.mm */; };
+		423B116A1038CB470069EC82 /* KCCopySheet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42CE9FC00FB2DFF7008EE4B1 /* KCCopySheet.mm */; };
+		423B116B1038CB470069EC82 /* KCCopyThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42A85A8C0FB62F1100FA11B8 /* KCCopyThread.mm */; };
+		423B116C1038CB470069EC82 /* KCDiscover.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423563F80FAF26D9008EB6C3 /* KCDiscover.mm */; };
+		423B116D1038CB470069EC82 /* KCDiscoverParent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423563EB0FAF208D008EB6C3 /* KCDiscoverParent.mm */; };
+		423B116E1038CB470069EC82 /* KCDiscoverStatistics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423564E40FAFA16E008EB6C3 /* KCDiscoverStatistics.mm */; };
+		423B116F1038CB470069EC82 /* KCDiscoverThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423563ED0FAF208D008EB6C3 /* KCDiscoverThread.mm */; };
+		423B11701038CB470069EC82 /* KCHelperCommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E9688610149A4F0039EC40 /* KCHelperCommon.c */; };
+		423B11711038CB470069EC82 /* KCReadOnlyTextView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 422E01240FB0F3CE00D69B02 /* KCReadOnlyTextView.mm */; };
+		423B11721038CB470069EC82 /* KCReport.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423564040FAF2BD7008EB6C3 /* KCReport.mm */; };
+		423B11731038CB470069EC82 /* KCReportParent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4235640A0FAF2EFE008EB6C3 /* KCReportParent.mm */; };
+		423B11741038CB470069EC82 /* KCReportStatistics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423564E90FAFA46F008EB6C3 /* KCReportStatistics.mm */; };
+		423B11751038CB470069EC82 /* KCReportThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4235640C0FAF2EFE008EB6C3 /* KCReportThread.mm */; };
+		423B11761038CB470069EC82 /* MBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E839A710347FEB00F07152 /* MBPreferencesController.m */; };
+		423B11771038CB470069EC82 /* NSImage+QuickLook.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4238CF720F9DD8690014E2CB /* NSImage+QuickLook.mm */; };
+		423B11881038CC310069EC82 /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42096CCD0FB8143600CB13AE /* SecurityFoundation.framework */; };
+		423B118D1038CC340069EC82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425CF29D10125C81009030CA /* Security.framework */; };
+		423B11C71038CC360069EC82 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD942B10172D8600FFED35 /* Carbon.framework */; };
+		423B12861038CC390069EC82 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429C119A0F9AAB9D00FC9501 /* QuickLook.framework */; };
+		423B128C1038CC3F0069EC82 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		42493FFD104DE0560066C896 /* JFSystemCopy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42493FFA104DE0560066C896 /* JFSystemCopy.mm */; };
+		42493FFE104DE0560066C896 /* JFSystemCopyThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42493FFC104DE0560066C896 /* JFSystemCopyThread.mm */; };
+		42494002104DE1710066C896 /* JFCopy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 420424501044606000B2054A /* JFCopy.mm */; };
+		4249400F104DE1DA0066C896 /* Copy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4249400E104DE1DA0066C896 /* Copy.xib */; };
+		42513F561051506500B77BBF /* JFMainWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42513F551051506500B77BBF /* JFMainWindow.mm */; };
+		42513F6E10515E5200B77BBF /* finder_quicklook.png in Resources */ = {isa = PBXBuildFile; fileRef = 42513F6B10515E1400B77BBF /* finder_quicklook.png */; };
+		425AAE1F103ABF08008CD4B9 /* JFBookmarkMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 425AAE1E103ABF08008CD4B9 /* JFBookmarkMenu.mm */; };
+		425CF2D510126D3A009030CA /* InstallCmdTools in CopyFiles */ = {isa = PBXBuildFile; fileRef = 425CF2C710126C89009030CA /* InstallCmdTools */; };
+		425CF2FB1012838D009030CA /* jf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42DAA38A0FABB8CF00A941A0 /* jf */; };
+		425D907A10CBE5B100B5689B /* apple_genericdocumenticon_with_newfolderbadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 425D907910CBE5B100B5689B /* apple_genericdocumenticon_with_newfolderbadge.png */; };
+		425D914610CC46C000B5689B /* NCVolumeInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 425D914110CC463500B5689B /* NCVolumeInfo.mm */; };
+		4262C934105D5DC000546803 /* Newton Commander Help in Resources */ = {isa = PBXBuildFile; fileRef = 4262C923105D5DC000546803 /* Newton Commander Help */; };
+		426F7640105E4C290065418A /* OpenInNewtonCommander.app in Resources */ = {isa = PBXBuildFile; fileRef = 426F763F105E4C290065418A /* OpenInNewtonCommander.app */; };
+		4275C886102DB24800467456 /* apple_genericfoldericon_with_newfolderbadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C86D102DB24800467456 /* apple_genericfoldericon_with_newfolderbadge.png */; };
+		4275C887102DB24800467456 /* bluetoothfileexchange_newfolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C86E102DB24800467456 /* bluetoothfileexchange_newfolder.png */; };
+		4275C888102DB24800467456 /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C86F102DB24800467456 /* copy.png */; };
+		4275C889102DB24800467456 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C870102DB24800467456 /* delete.png */; };
+		4275C88A102DB24800467456 /* diricon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C871102DB24800467456 /* diricon.png */; };
+		4275C88B102DB24800467456 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C872102DB24800467456 /* edit.png */; };
+		4275C88C102DB24800467456 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C873102DB24800467456 /* help.png */; };
+		4275C88D102DB24800467456 /* interfacebuilder_gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C874102DB24800467456 /* interfacebuilder_gear.png */; };
+		4275C88E102DB24800467456 /* iphoto_edit.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4275C875102DB24800467456 /* iphoto_edit.tiff */; };
+		4275C88F102DB24800467456 /* keynote_help.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4275C876102DB24800467456 /* keynote_help.tiff */; };
+		4275C890102DB24800467456 /* makedir.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C877102DB24800467456 /* makedir.png */; };
+		4275C891102DB24800467456 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C878102DB24800467456 /* menu.png */; };
+		4275C892102DB24800467456 /* move.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C879102DB24800467456 /* move.png */; };
+		4275C893102DB24800467456 /* noname.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C87A102DB24800467456 /* noname.png */; };
+		4275C894102DB24800467456 /* quicklook_placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4275C87B102DB24800467456 /* quicklook_placeholder.jpg */; };
+		4275C895102DB24800467456 /* simon_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C87C102DB24800467456 /* simon_copy.png */; };
+		4275C896102DB24800467456 /* simon_move.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C87D102DB24800467456 /* simon_move.png */; };
+		4275C89C102DB24800467456 /* system_delete.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4275C883102DB24800467456 /* system_delete.tiff */; };
+		4275C89D102DB24800467456 /* system_info.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4275C884102DB24800467456 /* system_info.tiff */; };
+		4275C89E102DB24800467456 /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C885102DB24800467456 /* view.png */; };
+		4275C8D9102DB36200467456 /* permissions_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D1102DB36200467456 /* permissions_000.png */; };
+		4275C8DA102DB36200467456 /* permissions_001.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D2102DB36200467456 /* permissions_001.png */; };
+		4275C8DB102DB36200467456 /* permissions_010.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D3102DB36200467456 /* permissions_010.png */; };
+		4275C8DC102DB36200467456 /* permissions_011.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D4102DB36200467456 /* permissions_011.png */; };
+		4275C8DD102DB36200467456 /* permissions_100.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D5102DB36200467456 /* permissions_100.png */; };
+		4275C8DE102DB36200467456 /* permissions_101.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D6102DB36200467456 /* permissions_101.png */; };
+		4275C8DF102DB36200467456 /* permissions_110.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D7102DB36200467456 /* permissions_110.png */; };
+		4275C8E0102DB36200467456 /* permissions_111.png in Resources */ = {isa = PBXBuildFile; fileRef = 4275C8D8102DB36200467456 /* permissions_111.png */; };
+		42B250830FA65B21005870D6 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42B250810FA65B21005870D6 /* icon.icns */; };
+		42BF3AA41032B4C900239AC2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF3AA31032B4C900239AC2 /* CoreServices.framework */; };
+		42BF3AE91032F30C00239AC2 /* SmallGenericDocumentIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AE51032F30C00239AC2 /* SmallGenericDocumentIcon.png */; };
+		42BF3AEA1032F30C00239AC2 /* SmallGenericDocumentIconLink.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AE61032F30C00239AC2 /* SmallGenericDocumentIconLink.png */; };
+		42BF3AEB1032F30C00239AC2 /* SmallGenericFolderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AE71032F30C00239AC2 /* SmallGenericFolderIcon.png */; };
+		42BF3AEC1032F30C00239AC2 /* SmallGenericFolderIconLink.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AE81032F30C00239AC2 /* SmallGenericFolderIconLink.png */; };
+		42BF3AF21032F89D00239AC2 /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AF01032F89D00239AC2 /* unknown.png */; };
+		42BF3AF31032F89D00239AC2 /* unknown_link.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AF11032F89D00239AC2 /* unknown_link.png */; };
+		42BF3AF61032FE4200239AC2 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BF3AF51032FE4200239AC2 /* loading.png */; };
+		42CC271A101A0DF10076E918 /* system_GDE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC26F4101A04360076E918 /* system_GDE.cpp */; };
+		42CC271B101A0DF10076E918 /* system_GDE.h in Sources */ = {isa = PBXBuildFile; fileRef = 42CC26F5101A04360076E918 /* system_GDE.h */; };
+		42CE9FBD0FB2DFDF008EE4B1 /* CopySheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 42CE9FBB0FB2DFDF008EE4B1 /* CopySheet.nib */; };
+		42DF91CE103C1172009B19BF /* JFIgnorePrefController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42DF91CD103C1172009B19BF /* JFIgnorePrefController.mm */; };
+		42DF91D7103C13BD009B19BF /* PreferencesIgnore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DF91D5103C13BD009B19BF /* PreferencesIgnore.xib */; };
+		42E70826101683350061ED7F /* kclist_main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42E70825101683350061ED7F /* kclist_main.mm */; };
+		42E70856101683670061ED7F /* KCList in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42E708211016831D0061ED7F /* KCList */; };
+		42E70858101683AA0061ED7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		42E839B01034813E00F07152 /* PreferencesGeneral.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E839AE1034813E00F07152 /* PreferencesGeneral.xib */; };
+		42E839B8103483A300F07152 /* PreferencesAction.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E839B6103483A300F07152 /* PreferencesAction.xib */; };
+		42E96878101498190039EC40 /* InstallKCHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42E96867101497830039EC40 /* InstallKCHelper */; };
+		42E968791014981B0039EC40 /* KCHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42E9686F101497C20039EC40 /* KCHelper */; };
+		42E968811014994D0039EC40 /* BetterAuthorizationSampleLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E9687F1014994D0039EC40 /* BetterAuthorizationSampleLib.c */; };
+		42E968831014996B0039EC40 /* BetterAuthorizationSampleLibInstallTool.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E968821014996B0039EC40 /* BetterAuthorizationSampleLibInstallTool.c */; };
+		42E9688810149A4F0039EC40 /* KCHelperCommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E9688610149A4F0039EC40 /* KCHelperCommon.c */; };
+		42E9688B1014A3B30039EC40 /* KCHelperTool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42E9688A1014A3B30039EC40 /* KCHelperTool.cpp */; };
+		42E9688D1014A75A0039EC40 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425CF29D10125C81009030CA /* Security.framework */; };
+		42E968951014A7710039EC40 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E968941014A7710039EC40 /* CoreFoundation.framework */; };
+		42EC8704103237D100C0C0B5 /* linkicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EC8703103237D100C0C0B5 /* linkicon.png */; };
+		42EE8BA610378A58001190C1 /* PreferencesBookmark.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42EE8BA410378A58001190C1 /* PreferencesBookmark.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		420424EB1044669700B2054A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 420424E71044669600B2054A /* JFCopyTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
+			remoteInfo = JFCopyTest;
+		};
+		423564600FAF4887008EB6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423563BB0FAEF504008EB6C3 /* Report.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
+			remoteInfo = ReportApp;
+		};
+		4235647A0FAF59FC008EB6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423563BB0FAEF504008EB6C3 /* Report.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Report;
+		};
+		423B111F1038AFDD0069EC82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 423B11151038AF990069EC82;
+			remoteInfo = JFCore;
+		};
+		425CF2C610126C89009030CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 425CF2C210126C89009030CA /* InstallCmdTools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = InstallCmdTools;
+		};
+		425CF2CA10126C96009030CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 425CF2C210126C89009030CA /* InstallCmdTools.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
+			remoteInfo = InstallCmdTools;
+		};
+		42952B06105EE08600EC8257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 420424E71044669600B2054A /* JFCopyTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 426F7658105E79B20065418A;
+			remoteInfo = TestCopy;
+		};
+		42A85A770FB6250300FA11B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42A85A730FB6250300FA11B8 /* CopyApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
+			remoteInfo = Copy;
+		};
+		42A85A790FB6250B00FA11B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42A85A730FB6250300FA11B8 /* CopyApp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Copy;
+		};
+		42DAA3890FABB8CF00A941A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DAA3850FABB8CF00A941A0 /* CommandLine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = CommandLine;
+		};
+		42DAA38B0FABB8DA00A941A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DAA3850FABB8CF00A941A0 /* CommandLine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
+			remoteInfo = CommandLine;
+		};
+		42E70854101683540061ED7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42E708201016831D0061ED7F;
+			remoteInfo = KCList;
+		};
+		42E96874101497D60039EC40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42E9686E101497C20039EC40;
+			remoteInfo = KCHelper;
+		};
+		42E96876101497DA0039EC40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42E96866101497830039EC40;
+			remoteInfo = InstallKCHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		425CF2E310126D41009030CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				42E70856101683670061ED7F /* KCList in CopyFiles */,
+				42E968791014981B0039EC40 /* KCHelper in CopyFiles */,
+				42E96878101498190039EC40 /* InstallKCHelper in CopyFiles */,
+				425CF2FB1012838D009030CA /* jf in CopyFiles */,
+				425CF2D510126D3A009030CA /* InstallCmdTools in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* OrthodoxFileManager_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthodoxFileManager_Prefix.pch; sourceTree = "<group>"; };
+		4204241C10443D9900B2054A /* info_emptydir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_emptydir.png; sourceTree = "<group>"; };
+		4204241D10443D9900B2054A /* info_fsbusy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_fsbusy.png; sourceTree = "<group>"; };
+		4204241E10443D9900B2054A /* info_install.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_install.png; sourceTree = "<group>"; };
+		4204244F1044606000B2054A /* JFCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFCopy.h; path = ../Copy/JFCopy.h; sourceTree = SOURCE_ROOT; };
+		420424501044606000B2054A /* JFCopy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFCopy.mm; path = ../Copy/JFCopy.mm; sourceTree = SOURCE_ROOT; };
+		420424E71044669600B2054A /* JFCopyTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JFCopyTest.xcodeproj; path = ../Copy/JFCopyTest/JFCopyTest.xcodeproj; sourceTree = SOURCE_ROOT; };
+		4204BEF61034331F0013A695 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AboutPanel.xib; sourceTree = "<group>"; };
+		42096CCD0FB8143600CB13AE /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = /System/Library/Frameworks/SecurityFoundation.framework; sourceTree = "<absolute>"; };
+		420C4726102E9E3B00CDB2DF /* JFDateInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFDateInfoCell.h; sourceTree = "<group>"; };
+		420C4727102E9E3B00CDB2DF /* JFDateInfoCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFDateInfoCell.mm; sourceTree = "<group>"; };
+		420C4751102EB7DC00CDB2DF /* JFSizeInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSizeInfoCell.h; sourceTree = "<group>"; };
+		420C4752102EB7DC00CDB2DF /* JFSizeInfoCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFSizeInfoCell.mm; sourceTree = "<group>"; };
+		421021F00F98D5EE00DB40DF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		421021F10F98D5EE00DB40DF /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		4210223F0F99019300DB40DF /* OFMTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMTableView.h; sourceTree = "<group>"; };
+		421022400F99019300DB40DF /* OFMTableView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OFMTableView.mm; sourceTree = "<group>"; };
+		42150E5A10528616009A86E9 /* joseph_wain_eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joseph_wain_eye.png; sourceTree = "<group>"; };
+		422E01230FB0F3CE00D69B02 /* KCReadOnlyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCReadOnlyTextView.h; sourceTree = "<group>"; };
+		422E01240FB0F3CE00D69B02 /* KCReadOnlyTextView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCReadOnlyTextView.mm; sourceTree = "<group>"; };
+		423563BB0FAEF504008EB6C3 /* Report.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Report.xcodeproj; path = ../ReportApp/Report.xcodeproj; sourceTree = SOURCE_ROOT; };
+		423563CF0FAF12F5008EB6C3 /* re_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = re_protocol.h; path = ../re_protocol.h; sourceTree = SOURCE_ROOT; };
+		423563EA0FAF208D008EB6C3 /* KCDiscoverParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDiscoverParent.h; sourceTree = "<group>"; };
+		423563EB0FAF208D008EB6C3 /* KCDiscoverParent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCDiscoverParent.mm; sourceTree = "<group>"; };
+		423563EC0FAF208D008EB6C3 /* KCDiscoverThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDiscoverThread.h; sourceTree = "<group>"; };
+		423563ED0FAF208D008EB6C3 /* KCDiscoverThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCDiscoverThread.mm; sourceTree = "<group>"; };
+		423563F70FAF26D9008EB6C3 /* KCDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDiscover.h; sourceTree = "<group>"; };
+		423563F80FAF26D9008EB6C3 /* KCDiscover.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCDiscover.mm; sourceTree = "<group>"; };
+		423564030FAF2BD7008EB6C3 /* KCReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCReport.h; sourceTree = "<group>"; };
+		423564040FAF2BD7008EB6C3 /* KCReport.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCReport.mm; sourceTree = "<group>"; };
+		423564090FAF2EFE008EB6C3 /* KCReportParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCReportParent.h; sourceTree = "<group>"; };
+		4235640A0FAF2EFE008EB6C3 /* KCReportParent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCReportParent.mm; sourceTree = "<group>"; };
+		4235640B0FAF2EFE008EB6C3 /* KCReportThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCReportThread.h; sourceTree = "<group>"; };
+		4235640C0FAF2EFE008EB6C3 /* KCReportThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCReportThread.mm; sourceTree = "<group>"; };
+		423564E30FAFA16E008EB6C3 /* KCDiscoverStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDiscoverStatistics.h; sourceTree = "<group>"; };
+		423564E40FAFA16E008EB6C3 /* KCDiscoverStatistics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCDiscoverStatistics.mm; sourceTree = "<group>"; };
+		423564E80FAFA46F008EB6C3 /* KCReportStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCReportStatistics.h; sourceTree = "<group>"; };
+		423564E90FAFA46F008EB6C3 /* KCReportStatistics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCReportStatistics.mm; sourceTree = "<group>"; };
+		4238CF720F9DD8690014E2CB /* NSImage+QuickLook.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSImage+QuickLook.mm"; sourceTree = "<group>"; };
+		4238D07E0F9F4D180014E2CB /* NSImage+QuickLook Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "NSImage+QuickLook Source Code License.rtf"; sourceTree = "<group>"; };
+		4238D0D40F9F5BB20014E2CB /* di_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = di_protocol.h; path = ../di_protocol.h; sourceTree = SOURCE_ROOT; };
+		4238D1E30F9FE2C10014E2CB /* OFMPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMPane.h; sourceTree = "<group>"; };
+		4238D1E40F9FE2C10014E2CB /* OFMPane.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OFMPane.mm; sourceTree = "<group>"; };
+		423B10551038AD9F0069EC82 /* JFCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JFCore-Info.plist"; sourceTree = "<group>"; };
+		423B10601038AE720069EC82 /* JFCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCore.h; sourceTree = "<group>"; };
+		423B10611038AE720069EC82 /* JFCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFCore.mm; sourceTree = "<group>"; };
+		423B11161038AF990069EC82 /* JFCore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFCore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		423B112B1038B1EC0069EC82 /* JFCoreProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCoreProtocol.h; sourceTree = "<group>"; };
+		423B112E1038BAE70069EC82 /* JFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMainWindowController.h; sourceTree = "<group>"; };
+		423B112F1038BAE70069EC82 /* JFMainWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFMainWindowController.mm; sourceTree = "<group>"; };
+		423B11421038C5240069EC82 /* JFMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMain.h; sourceTree = "<group>"; };
+		423B11431038C5240069EC82 /* JFMain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFMain.mm; sourceTree = "<group>"; };
+		423B114B1038C7D60069EC82 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		423B114D1038C7D60069EC82 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		42493FF9104DE0560066C896 /* JFSystemCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFSystemCopy.h; path = ../Copy/JFSystemCopy.h; sourceTree = SOURCE_ROOT; };
+		42493FFA104DE0560066C896 /* JFSystemCopy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFSystemCopy.mm; path = ../Copy/JFSystemCopy.mm; sourceTree = SOURCE_ROOT; };
+		42493FFB104DE0560066C896 /* JFSystemCopyThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFSystemCopyThread.h; path = ../Copy/JFSystemCopyThread.h; sourceTree = SOURCE_ROOT; };
+		42493FFC104DE0560066C896 /* JFSystemCopyThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFSystemCopyThread.mm; path = ../Copy/JFSystemCopyThread.mm; sourceTree = SOURCE_ROOT; };
+		4249400E104DE1DA0066C896 /* Copy.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Copy.xib; path = ../Copy/Copy.xib; sourceTree = SOURCE_ROOT; };
+		42513F541051506500B77BBF /* JFMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMainWindow.h; sourceTree = "<group>"; };
+		42513F551051506500B77BBF /* JFMainWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFMainWindow.mm; sourceTree = "<group>"; };
+		42513F6B10515E1400B77BBF /* finder_quicklook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finder_quicklook.png; sourceTree = "<group>"; };
+		425AAE1D103ABF08008CD4B9 /* JFBookmarkMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFBookmarkMenu.h; sourceTree = "<group>"; };
+		425AAE1E103ABF08008CD4B9 /* JFBookmarkMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFBookmarkMenu.mm; sourceTree = "<group>"; };
+		425CF29D10125C81009030CA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		425CF2C210126C89009030CA /* InstallCmdTools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstallCmdTools.xcodeproj; path = ../InstallCmdTools/InstallCmdTools.xcodeproj; sourceTree = SOURCE_ROOT; };
+		425D907910CBE5B100B5689B /* apple_genericdocumenticon_with_newfolderbadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_genericdocumenticon_with_newfolderbadge.png; sourceTree = "<group>"; };
+		425D914010CC463500B5689B /* NCVolumeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCVolumeInfo.h; sourceTree = "<group>"; };
+		425D914110CC463500B5689B /* NCVolumeInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCVolumeInfo.mm; sourceTree = "<group>"; };
+		4262C924105D5DC000546803 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = "English.lproj/Newton Commander Help"; sourceTree = "<group>"; };
+		426F763F105E4C290065418A /* OpenInNewtonCommander.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = OpenInNewtonCommander.app; sourceTree = "<group>"; };
+		4275C86D102DB24800467456 /* apple_genericfoldericon_with_newfolderbadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_genericfoldericon_with_newfolderbadge.png; sourceTree = "<group>"; };
+		4275C86E102DB24800467456 /* bluetoothfileexchange_newfolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluetoothfileexchange_newfolder.png; sourceTree = "<group>"; };
+		4275C86F102DB24800467456 /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
+		4275C870102DB24800467456 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		4275C871102DB24800467456 /* diricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diricon.png; sourceTree = "<group>"; };
+		4275C872102DB24800467456 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		4275C873102DB24800467456 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		4275C874102DB24800467456 /* interfacebuilder_gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = interfacebuilder_gear.png; sourceTree = "<group>"; };
+		4275C875102DB24800467456 /* iphoto_edit.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = iphoto_edit.tiff; sourceTree = "<group>"; };
+		4275C876102DB24800467456 /* keynote_help.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = keynote_help.tiff; sourceTree = "<group>"; };
+		4275C877102DB24800467456 /* makedir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makedir.png; sourceTree = "<group>"; };
+		4275C878102DB24800467456 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		4275C879102DB24800467456 /* move.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = move.png; sourceTree = "<group>"; };
+		4275C87A102DB24800467456 /* noname.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noname.png; sourceTree = "<group>"; };
+		4275C87B102DB24800467456 /* quicklook_placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quicklook_placeholder.jpg; sourceTree = "<group>"; };
+		4275C87C102DB24800467456 /* simon_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simon_copy.png; sourceTree = "<group>"; };
+		4275C87D102DB24800467456 /* simon_move.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simon_move.png; sourceTree = "<group>"; };
+		4275C883102DB24800467456 /* system_delete.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = system_delete.tiff; sourceTree = "<group>"; };
+		4275C884102DB24800467456 /* system_info.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = system_info.tiff; sourceTree = "<group>"; };
+		4275C885102DB24800467456 /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
+		4275C8D1102DB36200467456 /* permissions_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_000.png; sourceTree = "<group>"; };
+		4275C8D2102DB36200467456 /* permissions_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_001.png; sourceTree = "<group>"; };
+		4275C8D3102DB36200467456 /* permissions_010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_010.png; sourceTree = "<group>"; };
+		4275C8D4102DB36200467456 /* permissions_011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_011.png; sourceTree = "<group>"; };
+		4275C8D5102DB36200467456 /* permissions_100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_100.png; sourceTree = "<group>"; };
+		4275C8D6102DB36200467456 /* permissions_101.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_101.png; sourceTree = "<group>"; };
+		4275C8D7102DB36200467456 /* permissions_110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_110.png; sourceTree = "<group>"; };
+		4275C8D8102DB36200467456 /* permissions_111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = permissions_111.png; sourceTree = "<group>"; };
+		429C11920F9AAB3600FC9501 /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
+		429C119A0F9AAB9D00FC9501 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = /System/Library/Frameworks/QuickLook.framework; sourceTree = "<absolute>"; };
+		42A85A730FB6250300FA11B8 /* CopyApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CopyApp.xcodeproj; path = ../CopyApp/CopyApp.xcodeproj; sourceTree = SOURCE_ROOT; };
+		42A85A800FB62A6000FA11B8 /* cp_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cp_protocol.h; path = ../cp_protocol.h; sourceTree = SOURCE_ROOT; };
+		42A85A870FB62E0400FA11B8 /* KCCopyParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCCopyParent.h; sourceTree = "<group>"; };
+		42A85A880FB62E0400FA11B8 /* KCCopyParent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCCopyParent.mm; sourceTree = "<group>"; };
+		42A85A8B0FB62F1100FA11B8 /* KCCopyThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCCopyThread.h; sourceTree = "<group>"; };
+		42A85A8C0FB62F1100FA11B8 /* KCCopyThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCCopyThread.mm; sourceTree = "<group>"; };
+		42A85A8F0FB62FE800FA11B8 /* KCCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCCopy.h; sourceTree = "<group>"; };
+		42A85A900FB62FE800FA11B8 /* KCCopy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCCopy.mm; sourceTree = "<group>"; };
+		42B1CA1A1035C33A002B83BB /* JFActionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFActionMenu.h; sourceTree = "<group>"; };
+		42B1CA1B1035C33A002B83BB /* JFActionMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFActionMenu.mm; sourceTree = "<group>"; };
+		42B250820FA65B21005870D6 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = English; path = English.lproj/icon.icns; sourceTree = "<group>"; };
+		42BD942B10172D8600FFED35 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		42BF3AA31032B4C900239AC2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		42BF3AE51032F30C00239AC2 /* SmallGenericDocumentIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericDocumentIcon.png; sourceTree = "<group>"; };
+		42BF3AE61032F30C00239AC2 /* SmallGenericDocumentIconLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericDocumentIconLink.png; sourceTree = "<group>"; };
+		42BF3AE71032F30C00239AC2 /* SmallGenericFolderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericFolderIcon.png; sourceTree = "<group>"; };
+		42BF3AE81032F30C00239AC2 /* SmallGenericFolderIconLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericFolderIconLink.png; sourceTree = "<group>"; };
+		42BF3AF01032F89D00239AC2 /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
+		42BF3AF11032F89D00239AC2 /* unknown_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown_link.png; sourceTree = "<group>"; };
+		42BF3AF51032FE4200239AC2 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		42CC26F4101A04360076E918 /* system_GDE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = system_GDE.cpp; path = ../System/system_GDE.cpp; sourceTree = SOURCE_ROOT; };
+		42CC26F5101A04360076E918 /* system_GDE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = system_GDE.h; path = ../System/system_GDE.h; sourceTree = SOURCE_ROOT; };
+		42CC276F101B7A1F0076E918 /* PanelTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelTable.h; sourceTree = "<group>"; };
+		42CC2770101B7A1F0076E918 /* PanelTable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PanelTable.mm; sourceTree = "<group>"; };
+		42CD57CA0F9CD78700294526 /* OPPartialSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPartialSearch.h; sourceTree = "<group>"; };
+		42CD57CB0F9CD78700294526 /* OPPartialSearch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OPPartialSearch.mm; sourceTree = "<group>"; };
+		42CE9FBC0FB2DFDF008EE4B1 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CopySheet.nib; sourceTree = "<group>"; };
+		42CE9FBF0FB2DFF7008EE4B1 /* KCCopySheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCCopySheet.h; sourceTree = "<group>"; };
+		42CE9FC00FB2DFF7008EE4B1 /* KCCopySheet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KCCopySheet.mm; sourceTree = "<group>"; };
+		42D1D3D3102F728200D755A0 /* JFPermissionInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFPermissionInfoCell.h; sourceTree = "<group>"; };
+		42D1D3D4102F728200D755A0 /* JFPermissionInfoCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFPermissionInfoCell.mm; sourceTree = "<group>"; };
+		42D89BF70FAA009F00754F5E /* DirCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirCache.h; sourceTree = "<group>"; };
+		42D89BF80FAA009F00754F5E /* DirCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DirCache.mm; sourceTree = "<group>"; };
+		42DAA3850FABB8CF00A941A0 /* CommandLine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommandLine.xcodeproj; path = ../CommandLine/CommandLine.xcodeproj; sourceTree = SOURCE_ROOT; };
+		42DF91CC103C1172009B19BF /* JFIgnorePrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFIgnorePrefController.h; path = ../Preferences/JFIgnorePrefController.h; sourceTree = SOURCE_ROOT; };
+		42DF91CD103C1172009B19BF /* JFIgnorePrefController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFIgnorePrefController.mm; path = ../Preferences/JFIgnorePrefController.mm; sourceTree = SOURCE_ROOT; };
+		42DF91D6103C13BD009B19BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PreferencesIgnore.xib; sourceTree = "<group>"; };
+		42E708211016831D0061ED7F /* KCList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KCList; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E70825101683350061ED7F /* kclist_main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = kclist_main.mm; path = ../KCListTool/kclist_main.mm; sourceTree = SOURCE_ROOT; };
+		42E839A610347FEB00F07152 /* MBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBPreferencesController.h; path = ../Preferences/MBPreferencesController.h; sourceTree = SOURCE_ROOT; };
+		42E839A710347FEB00F07152 /* MBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBPreferencesController.m; path = ../Preferences/MBPreferencesController.m; sourceTree = SOURCE_ROOT; };
+		42E839A91034807300F07152 /* JFGeneralPrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFGeneralPrefController.h; path = ../Preferences/JFGeneralPrefController.h; sourceTree = SOURCE_ROOT; };
+		42E839AA1034807300F07152 /* JFGeneralPrefController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFGeneralPrefController.mm; path = ../Preferences/JFGeneralPrefController.mm; sourceTree = SOURCE_ROOT; };
+		42E839AF1034813E00F07152 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PreferencesGeneral.xib; sourceTree = "<group>"; };
+		42E839B31034836D00F07152 /* JFActionPrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFActionPrefController.h; path = ../Preferences/JFActionPrefController.h; sourceTree = SOURCE_ROOT; };
+		42E839B41034836D00F07152 /* JFActionPrefController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFActionPrefController.mm; path = ../Preferences/JFActionPrefController.mm; sourceTree = SOURCE_ROOT; };
+		42E839B7103483A300F07152 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PreferencesAction.xib; sourceTree = "<group>"; };
+		42E96867101497830039EC40 /* InstallKCHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InstallKCHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E9686F101497C20039EC40 /* KCHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KCHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E9687F1014994D0039EC40 /* BetterAuthorizationSampleLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BetterAuthorizationSampleLib.c; path = ../BetterAuthorizationSampleLib.c; sourceTree = SOURCE_ROOT; };
+		42E968821014996B0039EC40 /* BetterAuthorizationSampleLibInstallTool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BetterAuthorizationSampleLibInstallTool.c; path = ../BetterAuthorizationSampleLibInstallTool.c; sourceTree = SOURCE_ROOT; };
+		42E968841014997D0039EC40 /* BetterAuthorizationSampleLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BetterAuthorizationSampleLib.h; path = ../BetterAuthorizationSampleLib.h; sourceTree = SOURCE_ROOT; };
+		42E9688510149A4F0039EC40 /* KCHelperCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCHelperCommon.h; path = ../KCHelperCommon.h; sourceTree = SOURCE_ROOT; };
+		42E9688610149A4F0039EC40 /* KCHelperCommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = KCHelperCommon.c; path = ../KCHelperCommon.c; sourceTree = SOURCE_ROOT; };
+		42E9688A1014A3B30039EC40 /* KCHelperTool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KCHelperTool.cpp; path = ../KCHelperTool.cpp; sourceTree = SOURCE_ROOT; };
+		42E968941014A7710039EC40 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		42EC8703103237D100C0C0B5 /* linkicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkicon.png; sourceTree = "<group>"; };
+		42EE8BA510378A58001190C1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PreferencesBookmark.xib; sourceTree = "<group>"; };
+		42EE8BA710378A92001190C1 /* JFBookmarkPrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFBookmarkPrefController.h; path = ../Preferences/JFBookmarkPrefController.h; sourceTree = SOURCE_ROOT; };
+		42EE8BA810378A92001190C1 /* JFBookmarkPrefController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFBookmarkPrefController.mm; path = ../Preferences/JFBookmarkPrefController.mm; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Newton Commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Newton Commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		423B11141038AF990069EC82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423B128C1038CC3F0069EC82 /* Cocoa.framework in Frameworks */,
+				423B12861038CC390069EC82 /* QuickLook.framework in Frameworks */,
+				423B11C71038CC360069EC82 /* Carbon.framework in Frameworks */,
+				423B118D1038CC340069EC82 /* Security.framework in Frameworks */,
+				423B11881038CC310069EC82 /* SecurityFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E7081F1016831D0061ED7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E70858101683AA0061ED7F /* Foundation.framework in Frameworks */,
+				42BF3AA41032B4C900239AC2 /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E96865101497830039EC40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E9686D101497C20039EC40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E9688D1014A75A0039EC40 /* Security.framework in Frameworks */,
+				42E968951014A7710039EC40 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* KCHelper */ = {
+			isa = PBXGroup;
+			children = (
+				42E9688510149A4F0039EC40 /* KCHelperCommon.h */,
+				42E9688610149A4F0039EC40 /* KCHelperCommon.c */,
+				42E968841014997D0039EC40 /* BetterAuthorizationSampleLib.h */,
+				42E968821014996B0039EC40 /* BetterAuthorizationSampleLibInstallTool.c */,
+				42E9687F1014994D0039EC40 /* BetterAuthorizationSampleLib.c */,
+				42E9688A1014A3B30039EC40 /* KCHelperTool.cpp */,
+			);
+			name = KCHelper;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Newton Commander.app */,
+				42E96867101497830039EC40 /* InstallKCHelper */,
+				42E9686F101497C20039EC40 /* KCHelper */,
+				42E708211016831D0061ED7F /* KCList */,
+				423B11161038AF990069EC82 /* JFCore.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* OrthodoxFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				420424E71044669600B2054A /* JFCopyTest.xcodeproj */,
+				42CC26F3101A04210076E918 /* System */,
+				42E7081D101682FD0061ED7F /* KCList */,
+				425CF2C210126C89009030CA /* InstallCmdTools.xcodeproj */,
+				42A85A730FB6250300FA11B8 /* CopyApp.xcodeproj */,
+				423563BB0FAEF504008EB6C3 /* Report.xcodeproj */,
+				42DAA3850FABB8CF00A941A0 /* CommandLine.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* KCHelper */,
+				29B97315FDCFA39411CA2CEA /* Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = OrthodoxFileManager;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				425D914010CC463500B5689B /* NCVolumeInfo.h */,
+				425D914110CC463500B5689B /* NCVolumeInfo.mm */,
+				42513F541051506500B77BBF /* JFMainWindow.h */,
+				42513F551051506500B77BBF /* JFMainWindow.mm */,
+				4204244E1044604A00B2054A /* Copy */,
+				425AAE1D103ABF08008CD4B9 /* JFBookmarkMenu.h */,
+				425AAE1E103ABF08008CD4B9 /* JFBookmarkMenu.mm */,
+				423B112B1038B1EC0069EC82 /* JFCoreProtocol.h */,
+				42B1CA1A1035C33A002B83BB /* JFActionMenu.h */,
+				42B1CA1B1035C33A002B83BB /* JFActionMenu.mm */,
+				42E839A510347FD600F07152 /* Preferences */,
+				42D1D3D3102F728200D755A0 /* JFPermissionInfoCell.h */,
+				42D1D3D4102F728200D755A0 /* JFPermissionInfoCell.mm */,
+				420C4751102EB7DC00CDB2DF /* JFSizeInfoCell.h */,
+				420C4752102EB7DC00CDB2DF /* JFSizeInfoCell.mm */,
+				420C4726102E9E3B00CDB2DF /* JFDateInfoCell.h */,
+				420C4727102E9E3B00CDB2DF /* JFDateInfoCell.mm */,
+				42CC276F101B7A1F0076E918 /* PanelTable.h */,
+				42CC2770101B7A1F0076E918 /* PanelTable.mm */,
+				42A85A8F0FB62FE800FA11B8 /* KCCopy.h */,
+				42A85A900FB62FE800FA11B8 /* KCCopy.mm */,
+				42A85A8B0FB62F1100FA11B8 /* KCCopyThread.h */,
+				42A85A8C0FB62F1100FA11B8 /* KCCopyThread.mm */,
+				42A85A870FB62E0400FA11B8 /* KCCopyParent.h */,
+				42A85A880FB62E0400FA11B8 /* KCCopyParent.mm */,
+				42A85A800FB62A6000FA11B8 /* cp_protocol.h */,
+				42CE9FBF0FB2DFF7008EE4B1 /* KCCopySheet.h */,
+				42CE9FC00FB2DFF7008EE4B1 /* KCCopySheet.mm */,
+				422E01230FB0F3CE00D69B02 /* KCReadOnlyTextView.h */,
+				422E01240FB0F3CE00D69B02 /* KCReadOnlyTextView.mm */,
+				423564E80FAFA46F008EB6C3 /* KCReportStatistics.h */,
+				423564E90FAFA46F008EB6C3 /* KCReportStatistics.mm */,
+				423564E30FAFA16E008EB6C3 /* KCDiscoverStatistics.h */,
+				423564E40FAFA16E008EB6C3 /* KCDiscoverStatistics.mm */,
+				423564090FAF2EFE008EB6C3 /* KCReportParent.h */,
+				4235640A0FAF2EFE008EB6C3 /* KCReportParent.mm */,
+				4235640B0FAF2EFE008EB6C3 /* KCReportThread.h */,
+				4235640C0FAF2EFE008EB6C3 /* KCReportThread.mm */,
+				423564030FAF2BD7008EB6C3 /* KCReport.h */,
+				423564040FAF2BD7008EB6C3 /* KCReport.mm */,
+				423563F70FAF26D9008EB6C3 /* KCDiscover.h */,
+				423563F80FAF26D9008EB6C3 /* KCDiscover.mm */,
+				423563EA0FAF208D008EB6C3 /* KCDiscoverParent.h */,
+				423563EB0FAF208D008EB6C3 /* KCDiscoverParent.mm */,
+				423563EC0FAF208D008EB6C3 /* KCDiscoverThread.h */,
+				423563ED0FAF208D008EB6C3 /* KCDiscoverThread.mm */,
+				423563CF0FAF12F5008EB6C3 /* re_protocol.h */,
+				42D89BF70FAA009F00754F5E /* DirCache.h */,
+				42D89BF80FAA009F00754F5E /* DirCache.mm */,
+				4238D1E30F9FE2C10014E2CB /* OFMPane.h */,
+				4238D1E40F9FE2C10014E2CB /* OFMPane.mm */,
+				4238D0D40F9F5BB20014E2CB /* di_protocol.h */,
+				4238CF720F9DD8690014E2CB /* NSImage+QuickLook.mm */,
+				42CD57CA0F9CD78700294526 /* OPPartialSearch.h */,
+				42CD57CB0F9CD78700294526 /* OPPartialSearch.mm */,
+				429C11920F9AAB3600FC9501 /* NSImage+QuickLook.h */,
+				4210223F0F99019300DB40DF /* OFMTableView.h */,
+				421022400F99019300DB40DF /* OFMTableView.mm */,
+				421021F00F98D5EE00DB40DF /* AppDelegate.h */,
+				421021F10F98D5EE00DB40DF /* AppDelegate.mm */,
+				32CA4F630368D1EE00C91783 /* OrthodoxFileManager_Prefix.pch */,
+				423B10601038AE720069EC82 /* JFCore.h */,
+				423B10611038AE720069EC82 /* JFCore.mm */,
+				423B112E1038BAE70069EC82 /* JFMainWindowController.h */,
+				423B112F1038BAE70069EC82 /* JFMainWindowController.mm */,
+				423B11421038C5240069EC82 /* JFMain.h */,
+				423B11431038C5240069EC82 /* JFMain.mm */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				426F763F105E4C290065418A /* OpenInNewtonCommander.app */,
+				4262C923105D5DC000546803 /* Newton Commander Help */,
+				4249400E104DE1DA0066C896 /* Copy.xib */,
+				42DF91D5103C13BD009B19BF /* PreferencesIgnore.xib */,
+				423B10551038AD9F0069EC82 /* JFCore-Info.plist */,
+				423B114A1038C7D60069EC82 /* MainMenu.xib */,
+				423B114C1038C7D60069EC82 /* MainWindow.xib */,
+				42EE8BA410378A58001190C1 /* PreferencesBookmark.xib */,
+				42E839B6103483A300F07152 /* PreferencesAction.xib */,
+				42E839AE1034813E00F07152 /* PreferencesGeneral.xib */,
+				4204BEF51034331F0013A695 /* AboutPanel.xib */,
+				4275C86C102DB24800467456 /* gfx */,
+				42B250810FA65B21005870D6 /* icon.icns */,
+				4238D07D0F9F4D180014E2CB /* licenses */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				42CE9FBB0FB2DFDF008EE4B1 /* CopySheet.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42BF3AA31032B4C900239AC2 /* CoreServices.framework */,
+				42BD942B10172D8600FFED35 /* Carbon.framework */,
+				42E968941014A7710039EC40 /* CoreFoundation.framework */,
+				425CF29D10125C81009030CA /* Security.framework */,
+				42096CCD0FB8143600CB13AE /* SecurityFoundation.framework */,
+				429C119A0F9AAB9D00FC9501 /* QuickLook.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4204244E1044604A00B2054A /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				42493FF9104DE0560066C896 /* JFSystemCopy.h */,
+				42493FFA104DE0560066C896 /* JFSystemCopy.mm */,
+				42493FFB104DE0560066C896 /* JFSystemCopyThread.h */,
+				42493FFC104DE0560066C896 /* JFSystemCopyThread.mm */,
+				4204244F1044606000B2054A /* JFCopy.h */,
+				420424501044606000B2054A /* JFCopy.mm */,
+			);
+			name = Copy;
+			sourceTree = "<group>";
+		};
+		420424E81044669600B2054A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				420424EC1044669700B2054A /* JFCopyTest.app */,
+				42952B07105EE08600EC8257 /* TestCopy.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4235645D0FAF4887008EB6C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				423564610FAF4887008EB6C3 /* Report.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4238D07D0F9F4D180014E2CB /* licenses */ = {
+			isa = PBXGroup;
+			children = (
+				4238D07E0F9F4D180014E2CB /* NSImage+QuickLook Source Code License.rtf */,
+			);
+			name = licenses;
+			path = ../licenses;
+			sourceTree = SOURCE_ROOT;
+		};
+		425CF2C310126C89009030CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				425CF2C710126C89009030CA /* InstallCmdTools */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4275C86C102DB24800467456 /* gfx */ = {
+			isa = PBXGroup;
+			children = (
+				425D907910CBE5B100B5689B /* apple_genericdocumenticon_with_newfolderbadge.png */,
+				42150E5A10528616009A86E9 /* joseph_wain_eye.png */,
+				42513F6B10515E1400B77BBF /* finder_quicklook.png */,
+				4204241C10443D9900B2054A /* info_emptydir.png */,
+				4204241D10443D9900B2054A /* info_fsbusy.png */,
+				4204241E10443D9900B2054A /* info_install.png */,
+				42BF3AF51032FE4200239AC2 /* loading.png */,
+				42BF3AF01032F89D00239AC2 /* unknown.png */,
+				42BF3AF11032F89D00239AC2 /* unknown_link.png */,
+				42BF3AE51032F30C00239AC2 /* SmallGenericDocumentIcon.png */,
+				42BF3AE61032F30C00239AC2 /* SmallGenericDocumentIconLink.png */,
+				42BF3AE71032F30C00239AC2 /* SmallGenericFolderIcon.png */,
+				42BF3AE81032F30C00239AC2 /* SmallGenericFolderIconLink.png */,
+				42EC8703103237D100C0C0B5 /* linkicon.png */,
+				4275C8D1102DB36200467456 /* permissions_000.png */,
+				4275C8D2102DB36200467456 /* permissions_001.png */,
+				4275C8D3102DB36200467456 /* permissions_010.png */,
+				4275C8D4102DB36200467456 /* permissions_011.png */,
+				4275C8D5102DB36200467456 /* permissions_100.png */,
+				4275C8D6102DB36200467456 /* permissions_101.png */,
+				4275C8D7102DB36200467456 /* permissions_110.png */,
+				4275C8D8102DB36200467456 /* permissions_111.png */,
+				4275C86D102DB24800467456 /* apple_genericfoldericon_with_newfolderbadge.png */,
+				4275C86E102DB24800467456 /* bluetoothfileexchange_newfolder.png */,
+				4275C86F102DB24800467456 /* copy.png */,
+				4275C870102DB24800467456 /* delete.png */,
+				4275C871102DB24800467456 /* diricon.png */,
+				4275C872102DB24800467456 /* edit.png */,
+				4275C873102DB24800467456 /* help.png */,
+				4275C874102DB24800467456 /* interfacebuilder_gear.png */,
+				4275C875102DB24800467456 /* iphoto_edit.tiff */,
+				4275C876102DB24800467456 /* keynote_help.tiff */,
+				4275C877102DB24800467456 /* makedir.png */,
+				4275C878102DB24800467456 /* menu.png */,
+				4275C879102DB24800467456 /* move.png */,
+				4275C87A102DB24800467456 /* noname.png */,
+				4275C87B102DB24800467456 /* quicklook_placeholder.jpg */,
+				4275C87C102DB24800467456 /* simon_copy.png */,
+				4275C87D102DB24800467456 /* simon_move.png */,
+				4275C883102DB24800467456 /* system_delete.tiff */,
+				4275C884102DB24800467456 /* system_info.tiff */,
+				4275C885102DB24800467456 /* view.png */,
+			);
+			path = gfx;
+			sourceTree = "<group>";
+		};
+		42A85A740FB6250300FA11B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42A85A780FB6250300FA11B8 /* Copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42CC26F3101A04210076E918 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				42CC26F4101A04360076E918 /* system_GDE.cpp */,
+				42CC26F5101A04360076E918 /* system_GDE.h */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		42DAA3860FABB8CF00A941A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42DAA38A0FABB8CF00A941A0 /* jf */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42E7081D101682FD0061ED7F /* KCList */ = {
+			isa = PBXGroup;
+			children = (
+				42E70825101683350061ED7F /* kclist_main.mm */,
+			);
+			name = KCList;
+			sourceTree = "<group>";
+		};
+		42E839A510347FD600F07152 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				42DF91CC103C1172009B19BF /* JFIgnorePrefController.h */,
+				42DF91CD103C1172009B19BF /* JFIgnorePrefController.mm */,
+				42EE8BA710378A92001190C1 /* JFBookmarkPrefController.h */,
+				42EE8BA810378A92001190C1 /* JFBookmarkPrefController.mm */,
+				42E839B31034836D00F07152 /* JFActionPrefController.h */,
+				42E839B41034836D00F07152 /* JFActionPrefController.mm */,
+				42E839A91034807300F07152 /* JFGeneralPrefController.h */,
+				42E839AA1034807300F07152 /* JFGeneralPrefController.mm */,
+				42E839A610347FEB00F07152 /* MBPreferencesController.h */,
+				42E839A710347FEB00F07152 /* MBPreferencesController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		423B11151038AF990069EC82 /* JFCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423B11251038AFF40069EC82 /* Build configuration list for PBXNativeTarget "JFCore" */;
+			buildPhases = (
+				423B11121038AF990069EC82 /* Resources */,
+				423B11131038AF990069EC82 /* Sources */,
+				423B11141038AF990069EC82 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JFCore;
+			productName = JFCore;
+			productReference = 423B11161038AF990069EC82 /* JFCore.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		42E708201016831D0061ED7F /* KCList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E70827101683350061ED7F /* Build configuration list for PBXNativeTarget "KCList" */;
+			buildPhases = (
+				42E7081E1016831D0061ED7F /* Sources */,
+				42E7081F1016831D0061ED7F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KCList;
+			productName = KCList;
+			productReference = 42E708211016831D0061ED7F /* KCList */;
+			productType = "com.apple.product-type.tool";
+		};
+		42E96866101497830039EC40 /* InstallKCHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E9686B101497880039EC40 /* Build configuration list for PBXNativeTarget "InstallKCHelper" */;
+			buildPhases = (
+				42E96864101497830039EC40 /* Sources */,
+				42E96865101497830039EC40 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstallKCHelper;
+			productName = InstallKCHelper;
+			productReference = 42E96867101497830039EC40 /* InstallKCHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+		42E9686E101497C20039EC40 /* KCHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E96873101497C70039EC40 /* Build configuration list for PBXNativeTarget "KCHelper" */;
+			buildPhases = (
+				42E9686C101497C20039EC40 /* Sources */,
+				42E9686D101497C20039EC40 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KCHelper;
+			productName = KCHelper;
+			productReference = 42E9686F101497C20039EC40 /* KCHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+		8D1107260486CEB800E47090 /* Newton Commander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Newton Commander" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				425CF2E310126D41009030CA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42DAA38C0FABB8DA00A941A0 /* PBXTargetDependency */,
+				4235647B0FAF59FC008EB6C3 /* PBXTargetDependency */,
+				42A85A7A0FB6250B00FA11B8 /* PBXTargetDependency */,
+				425CF2CB10126C96009030CA /* PBXTargetDependency */,
+				42E96875101497D60039EC40 /* PBXTargetDependency */,
+				42E96877101497DA0039EC40 /* PBXTargetDependency */,
+				42E70855101683540061ED7F /* PBXTargetDependency */,
+				423B11201038AFDD0069EC82 /* PBXTargetDependency */,
+			);
+			name = "Newton Commander";
+			productInstallPath = "$(HOME)/Applications";
+			productName = OrthodoxFileManager;
+			productReference = 8D1107320486CEB800E47090 /* Newton Commander.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OrthodoxFileManager" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* OrthodoxFileManager */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 42DAA3860FABB8CF00A941A0 /* Products */;
+					ProjectRef = 42DAA3850FABB8CF00A941A0 /* CommandLine.xcodeproj */;
+				},
+				{
+					ProductGroup = 42A85A740FB6250300FA11B8 /* Products */;
+					ProjectRef = 42A85A730FB6250300FA11B8 /* CopyApp.xcodeproj */;
+				},
+				{
+					ProductGroup = 425CF2C310126C89009030CA /* Products */;
+					ProjectRef = 425CF2C210126C89009030CA /* InstallCmdTools.xcodeproj */;
+				},
+				{
+					ProductGroup = 420424E81044669600B2054A /* Products */;
+					ProjectRef = 420424E71044669600B2054A /* JFCopyTest.xcodeproj */;
+				},
+				{
+					ProductGroup = 4235645D0FAF4887008EB6C3 /* Products */;
+					ProjectRef = 423563BB0FAEF504008EB6C3 /* Report.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Newton Commander */,
+				42E96866101497830039EC40 /* InstallKCHelper */,
+				42E9686E101497C20039EC40 /* KCHelper */,
+				42E708201016831D0061ED7F /* KCList */,
+				423B11151038AF990069EC82 /* JFCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		420424EC1044669700B2054A /* JFCopyTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = JFCopyTest.app;
+			remoteRef = 420424EB1044669700B2054A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		423564610FAF4887008EB6C3 /* Report.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Report.app;
+			remoteRef = 423564600FAF4887008EB6C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425CF2C710126C89009030CA /* InstallCmdTools */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = InstallCmdTools;
+			remoteRef = 425CF2C610126C89009030CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42952B07105EE08600EC8257 /* TestCopy.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TestCopy.octest;
+			remoteRef = 42952B06105EE08600EC8257 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42A85A780FB6250300FA11B8 /* Copy.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Copy.app;
+			remoteRef = 42A85A770FB6250300FA11B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42DAA38A0FABB8CF00A941A0 /* jf */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = jf;
+			remoteRef = 42DAA3890FABB8CF00A941A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		423B11121038AF990069EC82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423B111A1038AFBC0069EC82 /* JFCore.bundle in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				42B250830FA65B21005870D6 /* icon.icns in Resources */,
+				42CE9FBD0FB2DFDF008EE4B1 /* CopySheet.nib in Resources */,
+				4275C886102DB24800467456 /* apple_genericfoldericon_with_newfolderbadge.png in Resources */,
+				4275C887102DB24800467456 /* bluetoothfileexchange_newfolder.png in Resources */,
+				4275C888102DB24800467456 /* copy.png in Resources */,
+				4275C889102DB24800467456 /* delete.png in Resources */,
+				4275C88A102DB24800467456 /* diricon.png in Resources */,
+				4275C88B102DB24800467456 /* edit.png in Resources */,
+				4275C88C102DB24800467456 /* help.png in Resources */,
+				4275C88D102DB24800467456 /* interfacebuilder_gear.png in Resources */,
+				4275C88E102DB24800467456 /* iphoto_edit.tiff in Resources */,
+				4275C88F102DB24800467456 /* keynote_help.tiff in Resources */,
+				4275C890102DB24800467456 /* makedir.png in Resources */,
+				4275C891102DB24800467456 /* menu.png in Resources */,
+				4275C892102DB24800467456 /* move.png in Resources */,
+				4275C893102DB24800467456 /* noname.png in Resources */,
+				4275C894102DB24800467456 /* quicklook_placeholder.jpg in Resources */,
+				4275C895102DB24800467456 /* simon_copy.png in Resources */,
+				4275C896102DB24800467456 /* simon_move.png in Resources */,
+				4275C89C102DB24800467456 /* system_delete.tiff in Resources */,
+				4275C89D102DB24800467456 /* system_info.tiff in Resources */,
+				4275C89E102DB24800467456 /* view.png in Resources */,
+				4275C8D9102DB36200467456 /* permissions_000.png in Resources */,
+				4275C8DA102DB36200467456 /* permissions_001.png in Resources */,
+				4275C8DB102DB36200467456 /* permissions_010.png in Resources */,
+				4275C8DC102DB36200467456 /* permissions_011.png in Resources */,
+				4275C8DD102DB36200467456 /* permissions_100.png in Resources */,
+				4275C8DE102DB36200467456 /* permissions_101.png in Resources */,
+				4275C8DF102DB36200467456 /* permissions_110.png in Resources */,
+				4275C8E0102DB36200467456 /* permissions_111.png in Resources */,
+				42EC8704103237D100C0C0B5 /* linkicon.png in Resources */,
+				42BF3AE91032F30C00239AC2 /* SmallGenericDocumentIcon.png in Resources */,
+				42BF3AEA1032F30C00239AC2 /* SmallGenericDocumentIconLink.png in Resources */,
+				42BF3AEB1032F30C00239AC2 /* SmallGenericFolderIcon.png in Resources */,
+				421CF28F1049EA0100D41B61 /* Report.app in Resources */,
+				42BF3AEC1032F30C00239AC2 /* SmallGenericFolderIconLink.png in Resources */,
+				42BF3AF21032F89D00239AC2 /* unknown.png in Resources */,
+				42BF3AF31032F89D00239AC2 /* unknown_link.png in Resources */,
+				42BF3AF61032FE4200239AC2 /* loading.png in Resources */,
+				4204BEF71034331F0013A695 /* AboutPanel.xib in Resources */,
+				42E839B01034813E00F07152 /* PreferencesGeneral.xib in Resources */,
+				42E839B8103483A300F07152 /* PreferencesAction.xib in Resources */,
+				42EE8BA610378A58001190C1 /* PreferencesBookmark.xib in Resources */,
+				423B114E1038C7D60069EC82 /* MainMenu.xib in Resources */,
+				423B114F1038C7D60069EC82 /* MainWindow.xib in Resources */,
+				42DF91D7103C13BD009B19BF /* PreferencesIgnore.xib in Resources */,
+				4204241F10443D9900B2054A /* info_emptydir.png in Resources */,
+				4204242010443D9900B2054A /* info_fsbusy.png in Resources */,
+				4204242110443D9900B2054A /* info_install.png in Resources */,
+				4249400F104DE1DA0066C896 /* Copy.xib in Resources */,
+				42513F6E10515E5200B77BBF /* finder_quicklook.png in Resources */,
+				42150E5C1052861B009A86E9 /* joseph_wain_eye.png in Resources */,
+				4262C934105D5DC000546803 /* Newton Commander Help in Resources */,
+				426F7640105E4C290065418A /* OpenInNewtonCommander.app in Resources */,
+				425D907A10CBE5B100B5689B /* apple_genericdocumenticon_with_newfolderbadge.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		423B11131038AF990069EC82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423B111D1038AFC70069EC82 /* JFCore.mm in Sources */,
+				423B11661038CB470069EC82 /* JFPermissionInfoCell.mm in Sources */,
+				423B11671038CB470069EC82 /* JFSizeInfoCell.mm in Sources */,
+				423B11681038CB470069EC82 /* KCCopy.mm in Sources */,
+				423B11691038CB470069EC82 /* KCCopyParent.mm in Sources */,
+				423B116A1038CB470069EC82 /* KCCopySheet.mm in Sources */,
+				423B116B1038CB470069EC82 /* KCCopyThread.mm in Sources */,
+				423B116C1038CB470069EC82 /* KCDiscover.mm in Sources */,
+				423B116D1038CB470069EC82 /* KCDiscoverParent.mm in Sources */,
+				423B116E1038CB470069EC82 /* KCDiscoverStatistics.mm in Sources */,
+				423B116F1038CB470069EC82 /* KCDiscoverThread.mm in Sources */,
+				423B11701038CB470069EC82 /* KCHelperCommon.c in Sources */,
+				423B11711038CB470069EC82 /* KCReadOnlyTextView.mm in Sources */,
+				423B11721038CB470069EC82 /* KCReport.mm in Sources */,
+				423B11731038CB470069EC82 /* KCReportParent.mm in Sources */,
+				423B11741038CB470069EC82 /* KCReportStatistics.mm in Sources */,
+				423B11751038CB470069EC82 /* KCReportThread.mm in Sources */,
+				423B11761038CB470069EC82 /* MBPreferencesController.m in Sources */,
+				423B11771038CB470069EC82 /* NSImage+QuickLook.mm in Sources */,
+				423B11591038CB170069EC82 /* OFMPane.mm in Sources */,
+				423B115A1038CB170069EC82 /* OFMTableView.mm in Sources */,
+				423B115B1038CB170069EC82 /* OPPartialSearch.mm in Sources */,
+				423B115C1038CB170069EC82 /* PanelTable.mm in Sources */,
+				423B115D1038CB170069EC82 /* system_GDE.cpp in Sources */,
+				423B115E1038CB280069EC82 /* AppDelegate.mm in Sources */,
+				423B115F1038CB280069EC82 /* BetterAuthorizationSampleLib.c in Sources */,
+				423B11601038CB280069EC82 /* DirCache.mm in Sources */,
+				423B11611038CB280069EC82 /* JFActionMenu.mm in Sources */,
+				423B11621038CB280069EC82 /* JFActionPrefController.mm in Sources */,
+				423B11631038CB280069EC82 /* JFBookmarkPrefController.mm in Sources */,
+				423B11641038CB280069EC82 /* JFDateInfoCell.mm in Sources */,
+				423B11651038CB280069EC82 /* JFGeneralPrefController.mm in Sources */,
+				423B11301038BAE70069EC82 /* JFMainWindowController.mm in Sources */,
+				425AAE1F103ABF08008CD4B9 /* JFBookmarkMenu.mm in Sources */,
+				42DF91CE103C1172009B19BF /* JFIgnorePrefController.mm in Sources */,
+				42494002104DE1710066C896 /* JFCopy.mm in Sources */,
+				42493FFD104DE0560066C896 /* JFSystemCopy.mm in Sources */,
+				42493FFE104DE0560066C896 /* JFSystemCopyThread.mm in Sources */,
+				42513F561051506500B77BBF /* JFMainWindow.mm in Sources */,
+				425D914610CC46C000B5689B /* NCVolumeInfo.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E7081E1016831D0061ED7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42CC271A101A0DF10076E918 /* system_GDE.cpp in Sources */,
+				42CC271B101A0DF10076E918 /* system_GDE.h in Sources */,
+				42E70826101683350061ED7F /* kclist_main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E96864101497830039EC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E968831014996B0039EC40 /* BetterAuthorizationSampleLibInstallTool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E9686C101497C20039EC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E968811014994D0039EC40 /* BetterAuthorizationSampleLib.c in Sources */,
+				42E9688810149A4F0039EC40 /* KCHelperCommon.c in Sources */,
+				42E9688B1014A3B30039EC40 /* KCHelperTool.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423B11441038C5240069EC82 /* JFMain.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4235647B0FAF59FC008EB6C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Report;
+			targetProxy = 4235647A0FAF59FC008EB6C3 /* PBXContainerItemProxy */;
+		};
+		423B11201038AFDD0069EC82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 423B11151038AF990069EC82 /* JFCore */;
+			targetProxy = 423B111F1038AFDD0069EC82 /* PBXContainerItemProxy */;
+		};
+		425CF2CB10126C96009030CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InstallCmdTools;
+			targetProxy = 425CF2CA10126C96009030CA /* PBXContainerItemProxy */;
+		};
+		42A85A7A0FB6250B00FA11B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Copy;
+			targetProxy = 42A85A790FB6250B00FA11B8 /* PBXContainerItemProxy */;
+		};
+		42DAA38C0FABB8DA00A941A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CommandLine;
+			targetProxy = 42DAA38B0FABB8DA00A941A0 /* PBXContainerItemProxy */;
+		};
+		42E70855101683540061ED7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42E708201016831D0061ED7F /* KCList */;
+			targetProxy = 42E70854101683540061ED7F /* PBXContainerItemProxy */;
+		};
+		42E96875101497D60039EC40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42E9686E101497C20039EC40 /* KCHelper */;
+			targetProxy = 42E96874101497D60039EC40 /* PBXContainerItemProxy */;
+		};
+		42E96877101497DA0039EC40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42E96866101497830039EC40 /* InstallKCHelper */;
+			targetProxy = 42E96876101497DA0039EC40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4204BEF51034331F0013A695 /* AboutPanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4204BEF61034331F0013A695 /* English */,
+			);
+			name = AboutPanel.xib;
+			sourceTree = "<group>";
+		};
+		423B114A1038C7D60069EC82 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423B114B1038C7D60069EC82 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		423B114C1038C7D60069EC82 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423B114D1038C7D60069EC82 /* English */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		4262C923105D5DC000546803 /* Newton Commander Help */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4262C924105D5DC000546803 /* English */,
+			);
+			name = "Newton Commander Help";
+			sourceTree = "<group>";
+		};
+		42B250810FA65B21005870D6 /* icon.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B250820FA65B21005870D6 /* English */,
+			);
+			name = icon.icns;
+			sourceTree = "<group>";
+		};
+		42CE9FBB0FB2DFDF008EE4B1 /* CopySheet.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42CE9FBC0FB2DFDF008EE4B1 /* English */,
+			);
+			name = CopySheet.nib;
+			sourceTree = "<group>";
+		};
+		42DF91D5103C13BD009B19BF /* PreferencesIgnore.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42DF91D6103C13BD009B19BF /* English */,
+			);
+			name = PreferencesIgnore.xib;
+			sourceTree = "<group>";
+		};
+		42E839AE1034813E00F07152 /* PreferencesGeneral.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E839AF1034813E00F07152 /* English */,
+			);
+			name = PreferencesGeneral.xib;
+			sourceTree = "<group>";
+		};
+		42E839B6103483A300F07152 /* PreferencesAction.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E839B7103483A300F07152 /* English */,
+			);
+			name = PreferencesAction.xib;
+			sourceTree = "<group>";
+		};
+		42EE8BA410378A58001190C1 /* PreferencesBookmark.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42EE8BA510378A58001190C1 /* English */,
+			);
+			name = PreferencesBookmark.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		423B11171038AF990069EC82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OrthodoxFileManager_Prefix.pch;
+				INFOPLIST_FILE = "JFCore-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JFCore;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		423B11181038AF990069EC82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OrthodoxFileManager_Prefix.pch;
+				INFOPLIST_FILE = "JFCore-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JFCore;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		42E708231016831D0061ED7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = KCList;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		42E708241016831D0061ED7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = KCList;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		42E96869101497830039EC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = InstallKCHelper;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		42E9686A101497830039EC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = InstallKCHelper;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		42E96871101497C20039EC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = KCHelper;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		42E96872101497C20039EC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = KCHelper;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OrthodoxFileManager_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Newton Commander";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OrthodoxFileManager_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Newton Commander";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		423B11251038AFF40069EC82 /* Build configuration list for PBXNativeTarget "JFCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423B11171038AF990069EC82 /* Debug */,
+				423B11181038AF990069EC82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E70827101683350061ED7F /* Build configuration list for PBXNativeTarget "KCList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E708231016831D0061ED7F /* Debug */,
+				42E708241016831D0061ED7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E9686B101497880039EC40 /* Build configuration list for PBXNativeTarget "InstallKCHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E96869101497830039EC40 /* Debug */,
+				42E9686A101497830039EC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E96873101497C70039EC40 /* Build configuration list for PBXNativeTarget "KCHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E96871101497C20039EC40 /* Debug */,
+				42E96872101497C20039EC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Newton Commander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OrthodoxFileManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

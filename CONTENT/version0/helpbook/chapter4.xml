@@ -1,0 +1,10 @@
+<chapter><?dbhtml filename="credits.html" ?>
+<title>Credits</title>
+
+<sect2><title>Programming</title>
+<simplelist type='vert'>
+<member><ulink url="http://opcoders.com/company/simon_strandgaard.html">Simon Strandgaard (neoneye)</ulink></member>
+</simplelist>
+</sect2>
+
+</chapter>

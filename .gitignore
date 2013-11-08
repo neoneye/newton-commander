@@ -1,0 +1,11 @@
+.DS_Store
+build
+testarea
+*.o
+*.mode1v3
+*.pbxuser
+.svn
+svn-commit.tmp
+Newton Commander Help
+xcuserdata
+*.xcworkspace

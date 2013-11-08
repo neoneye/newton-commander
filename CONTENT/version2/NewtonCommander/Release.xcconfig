@@ -1,0 +1,23 @@
+//
+//  Release.xcconfig
+//  NewtonCommander
+//
+//  Created by Simon Strandgaard on 17/03/10.
+//  Copyright 2010 opcoders.com. All rights reserved.
+//
+ARCHS = i386
+GCC_OPTIMIZATION_LEVEL = 0
+
+//SYMROOT = ../build
+//BUILD_DIR = ../build
+//PROJECT_TEMP_DIR = ../build
+
+NCCORE_HEADERS = ../NCCore/build/$(CONFIGURATION)/NCCore.framework/Versions/A/Headers
+PSMTABBARCONTROL_HEADERS = ../PSMTabBarControl
+
+//USER_HEADER_SEARCH_PATHS = SOURCE_TREE_COMMANDER
+//USER_HEADER_SEARCH_PATHS = /Users/neoneye/git/Commander/CONTENT/version2
+
+LD_RUNPATH_SEARCH_PATHS = @loader_path/../Frameworks
+
+//OTHER_LDFLAGS = -ObjC

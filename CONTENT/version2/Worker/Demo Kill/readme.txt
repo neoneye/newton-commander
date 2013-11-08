@@ -1,0 +1,1 @@
+ensure that we can kill the worker

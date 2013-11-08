@@ -1,0 +1,40 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <table>
+            <tr><th>id</th><th>name</th><th>[run|source|target]</th></tr>
+            <tr><td>1001</td><td>nocollision1</td><td>[|.|..]</td></tr>
+            <tr><td>1002</td><td>nocollision2</td><td>[|...|....]</td></tr>
+            <tr><td>2001</td><td>overwrite all</td><td>[|.|E]</td></tr>
+            <tr><td>2002</td><td>overwrite never</td><td>[|.|.]</td></tr>
+            <tr><td>2003</td><td>overwrite oldest</td><td>[|..|E]</td></tr>
+            <tr><td>2004</td><td>overwrite newest</td><td>[|..|.E]</td></tr>
+            <tr><td>2005</td><td>overwrite smaller</td><td>[|..|E]</td></tr>
+            <tr><td>2006</td><td>overwrite larger</td><td>[|..|.E]</td></tr>
+            <tr><td>2101</td><td>overwrite all recursive1</td><td>[|....|E]</td></tr>
+            <tr><td>2102</td><td>overwrite all recursive2</td><td>[|......|E]</td></tr>
+            <tr><td>2201</td><td>merge simple - Simple Merge</td><td>[|...|E]</td></tr>
+            <tr><td>2202</td><td>merge advanced</td><td>[|.......|E]</td></tr>
+            <tr><td>3001</td><td>symlink</td><td>[|...|E]</td></tr>
+            <tr><td>3002</td><td>symlink broken1</td><td>[|...|E]</td></tr>
+            <tr><td>3002</td><td>symlink broken2</td><td>[|....|E]</td></tr>
+            <tr><td>5001</td><td>rename new</td><td>[|..|.E]</td></tr>
+            <tr><td>5002</td><td>rename old</td><td>[|..|E]</td></tr>
+            <tr><td>5003</td><td>autorename new1</td><td>[|..|.E]</td></tr>
+            <tr><td>5004</td><td>autorename new2</td><td>[|...|..E]</td></tr>
+            <tr><td>5005</td><td>autorename new3</td><td>[|....|...E]</td></tr>
+            <tr><td>5006</td><td>autorename old1</td><td>[|..|E]</td></tr>
+            <tr><td>5007</td><td>autorename old2</td><td>[|...|E]</td></tr>
+            <tr><td>5008</td><td>autorename old3</td><td>[|....|E]</td></tr>
+            <tr><td>6001</td><td>append</td><td>[|.|E]</td></tr>
+            <tr><td>6101</td><td>retry</td><td>[E|....|E]</td></tr>
+            <tr><td>7001</td><td>prompt</td><td>[E|....|E]</td></tr>
+            <tr><td>8001</td><td>exclude file</td><td>[|......|E]</td></tr>
+            <tr><td>8002</td><td>exclude dir</td><td>[|.....|E]</td></tr>
+            <tr><td>9001</td><td>cancel file</td><td>[|......|E]</td></tr>
+            <tr><td>9002</td><td>cancel dir</td><td>[|....|E]</td></tr>
+        </table>
+    </body>
+</html>

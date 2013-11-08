@@ -1,0 +1,28 @@
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude"><?dbhtml filename="getting-help.html" ?>
+<title>Getting Help</title>
+
+<sect2><title>Contact by Email</title>
+<para>Contact the developer privately by sending a mail to <ulink url="mailto:simon@opcoders.com">simon@opcoders.com</ulink>.
+</para>
+</sect2>
+          
+<sect2><title>Message Board</title>
+<para>Submit your bug reports and ideas on <ulink url="http://toolboxapp.com/forums/">the message board</ulink>.
+</para>
+</sect2>
+          
+<sect2><title>IRC Channel</title>
+<para>There is a #toolbox IRC channel on <ulink url="http://freenode.org/">freenode.org</ulink>.
+</para>
+</sect2>
+          
+<sect2><title>Developer Zone</title>
+<para>Follow the <ulink url="http://twitter.com/neoneye">developer on twitter</ulink>.
+</para>
+<para>Talk with <code>simon.strandgaard</code> on Skype.
+</para>
+<para>Read <ulink url="http://neoneye.blogspot.com/">his blog</ulink>.
+</para>
+</sect2>
+          
+</chapter>

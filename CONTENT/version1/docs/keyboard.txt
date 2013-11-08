@@ -1,0 +1,99 @@
+Inspired by Total Commander's "KEYBOARD.TXT" file.
+
+Keyboard Layout of Newton Commander
+===================================
+
+Key                    Action
+~~~                    ~~~~~~
+F1                     -
+F2                     -
+F3                     -
+F4                     -
+F5                     Copy selected items
+F6                     -
+F7                     Create directory
+F8  or  DELETE         Delete selected items
+SHIFT F1               -
+SHIFT F2               -
+SHIFT F3               -
+SHIFT F4               -
+SHIFT F5               -
+SHIFT F6               Rename file
+SHIFT F7               Create file
+SHIFT F8               -
+CRTL F1                -
+CRTL F2                -
+CRTL F3                -
+CRTL F4                -
+CRTL F5                -
+CRTL F6                -
+CRTL F7                Create link
+CRTL F8                -
+TAB                    Switch between left and right list
+SHIFT TAB              -                             
+SPACE                  QuickLook
+ENTER                  Navigate into directory
+CMD ENTER              When cursor is on the top-most row: Navigate to parent directory
+BACKSPACE              Navigate back to previous directory
+CMD BACKSPACE          Navigate to parent directory
+CMD T                  Open new tab
+CMD W                  Close currently active tab
+CTRL TAB               Jump to next tab
+CTRL SHIFT TAB         Jump to previous tab
+CMD Q                  Exit
+CMD ,                  Show Preferences window
+CMD F                  Reveal selected items in Apple's Finder
+CMD R                  Reload
+CMD A                  Select all items. If all items are selected then select none
+CMD ARROW_DOWN         Open select items
+CMD D                  Bookmark this directory
+CMD E                  Eject this volume
+ALT CMD B              Show bookmark window
+CMD 1                  Navigate to bookmark 1
+CMD 2                  Navigate to bookmark 2
+CMD 3                  Navigate to bookmark 3
+CMD 4                  Navigate to bookmark 4
+CMD 5                  Navigate to bookmark 5
+CMD 6                  Navigate to bookmark 6
+CMD 7                  Navigate to bookmark 7
+CMD 8                  Navigate to bookmark 8
+CMD 9                  Navigate to bookmark 9
+HOME                   Move cursor to top
+END                    Move cursor to bottom
+COMMAND_ARROW_UP       Go out of the folder
+ARROW_UP               Move cursor up by one row
+ARROW_DOWN             Move cursor down by one row
+SHIFT ARROW_UP         (un)select file under cursor and move cursor to the row above
+SHIFT ARROW_DOWN       (un)select file under cursor and move cursor to the row below
+PAGE_UP                Move cursor up by one page
+PAGE_DOWN              Move cursor down by one page
+ARROW_LEFT             Show left action menu
+ARROW_RIGHT            Show right action menu
+CMD C                  Copy absolute paths for the selected items to clipboard
+SHIFT CMD C            Copy names of the selected items to clipboard
+CMD G                  Go to the folder
+
+
+
+Gestures
+----------------------------------------------------
+3 finger swipe left    Go to previous tab
+3 finger swipe right   Go to next tab
+3 finger swipe up      Navigate back to previous directory
+
+
+
+ideas for future shortcut assignments:
+----------------------------------------------------
+global CMD F1          Reveal Finder's location in Newton Commander
+COMMAND_ARROW_DOWN     Go into the folder
+CMD F                  Find/filter.. As in TextMate.. CMD T to open a file
+CTRL+U                 Exchange directories
+CTRL+SHIFT+U           Exchange directories and tabs
+CTRL+I                 Switch to target directory
+CTRL+F3                Sort by name
+CTRL+F4                Sort by extension
+CTRL+F5                Sort by date/time
+CTRL+F6                Sort by size
+CTRL+F7                Unsorted
+CTRL+D                 Open directory hotlist ('bookmarks')

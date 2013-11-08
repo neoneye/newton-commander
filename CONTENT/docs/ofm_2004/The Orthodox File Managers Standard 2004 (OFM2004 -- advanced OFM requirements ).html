@@ -1,0 +1,1075 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>The Orthodox File Managers 
+Standard 2004 (OFM2004 -- advanced OFM requirements )</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/main.css">
+</head>
+
+<body>
+
+<h1>Orthodox File Managers Standard 2004 (OFM2004) -- advanced OFM requirements</h1>
+<p>The Orthodox File Managers Standard is undated periodically (usually once in 
+five years) to reflect progress in OFM implementations. </p>
+<p>The Orthodox File Managers Standard 2004 specified 4 areas of compliance: basic, 
+command line (including user and extension menu), viewer/editor, and VFS.&nbsp;&nbsp;
+</p>
+<p>The compliance in OFM2004 is measured a way similar to TCP/IP addresses i.e. 
+100.45.0.0 means that particular OFM has a score 100% on part 1 (basic compatibility), 
+score 60% out&nbsp; on the part 2&nbsp; and zeroes on the part three and four of 
+the standard (see below).&nbsp; In this case the average score would be 40% and 
+it does not tell the whole truth as this implementation perfectly implement all 
+basic features.&nbsp; </p>
+<p>The score is determined separately for each section of the standard. Each section 
+consists of&nbsp; subsections that&nbsp; specified measurable requirements that 
+need to be met.&nbsp; Each subsection has a Weight that determine its weight in 
+the total score. </p>
+<p><strong>Important notes: </strong></p>
+<ul>
+	<li>The Orthodox File Managers Standard is&nbsp; undated periodically (usually 
+	once a year) to reflect progress in OFM implementations </li>
+	<li>50% or better compliance with the parts 1-4of the standard are required 
+	for the implementation to be considered an implementation conformant with&nbsp; 
+	the OFM2004.</li>
+	<li>The Orthodox File Managers Standard 2004 does not require key assignments 
+	to be exactly the sane as in the standard as long as there is a possibility 
+	to change them.&nbsp; The specified in the standard key bindings are<i> recommended.</i> 
+	If semantically the feature implemented in accordance with OFM doctrine, but 
+	there is no key remapping feature and the OFM use different hot-key, then the 
+	compliance score for the feature is multiplied by 0.66. </li>
+	<li>If feature can be implemented using existing commands (for example unpacking 
+	the archive into the directory with the same name as the name of the archive 
+	can be implemented via user menu) than it is assigned the low Weight (usually 
+	1). </li>
+	<li>The structure of main menu is not defined in the test.</li>
+	<li>The capability to connect with a different computer via serial line is considered 
+	obsolete and not included in the test. </li>
+	<li>All <em>Alt </em>keys can be replaced with <em>Ctrl-Alt </em>keys in Windows 
+	GOFM implementations. </li>
+</ul>
+<p>The OFM2004 standard consists of 3 parts </p>
+<p>Part 1: <b><a href="#Basic_comapitibility">Basic Compatibility </a></b></p>
+<p>Part 2: <b><a href="#Shell Execution compatibility">Shell Execution compatibility</a></b> 
+( Command Line, user menu and extension menu)</p>
+<p>Part 3:<b> <a href="#Built-in Editor and Viewer">Built-in Editor and Viewer
+</a>&nbsp;(</b>Built-in Editor is optional for GUI based implementations)</p>
+<p>Part 4: <b><a href="#VFS_comaptibility">Virtual file systems support compatibility</a></b></p>
+<p>Generally for the inclusion into one of the sections of the standard the feature 
+needs to be present either in MC (as a leading Unix-based implementation), FAR or 
+NCW 2.0 or be consistently implemented in at least two other major OFM implementations 
+(for example XTree virtual file system is consistently implemented in Total Commander 
+and Northern Captain with the hotkey binding Ctrl-B) and have stable semantics.&nbsp;
+</p>
+<p>Hotkey assignments listed below can be different from recommended, if key remapping 
+capability is implemented in a particular OFM, otherwise 0.66 coefficient is used 
+if semantically operation in implemented correctly. For simplicity all numbered 
+requirements have an equal weight. </p>
+<p>All features are assigned <i>weight </i>on the scale 1-3. It is used in calculation 
+of compliance with the standard.&nbsp; </p>
+<ul>
+	<li><b>Weight 3</b> is assigned to features that are considered <b><i>indispensable</i></b>; 
+	they proved their usefulness and are frequently used by power users in existing 
+	implementations; for part one such features constitute the cornerstone of the 
+	&quot;look and feel&quot; of OFMs; developers should think twice before omitting them.&nbsp;
+	</li>
+	<li><b>Weight 2 </b>is assigned to features that are <b><i>essential and field 
+	proven but the absence of which will not noticeably slow down advanced users
+	</i></b>either because there are alternative ways to achieve similar effects 
+	or the features are used not that often </li>
+	<li><b>Weight 1</b> is assigned to those features that, although essential,
+	<i><b>can be fully implemented using existing commands</b></i> (for example 
+	unpacking the archive into the directory with the same name as the name of the 
+	archive can be implemented via user menu). </li>
+</ul>
+<p>If the weight is not stated it should be assumed to be 3</p>
+<h2 align="center"><a name="Basic_comapitibility">Part 1. Basic compatibility</a></h2>
+<ol>
+	<li><b>Panel navigation and basic hot keys compatibility:</b>
+	<ul>
+		<li>The <b>Tab</b> key should change active panel to passive and passive 
+		to active </li>
+		<li><b>Ctrl-\ </b>key should move to the root of the drive ( mandatory only 
+		for DOS/Windows implementations; in Unix is can be home of the current user 
+		(Cd ~) or the mount point of the current file system)</li>
+		<li><b>Ctrl-PgDn</b> and <b>Ctrl-PgUp </b>&nbsp;move to the upper (current 
+		subdirectory) and lower level (parent i.e. CD ..) directories; in Unix left 
+		and right arrows can be used instead (Lynx style navigation in MC), but 
+		they are more error prone.&nbsp; The importance of this feature is that 
+		it permit exit from several level of directories (traversing tree up) without 
+		using tree view<b> </b>(Weight 3)</li>
+		<li><b>Alt-PgDn</b>&nbsp; should open the directory under the cursor (or 
+		archive under the cursor) directory&nbsp; on the passive panel, <b>Alt-PgUp</b> 
+		should show the parent directory on the passive panel&nbsp;
+		<font color="#008000"><b>(new in OFM2004)&nbsp; </b></font></li>
+		<li><b>Ctrl-R</b> -- should reread the directory;</li>
+		<li><b>Ctrl-U </b>-- should swap panels;</li>
+		<li><b>Alt-F1</b> and <b>Alt-F2</b><i> </i>(<b>Ctrl_Alt-F1/F2</b> is recommended 
+		for Windows) should produce the list of logical disks for left and right 
+		panels (not applicable for UNIX implementations. For Unix-based implementation 
+		the list of directory favorites or mount points can be produced.);</li>
+		<li><b>Ctrl-Q </b>should switch to quick view;<i> (only for classic implementations; 
+		n/a for GOFM)</i></li>
+		<li><b>Ctrl-L </b>should switch to the information panel.&nbsp; Information 
+		panel should provide at least statistics about the current directory and 
+		current drive. If directory description (file dirinfo) is available it should 
+		be displayed as well (Compatibility with dirinfo descriptions is optional 
+		for UNIX-based implementations.)<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Compatibility of&nbsp; F1..F8 operations:</b> </li>
+	<ul>
+		<li><b>F1</b> -- should not only invoke hypertext help, it should invoke 
+		help on any item of the toolbar and any item of tool bar menus. The help 
+		should be context sensitive: if some dialog is opened the help should be 
+		about this particular dialog, not the general help tree. <br>
+&nbsp;</li>
+		<li><b>F2 </b>-- user menu or equivalent (start menu). Should provide the 
+		possibility to run user shell scripts with substitution of macro variables 
+		from the panels. Each item of the menu should be activated by its own letter 
+		(hotkey). Format of the macro variable is not defined in this standard but 
+		following Midnight Commander conventions is recommended.&nbsp; See part 
+		2.2 for specification of the user menu semantic. <br>
+&nbsp;</li>
+		<li><b>Invocation of viewer and editor. </b>
+		<ol>
+			<li><b>F3</b> -- should invoke built-in viewer or (in GOFM only) default 
+			viewer </li>
+			<li><b>F4</b> -- should invoke built-in editor or (in GOFM only) default 
+			editor ;</li>
+			<li><b>Alt-F3 </b>and <b>Alt-F4</b> should select alternative viewer 
+			and editor. There should be a configurable option is Command menu to 
+			specify this external viewer and editor</li>
+			<li><b>Optional: Additional option in Options menu </b>to specify invocation 
+			of built-in viewer and editor in the panel mode instead of full screen 
+			mode. At this mode all command line insertion capabilities should be 
+			redirected to editor (Ctrl-[ Ctrl], Ctrl-F, etc).&nbsp; </li>
+			<li>There should be a capability to switch primary and alternative viewer, 
+			so that alternative viewer/editor can be selected via <b>F3/F4</b> and 
+			primary (built-in) via <b>Alt-F3</b> and <b>Alt-F4</b>. <i>(Weight 1)</i></li>
+		</ol>
+		</li>
+		<li><b>F5</b> -- should copy/move subtrees if applied to directories<ol>
+			<li>Should work with selected files and directories</li>
+			<li>In case the file (files) exist on the target panel there should 
+			be an &quot;overwrite&quot; dialog box that contains both file size and creation/modification 
+			dates. </li>
+			<li>In case the user input the name of the directory in the target field, 
+			the copy should be made to this directory</li>
+			<li>File completion (<b>Tab</b> or <b>Alt-Tab</b>) should work. In addition 
+			the ability to complete directory only&nbsp; is recommended but optional&nbsp; 
+			(as an option in<b> move </b>command panel and/or<b> Options/System 
+			Settings </b>menu)<b>. </b></li>
+			<li>Should permit specifying &quot;quick target&quot; via <b>F10. </b></li>
+			<li><b>Shift-F5</b> should either copy file within the same directory 
+			and should gives possibility to specify the path and name. </li>
+			<li><b>Alt-F5</b> should create a &quot;soft link&quot; if they are available 
+			in a particular OS</li>
+			<li>Should be able to copy to a current directory in tree view on the 
+			opposite panel and vise versa. </li>
+			<li>Options &quot;Only newer files&quot; and &quot;with the access rights&quot; are recommended.
+			</li>
+			<li><b>F5-F5</b> <b><font color="#000080">should synchronize panels 
+			(current directory should be displayed on the passive panel).</font></b><br>
+&nbsp;</li>
+		</ol>
+		</li>
+		<li><b>F6</b> should be able to move subtrees. Movement of directories within 
+		the same logical drive should<span lang="ru"> </span>&nbsp;not result in 
+		a copy operation, just a directory modification;
+		<ol>
+			<li>Should work with selected files and directories</li>
+			<li>In case the file (files) exist on the target panel there should 
+			be an &quot;overwrite&quot; dialog box that contains both file size and creation/modification 
+			dates. </li>
+			<li>If the passive panel is hidden should work in rename mode. Also 
+			rename mode can be invoked by <b>F6-F6 </b>sequence. </li>
+			<li>In case the user input the name of the directory in the target field 
+			the move operation should be made to this directory. </li>
+			<li>File completion (<b>Tab</b> or <b>Alt-Tab</b>) should work. In addition 
+			the ability to complete directory only&nbsp; is recommended but optional&nbsp; 
+			(as an option in<b> move </b>command panel and/or<b> Options/System 
+			Settings </b>menu)<b>. </b></li>
+			<li>Should permit specifying &quot;quick target&quot; via <b>F10. </b></li>
+			<li><b>Shift-F6</b> should permit renaming of&nbsp; the target file 
+			or directory with the capability of editing the old name &quot;in place&quot;&nbsp; 
+			(without reentering it) </li>
+			<li><b>Alt-F6 </b>should create a &quot;hard link&quot; if they are available 
+			in a particular OS</li>
+			<li>Should be able to move to a current directory in tree view on the 
+			opposite panel and vise versa. </li>
+			<li>Options &quot;Only newer files&quot; and &quot;with the access rights&quot; are recommended.
+			<br>
+&nbsp;</li>
+		</ol>
+		</li>
+		<li><b>F7</b> should create directories.
+		<ol>
+			<li>Option &quot;process multiple names&quot; should be provided and if activated 
+			should permit specified several directory names separated with &quot;;&quot; (semicolon), 
+			for example<blockquote>
+				<pre><font color="#0000FF">bin; etc; local</font></pre>
+			</blockquote>
+			<p>should create three subdirectories in the current directory, not 
+			one. <br>
+&nbsp;</p>
+			</li>
+			<li><b>Shift-F7</b> or similar combination should create a recursive 
+			copy of all directories of the active panel in the directory at the 
+			opposite panel (just directories, no files)<br>
+&nbsp;</li>
+		</ol>
+		</li>
+		<li><b>F8</b> should delete current or selected files or directory subtree. 
+		It should work if applied to the directory with non-empty subdirectories. 
+		In case the group is selected the operation is performed on each member 
+		of the group. <b>Shift-F8</b> (unlink) or similar combination should work 
+		only there are still multiple link hard link to a particular file/directory.<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Panel Tree View and Directory Search panel compatibility:</b>
+	<ul>
+		<li>Panel resizing</b><ul>
+			<li>Panel should be able to shrink in vertical direction. In this case 
+			&quot;shell area&quot; should enlarge accordingly</li>
+			<li>User should be able to extend of shrink size of left column (possibly 
+			by moving the column divider)</li>
+		</ul>
+		</li>
+		<li><b>Directory tree semantic.&nbsp;&nbsp; </b>In OFMs there should be 
+		two distinct tree panels:<ul>
+			<li><b><i>A regular tree panel.</i></b> Activated by <b>Ctrl-T</b>. 
+			In this case tree replaces the <i><b>passive panel</b></i> Tree panel 
+			should work in three modes:
+			<ul>
+				<li><i>The default mode</i>: The cursor can be moved independently 
+				and does not affect the opposite panel. Pressing Enter opens the 
+				directory under the cursor in the opposite panel. Copy and Move 
+				operations from the opposite panel are targeted to the current directory 
+				on the tree. Quick view mode (<i>&quot;dive into the directory mode&quot;)</i> 
+				should be available via hotkey Ctrl-Q. Quick search mode should 
+				be available via Alt - key combination. </li>
+				<li><i>Quick view mode</i> (<i>&quot;dive into the directory mode&quot;) S</i>witchable 
+				with Ctrl-Q. This mode is similar to the behavior of Windows Explorer 
+				movement of the cursor opens the directory under the cursor in the 
+				opposite window.&nbsp; Mostly used for quick traversing of the directory 
+				tree in a mode similar to quick view with directories opening as 
+				we move the cursor (quick diving into subdirectories). Quick search 
+				should be available. </li>
+				<li><i>Information mode</i> (Ctrl-L). Similar to quick view mode. 
+				But in this case the movement of the cursor on the tree panel opens 
+				not a listing of files in the directory but the information window 
+				should be shown that calculated statistics for the directory (number 
+				of the files, total size, number of subfolders, attributes, owners, 
+				etc).&nbsp; </li>
+			</ul>
+			</li>
+			<li><b><i>The directory search panel. </i></b>Activated by<b><i> </i>
+			Alt-F10</b>. Also should be present as an option in the top menu as 
+			Command/Find folder in Far, Command/Directory tree in mc, ). This panel 
+			should instantly provide a quick search window. It should be also accessible 
+			from copy/move dialogs&nbsp; (via F10) as it is often used not only 
+			for the &quot;directory completion&quot; and traversing of the tree, but also 
+			for the quick selection of the target directory for copy/move operations</li>
+			<li>Both panels should support expansion/collapse branches (Standard 
+			hotkeys are currently undefined; Ctrl-+/Ctrl- hotkeys are recommended)<br>
+&nbsp;</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	</li>
+	<li><b>Tree Panel Hotkeys Compatibility </b>
+	<ol>
+		<li><b>Tree View panel </b>
+		<ol>
+			<li>In tree panel usual keys can be using for moving the directories 
+			to the opposite panel. </li>
+			<li>Regular copy/move keys should also work from the regular panel if 
+			tree panel is the target. In this case the target directory is the current 
+			directory on the tree panel. </li>
+			<li>Delete operation should work on tree panel. </li>
+			<li>Movement of the cursor on the panel with tree representation should 
+			not lead to change of the directory on the current panel unless Ctrl-Q 
+			was additionally pressed (quick mode activated).&nbsp; </li>
+			<li><b>Ctrl-enter </b>should paste the current directory in the command 
+			line</li>
+		</ol>
+		</li>
+		<li><b>Quick search in Tree View panel: </b>
+		<ol>
+			<li><b>Ctrl-Q</b> on tree panel should switch the panel into &quot;quick 
+			search mode&quot; like normal panel. In this mode changing the directory 
+			on the active panel should lead to display of the content of this directory 
+			on the passive panel. In quick search mode <b>Ctrl-Enter</b> should&nbsp; 
+			jump to the next directory with the same prefix (If no prefix is specified 
+			it find the next directory with the same name, if any)&nbsp; In normal 
+			mode it should paste the current directory into the command line.
+			</li>
+			<li>Ctrl-Enter should&nbsp; jump to the next directory with the same 
+			prefix. If there is no text in the quick search window quick search 
+			mode should find the next directory with the same name, if any. </li>
+			<li>Rescanning of the directory tree should be available via Ctrl-R 
+			and/or F2. Pressing Alt-F10 should <em>not</em> produce rescanning of 
+			the disk without reason. </li>
+		</ol>
+		</li>
+		<li><b>Both panels </b>
+		<ol>
+			<li>Backspace should move to the previous level of the directory tree.
+			</li>
+			<li><b>Gray+</b> (or spacebar), <b>Gray-</b> (backspace) should move 
+			up and down the tree to the next branch on the same level&nbsp; (left 
+			arrow and right arrow can be used in Unix). </li>
+			<li>Quick search should be activated for Directory Search panel on invocation 
+			. </li>
+			<li><b>Ctrl-PgUp/Ctrl-PgDn</b> should work as usual on both Tree panel 
+			and Directory search panel. <br>
+&nbsp;</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+	<li><b>Selection/deselection compatibility:</b></li>
+	<ol>
+		<li><b>Ins</b> should select a single file (cursor may move one line down 
+		if such option is set);</li>
+		<li><b>Gray+</b> and <b>Gray- </b>should select and deselect file using 
+		a regular expression or mask;</li>
+		<li><b>Gray *</b> should invert the selection;</li>
+		<li>Special keys (<b>Ctrl-Gray+</b> and <b>Ctrl-Gray- </b>are recommended) 
+		for selecting deselecting all files regardless of current selection;</li>
+		<li>Selection and deselection operations should be persistent (second selection 
+		operation should add to existing selection, deselection should remove some 
+		or all files). </li>
+		<li>Restore Selection operation (no standard key exist). It should restore 
+		highlighting of files selected for last copying operation. </li>
+		<li>UNIX-style regular expressions should be supported&nbsp; in selections 
+		(expression *a*.* should select files like my_bak.tmp and my_bat.txt, not 
+		all files) </li>
+		<li>Ability to select all file with the extension equal to the extension 
+		of the current file or the last part of the filename in UNIX (<b>Ctrl-Enter</b> 
+		for the extension).</li>
+		<li>Selections history should be available with the ability to open history 
+		with <b>Ctrl</b>-<b>ArrowDn</b>, or browse it in the input line ( C-shell 
+		style) with <b>ArrowUp</b> and <b>ArrowDn</b> keys.</li>
+		<li>Option &quot;Process multiple names&quot; should be provided and if activated 
+		should permit specified several regular expressions (or DOS masks) separated 
+		with &quot;;&quot; (semicolon), for example<blockquote>
+			<pre><font color="#0000FF">*.html; *.htm</font></pre>
+		</blockquote>
+		</li>
+	</ol>
+	</li>
+	<li><b>Quick view compatibility:</b>
+	<ol>
+		<li>The viewer should be invokes according to the extension menu (file association 
+		list) information. </li>
+		<li>For archive content of the information files should be shown (list of 
+		information files should be customizable, but default should include&nbsp; 
+		File_id.diz, read.me, readme.1st). In case no description is available the 
+		content of the archive should be should.</li>
+		<li>Pressing F3 or Alt-F3 in quick view should lead to switching to regular 
+		(wide screen ) view. </li>
+		<li>Pressing F4 should invoke the editor in the panel (no full screen)<br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>Quick search compatibility:</b>
+	<ol>
+		<li>Alt-<em>letter</em> (or Ctrl-Alt for GUI-based versions) quick search 
+		option should be available for both regular and tree views of the panel.
+		</li>
+		<li>Ctrl-Enter during quick search should move to the next item with given 
+		initial letters.<br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>FindFile(Ctrl-F7) compatibility</b>
+	<ul>
+		<li>Reversible implementation of at least View ( F3 and edit (F4)&nbsp;&nbsp; 
+		-- after exiting user return to the search panel without researching; irreversible 
+		implementation of Jump (Enter). <br>
+		Please note that search can be used as a poor man command completion in 
+		the current directory: it&#39;s very convenient for files with long names and 
+		for search operation and essentially bridges search operation and wide (double-width) 
+		panel representation.</li>
+		<li>The ability to search by content (regular expression like in Grep)
+		<i>(Weight 3)<b> </b></i></li>
+		<li>The ability to search by timestamp range and age of the file <i>(Weight 
+		3)<b> </b></i></li>
+		<li>The ability to search by size (interval) <i>(Weight 3)<b> </b></i>
+		</li>
+		<li>The ability to search by attributes (Weight 2)</li>
+		<li>Search history <i>(Weight 3)<b> </b></i></li>
+		<li>Panelize option or availability of all other file operations directly 
+		from the search panel (optional if Script-based VFS is implemented as in 
+		MC); Refresh (Ctrl-R) should work for panelized view. </li>
+		<li>Search from the root and search from the current directory options</li>
+		<li>The possibility of a quick selection of the start directory using tree 
+		search panel (F10)</li>
+		<li>Search in archives<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Sorting directories compatibility:</b>
+	<ul>
+		<li>The ability to view files (and optionally directories, but directories 
+		should generally precede files) sorted by name, time, size, and unsorted 
+		order (minimum is &quot;NETSU&quot; (sorting by <b>N</b>ame, <b>E</b>xtension, modification<b> 
+		T</b>ime, <b>S</b>ize, and <b>U</b>nsorted). The ability to sort by creation 
+		time, access time and descriptions is optional.&nbsp;&nbsp; For Unix, the 
+		ability to sort by permissions, owner and group is recommended (&quot;NETSUPOG&quot;).&nbsp;&nbsp;
+		</li>
+		<li>The hotkey assignment for sorting is optional.&nbsp; If the hotkey is 
+		defined its action should correspond to the <b>F9-(LR)-S</b> sequence for 
+		the current panel and display the same menu so that the proper order can 
+		be selected with the second key from the menu ( <b>Ctrl-F12 (FAR)</b> is 
+		recommended).&nbsp; In addition, &quot;old-style&quot; hotkeys <b>Ctrl-F3</b>, <b>
+		Ctrl-F4</b>, <b>Ctrl-F5</b>, <b>Ctrl-F6</b> and <b>Ctrl-F7</b> can be provided&nbsp; 
+		for sorting by name, extension, modification time, size and unsorted, correspondingly 
+		(&quot;NETSU&quot; order).&nbsp; </li>
+		<li>The ability to reverse the sorting order by using the same hotkey again 
+		should be provided. </li>
+		<li>If mouse is supported, then mouse click on any header (name, size, time, 
+		etc) in the panel view should change the sorting order for this attribute. 
+		Second mouse click on the same button reverses the sorting order (Windows 
+		Commander 3.03; NCW 1.0); </li>
+		<li>Sorting Groups should be available, for example (htm|html|shtml) as 
+		one group.&nbsp; <br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>User menu script invocation compatibility (GUI implementations can provide 
+	alternative methods to run custom scripts with parameters taken from the panel):</b>
+	<ol>
+		<li>The ability to specify the hotkey and the label for each script</li>
+		<li>Multiple commands can be written without need to create a separate batch 
+		file </li>
+		<li>Include files are permitted in the user menu</li>
+		<li>The ability to use symbols from both passive and active panels in user 
+		menu commands<br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>Additional file commands compatibility:</b></li>
+	<ol>
+		<li>File attribute command (no hot key specified, should be available via 
+		menu) should permit changing of attributes and file stamps of a&nbsp; single 
+		file or group of files, or subtree (if applied to the directory) as well 
+		as ownership (in Unix);</li>
+		<li>File case conversion command should permit changing of the case of the 
+		file or group of files (not applicable to DOS 6 and lower)<br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>Association management compatibility:</b></li>
+	<ol>
+		<li>The ability to specify one or several associations for the same extension</li>
+		<li>The ability to use macrosymbols in the association table <br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>Dialog box extensions:</b> </li>
+	<ul>
+		<li>Support of regular expressions everywhere were applicable (MC, FAR). 
+		Unix RegEx notation should be used. </li>
+		<li><em>Ctrl-Enter</em>, <em>Ctrl-[ </em>and <em>Ctrl-]</em> keystrokes 
+		pressed in input lines of dialog boxes make the same actions as in the command 
+		line (VC)</li>
+		<li>Mouse click on current file in the panel information line (bottom line 
+		of the panel) should input file extension to the opened dialog box, for 
+		example the selection list or copy dialog box&nbsp; (VC).</li>
+		<li>Support of clipboard and standard set of editing operation in dialog 
+		boxes.<em> Ctrl-X/C/V </em>or equivalents<em> (Shift-Del, Ctrl-Del and Ctrl-Ins)
+		</em>should be available in dialog boxes for copy/paste operations. <em>
+		Shift-left/right</em> key operations should give a possibility to select 
+		arbitrary part of the current line. </li>
+		<li>For each dialog box toolbar should provide list of functional keys applicable 
+		(for example F10 is applicable for most file operations)<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Working with attributes</b><br>
+&nbsp;</li>
+	<li><b>Compare directories</b>
+	<ul>
+		<li>Erase preexisting highlighting</li>
+		<li>Comparison rules/filters (size only, date only, etc)</li>
+		<li>Option to block highlighting newer files with equal size (important 
+		for FTP VFS comparison)</li>
+		<li>Synchronize option or command<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Compare files operation</b>
+	<ul>
+		<li>Binary</li>
+		<li>Text</li>
+		<li>Ignore case</li>
+		<li>Ignore whitespace<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Favorite directories list. </b>Basic functionality should be close to 
+	provided by Netscape:<ul>
+		<li>The ability to add the current directory to the current favorites list 
+		using hotkey (and/or button in GUI implementations like add to favorites 
+		button in Netscape;</li>
+		<li>Browsing with standard viewer keys navigation compatibility;</li>
+	</ul>
+	</li>
+	<li><b>Command line history<br>
+&nbsp;</b></li>
+	<li><b>Keyboard macro support (DN, FAR, JC).</b> </li>
+	<ul>
+		<li>It should be possible to assign a sequence of keystrokes to a key and 
+		delete assigned sequence. </li>
+		<li>Macro recoding should be extended to built-in viewer and editor (JC);</li>
+		<li>Macro recorder should provide the possibility to send keystrokes to 
+		the launched applications and redefine keystrokes in launched applications 
+		like famous KM by E.Yutsis (see
+		<a href="../../Bulletin/Contents/index.html">Softpanorama archives</a>).
+		</li>
+	</ul>
+	</li>
+	<ul>
+	</ul>
+	</li>
+</ol>
+<h2>Part 2: <a name="Shell Execution compatibility">Shell Execution compatibility</a></h2>
+<b>
+<ol>
+	<li><a name="Shell_windows_compatibility">Shell windows compatibility</a></b><ol>
+		<li>The command line at the bottom of the screen actually is a minimized 
+		to one line shell windows and there should be at least two capabilities 
+		to expand them</li>
+		<li>Ctrl-O should&nbsp; maximize shell screen to the whole terminal window 
+		(hide panels). In the resulting screen standard shell functionality should 
+		be present as if this is a telnet session to localhost. For example, if 
+		the shell for a particular OS provides browsing of shell history with arrow 
+		keys this should work.&nbsp; (for COFMs only, GOFMs can extend active panel 
+		to the full screen, if they do not support OS shell screen view);</li>
+		<li>Ctrl-F1/Ctrl-F2 should provide a view of the shell screen with overlaid 
+		one panel. If this panel contains minimized editor it should remain functional.
+		</li>
+		<li>There should be either the ability to expand/shrink shell screen one 
+		line at a time (like in Far) or provide one step expansion to half screen 
+		(like in classic NC implementation since NC 2.0) with a hotkey. <br>
+&nbsp;</li>
+	</ol>
+	<b></li>
+	<li>Command line (minimized shell window) compatibility: </b>
+	<p></p>
+	<ol>
+		<li>Cursor movement keys should work like in OS shell when panels are hidden
+		</li>
+		<li>Command history&nbsp; availability:<ol>
+			<li>Should be available&nbsp; both via hotkey (<b>Alt-F8</b>)&nbsp; 
+			and C-shell-style browsing mode.&nbsp; </li>
+			<li>In C-shell style browsing mode&nbsp; the retrieval of a command 
+			from the history into the command line should be possible with the hotkeys, 
+			for example (for example, <b>Alt-E, Alt-X </b>like in NC5). </li>
+			<li>The possibility of&nbsp; sorting command history in history window 
+			and eliminating duplicates. </li>
+		</ol>
+		</li>
+		<li>Command completion feature: Alt-Tab<i> or </i><b>Ctrl-End</b> at the 
+		end of the command line complete the command starting with these symbols 
+		from the command history. In case several variant of completion are possible 
+		they should either displayed or it should be possible to press <b>Ctrl-End</b> 
+		several times to find the next command in the history that has the same 
+		prefix;</li>
+		<li>Change of the current directory via command or script execution changes 
+		the directory on the active panel;</li>
+		<li>The ability to execute arbitrary command or script for selected files 
+		(DN, VC, FAR, WinCmd) ;<br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>The &quot;special paste&quot; operation compatibility.</b> The following operation 
+	should be supported for command line (minimized shell window) mode:
+	<ol>
+		<li>Inserting current path from left and right panels (<b>Ctrl-[ </b>and
+		<b>Ctrl-]</b>) </li>
+		<li>Inserting the&nbsp; current file <b>Ctrl-Enter</b>&nbsp; (if one or 
+		several files are selected they should be inserted into the command line 
+		instead of the current) </li>
+		<li>Inserting the current file with the full path <b>Ctrl-Shift-Enter</b></li>
+		<li>Optional<ul>
+			<li>Inserting the current file from the passive panel</li>
+			<li>Inserting the&nbsp; current file with abs path from the passive 
+			panel<br>
+&nbsp;</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li><b>User menu (usually bound to F2)</b>. Also called Start menu. Should provide 
+	the possibility to run user shell scripts with substitution of macro variables 
+	that represent information extracted prom active or passive panel.&nbsp; The 
+	menu may contain submenus. Each item of the menu should be activated by its 
+	own letter (hotkey). <br>
+&nbsp;<ol>
+		<li>You can create three types of user menu: global (or main), user-based 
+		and directory based.
+		<ol>
+			<li>The main user menu is called if no local menu for the current folder 
+			is available. </li>
+			<li>User is called if user defined its own menu in his home directory</li>
+			<li>The local menu may be placed in any folder. <br>
+&nbsp;</li>
+		</ol>
+		</li>
+		<li>You may switch between the main menu and the user menu by pressing Shift-F2 
+		instead of F2. <br>
+&nbsp;</li>
+		<li>If local (directory-based)&nbsp; menu is present then it overrides both 
+		user menu and main menu<br>
+&nbsp;</li>
+		<li>Format of the macro variable is not defined in this standard but following 
+		Midnight Commander conventions is recommended.&nbsp; <br>
+&nbsp;</li>
+		<li>To execute a user menu command, select it with cursor keys and press 
+		Enter.<br>
+		You may also press the hot key assigned to the required menu item. It is 
+		possible to use digits, letters and function keys (F1..F12) as hot keys 
+		in user menu. If F1 or F4 is used, its original function in user menu is 
+		overridden. However, you still may use Shift-F4 to edit the menu.<br>
+&nbsp;</li>
+		<li>User should be able to edit user menu using regular built-in editor.
+		<br>
+&nbsp;</li>
+		<li>Two styles of macro substitution symbols are acceptable (MC-style or 
+		NC-style). MC style is recommended and NC style is deprecated.&nbsp; <br>
+&nbsp;<ol>
+			<li><b>The MC-style naming system for macro substitution symbols for 
+			active panel</b> (see nelow the set for passive panel) <br>
+&nbsp;<ul>
+				<li>&quot;%f&quot; The current file name.</li>
+				<li>&quot;%F&quot; The current file in the unselected panel.</li>
+				<li>&quot;%d&quot; The current directory name.</li>
+				<li>&quot;%D&quot; The directory name of the unselected panel.</li>
+				<li>&quot;%t&quot; The currently tagged files.</li>
+				<li>&quot;%T&quot; The tagged files in the unselected panel.</li>
+				<li>&quot;%u&quot; and &quot;%U&quot; Similar to the %t and %T macros, but after the 
+				operation all selected files are untagged. That means that this 
+				macro can be used only once per menu entry (or extension entry), 
+				because on the second and subsequent invocations there will be no 
+				tagged files.</li>
+				<li>&quot;%s&quot; and &quot;%S&quot;&nbsp; The tagged files if there are any. Otherwise 
+				the current file.</li>
+				<li>&quot;%cd&quot; This is a special macro that is used to change the current 
+				directory to the directory specified in front of it. This is used 
+				primarily as an interface to the VFS.</li>
+				<li>&quot;%view&quot;&nbsp; the invocation of the internal viewer. An argument 
+				to force the viewer in a particular mode can be passed:<em> ASCII
+				</em>to force the viewer into ASCII mode; <em>hex</em> to force 
+				the viewer into hex mode; <br>
+				</li>
+				<li>&quot;%%&quot; The % character</li>
+				<li>&quot;%{some text}&quot; Popup an input box and prompts for the substitution.&nbsp;&nbsp; 
+				The user should be able to cancel input ( ESC or F10 recommended).
+				<br>
+&nbsp;</li>
+			</ul>
+			</li>
+			<li>There should also be a special prefix of suffix that turns macro 
+			symbols for active panel to macro symbols to passive panel, if applicable, 
+			for example %f is the current file name on active panel but %-f is the 
+			current name on the passive panel. <br>
+&nbsp;</li>
+			<li><b>NC-style</b> <b>naming system for macro substitution symbols 
+			in OFMs</b> (not recommended for Unix implementations, they should use 
+			mc-style symbols, see above). At least the following macro symbols should 
+			be defined:<br>
+			<br>
+&nbsp; !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The current 
+			file name without extension<br>
+&nbsp; !.!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The current file name 
+			with extension<br>
+&nbsp; ^!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The current filename 
+			of the passive panel without extension<br>
+&nbsp; ^!.!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The current filename of the 
+			passive panel <br>
+&nbsp; !&amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of names of selected files<br>
+&nbsp; !:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The current drive<br>
+&nbsp; !\&nbsp; or !/&nbsp;&nbsp; The current path<br>
+			<br>
+			Some prefix or suffix (for example ^) can be used to define the same 
+			macros for the passive panel to refer to the passive panel. <br>
+			<br>
+			NC style is deprecated and should be avoided in new implementations 
+			of OFMs<br>
+&nbsp;</li>
+		</ol>
+		</li>
+		<li><b>Optional:</b> MC-style system of hiding menu elements using &quot;visibility 
+		predicates&quot;. <br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>Extension menu (file association list) </b>
+	<ol>
+		<li> should allow regular expressions in defining associations (like in mc) <br>
+		Should allow </b>the following&nbsp; commands to be associated with a particular 
+		file type, defined by regular expression&nbsp; or DOS-style wildcard mask 
+		or shell script:<ol>
+			<li><b>Execute command:&nbsp;&nbsp;&nbsp; </b>Performed if Enter is 
+			pressed</li>
+			<li><b>Alternative execute</b>&nbsp;&nbsp; Performed when GreyEnter 
+			or Ctrl-PgDn is pressed</li>
+			<li><b>View command: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Performed if F3 is pressed</li>
+			<li><b>Alternative view </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Performed when Alt-F3 is pressed</li>
+			<li><b>Edit command: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Performed if F4 is pressed</li>
+			<li><b>Alternative Edit:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Performed when Alt-F4 is pressed<br>
+&nbsp;</li>
+		</ol>
+		</li>
+		<li>In case multiple association are trigged by the file a menu should be 
+		displayed and the user should be able to select the best association manually.
+		</li>
+		<li>The user should be able to add new associations with the Edit associations 
+		command in the Commands menu.<b> </b></li>
+		<li>There should be a possibility to block switching&nbsp; the panels off 
+		during the execution of the command (implementation dependent, for example 
+		using special prefix)</li>
+	</ol>
+	</li>
+</ol>
+<h2>Part 3: <b><a name="Built-in Editor and Viewer">Built-in Editor and Viewer
+</a><br>
+(optional for GUI-based OFMs):</b></li> </h2>
+<ol>
+	</li>
+	<li><b>Built-in viewer:</b></li>
+	<ol>
+		<li>Should be able to work in full screen mode and in the panel mode both 
+		in quick view and in regular mode (via some hotkey (for example Alt-F3). 
+		This mode should be configurable in Options menu as an alternative for external 
+		viewer invocation. This is very useful if 132 symbol mode is used.&nbsp;&nbsp;
+		</li>
+		<li>The ability to expand shell windows described in Part 2 should be preserved. 
+		For example Ctrl-O should maximize shell windows to the whole screen.</li>
+		<li>Special hot key to go to a line number (Ctrl-G or Ctrl-F8). The ability 
+		to go to the absolute or relative (+5, -5) line number as well as the percentage 
+		of the file (FAR). A mouse click on the current line number should open 
+		panel to specify line number to go.&nbsp; </li>
+		<li><em>End</em> should go to the end of the file; <em>Home</em> to the 
+		beginning of the file;</li>
+		<li>Wrap/unwrap long lines feature should be available via <b>F2</b>;</li>
+		<li>The ability to view file in hex should be provided (via <b>F4</b>)<br>
+		<strong>Optional:</strong> The ability to jump to hex offset and/or line 
+		number;</li>
+		<li>Search compatibility<ol>
+			<li>The ability to search for both text strings (case sensitive or not) 
+			and regular expression (F7). Default for F7 search is text string or 
+			configurable. Default hotkey for RegEx search is &quot;/&quot; or &quot;?&quot;. </li>
+			<li>The hotkey for repeat search (F17, Shift-F7)</li>
+			<li>The ability to search in reverse direction (Alt-F7 or Ctrl-Alt-F7);</li>
+			<li>&quot;/&quot; and &quot;?&quot; keys should serve as additional hotkeys for regular 
+			expressions search forwards/backwards as in many unix tools (FC).
+			</li>
+		</ol>
+		</li>
+		<li>F3 exit the viewer -- very convenient key assignment for quick exit 
+		from the viewer (MC,FAR); </li>
+		<li>Autodetection of UNIX-style text files (in Windows) and DOS-style in 
+		Unix;</li>
+		<li>Bottom menu changes when Ctrl and/or Alt is pressed.</li>
+		<li><b>Optional: </b>Bookmarks mechanism should be provided <br>
+&nbsp;</li>
+	</ol>
+	</li>
+	<li><b>Built-in Editor</b><ol>
+		<li>Autodetection of Unix/Dos style text files and preservation of the style 
+		in save. </li>
+		<li>A user should be able to invoke the editor in the panel mode via some 
+		hotkey (for example <b>Alt-F4</b>). This is very useful if 132 symbol mode 
+		is used. In panel mode all command line insertion hotkeys should be redirected 
+		to the current position of the cursor in editor (Ctrl-[, Ctrl-], etc)&nbsp;
+		</li>
+		<li>Special hot key to go to a line number (Ctrl-G or Ctrl-F8). The ability 
+		to go to the absolute or relative (+5, -5) line number as well as the percentage 
+		of the file (FAR). A mouse click on the current line number should open 
+		panel to specify line number to go.&nbsp; </li>
+		<li>Hotkey for finding matching bracket should be provided. </li>
+		<li><b>Cursor movement.</b> <em>Please note that Ctrl-Home/Ctrl-End </em>&nbsp;go 
+		to top line/bottom line of the file;<br>
+		<br>
+&nbsp;&nbsp; Left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Character left<br>
+&nbsp;&nbsp; Right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Character right<br>
+&nbsp;&nbsp; Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Line up<br>
+&nbsp;&nbsp; Down&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Line down<br>
+&nbsp;&nbsp; Ctrl-Left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Word left<br>
+&nbsp;&nbsp; Ctrl-Right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Word right<br>
+&nbsp;&nbsp; Ctrl-Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Scroll screen up <i>(Weight 1) </i><br>
+&nbsp;&nbsp; Ctrl-Down&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Scroll screen down <i>(Weight 1) </i><br>
+&nbsp;&nbsp; PgUp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Page up<br>
+&nbsp;&nbsp; PgDn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Page down<br>
+&nbsp;&nbsp; Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Start of line<br>
+&nbsp;&nbsp; End&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		End of line<br>
+&nbsp;&nbsp; Ctrl-Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Start of file<br>
+&nbsp;&nbsp; Ctrl-End&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		End of file<br>
+&nbsp;&nbsp; Ctrl-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Start of screen&nbsp; <i>(Weight 1) </i><br>
+&nbsp;&nbsp; Ctrl-E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		End of screen <i>(Weight 1) </i><br>
+&nbsp;</li>
+		<li><b>Delete operations.</b> It&#39;s mandatory to support standard block selection 
+		operations <em>Shift-left/right/up/down</em> and Ctrl-C, Ctrl-X and Ctrl-V 
+		as copy cut and paste. <em>Please note that Ctrl-Delete (and/or </em>Ctrl-T<em>)&nbsp;
+		</em>- delete word right of the cursor and&nbsp; Ctrl-Backspace to the left 
+		of the cursor <br>
+		<br>
+&nbsp;&nbsp; Del&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Delete char (also may delete block,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		depending upon Editor settings<br>
+&nbsp;&nbsp; BS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Delete char left<br>
+&nbsp;&nbsp; Ctrl-Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Delete line<br>
+&nbsp;&nbsp; Ctrl-K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Delete to end of line<br>
+&nbsp;&nbsp; Ctrl-BS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Delete word left<br>
+&nbsp;&nbsp; Ctrl-T, Ctrl-Del&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete word 
+		right<br>
+&nbsp;</li>
+		<li><b>Block operations:</b><br>
+		<br>
+&nbsp;&nbsp; Shift-Cursor keys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select block<br>
+&nbsp;&nbsp; Ctrl-Shift-Cursor keys&nbsp; Select block<br>
+&nbsp;&nbsp; Alt-gray cursor keys&nbsp;&nbsp;&nbsp; Select vertical block<br>
+&nbsp;&nbsp; Alt-Shift-Cursor keys&nbsp;&nbsp; Select vertical block<br>
+&nbsp;&nbsp; Ctrl-Alt-gray keys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select vertical block<br>
+&nbsp;&nbsp; Ctrl-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Select all text<br>
+&nbsp;&nbsp; Ctrl-U&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Deselect block<br>
+&nbsp;&nbsp; Shift-Ins, Ctrl-V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Paste block from 
+		clipboard<br>
+&nbsp;&nbsp; Shift-Del, Ctrl-X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cut block<br>
+&nbsp;&nbsp; Ctrl-Ins, Ctrl-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copy block 
+		to clipboard<br>
+&nbsp;&nbsp; Ctrl-<gray +></gray>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Append block to clipboard<br>
+&nbsp;&nbsp; Ctrl-D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Delete block<br>
+&nbsp;&nbsp; Ctrl-P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Copy block to current cursor position<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		(in persistent blocks mode only)<br>
+&nbsp;&nbsp; Ctrl-M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Move block to current cursor position<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		(in persistent blocks mode only)<br>
+&nbsp;&nbsp; Alt-U&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Shift block left<br>
+&nbsp;&nbsp; Alt-I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Shift block right<br>
+&nbsp;</li>
+		<li><b>Search</b> (regex support should be implemented) <br>
+&nbsp;&nbsp; F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Search<br>
+&nbsp;&nbsp; Ctrl-F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Replace<br>
+&nbsp;&nbsp; Shift-F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Continue search<strong><br>
+		Optional:</strong> <em>Alt-F7 </em>- Search for same text in reverse direction;<br>
+		<br>
+		</li>
+		<li>The ability to view hex representation of the current symbol in the 
+		upper menu;</li>
+		<li><b>For Windows only:</b> Bottom menu should change when <em>Ctrl</em> 
+		or <em>Alt</em> keys are pressed;</li>
+		<li><em>Shift-F4 </em>creates a new file (prompts for the name) instead 
+		of editing current;</li>
+		<li><em>Ctrl-Q</em> -- Quote character (insertion of special characters)</li>
+		<li><em>Ctrl-Y</em> -- delete&nbsp; current line; <em>Ctrl-T</em> (or Ctrl-backspace) 
+		-- delete current word; Ctrl-Z or Alt-Backspace undo (at least the current 
+		line). </li>
+		<li><em>Insert</em> - Toggle Insert/Overstrike mode;<br>
+		<strong>Optional: </strong>hot key for Auto-indent mode;</li>
+		<li><em>F2</em> - Save changes without exiting; <em>Shift-F2</em> save with 
+		new name (SaveAs);</li>
+		<li><em>ESC,F10</em> - Exit (should produce save prompt if changes were 
+		made);<em> Shift-F10</em> - save and exit. </li>
+		<li>Ctrl-[ Ctrl-] and Ctrl-Enter (or Shift-Enter) should paste left panel 
+		path, right panel path and the current file name at the cursor location.</li>
+		<li>F6 -- if in viewer, switch from the viewing the file to editing it and 
+		vise versa, if in editing mode switch to viewing mode.&nbsp; </li>
+	</ol>
+	</li>
+</ol>
+</li>
+<ol>
+</ol>
+<h2><a name="VFS_comaptibility">Part 3. Virtual file systems support compatibility</a></h2>
+<ol>
+	<li><b>FTP virtual file system:</b><ul>
+		<li>Panel navigation and representation:</li>
+		<ul>
+			<li>Uppercase file names should not be converted to lowercase on the 
+			FTP VFS panel</li>
+			<li>Quick search (alt-<em>&lt;letter&gt;</em>) should work on archive VFS 
+			panel. </li>
+		</ul>
+		</li>
+		<li>Minimum set of operations on files, selected files and directories:
+		<ul>
+			<li>view</li>
+			<li>edit</li>
+			<li>copy (with option of changing of case of the files);</li>
+			<li>move (with the same option);</li>
+			<li>delete;</li>
+			<li>MKDIR;</li>
+			<li>change case command;</li>
+			<li>rename command;</li>
+			<li>compare directories command.<br>
+&nbsp;</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><b>Network &quot;client server&quot; mode:</b> via TCP/IP (like in MC) and/or parallel 
+	cable (Total Commander). <br>
+&nbsp;</li>
+	<li><b>Archive virtual file system:</b><ul>
+		<li>Compress and extract commands that permit compress subtree into archive 
+		with optional deletion of subtree. Extract command should permit creation 
+		of a folder for extraction ( FAR, DN): <br>
+&nbsp;</li>
+		<li>Navigation compatibility: </li>
+		<ul>
+			<li>pressing of the Enter key on the archive file should produce the 
+			listing of archive content in the panel;</li>
+			<li>Any operation for leaving the folder should work as closing the 
+			archive view.</li>
+			<li>Quick search (alt-<em>&lt;letter&gt;</em>) should work on archive VFS 
+			panel.<br>
+&nbsp;</li>
+		</ul>
+		</li>
+		<li>Reasonable subset of file operations implemented:&nbsp; </li>
+		<ul>
+			<li>View, quick view&nbsp; and edit should be supported;</li>
+			<li>Files can be selected, deselected as in regular folder;</li>
+			<li>File or groups can copied (copying to regular folder result in extraction; 
+			copying to archived folder results in compression; copied, moved, viewed 
+			and so on;</li>
+			<li>Files can be deleted and renamed;</li>
+			<li>Support of View (including &quot;Quick View&quot; and Edit operations)</li>
+			<li>Support of directory based operations with archive as a target (compressing 
+			directory with all subdirectories to the archive) </li>
+			<li>Support of compare directories operation between archive and regular 
+			folder and between two archives.</li>
+			<li>Add to archive operation on the directory should create archive 
+			of that directory and optionally delete the directory and all files 
+			in it.</li>
+			<li>Complete archive extraction to the directory operation on the archive 
+			should create directory with the name of the archive by default and 
+			un-archive all files into this directory. </li>
+		</ul>
+		</li>
+		<li>Support of at least ZIP, GZIP, TAR, ARJ, RAR and LHA;</li>
+		<li>If both panels are viewing archives, file operation like copy and move 
+		should be possible.</li>
+		<li>Ability to view self-extracting archives via Ctrl-PgDn;</li>
+		<li>Support of additional commands (integrity check, repair, etc.) via special 
+		menu item (for example Shift-F3);<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Search VFS (optional if Script VFS is implemented)</b>
+	<ul>
+		<li>Panelize command in the search mode creates a virtual panel with the 
+		files that satisfies the search criteria. </li>
+		<li>Ability to hide full path in order to see duplicates and other anomalies.
+		</li>
+		<li>The ability to perform operations with a single file on Search VFS as 
+		a target </li>
+		<li>Ability to use panel filters with the virtual search panel. <br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Xtree VFS&nbsp; (also called &quot;flat&quot; VFS, recommended key assignment Ctrl-B)</b><br>
+	The ability to view all files in the subtree (current directory and all its 
+	subdirectories) as a double-width panel (like in Xtree) with all file operations 
+	available. This is a very important feature for system administration.&nbsp; 
+	Filters on subtree should be available (Total Commander, Northern Capitan)<br>
+&nbsp;</li>
+	<li><b>Script VFS -- the ability run an arbitrary script that produce a list 
+	of names of files and view the result in the panel (MC <em>panelize</em> command).</b>
+	<ul>
+		<li>All reasonable operations that use this panel as a source should be 
+		allowed. </li>
+		<li>Only a single file can be used as a target.</li>
+		<li>Refresh operation should lead to another invocation of the script<br>
+&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Briefcase VFS (panelizing history of visited directories and browsed 
+	files) </b>
+	<ul>
+		<li>History of browsed files<ul>
+			<li>Automatic&nbsp; addition of links to all recently changed files 
+			to the briefcase virtual directory;</li>
+			<li>Automatic deletion of the files from the briefcase that are more 
+			than N days old;</li>
+			<li>Ability manually add files to the briefcase folder;</li>
+			<li>Ability to use a briefcase as a virtual source panel for all relevant 
+			file and selection based operations;</li>
+			<li>Ability to discard the content of a briefcase.</li>
+			<li>Only single file in the briefcase can be used as a target<br>
+&nbsp;</li>
+		</ul>
+		</li>
+	</ul>
+	<ul>
+		<li><b>History of visited directories VFS </b>(it can be a very limited 
+		VFS -- essentially FAR functionality is enough)</li> </li>
+	</ul>
+	<blockquote>
+		<blockquote>
+			<ul>
+				<li>The ability to view the history of visited directories it in 
+				a virtual panel and be able to perform reasonable subset of operations 
+				on this list;</li>
+				<li>Hotkeys&nbsp; and/or buttons to navigate history (like back 
+				and forward buttons in Netscape);</li>
+				<li>Ability to add directories from the favorite list to history</li>
+				<li>Ability to search history;</li>
+			</ul>
+		</blockquote>
+	</blockquote>
+	</li>
+</ol>
+</b>
+
+
+</body>
+
+</html>

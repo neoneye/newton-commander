@@ -1,0 +1,34 @@
+//
+// Prefix header for all source files of the 'OrthodoxFileManager' target in the 'OrthodoxFileManager' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define STATIC_CHECK(expr) \
+	typedef int _STATIC_CHECK_dummy[(expr) ? 1 : -1]
+
+
+typedef unsigned long long FileSize;
+STATIC_CHECK(sizeof(FileSize) == 8);
+
+
+#define TIME0 \
+	double time0 = CFAbsoluteTimeGetCurrent();
+
+#define TIME1 \
+	double time1 = CFAbsoluteTimeGetCurrent();
+
+#define TIME2 \
+	double time2 = CFAbsoluteTimeGetCurrent();
+
+#define TIME3 \
+	double time3 = CFAbsoluteTimeGetCurrent();
+
+#define TIME4 \
+	double time4 = CFAbsoluteTimeGetCurrent();
+
+
+#define NAMESPACE_BEGIN namespace {
+#define NAMESPACE_END   }

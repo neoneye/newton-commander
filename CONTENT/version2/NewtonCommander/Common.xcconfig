@@ -1,0 +1,22 @@
+//
+//  Common.xcconfig
+//  NewtonCommander
+//
+//  Created by Simon Strandgaard on 13/06/10.
+//  Copyright 2010 opcoders.com. All rights reserved.
+//
+
+//SYMROOT = ../build
+//BUILD_DIR = ../build
+//PROJECT_TEMP_DIR = ../build
+
+NCCORE_PLUGIN = ../NCCore/build/$(CONFIGURATION)/NCCore.ibplugin
+PSMTABBARCONTROL_PLUGIN = ../PSMTabBarControl/build/$(CONFIGURATION)/PSMTabBarControl.ibplugin
+
+NCCORE_HEADERS = ../NCCore/build/$(CONFIGURATION)/NCCore.framework/Versions/A/Headers
+PSMTABBARCONTROL_HEADERS = ../PSMTabBarControl
+
+
+LD_RUNPATH_SEARCH_PATHS = @loader_path/../Frameworks
+
+//OTHER_LDFLAGS = -ObjC

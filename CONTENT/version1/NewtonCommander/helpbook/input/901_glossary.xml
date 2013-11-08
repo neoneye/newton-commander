@@ -1,0 +1,121 @@
+<glossary xmlns:xi="http://www.w3.org/2003/XInclude"><?dbhtml filename="glossary.html" ?>
+<title>Glossary</title>
+
+
+<glossdiv><title>F</title>
+
+<glossentry xml:id="filemanager"><glossterm>File Manager</glossterm>
+<glossdef>
+  <para>A program for organizing the data on your computer. There are
+	many different approaches: mouse centric, keyboard centric. Spatial 
+	memory centric. Expert tool. User friendly tools.</para>
+</glossdef>
+</glossentry>
+
+<glossentry xml:id="finder"><glossterm>Finder</glossterm>
+<glossdef>
+  <para>Apple's file manager is "The Finder". It has really nice drag and 
+	drop. It gets a lot of attention from computer magazines whenever
+	Apple makes a tiny change to it.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+
+<glossdiv><title>L</title>
+
+<glossentry xml:id="ls"><glossterm>ls</glossterm>
+<glossdef>
+  <para>ls is a commandline program for listing directory contents.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+
+<glossdiv><title>N</title>
+
+<glossentry xml:id="nc"><glossterm>NC</glossterm>
+<glossdef>
+  <para>Newton Commander. The name of this program. Also the same
+	shortname for the legendary Norton Commander that you typed in
+	to start the program.</para>
+</glossdef>
+</glossentry>
+
+<glossentry xml:id="norton"><glossterm>Norton Commander</glossterm>
+<glossdef>
+  <para>Perhaps the first dual pane file manager. It was for MSDOS and dissapeared
+	around the time Windows95 took over the world. Extremely popular.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+
+<glossdiv><title>O</title>
+
+<glossentry xml:id="orthodoxfilemanager"><glossterm>Orthodox File Manager</glossterm>
+<glossdef>
+  <para>Commander-like file managers. That have two panels. Have the same keybindings for F1-F10. Same keyboard navigation.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+
+<glossdiv><title>Q</title>
+
+<glossentry xml:id="quicklook"><glossterm>QuickLook</glossterm>
+<glossdef>
+  <para>An Apple technology that is VERY important in file managers.
+  It allows you to view the file content without opening the file.
+  However there are only a few quicklook plugins installed per default,
+  so it's up to you to obtain the plugins you need.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+
+<glossdiv><title>S</title>
+
+<glossentry xml:id="su"><glossterm>su</glossterm>
+<glossdef>
+  <para>Switch user. If no argument is specified you will be logged in as root.</para>
+</glossdef>
+</glossentry>
+
+<glossentry xml:id="sudo"><glossterm>sudo</glossterm>
+<glossdef>
+  <para>Execute a command as the super user.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+<glossdiv><title>T</title>
+
+<glossentry xml:id="total"><glossterm>Total Commander</glossterm>
+<glossdef>
+  <para>A dual pane file manager for windows. After Norton Commander ruled the MSDOS world, came Total Commander and now rules the Windows world.</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+<glossdiv><title>W</title>
+
+<glossentry xml:id="windowsexplorer"><glossterm>Windows Explorer</glossterm>
+<glossdef>
+  <para>Microsoft's file manager is named "Windows Explorer".</para>
+</glossdef>
+</glossentry>
+
+</glossdiv>
+
+
+
+
+</glossary>

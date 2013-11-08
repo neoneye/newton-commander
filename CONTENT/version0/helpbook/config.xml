@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:import href="/opt/local/share/xsl/docbook-xsl/xhtml/chunk.xsl"/>
+
+	<xsl:template name="tr.attributes">
+	  <xsl:param name="row" select="."/>
+	  <xsl:param name="rownum" select="0"/>
+	  <xsl:if test="$rownum mod 2 = 0">
+	    <xsl:attribute name="class">oddrow</xsl:attribute>
+	  </xsl:if>
+	</xsl:template>
+
+
+	<xsl:template name="user.head.content">
+
+		<!-- 
+		First we had the following AppleTitle on all pages.
+	    <meta name="AppleTitle" content="Newton Commander Help"></meta>
+
+		The problem with this was that the Apple Help Viewer uses the AppleTitle
+		to determine the frontpage, and it needs to correspond to the help book name.
+		and it must ONLY appear within index.html.
+
+		We want the index.html file to have the AppleTitle: "Newton Commander Help"
+		-->
+		<xsl:variable name="filename">
+		    <xsl:apply-templates select="." mode="recursive-chunk-filename"/>
+		</xsl:variable>
+		<xsl:if test="$filename = 'index.html'">
+			<xsl:text disable-output-escaping="yes">
+			  &lt;meta name="AppleTitle" content="Newton Commander Help" /&gt;
+			  &lt;meta name="AppleIcon" content="Newton%20Commander%20Help/images/Newton-Commander-helpbook-icon.png" /&gt;
+			  &lt;meta name="AppleFont" content="Lucida Grande,Helvetica,Arial" /&gt;
+			  &lt;meta name="AppleSearchResultsFont" content="Lucida Grande,Geneva,Arial" /&gt;
+			  &lt;meta name="robots" content="noindex" /&gt;
+			</xsl:text>
+		</xsl:if>
+
+	</xsl:template>
+	
+</xsl:stylesheet>

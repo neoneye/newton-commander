@@ -1,0 +1,62 @@
+* {
+   margin:0;
+   padding:0;
+   -webkit-touch-callout: none; /* Disable Open/Copy/Cancel alert with long link selection */
+   -webkit-user-select: none; /* Disable selection/Copy of UIWebView*/
+}
+html {
+	height:100%; width:100%; 
+	overflow-y: hidden;
+	}
+body {
+    height:100%; width:100%; 
+    font-family:"Lucida Grande"; font-size:14px; 
+    background-color: #eee; color: #000;
+}
+
+
+#compare {
+	width: 100%;
+	border-collapse: collapse;
+/*	border-collapse: separate;*/
+/*	border-spacing: 10px 0px;*/
+}
+
+#compare #divider1 {
+	background-color: #bbb;
+	width: 1px;
+}
+
+#compare #title0,
+#compare #title1 {
+	text-align: center;
+	margin-top: 10px;
+}
+
+#compare .label {
+	text-align: right;
+	color: #bbb;
+	width: 25%;
+	font-size: 80%;
+}
+#compare .label span {
+	margin-right: 4px;
+}
+
+#compare #thumbnail0,
+#compare #thumbnail1 {
+	height: 200px;
+/*	background-color: #f00;*/
+	width: 50%;
+	text-align: center;
+}
+
+
+#compare #message {
+	text-align: center;
+}
+#compare #message span {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+}

@@ -1,0 +1,166 @@
+<chapter xmlns:xi="http://www.w3.org/2003/XInclude"><?dbhtml filename="tools.html" ?>
+<title>Great System Tools</title>
+
+<para>Here are some tools to go along with any file manager.</para>
+
+<section>
+<title>Mount 3rd party file systems</title>
+
+<para>You need MacFUSE if you want to mount SFTP, FTP, Amazon S3, etc. It's one of the first things I install on a new Mac. Second I install Macfusion. You need both for things to work optimal.</para>
+    <segmentedlist>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Name</segtitle>
+    <segtitle>Type</segtitle>
+    <seglistitem>
+        <seg><ulink url="http://code.google.com/p/macfuse/">MacFUSE</ulink></seg>
+        <seg>Free + Open Source.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg><ulink url="http://www.macfusionapp.org/">Macfusion</ulink></seg>
+        <seg>Free.</seg>
+    </seglistitem>
+    </segmentedlist>
+</section>
+
+<section>
+<title>Hex editors</title>
+
+<para>Without a good hex editor it's difficult to really see whats going on. Is it all just zeroes or is there actual data in there.</para>
+
+	<segmentedlist>
+	<?dbhtml list-presentation="table"?>
+	<segtitle>Name</segtitle>
+	<segtitle>Type</segtitle>
+	<seglistitem>
+		<seg><ulink url="http://www.ridiculousfish.com/hexfiend/">Hex Fiend</ulink></seg>
+		<seg>Free + Open Source.</seg>
+	</seglistitem>
+	<seglistitem>
+		<seg><ulink url="http://www.suavetech.com/0xed/0xed.html">0xED</ulink></seg>
+		<seg>Free.</seg>
+	</seglistitem>
+	<seglistitem>
+		<seg><ulink url="http://sourceforge.net/projects/hexedit/">HexEdit</ulink></seg>
+		<seg>Free + Open Source.</seg>
+	</seglistitem>
+	</segmentedlist>
+</section>
+
+<section>
+<title>Real time disk monitoring</title>
+
+<para>Lorem ipsum.</para>
+    <segmentedlist>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Name</segtitle>
+    <segtitle>Type</segtitle>
+    <seglistitem>
+        <seg><ulink url="http://www.fernlightning.com/doku.php?id=software:fseventer:start">fseventer</ulink></seg>
+        <seg>Free.</seg>
+    </seglistitem>
+    </segmentedlist>
+</section>
+
+<section>
+<title>Mass rename</title>
+
+<para>Lorem ipsum.</para>
+    <segmentedlist>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Name</segtitle>
+    <segtitle>Type</segtitle>
+    <seglistitem>
+        <seg><ulink url="http://web.mac.com/mickeyroberson/MRR_Software/NameChanger.html">NameChanger</ulink></seg>
+        <seg>Free.</seg>
+    </seglistitem>
+    </segmentedlist>
+</section>
+
+<section>
+<title>Compression</title>
+
+<para>Lorem ipsum.</para>
+	<segmentedlist>
+	<?dbhtml list-presentation="table"?>
+	<segtitle>Name</segtitle>
+	<segtitle>Type</segtitle>
+	<seglistitem>
+		<seg><ulink url="http://wakaba.c3.cx/s/apps/unarchiver.html">The Unarchiver</ulink></seg>
+		<seg>Free + Open Source.</seg>
+	</seglistitem>
+	</segmentedlist>
+</section>
+
+<section>
+<title>Compare Files and Folders</title>
+
+<para>See <ulink url="http://stackoverflow.com/questions/187064/graphical-diff-for-mac-os-x">stackoverflow</ulink>.</para>
+	<segmentedlist>
+	<?dbhtml list-presentation="table"?>
+	<segtitle>Name</segtitle>
+	<segtitle>Type</segtitle>
+    <seglistitem>
+        <seg><ulink url="http://www.sourcegear.com/diffmerge/">DiffMerge</ulink></seg>
+        <seg>Free.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg><ulink url="http://en.wikipedia.org/wiki/Apple_Developer_Tools#FileMerge">Apple FileMerge</ulink></seg>
+        <seg>Free.</seg>
+    </seglistitem>
+	</segmentedlist>
+</section>
+
+<section>
+<title>Find what's taking up diskspace</title>
+
+<para>Lorem ipsum.</para>
+    <segmentedlist>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Name</segtitle>
+    <segtitle>Type</segtitle>
+    <seglistitem>
+        <seg><ulink url="http://grandperspectiv.sourceforge.net/">GrandPerspective</ulink></seg>
+        <seg>Free + Open Source.</seg>
+    </seglistitem>
+    </segmentedlist>
+</section>
+
+<section>
+<title>Quicklook plugins</title>
+
+<para>These plugins lets you view file types, that QuickLook doesn't supports out of the box.</para>
+	<segmentedlist>
+	<?dbhtml list-presentation="table"?>
+	<segtitle>Name</segtitle>
+	<segtitle>File Types</segtitle>
+	<segtitle>Purpose</segtitle>
+	<seglistitem>
+		<seg><ulink url="http://homepage.mac.com/xdd/software/zip/">Archive.qlgenerator</ulink></seg>
+		<seg>.zip, .tar archives.</seg>
+		<seg>See what files are contained within an archive, without extracting it.</seg>
+	</seglistitem>
+	<seglistitem>
+		<seg><ulink url="http://homepage.mac.com/xdd/software/folder/">Folder.qlgenerator</ulink></seg>
+		<seg>Folders</seg>
+		<seg>See summary of whats inside a folder.</seg>
+	</seglistitem>
+    <seglistitem>
+        <seg><ulink url="http://www.mothersruin.com/software/SuspiciousPackage/download.html">Suspicious Package.qlgenerator</ulink></seg>
+        <seg>.pkg packages</seg>
+        <seg>See before you install something if things looks ok.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg><ulink url="http://whomwah.github.com/qlstephen/">QLStephen</ulink></seg>
+        <seg>files without a file extension</seg>
+        <seg>Read files such as: README, INSTALL, ChangeLog, rakefile.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg><ulink url="http://technocrank.com/downloads/">QLTorrent</ulink></seg>
+        <seg>.torrent</seg>
+        <seg>See what it is without having to start your bittorrent program.</seg>
+    </seglistitem>
+	</segmentedlist>
+
+</section>
+          
+</chapter>

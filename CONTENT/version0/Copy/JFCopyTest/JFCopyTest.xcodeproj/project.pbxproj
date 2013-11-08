@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		420424BC1044665200B2054A /* JFCopyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 420424BB1044665200B2054A /* JFCopyTest.mm */; };
+		420424BF1044665900B2054A /* JFCopy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 420424BE1044665900B2054A /* JFCopy.mm */; };
+		420424F41044679400B2054A /* Copy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 420424F31044679400B2054A /* Copy.xib */; };
+		420425A71044A10900B2054A /* green_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 420425A61044A10900B2054A /* green_checkmark.png */; };
+		420D917610451C690054BDF7 /* JFSystemCopy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 420D917510451C690054BDF7 /* JFSystemCopy.mm */; };
+		423B26CC107299C200EE2A15 /* 00-Content-Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 423B26CB107299C200EE2A15 /* 00-Content-Test.m */; };
+		423B26CF10729A2E00EE2A15 /* 20-Flags-Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 423B26CE10729A2E00EE2A15 /* 20-Flags-Test.m */; };
+		423B26D310729ACE00EE2A15 /* 40-Resource-Fork-Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 423B26D010729ACE00EE2A15 /* 40-Resource-Fork-Test.m */; };
+		423B26D410729ACE00EE2A15 /* 50-Access-Control-List-Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 423B26D110729ACE00EE2A15 /* 50-Access-Control-List-Test.m */; };
+		423B26D510729ACE00EE2A15 /* 60-Extended-Attributes-Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 423B26D210729ACE00EE2A15 /* 60-Extended-Attributes-Test.m */; };
+		423B26DA10729C2400EE2A15 /* Tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 423B26D910729C2400EE2A15 /* Tester.m */; };
+		423E8E5F10487D9000DDB12C /* JFSystemCopyThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 423E8E5E10487D9000DDB12C /* JFSystemCopyThread.mm */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* JFCopyTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCopyTest_Prefix.pch; sourceTree = "<group>"; };
+		420424BA1044665200B2054A /* JFCopyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCopyTest.h; sourceTree = "<group>"; };
+		420424BB1044665200B2054A /* JFCopyTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JFCopyTest.mm; sourceTree = "<group>"; };
+		420424BD1044665900B2054A /* JFCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFCopy.h; path = ../JFCopy.h; sourceTree = SOURCE_ROOT; };
+		420424BE1044665900B2054A /* JFCopy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFCopy.mm; path = ../JFCopy.mm; sourceTree = SOURCE_ROOT; };
+		420424F31044679400B2054A /* Copy.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Copy.xib; path = ../Copy.xib; sourceTree = SOURCE_ROOT; };
+		420425A61044A10900B2054A /* green_checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_checkmark.png; path = ../../MainApp/gfx/green_checkmark.png; sourceTree = SOURCE_ROOT; };
+		420D917410451C690054BDF7 /* JFSystemCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFSystemCopy.h; path = ../JFSystemCopy.h; sourceTree = SOURCE_ROOT; };
+		420D917510451C690054BDF7 /* JFSystemCopy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFSystemCopy.mm; path = ../JFSystemCopy.mm; sourceTree = SOURCE_ROOT; };
+		423B26CB107299C200EE2A15 /* 00-Content-Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "00-Content-Test.m"; path = "../Tests/00-Content-Test.m"; sourceTree = SOURCE_ROOT; };
+		423B26CE10729A2E00EE2A15 /* 20-Flags-Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "20-Flags-Test.m"; path = "../Tests/20-Flags-Test.m"; sourceTree = SOURCE_ROOT; };
+		423B26D010729ACE00EE2A15 /* 40-Resource-Fork-Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "40-Resource-Fork-Test.m"; path = "../Tests/40-Resource-Fork-Test.m"; sourceTree = SOURCE_ROOT; };
+		423B26D110729ACE00EE2A15 /* 50-Access-Control-List-Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "50-Access-Control-List-Test.m"; path = "../Tests/50-Access-Control-List-Test.m"; sourceTree = SOURCE_ROOT; };
+		423B26D210729ACE00EE2A15 /* 60-Extended-Attributes-Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "60-Extended-Attributes-Test.m"; path = "../Tests/60-Extended-Attributes-Test.m"; sourceTree = SOURCE_ROOT; };
+		423B26D810729C2400EE2A15 /* Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tester.h; path = ../Tests/Tester.h; sourceTree = SOURCE_ROOT; };
+		423B26D910729C2400EE2A15 /* Tester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tester.m; path = ../Tests/Tester.m; sourceTree = SOURCE_ROOT; };
+		423E8E5D10487D9000DDB12C /* JFSystemCopyThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFSystemCopyThread.h; path = ../JFSystemCopyThread.h; sourceTree = SOURCE_ROOT; };
+		423E8E5E10487D9000DDB12C /* JFSystemCopyThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JFSystemCopyThread.mm; path = ../JFSystemCopyThread.mm; sourceTree = SOURCE_ROOT; };
+		426F7658105E79B20065418A /* TestCopy.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCopy.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		426F7659105E79B20065418A /* TestCopy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestCopy-Info.plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* JFCopyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFCopyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		426F7655105E79B20065418A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* JFCopyTest.app */,
+				426F7658105E79B20065418A /* TestCopy.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* JFCopyTest */ = {
+			isa = PBXGroup;
+			children = (
+				426F7668105E79E30065418A /* Tests */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				426F7659105E79B20065418A /* TestCopy-Info.plist */,
+			);
+			name = JFCopyTest;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				423E8E5D10487D9000DDB12C /* JFSystemCopyThread.h */,
+				423E8E5E10487D9000DDB12C /* JFSystemCopyThread.mm */,
+				420D917410451C690054BDF7 /* JFSystemCopy.h */,
+				420D917510451C690054BDF7 /* JFSystemCopy.mm */,
+				420424BD1044665900B2054A /* JFCopy.h */,
+				420424BE1044665900B2054A /* JFCopy.mm */,
+				420424BA1044665200B2054A /* JFCopyTest.h */,
+				420424BB1044665200B2054A /* JFCopyTest.mm */,
+				32CA4F630368D1EE00C91783 /* JFCopyTest_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				420425A61044A10900B2054A /* green_checkmark.png */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				420424F31044679400B2054A /* Copy.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		426F7668105E79E30065418A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				423B26D810729C2400EE2A15 /* Tester.h */,
+				423B26D910729C2400EE2A15 /* Tester.m */,
+				423B26D010729ACE00EE2A15 /* 40-Resource-Fork-Test.m */,
+				423B26D110729ACE00EE2A15 /* 50-Access-Control-List-Test.m */,
+				423B26D210729ACE00EE2A15 /* 60-Extended-Attributes-Test.m */,
+				423B26CE10729A2E00EE2A15 /* 20-Flags-Test.m */,
+				423B26CB107299C200EE2A15 /* 00-Content-Test.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		426F7657105E79B20065418A /* TestCopy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426F765A105E79D30065418A /* Build configuration list for PBXNativeTarget "TestCopy" */;
+			buildPhases = (
+				426F7653105E79B20065418A /* Resources */,
+				426F7654105E79B20065418A /* Sources */,
+				426F7655105E79B20065418A /* Frameworks */,
+				426F7656105E79B20065418A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestCopy;
+			productName = TestCopy;
+			productReference = 426F7658105E79B20065418A /* TestCopy.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* JFCopyTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "JFCopyTest" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JFCopyTest;
+			productInstallPath = "$(HOME)/Applications";
+			productName = JFCopyTest;
+			productReference = 8D1107320486CEB800E47090 /* JFCopyTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "JFCopyTest" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* JFCopyTest */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* JFCopyTest */,
+				426F7657105E79B20065418A /* TestCopy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		426F7653105E79B20065418A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				420424F41044679400B2054A /* Copy.xib in Resources */,
+				420425A71044A10900B2054A /* green_checkmark.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		426F7656105E79B20065418A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		426F7654105E79B20065418A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423B26CC107299C200EE2A15 /* 00-Content-Test.m in Sources */,
+				423B26CF10729A2E00EE2A15 /* 20-Flags-Test.m in Sources */,
+				423B26D310729ACE00EE2A15 /* 40-Resource-Fork-Test.m in Sources */,
+				423B26D410729ACE00EE2A15 /* 50-Access-Control-List-Test.m in Sources */,
+				423B26D510729ACE00EE2A15 /* 60-Extended-Attributes-Test.m in Sources */,
+				423B26DA10729C2400EE2A15 /* Tester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420424BC1044665200B2054A /* JFCopyTest.mm in Sources */,
+				420424BF1044665900B2054A /* JFCopy.mm in Sources */,
+				420D917610451C690054BDF7 /* JFSystemCopy.mm in Sources */,
+				423E8E5F10487D9000DDB12C /* JFSystemCopyThread.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		426F765B105E79D30065418A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "TestCopy-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TestCopy;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		426F765C105E79D30065418A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "TestCopy-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TestCopy;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JFCopyTest_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = JFCopyTest;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JFCopyTest_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = JFCopyTest;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		426F765A105E79D30065418A /* Build configuration list for PBXNativeTarget "TestCopy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426F765B105E79D30065418A /* Debug */,
+				426F765C105E79D30065418A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "JFCopyTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "JFCopyTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

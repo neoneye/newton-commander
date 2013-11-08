@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<book  xmlns="http://docbook.org/ns/docbook"
+       xmlns:xi="http://www.w3.org/2003/XInclude"
+       xml:lang="en"
+	   xml:base="/Users/neoneye/cmd/Documentation/main.xml"
+>
+
+<info>
+  <title>Newton Commander Help</title>
+</info>
+
+<xi:include href="chapter1.xml"/>
+<xi:include href="the-main-window.xml"/>
+<xi:include href="chapter2.xml"/>
+<xi:include href="chapter5.xml"/>
+<xi:include href="chapter6.xml"/>
+<xi:include href="chapter4.xml"/>
+<xi:include href="chapter3.xml"/>
+<xi:include href="glossary.xml"/>
+
+</book>

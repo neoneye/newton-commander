@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+	html, body
+	{
+/*		background-color: #a88;*/
+		
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #888),
+		                color-stop(0.5, #999), color-stop(1.0, #555));
+		
+		font: 12px "Lucida Grande";
+		overflow-x: hidden;
+		overflow-y: auto;
+		margin: 0;
+		padding: 0;
+		white-space: normal;
+		width: 100%;
+		height: 100%;
+	}
+	#content {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.group-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	.group-row {
+		height: 30px;
+		width: 100%;
+	}
+	
+	.theme1 .group-row {
+		height: 30px;
+		background: -webkit-gradient(linear, left top, left bottom, 
+			color-stop(0.0, #d8d8d8),
+			color-stop(0.033, #fcfcfc),
+			color-stop(0.5, #f2f2f2),
+			color-stop(0.5, #e9e9e9),
+			color-stop(0.966, #e6e6e6),
+			color-stop(1.0, #b2b2b2));
+
+		font-size: 12px;
+		font-weight: bold;
+		color: #363636;
+	}
+	
+	.theme2 .group-row {
+		height: 22px;
+		background: -webkit-gradient(linear, left top, left bottom, 
+			color-stop(0.0, #a9a9a9),
+			color-stop(0.045, #a9a9a9),
+			
+			color-stop(0.045, #f7f7f7),
+			color-stop(0.09, #f7f7f7),
+			color-stop(0.09, #e7e7e7),
+			
+			color-stop(0.33, #e1dfe1),
+			color-stop(0.66, #d8d8d8),
+			
+			color-stop(0.95, #d1d1d1),
+			color-stop(0.95, #a9a9a9),
+			color-stop(1.0, #a9a9a9));
+
+		font-size: 11px;
+		font-weight: normal;
+		color: #181818;
+	}
+	
+	.theme1 .input-row {
+		background-color: #f2f2f2;
+	}
+	
+	.theme2 .input-row {
+		background-color: #f9f9f9;
+	}
+	
+	.group-row + .input-row .col0 {
+		padding-top: 10px;
+/*		background-color: green;*/
+	}
+
+	.before-group .col0 {
+		padding-bottom: 10px;
+/*		background-color: red;*/
+	}
+
+	
+	.group-row .col0 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.input-row .col0 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	.space_bottom {
+		padding-bottom: 1em;
+	}
+	
+	label {
+		float: left;
+		width: 80px;
+		display: inline;
+	}
+	
+	.theme2 label {
+		text-align: right;
+		font-size: 11px;
+		padding-right: 12px;
+		color: #6e6e6e;
+		font-weight: bold;
+	}
+	
+	textarea {
+/*		width: 80%;*/
+/*		min-width: 150px;*/
+/*		max-width: 800px;*/
+		width: 100%;
+		height: 100%;
+/*		display: inline;*/
+	}
+	
+	.textarea_wrap {
+		min-width: 150px;
+		max-width: 800px;
+		width: 100%;
+		height: 80px;
+		margin: 0;
+	}
+
+	</style>
+</head>
+<body onresize='resize()' oncontextmenu='return false'>
+
+<div id="content" class="theme2">
+
+	<table class="group-table">
+		<tr class="input-row">
+			<td class="col0">Inode: <span id="field_inode">11988700</span></td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0">Type: FILE</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0">Device: disk0s4</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0">File size: 523 KB (535.922 bytes)</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0">Data fork: 473 KB (485.027 bytes)</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0">Rsrc fork: 49 KB (50.895 bytes)</td>
+		</tr>
+		<tr class="input-row before-group">
+			<td class="col0">Where: <span>/Users/</span><span>neoneye/</span><span>Downloads/</span><span>Demoscene.Trilogy[2020][Director's.Cut]DvDrip-Cracked/</span><span>The.Movie.About.The.Demoscene[2013][Director's.Cut]DvDrip-Cracked.avi</span></td>
+		</tr>
+		<tr class="group-row">
+			<td class="col0">Name</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><input id="field_name" type="text" value="The.Movie.About.The.Demoscene[2013][Director's.Cut]DvDrip-Cracked.avi"></td>
+		</tr>
+		<tr class="input-row before-group">
+			<td class="col0"><input type="checkbox" class="checkbox" value="1" name="test" checked="checked" /> Hide extension</td>
+		</tr>
+		<tr class="group-row">
+			<td class="col0">Type</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Kind</label><input type="text" value="AVI Container"></td>
+		</tr>
+		<tr class="input-row before-group">
+			<td class="col0"><label>Open</label><input type="text" value="VLC"></td>
+		</tr>
+		<tr class="group-row">
+			<td class="col0">Comment</td>
+		</tr>
+		<tr class="input-row before-group">
+			<td class="col0"><div class="textarea_wrap">
+				<textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea></div></td>
+		</tr>
+		<tr class="group-row">
+			<td class="col0">Timestamps</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Accessed</label><input type="text" value="2010-06-18 18:56:35"></td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Modified</label><input type="text" value="2010-06-18 18:56:35"></td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Created</label><input type="text" value="2010-06-18 18:56:35"></td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Birth</label><input type="text" value="2010-06-18 18:56:35"></td>
+		</tr>
+		<tr class="input-row before-group">
+			<td class="col0"><label>Backup</label><input type="text" value="2010-06-18 18:56:35"></td>
+		</tr>
+		<tr class="group-row">
+			<td class="col0">Permissions</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>User</label>
+				<select>
+				  <option value="1">No access</option>
+				  <option value="2">Execute only</option>
+				  <option value="3">Write only</option>
+				  <option value="4">Write &amp; Execute</option>
+				  <option value="5">Read only</option>
+				  <option value="6">Read &amp; Execute</option>
+				  <option value="7">Read &amp; Write</option>
+				  <option value="8">Read &amp; Write &amp; Execute</option>
+				</select>
+
+				<select>
+				  <option value="1">neoneye (501)</option>
+				  <option value="2">johndoe (502)</option>
+				  <option value="3">root (0)</option>
+				  <option value="3">nobody (-2)</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Group</label>
+				<select>
+				  <option value="1">No access</option>
+				  <option value="2">Execute only</option>
+				  <option value="3">Write only</option>
+				  <option value="4">Write &amp; Execute</option>
+				  <option value="5">Read only</option>
+				  <option value="6">Read &amp; Execute</option>
+				  <option value="7">Read &amp; Write</option>
+				  <option value="8">Read &amp; Write &amp; Execute</option>
+				</select>
+
+				<select>
+				  <option value="1">staff (20)</option>
+				  <option value="2">admin (0)</option>
+				  <option value="3">wheel (1)</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Others</label>
+				<select>
+				  <option value="1">No access</option>
+				  <option value="2">Execute only</option>
+				  <option value="3">Write only</option>
+				  <option value="4">Write &amp; Execute</option>
+				  <option value="5">Read only</option>
+				  <option value="6">Read &amp; Execute</option>
+				  <option value="7">Read &amp; Write</option>
+				  <option value="8">Read &amp; Write &amp; Execute</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Special</label>
+				<input type="checkbox" class="checkbox" value="1" name="test" checked="checked" /> Set UID
+				<input type="checkbox" class="checkbox" value="1" name="test" checked="checked" /> Set GID
+				<input type="checkbox" class="checkbox" value="1" name="test" checked="checked" /> Sticky
+			</td>
+		</tr>
+		<tr class="input-row before-group">
+			<td class="col0"><label>ACL</label>NONE</td>
+		</tr>
+		<tr class="group-row">
+			<td class="col0">Misc</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>Flags</label><input type="text" value="192"> Invisible | Locked | Hidden</td>
+		</tr>
+		<tr class="input-row">
+			<td class="col0"><label>XAttr</label>com.apple.FinderInfo<br>com.apple.XcodeGenerated</td>
+		</tr>
+	</table>
+	
+</div>
+
+	<script>
+
+	//
+	// New value : called from ObjC
+	//
+	function	WebViewControl_valueChanged(valueChanged)
+	{
+		{
+			var v = WebViewControl.filename;
+			setName(v);
+		}
+		{
+			var v = WebViewControl.angle;
+			setInode(v);
+		}
+
+	}
+
+	function setName(newValue) {
+		var el = document.getElementById('field_name');
+		el.value = newValue.toString();
+	}
+
+	function setInode(newValue) {
+		var el = document.getElementById('field_inode');
+		el.innerHTML = newValue.toString();
+	}
+
+
+	function resize()
+	{
+	}
+
+	{
+		var el = document.getElementById('field_name');
+		el.value = 'my file name.png';
+	}
+	{
+		var el = document.getElementById('field_inode');
+		el.innerHTML = '12345678';
+	}
+/*	setValue('xcuvoiuoiu');
+	setValue(42);*/
+	
+	WebViewControl.setNewValue_forKey_(9999999, 'angle');
+	WebViewControl.setNewValue_forKey_('testname', 'filename');
+
+	</script>
+</body>
+</html>

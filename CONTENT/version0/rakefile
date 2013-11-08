@@ -1,0 +1,169 @@
+desc "open xcode with our project"
+task :open_xcode do
+  system("open MainApp/OrthodoxFileManager.xcodeproj")
+end
+
+desc "open textmate with our project"
+task :open_textmate do
+  # system("mate .")
+  system("open source_commander.tmproj")
+end
+
+desc "open project in textmate"
+task :a => :open_textmate;
+
+desc "open project in xcode"
+task :b => :open_xcode;
+
+desc "GC aka. Generate Copy files"
+task :gc do
+  Dir.chdir("Copy/JFCopyTest") do
+    system("rake g")
+  end
+end
+
+desc "copy the .app to the desktop.. with everything included"
+task :deploy do
+  dir = "build/Release/Newton Commander.app"
+  begin
+    file = "#{dir}/Contents/MacOS/Newton Commander"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip FileManager: #{size0} -> #{size1}"
+  end
+  begin
+    file = "#{dir}/Contents/MacOS/InstallCmdTools"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip InstallCmdTools: #{size0} -> #{size1}"
+  end
+  begin
+    file = "#{dir}/Contents/MacOS/jf"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip jf: #{size0} -> #{size1}"
+  end
+  begin
+    file = "#{dir}/Contents/MacOS/KCList"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip KCList: #{size0} -> #{size1}"
+  end
+  begin
+    file = "#{dir}/Contents/MacOS/KCHelper"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip KCHelper: #{size0} -> #{size1}"
+  end
+  begin
+    file = "#{dir}/Contents/MacOS/InstallKCHelper"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip InstallKCHelper: #{size0} -> #{size1}"
+  end
+  begin
+    file = "#{dir}/Contents/Resources/JFCore.bundle/Contents/MacOS/JFCore" 
+    size0 = File.size(file)
+    system("strip -x '#{file}'")
+    size1 = File.size(file)
+    puts "strip JFCore.bundle: #{size0} -> #{size1}"
+  end
+
+  begin
+    file = "build/Release/Report.app/Contents/MacOS/Report"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip Report: #{size0} -> #{size1}"
+  end
+
+  begin
+    file = "build/Release/Copy.app/Contents/MacOS/Copy"
+    size0 = File.size(file)
+    system("strip '#{file}'")
+    size1 = File.size(file)
+    puts "strip Copy: #{size0} -> #{size1}"
+  end
+
+  begin
+    dir1 = "build/Release/Report.app"
+    dir2 = "#{dir}/Contents/Resources"
+    FileUtils.cp_r(dir1, dir2)
+    puts "copied in 'Report.app'"
+  end
+
+  begin
+    dir1 = "build/Release/Copy.app"
+    dir2 = "#{dir}/Contents/Resources"
+    FileUtils.cp_r(dir1, dir2)
+    puts "copied in 'Copy.app'"
+  end
+
+  begin
+    file1 = "KCHelperUninstall.sh"
+    dir2 = "#{dir}/Contents/Resources"
+    FileUtils.cp(file1, dir2)
+    puts "copied in 'KCHelperUninstall.sh'"
+  end
+
+  begin
+    dir1 = dir
+    dir2 = File.expand_path("~/Desktop")
+    FileUtils.cp_r(dir1, dir2)
+    puts "copied in 'Newton Commander.app' to Desktop"
+  end
+end
+
+desc "show process groups"
+task :ps do
+  cmd = "ps -a -x -o pid,ppid,pgid,state,comm"
+  system(cmd)
+end
+
+
+desc "restore default logging settings for ASL"
+task :log0 do
+  cmd = "sudo syslog -c syslogd -n"
+  system(cmd)
+end 
+
+
+desc "show all debug log messages with ASL"
+task :log1 do
+  cmd = "sudo syslog -c syslogd -d"
+  system(cmd)
+end 
+
+desc "inspect ASL's log settings"
+task :asl do
+  cmd = "syslog -c syslogd"
+  system(cmd)
+end 
+
+
+desc "compare two dirs to verify that the copy operation works correct"
+task :diff do
+  cmd = "diff -r -q /tmp/juxtafile_test/src /tmp/juxtafile_test/dest"
+  system(cmd)
+end 
+
+
+desc "import the latest documentation"
+task :doc do
+  src = "Documentation/JuxtaFile Help"
+  dest = "MainApp/English.lproj"
+  FileUtils.cp_r(src, dest)
+end 
+
+
+desc "count LOC"
+task :wc do
+  cmd = 'find . \( -name "*.c" -or -name "*.cpp" -or -name "*.h" -or -name "*.m" \) -print0 | xargs -0 wc'
+  system(cmd)
+end

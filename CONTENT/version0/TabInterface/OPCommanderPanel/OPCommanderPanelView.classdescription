@@ -1,0 +1,15 @@
+{
+	Actions = {
+		// Define action descriptions here, for example
+		// "myAction:" = id;
+		//"addNewTab:" = id;
+	};
+	Outlets = {
+		// Define outlet descriptions here, for example
+		// myOutlet = NSView;
+		m_tabview = NSTabView;
+		m_tabbar = PSMTabBarControl;
+	};
+    ClassName = OPCommanderPanelView; 
+    SuperClass = NSView; 
+}

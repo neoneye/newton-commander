@@ -1,0 +1,145 @@
+Orthodox File Manager
+copyright 2009 by Simon Strandgaard
+
+
+
+OpenInKC (Finder.app plugin)
+============================
+
+Drag OpenInOrthodoxFileManager.app to /Applications/Scripts (you'll need to create the Scripts directory, likely). Then, find the icon, and drag it up to your toolbar. Keep it there for a few seconds until it "sticks".
+
+To use, open finder, and click the "OFM" icon.
+
+
+
+/Library/PrivilegedHelperTools/com.opcoders.kc
+==============================================
+
+To gain SUDO capabilities we have our own launchd deamon
+that we use to start Discover.app as root user.
+
+
+
+/usr/bin/kc
+===========
+
+A commandline app that opens the filemanager with the current working directory.
+
+Can be installed from the "OrthodoxFileManager" -> "Install Commandline Tool..." menu.
+It will ask for your password, and install "/usr/bin/kc"
+
+
+
+Main.app
+========
+
+Navigation:
+ 1. Page up/down preserves the cursor position.
+ 2. Page up/down in repeat mode preserves the cursor position when it hit the top/bottom.
+ 3. Arrow Left/Right opens the context menu.
+ 4. Enter-key follows a link.
+ 5. Backspace key (or CMD arrow-up) jumps to the parent dir.
+ 6. TAB key switches focus between the left and the right pane.
+ 7. Spacebar toggles selection.
+ 8. Hit enter multiple times on a file to cycle through its properties.
+
+Partial search. Type in ascii even though focus is on the
+tableview.. and the key stroke events will be send to the
+searchfield. This saves you from clicking in the searchfield
+whenever you want to search.
+
+F2 renames a file.
+
+F3 (1st time) opens QuickLook. 
+
+
+F3 (2nd time) opens the detailed report for a file.
+You can TAB to it and scroll through the report using Arrow up/down, pageup/down, home/end.
+The report high lites suspicious data, such as when a file has
+SETUID or when it's hidden.
+
+
+Kill's Discover.app, Report.app when an operation times out or crashes.
+
+Caches file-listing with the breadcrums, so that we
+don't have to wait for the async operation to complete.
+This will make it easier to preserve the cursor position 
+and at the same time allow us to do sorting.
+
+Statistics window that shows what file-system operation that is hanging.
+
+Drag files from filelist into other apps.
+ 1. Terminal.app - will insert the full path
+ 2. TextMate - will insert the content. ALT modifier inserts full path.
+ 3. Finder.app - copies the file.
+ 4. Pages - will insert selected images into the open document.
+
+CMD D to spawn apple's FileMerge program, so you can see differences
+between the file selected in the left pane and the one in the right pane.
+
+
+Integrated with Terminal.app
+ 1. CMD T will go to the dir in the current tab.
+ 2. SHIFT CMD T will go to the dir in a new window.
+ 3. ALT CMD T will go to the dir in a new tab.
+
+
+CMD F7 = create empty file
+
+
+
+Discover.app
+============
+
+Discover.app collects dir-entries.
+
+Discover.app is used as a shield against file-system operations 
+that times out (10 second penalty). When it becomes unresponsive
+this process can be killed. There is no non-blocking API for
+doing file operations so this is THE ONLY WAY to do it AFAIK.
+
+Suicide when parent process dies.
+
+Reads data in these phases:
+ 1. read filenames.
+ 2. determine if they are directories.
+ 3. obtain their file size.
+
+
+Discover.app can be started as root via the KCHelperTool.
+When it's running root then Distributed Objects (DO) is
+stupid. You have to communicate between the Main.app (run
+by username) and the Discover.app (run by root), but DO
+doesn't allow that out of the box. You have to use NSSocketPort.
+
+
+
+Report.app
+============
+
+Report.app makes a report of all the data it can collect about a
+single file.
+
+Report.app is used as a shield against file-system operations 
+that times out (10 second penalty). When it becomes unresponsive
+this process can be killed. There is no non-blocking API for
+doing file operations so this is THE ONLY WAY to do it AFAIK.
+
+Suicide when parent process dies.
+
+
+
+
+Copy.app
+========
+
+Copy.app performs a copy operation of multiple files, while
+it's sending notifications with progress.
+
+Copy.app is used as a shield against file-system operations 
+that times out (10 second penalty). When it becomes unresponsive
+this process can be killed. There is no non-blocking API for
+doing file operations so this is THE ONLY WAY to do it AFAIK.
+
+Suicide when parent process dies.
+

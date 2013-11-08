@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'NewtonCommander' target in the 'NewtonCommander' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

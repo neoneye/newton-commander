@@ -1,0 +1,8 @@
+{
+	Actions = {};
+	Outlets = {
+		delegate = id;
+	};
+	ClassName = NCLister;
+	SuperClass = NSView;
+}

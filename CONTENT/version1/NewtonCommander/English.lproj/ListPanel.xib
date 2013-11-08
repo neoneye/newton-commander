@@ -1,0 +1,2667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
+	<data>
+		<int key="IBDocument.SystemTarget">1060</int>
+		<string key="IBDocument.SystemVersion">10F569</string>
+		<string key="IBDocument.InterfaceBuilderVersion">762</string>
+		<string key="IBDocument.AppKitVersion">1038.29</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string>com.positivespinmedia.PSMTabBarControlPlugin</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>762</string>
+				<string>1</string>
+			</object>
+		</object>
+		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="1"/>
+		</object>
+		<object class="NSArray" key="IBDocument.PluginDependencies">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<string>com.positivespinmedia.PSMTabBarControlPlugin</string>
+			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.Metadata">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys" id="0">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+			</object>
+		</object>
+		<object class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSCustomObject" id="1001">
+				<string key="NSClassName">NCListPanelController</string>
+			</object>
+			<object class="NSCustomObject" id="1003">
+				<string key="NSClassName">FirstResponder</string>
+			</object>
+			<object class="NSCustomObject" id="1004">
+				<string key="NSClassName">NSApplication</string>
+			</object>
+			<object class="NSCustomView" id="1005">
+				<reference key="NSNextResponder"/>
+				<int key="NSvFlags">4370</int>
+				<object class="NSMutableArray" key="NSSubviews">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+					<object class="NSTabView" id="123470691">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">4114</int>
+						<string key="NSFrameSize">{452, 513}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<object class="NSMutableArray" key="NSTabViewItems">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="NSTabViewItem" id="910799122">
+								<string key="NSIdentifier">1</string>
+								<object class="NSView" key="NSView" id="351667141">
+									<reference key="NSNextResponder" ref="123470691"/>
+									<int key="NSvFlags">256</int>
+									<string key="NSFrameSize">{452, 513}</string>
+									<reference key="NSSuperview" ref="123470691"/>
+								</object>
+								<string key="NSLabel">Tab</string>
+								<object class="NSColor" key="NSColor" id="591682378">
+									<int key="NSColorSpace">6</int>
+									<string key="NSCatalogName">System</string>
+									<string key="NSColorName">controlColor</string>
+									<object class="NSColor" key="NSColor">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MC42NjY2NjY2ODY1AA</bytes>
+									</object>
+								</object>
+								<reference key="NSTabView" ref="123470691"/>
+							</object>
+							<object class="NSTabViewItem" id="1053364605">
+								<string key="NSIdentifier">2</string>
+								<object class="NSView" key="NSView" id="258327739">
+									<nil key="NSNextResponder"/>
+									<int key="NSvFlags">256</int>
+									<string key="NSFrameSize">{452, 513}</string>
+								</object>
+								<string key="NSLabel">View</string>
+								<reference key="NSColor" ref="591682378"/>
+								<reference key="NSTabView" ref="123470691"/>
+							</object>
+							<object class="NSTabViewItem" id="625875411">
+								<string key="NSIdentifier">Item 2</string>
+								<object class="NSView" key="NSView" id="706400656">
+									<nil key="NSNextResponder"/>
+									<int key="NSvFlags">256</int>
+									<string key="NSFrameSize">{452, 513}</string>
+								</object>
+								<string key="NSLabel">Item 2</string>
+								<reference key="NSColor" ref="591682378"/>
+								<reference key="NSTabView" ref="123470691"/>
+							</object>
+							<object class="NSTabViewItem" id="1043291859">
+								<string key="NSIdentifier">Item 3</string>
+								<object class="NSView" key="NSView" id="783176017">
+									<nil key="NSNextResponder"/>
+									<int key="NSvFlags">256</int>
+									<string key="NSFrameSize">{452, 513}</string>
+								</object>
+								<string key="NSLabel">Item 3</string>
+								<reference key="NSColor" ref="591682378"/>
+								<reference key="NSTabView" ref="123470691"/>
+							</object>
+							<object class="NSTabViewItem" id="725617746">
+								<string key="NSIdentifier">Item 4</string>
+								<object class="NSView" key="NSView" id="474652985">
+									<nil key="NSNextResponder"/>
+									<int key="NSvFlags">256</int>
+									<string key="NSFrameSize">{452, 513}</string>
+								</object>
+								<string key="NSLabel">Item 4</string>
+								<reference key="NSColor" ref="591682378"/>
+								<reference key="NSTabView" ref="123470691"/>
+							</object>
+						</object>
+						<reference key="NSSelectedTabViewItem" ref="910799122"/>
+						<object class="NSFont" key="NSFont">
+							<string key="NSName">LucidaGrande</string>
+							<double key="NSSize">13</double>
+							<int key="NSfFlags">1044</int>
+						</object>
+						<int key="NSTvFlags">6</int>
+						<bool key="NSAllowTruncatedLabels">YES</bool>
+						<bool key="NSDrawsBackground">YES</bool>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="351667141"/>
+						</object>
+					</object>
+					<object class="PSMTabBarControl" id="374177355">
+						<reference key="NSNextResponder" ref="1005"/>
+						<int key="NSvFlags">4362</int>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="PSMOverflowPopUpButton" id="776875631">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<object class="NSFont" key="NSSupport" id="244004601">
+										<string key="NSName">LucidaGrande</string>
+										<double key="NSSize">13</double>
+										<int key="NSfFlags">1301</int>
+									</object>
+									<reference key="NSControlView" ref="776875631"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<object class="NSFont" key="NSAlternateImage" id="351135">
+										<string key="NSName">LucidaGrande</string>
+										<double key="NSSize">13</double>
+										<int key="NSfFlags">16</int>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<object class="NSColor" key="NSColor" id="519944836">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MCAwAA</bytes>
+									</object>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="477099368">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{157, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<object class="NSFont" key="NSSupport" id="978478260">
+										<string key="NSName">LucidaGrande</string>
+										<double key="NSSize">12</double>
+										<int key="NSfFlags">16</int>
+									</object>
+									<reference key="NSControlView" ref="477099368"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="560644829">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="560644829"/>
+								<int key="myTrackingRectTag">477951328</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="301312055">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="301312055"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<nil key="NSMenu"/>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="351806300">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{12, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="351806300"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="260015705">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="260015705"/>
+								<int key="myTrackingRectTag">426382400</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="366498249">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="366498249"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="583374667">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{389, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="583374667"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="549570645">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="549570645"/>
+								<int key="myTrackingRectTag">373740720</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="711973577">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="711973577"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="831794409">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{389, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="831794409"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="918075692">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="918075692"/>
+								<int key="myTrackingRectTag">425967680</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="315256623">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="315256623"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="724221136">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{389, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="724221136"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="1064886654">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="1064886654"/>
+								<int key="myTrackingRectTag">425931376</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="1065148617">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="1065148617"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<nil key="NSMenu"/>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="80652394">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{5, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="80652394"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="497555012">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/AquaTabNew.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/AquaTabNewPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/AquaTabNewRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="497555012"/>
+								<int key="myTrackingRectTag">426014624</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="225635910">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="225635910"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="521992980">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{389, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="521992980"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="884308502">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="884308502"/>
+								<int key="myTrackingRectTag">425922464</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="484325906">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="484325906"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="705145798">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{389, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="705145798"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="296995005">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="296995005"/>
+								<int key="myTrackingRectTag">425923376</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="779264657">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="779264657"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<nil key="NSMenu"/>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="683588995">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{12, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="683588995"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="709752511">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="709752511"/>
+								<int key="myTrackingRectTag">425906368</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="1057177679">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="1057177679"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="31143414">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{429, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="31143414"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="218038824">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="218038824"/>
+								<int key="myTrackingRectTag">373788928</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="421492351">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="421492351"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="135812370">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{429, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="135812370"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="927668467">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="927668467"/>
+								<int key="myTrackingRectTag">477905376</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="527491591">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="527491591"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="252059143">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{429, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<reference key="NSSupport" ref="978478260"/>
+									<reference key="NSControlView" ref="252059143"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="552493493">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</string>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<string key="NS.relative">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</string>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="552493493"/>
+								<int key="myTrackingRectTag">477916176</int>
+							</object>
+							<object class="PSMOverflowPopUpButton" id="216536986">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483391</int>
+								<string key="NSFrame">{{429, 0}, {24, 22}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSPopUpButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239488</int>
+									<int key="NSCellFlags2">2048</int>
+									<reference key="NSSupport" ref="244004601"/>
+									<reference key="NSControlView" ref="216536986"/>
+									<int key="NSButtonFlags">-2046672641</int>
+									<int key="NSButtonFlags2">2</int>
+									<reference key="NSAlternateImage" ref="351135"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+									<nil key="NSMenuItem"/>
+									<bool key="NSMenuItemRespectAlignment">YES</bool>
+									<object class="NSMenu" key="NSMenu">
+										<string key="NSTitle"/>
+									</object>
+									<int key="NSSelectedIndex">-1</int>
+									<bool key="NSPullDown">YES</bool>
+									<int key="NSPreferredEdge">2</int>
+									<bool key="NSUsesItemFromMenu">YES</bool>
+									<bool key="NSAltersState">YES</bool>
+									<int key="NSArrowPosition">1</int>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<object class="NSMutableString" key="NS.relative">
+													<characters key="NS.bytes">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImage.png</characters>
+												</object>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<object class="NSImage" key="PSMTabBarOverflowDownPopUpImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<object class="NSMutableString" key="NS.relative">
+													<characters key="NS.bytes">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/overflowImagePressed.png</characters>
+												</object>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<bool key="PSMTabBarOverflowAnimatingAlternateImage">NO</bool>
+							</object>
+							<object class="PSMRolloverButton" id="180490690">
+								<reference key="NSNextResponder" ref="374177355"/>
+								<int key="NSvFlags">-2147483392</int>
+								<string key="NSFrame">{{429, 3}, {16, 16}}</string>
+								<reference key="NSSuperview" ref="374177355"/>
+								<int key="NSTag">-1</int>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell">
+									<int key="NSCellFlags">67239424</int>
+									<int key="NSCellFlags2">134217728</int>
+									<string key="NSContents"/>
+									<object class="NSFont" key="NSSupport">
+										<string key="NSName">LucidaGrande</string>
+										<double key="NSSize">12</double>
+										<int key="NSfFlags">4883</int>
+									</object>
+									<reference key="NSControlView" ref="180490690"/>
+									<int key="NSButtonFlags">138428671</int>
+									<int key="NSButtonFlags2">6</int>
+									<object class="NSImage" key="NSNormalImage" id="402303965">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<object class="NSMutableString" key="NS.relative">
+														<characters key="NS.bytes">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetal.png</characters>
+													</object>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<object class="NSImage" key="NSAlternateImage">
+										<int key="NSImageFlags">79691776</int>
+										<object class="NSArray" key="NSReps">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSArray">
+												<bool key="EncodedWithXMLCoder">YES</bool>
+												<integer value="5"/>
+												<object class="NSURL">
+													<nil key="NS.base"/>
+													<object class="NSMutableString" key="NS.relative">
+														<characters key="NS.bytes">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalPressed.png</characters>
+													</object>
+												</object>
+											</object>
+										</object>
+										<reference key="NSColor" ref="519944836"/>
+									</object>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">400</int>
+									<int key="NSPeriodicInterval">75</int>
+								</object>
+								<object class="NSImage" key="rolloverImage">
+									<int key="NSImageFlags">79691776</int>
+									<object class="NSArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="5"/>
+											<object class="NSURL">
+												<nil key="NS.base"/>
+												<object class="NSMutableString" key="NS.relative">
+													<characters key="NS.bytes">file://localhost/Users/neoneye/bzr/newcmd_app/CONTENT/version1/source/PSMTabBarControl/build/Release/PSMTabBarControl.ibplugin/Contents/Frameworks/PSMTabBarControl.framework/Resources/TabNewMetalRollover.png</characters>
+												</object>
+											</object>
+										</object>
+									</object>
+									<reference key="NSColor" ref="519944836"/>
+								</object>
+								<reference key="usualImage" ref="402303965"/>
+								<int key="myTrackingRectTag">425948704</int>
+							</object>
+						</object>
+						<object class="NSMutableSet" key="NSDragTypes">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="NSArray" key="set.sortedObjects">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<string>PSMTabBarControlItemPBType</string>
+							</object>
+						</object>
+						<string key="NSFrame">{{0, 513}, {452, 22}}</string>
+						<reference key="NSSuperview" ref="1005"/>
+						<bool key="NSEnabled">YES</bool>
+					</object>
+				</object>
+				<string key="NSFrameSize">{452, 535}</string>
+				<reference key="NSSuperview"/>
+				<string key="NSClassName">NSView</string>
+			</object>
+		</object>
+		<object class="IBObjectContainer" key="IBDocument.Objects">
+			<object class="NSMutableArray" key="connectionRecords">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1005"/>
+					</object>
+					<int key="connectionID">15</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="123470691"/>
+						<reference key="destination" ref="374177355"/>
+					</object>
+					<int key="connectionID">159</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tabView</string>
+						<reference key="source" ref="374177355"/>
+						<reference key="destination" ref="123470691"/>
+					</object>
+					<int key="connectionID">160</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">partnerView</string>
+						<reference key="source" ref="374177355"/>
+						<reference key="destination" ref="123470691"/>
+					</object>
+					<int key="connectionID">161</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tabBar</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="374177355"/>
+					</object>
+					<int key="connectionID">168</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tabView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="123470691"/>
+					</object>
+					<int key="connectionID">169</int>
+				</object>
+			</object>
+			<object class="IBMutableOrderedSet" key="objectRecords">
+				<object class="NSArray" key="orderedObjects">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+					<object class="IBObjectRecord">
+						<int key="objectID">0</int>
+						<reference key="object" ref="0"/>
+						<reference key="children" ref="1000"/>
+						<nil key="parent"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">-2</int>
+						<reference key="object" ref="1001"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">File's Owner</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">-1</int>
+						<reference key="object" ref="1003"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">First Responder</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">-3</int>
+						<reference key="object" ref="1004"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Application</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1</int>
+						<reference key="object" ref="1005"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="374177355"/>
+							<reference ref="123470691"/>
+						</object>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">153</int>
+						<reference key="object" ref="374177355"/>
+						<reference key="parent" ref="1005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">154</int>
+						<reference key="object" ref="123470691"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="910799122"/>
+							<reference ref="1053364605"/>
+							<reference ref="625875411"/>
+							<reference ref="1043291859"/>
+							<reference ref="725617746"/>
+						</object>
+						<reference key="parent" ref="1005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">155</int>
+						<reference key="object" ref="910799122"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="351667141"/>
+						</object>
+						<reference key="parent" ref="123470691"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">156</int>
+						<reference key="object" ref="1053364605"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="258327739"/>
+						</object>
+						<reference key="parent" ref="123470691"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">157</int>
+						<reference key="object" ref="258327739"/>
+						<reference key="parent" ref="1053364605"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">158</int>
+						<reference key="object" ref="351667141"/>
+						<reference key="parent" ref="910799122"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">162</int>
+						<reference key="object" ref="625875411"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="706400656"/>
+						</object>
+						<reference key="parent" ref="123470691"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">163</int>
+						<reference key="object" ref="706400656"/>
+						<reference key="parent" ref="625875411"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">164</int>
+						<reference key="object" ref="1043291859"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="783176017"/>
+						</object>
+						<reference key="parent" ref="123470691"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">165</int>
+						<reference key="object" ref="783176017"/>
+						<reference key="parent" ref="1043291859"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">166</int>
+						<reference key="object" ref="725617746"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="474652985"/>
+						</object>
+						<reference key="parent" ref="123470691"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">167</int>
+						<reference key="object" ref="474652985"/>
+						<reference key="parent" ref="725617746"/>
+					</object>
+				</object>
+			</object>
+			<object class="NSMutableDictionary" key="flattenedProperties">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="NSArray" key="dict.sortedKeys">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>-1.IBPluginDependency</string>
+					<string>-2.IBPluginDependency</string>
+					<string>-3.IBPluginDependency</string>
+					<string>1.IBEditorWindowLastContentRect</string>
+					<string>1.IBPluginDependency</string>
+					<string>1.WindowOrigin</string>
+					<string>1.editorWindowContentRectSynchronizationRect</string>
+					<string>153.IBPluginDependency</string>
+					<string>154.IBPluginDependency</string>
+					<string>155.IBPluginDependency</string>
+					<string>156.IBPluginDependency</string>
+					<string>157.IBPluginDependency</string>
+					<string>158.IBPluginDependency</string>
+				</object>
+				<object class="NSMutableArray" key="dict.values">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{445, 112}, {452, 535}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{628, 654}</string>
+					<string>{{357, 416}, {480, 272}}</string>
+					<string>com.positivespinmedia.PSMTabBarControlPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+				</object>
+			</object>
+			<object class="NSMutableDictionary" key="unlocalizedProperties">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<reference key="dict.sortedKeys" ref="0"/>
+				<object class="NSMutableArray" key="dict.values">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+				</object>
+			</object>
+			<nil key="activeLocalization"/>
+			<object class="NSMutableDictionary" key="localizations">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<reference key="dict.sortedKeys" ref="0"/>
+				<object class="NSMutableArray" key="dict.values">
+					<bool key="EncodedWithXMLCoder">YES</bool>
+				</object>
+			</object>
+			<nil key="sourceID"/>
+			<int key="maxID">169</int>
+		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">NCListPanelController</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>activatePanel:</string>
+							<string>deactivatePanel:</string>
+							<string>newTab:</string>
+							<string>selectAllOrNone:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>background</string>
+							<string>delegate</string>
+							<string>lister</string>
+							<string>listerCounter</string>
+							<string>m_delegate</string>
+							<string>modelController</string>
+							<string>tabBar</string>
+							<string>tabView</string>
+							<string>tabbedPathBar</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NCBackground</string>
+							<string>id</string>
+							<string>NCLister</string>
+							<string>NCListerCounter</string>
+							<string>id</string>
+							<string>NSObjectController</string>
+							<string>PSMTabBarControl</string>
+							<string>NSTabView</string>
+							<string>NCTabbedPathBar</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="203990281">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">source/NCListPanelController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>clickToActivatePanel:</string>
+							<string>closeTab:</string>
+							<string>duplicateTab:</string>
+							<string>switchToNextTab:</string>
+							<string>switchToPrevTab:</string>
+							<string>tabKeyPressed:</string>
+							<string>workingDirDidChange:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<reference key="sourceIdentifier" ref="203990281"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">source/NCMainWindow.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">source/NCToolbar.h</string>
+					</object>
+				</object>
+			</object>
+			<object class="NSMutableArray" key="referencedPartialClassDescriptionsV3.2+">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSApplication</string>
+					<string key="superclassName">NSResponder</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="53912741">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSApplication.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSApplication</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="842882367">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSApplicationScripting.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSApplication</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="121887840">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSColorPanel.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSApplication</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSHelpManager.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSApplication</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSPageLayout.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSApplication</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSUserInterfaceItemSearching.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSControl</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="244260800">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSControl.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSController</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSFormatter</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSFormatter.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSManagedObjectContext</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">CoreData.framework/Headers/NSManagedObjectContext.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSMenu</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="163428900">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSMenu.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSAccessibility.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<reference key="sourceIdentifier" ref="53912741"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<reference key="sourceIdentifier" ref="842882367"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<reference key="sourceIdentifier" ref="121887840"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<reference key="sourceIdentifier" ref="244260800"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSDictionaryController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSDragging.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSFontManager.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSFontPanel.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSKeyValueBinding.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<reference key="sourceIdentifier" ref="163428900"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSNibLoading.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSOutlineView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSPasteboard.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSSavePanel.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSTableView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSToolbarItem.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="329261767">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSArchiver.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSClassDescription.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSError.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSFileManager.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSKeyValueCoding.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSKeyValueObserving.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSKeyedArchiver.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSObject.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSObjectScripting.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSPortCoder.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSRunLoop.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptClassDescription.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptKeyValueCoding.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptObjectSpecifiers.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptWhoseTests.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSThread.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSURL.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSURLConnection.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSURLDownload.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">ImageKit.framework/Headers/IKImageBrowserView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">ImageKit.framework/Headers/IKSaveOptions.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">ImageKit.framework/Headers/ImageKitDeprecated.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">PDFKit.framework/Headers/PDFDocument.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">PDFKit.framework/Headers/PDFView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzComposer.framework/Headers/QCCompositionParameterView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzComposer.framework/Headers/QCCompositionPickerView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzFilters.framework/Headers/QuartzFilterManager.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuickLookUI.framework/Headers/QLPreviewPanel.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObjectController</string>
+					<string key="superclassName">NSController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSObjectController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSResponder</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSInterfaceStyle.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSResponder</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSResponder.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSTabView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSTabView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSTabViewItem</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSTabViewItem.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSClipView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSMenuItem.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSRulerView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSView</string>
+					<string key="superclassName">NSResponder</string>
+					<reference key="sourceIdentifier" ref="329261767"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSViewController</string>
+					<string key="superclassName">NSResponder</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">view</string>
+						<string key="NS.object.0">NSView</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSViewController.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
+		<int key="IBDocument.localizationMode">0</int>
+		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
+			<integer value="1060" key="NS.object.0"/>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>
+			<integer value="3000" key="NS.object.0"/>
+		</object>
+		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../NewtonCommander.xcodeproj</string>
+		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+	</data>
+</archive>

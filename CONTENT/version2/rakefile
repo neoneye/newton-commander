@@ -1,0 +1,152 @@
+require 'fileutils'
+
+def log_write(filename, text)
+  File.open(filename, 'a+') {|f| f.write(text) }
+end
+  
+
+desc "find icns files and their size"
+task :icons do
+  Dir.chdir("/Applications") do
+    cmd = 'find . -type f -name "*.icns" -exec stat -f "%z %N" "{}" \; | tee /tmp/icon_result.txt'
+    system(cmd)
+  end
+  # sort -s -n -k 1
+end
+
+
+desc "find a header file in one of the standard locations"
+task :header do
+  pattern = "*ase.h"
+  cmd = "find . -name '#{pattern}' -print"
+  dirs = %w(
+    /Developer/Library/Frameworks
+    /usr/include
+    /System/Library/Frameworks
+  )
+  dirs.each do |dir|
+    puts "========= #{dir}"
+    Dir.chdir(dir) do
+      system(cmd)
+    end
+  end
+end
+
+
+
+desc "word count in the NCCore dir"
+task :wc1 do
+  cmd = 'find NCCore -type f \( '
+  cmd += '-name "*.h" -or -name "*.m" -or -name "*.c"'
+  cmd += ' \) | xargs wc -mlw'
+  system(cmd)
+end
+
+desc "word count in the NewtonCommander dir"
+task :wc2 do
+  cmd = 'find NewtonCommander -type f \( '
+  cmd += '-name "*.h" -or -name "*.m" -or -name "*.c"'
+  cmd += ' \) | xargs wc -mlw'
+  system(cmd)
+end
+
+desc "word count in the NewtonCommanderHelper dir"
+task :wc3 do
+  cmd = 'find NewtonCommanderHelper -type f \( '
+  cmd += '-name "*.h" -or -name "*.m" -or -name "*.c"'
+  cmd += ' \) | xargs wc -mlw'
+  system(cmd)
+end
+
+
+desc "install the tool which we use to set the SETUID bit, during development of newtoncommander"
+task :ift => :install_fixperm_tool
+task :install_fixperm_tool do 
+  system("sudo cp fixperm_on_newtoncommanders_worker.sh /usr/bin/.")
+  puts "you must add the following line to /etc/sudoers"
+  puts "neoneye  ALL=(ALL) NOPASSWD: /usr/bin/fixperm_on_newtoncommanders_worker.sh"
+  puts "you can do this by typing: sudo visudo"
+end
+
+
+desc "restore default logging settings for ASL"
+task :log0 do
+  cmd = "sudo syslog -c syslogd -n"
+  p cmd
+  system(cmd)
+end 
+
+
+desc "show all debug log messages with ASL"
+task :log1 do
+  cmd = "sudo syslog -c syslogd -d"
+  p cmd
+  system(cmd)
+end 
+
+
+desc "restore master logging settings for ASL"
+task :master_off do
+  cmd = "sudo syslog -c 0 off"
+  p cmd
+  system(cmd)
+end 
+
+
+desc "show all master log messages with ASL"
+task :master_on do
+  cmd = "sudo syslog -c 0 -d"
+  p cmd
+  system(cmd)
+end 
+
+
+desc "write test message to ASL log"
+task :test_log do
+  cmd = 'syslog -s -l 7 "Houston, I think we have a problem."'
+  p cmd
+  system(cmd)
+end 
+
+
+desc "restart syslogd"
+task :restart_syslogd do
+  begin
+    cmd = 'sudo launchctl unload /System/Library/LaunchDaemons/com.apple.syslogd.plist'
+    p cmd
+    system(cmd)
+  end
+  begin
+    cmd = 'sudo launchctl load /System/Library/LaunchDaemons/com.apple.syslogd.plist'
+    p cmd
+    system(cmd)
+  end
+end 
+
+desc "inspect ASL's log settings"
+task :asl do
+  begin
+    cmd = "syslog -c syslogd"
+    p cmd
+    system(cmd)
+  end
+  begin
+    cmd = "syslog -c 0"
+    p cmd
+    system(cmd)
+  end
+  begin
+    puts "/etc/asl.conf contains:"
+    s = IO.read('/etc/asl.conf')
+    puts s.grep(/Newton|NewtonCommanderHelper|NCWorker/i)
+    puts "\n\nit should contain:"
+    txt =<<TXT
+# save everything from NewtonCommander
+? [= Sender Newton Commander] store
+? [= Sender NewtonCommanderHelper] store
+? [= Sender NCWorker] store
+TXT
+    puts txt
+  end
+end
+

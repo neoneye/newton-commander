@@ -1,0 +1,321 @@
+<chapter><?dbhtml filename="shortcuts.html" ?>
+<title>Keyboard shortcuts</title>
+
+<sect2><title>List of Shortcuts</title>
+<para>Newton Commander is supposed to be operated from the keyboard.</para>
+
+<para>The selection of files is done by holding down shift while moving around with the arrow up/down keys over the file you want to select.</para>
+
+    <segmentedlist><title>Navigation Shortcuts</title>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Shortcut</segtitle>
+    <segtitle>Action</segtitle>
+    <seglistitem>
+        <seg>TAB</seg>
+        <seg>Switch between left and right list.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD T</seg>
+        <seg>Open new tab.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD W</seg>
+        <seg>Close currently active tab.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>^TAB</seg>
+        <seg>Jump to next tab.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>^ SHIFT TAB</seg>
+        <seg>Jump to previous tab.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD Q</seg>
+        <seg>Quit this program.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD ,</seg>
+        <seg>Show Preferences window.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD F</seg>
+        <seg>Reveal selected items in Apple's Finder.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Arrow up</seg>
+        <seg>Moves up one row.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Arrow down</seg>
+        <seg>Moves down one row.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧Arrow up</seg>
+        <seg>Select this row and move up one row.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧Arrow down</seg>
+        <seg>Select this row and move down one row.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>^Arrow down</seg>
+        <seg>Open select items.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Arrow left</seg>
+        <seg>Open the left action menu.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Arrow right</seg>
+        <seg>Open the right action menu.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>HOME</seg>
+        <seg>Move cursor to top.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>END</seg>
+        <seg>Move cursor to bottom.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Enter</seg>
+        <seg>Navigate into the dir.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Backspace</seg>
+        <seg>Navigate back to previous directory.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD Backspace</seg>
+        <seg>Navigate to parent directory.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Spacebar</seg>
+        <seg>QuickLook.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Page up</seg>
+        <seg>Move a page up.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>Page down</seg>
+        <seg>Move a page down.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD A</seg>
+        <seg>Select all items. If all items are selected then select none.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD R</seg>
+        <seg>Reload directory.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD D</seg>
+        <seg>Bookmark this directory.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>ALT CMD B</seg>
+        <seg>Show bookmark window.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 1</seg>
+        <seg>Navigate to bookmark 1.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 2</seg>
+        <seg>Navigate to bookmark 2.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 3</seg>
+        <seg>Navigate to bookmark 3.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 4</seg>
+        <seg>Navigate to bookmark 4.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 5</seg>
+        <seg>Navigate to bookmark 5.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 6</seg>
+        <seg>Navigate to bookmark 6.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 7</seg>
+        <seg>Navigate to bookmark 7.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 8</seg>
+        <seg>Navigate to bookmark 8.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 9</seg>
+        <seg>Navigate to bookmark 9.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD 0</seg>
+        <seg>Navigate to bookmark 10.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD C</seg>
+        <seg>Copy absolute paths for the selected items to clipboard.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>SHIFT CMD C</seg>
+        <seg>Copy names of the selected items to clipboard.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>CMD G</seg>
+        <seg>Go to the folder.</seg>
+    </seglistitem>
+    </segmentedlist>
+
+</sect2>
+
+
+<sect2><title>The F Keys</title>
+<para>Perform file operations using the F keys.</para>
+
+    <segmentedlist><title>F1 to F10 without modifiers</title>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Shortcut</segtitle>
+    <segtitle>Action</segtitle>
+    <seglistitem>
+        <seg>F1</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F2</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F3</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F4</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F5</seg>
+        <seg>Copy.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F6</seg>
+        <seg>Move (work in progress).</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F7</seg>
+        <seg>MkDir.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F8 or DELETE</seg>
+        <seg>Delete.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F9</seg>
+        <seg>Reserve.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>F10</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    </segmentedlist>
+
+    <segmentedlist><title>F1 to F10 with SHIFT modifier</title>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Shortcut</segtitle>
+    <segtitle>Action</segtitle>
+    <seglistitem>
+        <seg>⇧F1</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F2</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F3</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F4</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F5</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F6</seg>
+        <seg>Rename.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F7</seg>
+        <seg>MkFile.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F8</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F9</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⇧F10</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    </segmentedlist>
+
+    <segmentedlist><title>F1 to F10 with CTRL modifier</title>
+    <?dbhtml list-presentation="table"?>
+    <segtitle>Shortcut</segtitle>
+    <segtitle>Action</segtitle>
+    <seglistitem>
+        <seg>⌃F1</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F2</seg>
+        <seg>Focus to the menu.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F3</seg>
+        <seg>Focus to the dock.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F4</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F5</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F6</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F7</seg>
+        <seg>MkLink.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F8</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F9</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    <seglistitem>
+        <seg>⌃F10</seg>
+        <seg>Reserved.</seg>
+    </seglistitem>
+    </segmentedlist>
+
+</sect2>
+
+</chapter>

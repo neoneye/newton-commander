@@ -1,0 +1,54 @@
+require 'rake/clean'
+
+CLEAN.include('simple_copy')
+CLOBBER.include('*.o')
+
+
+task :default => ["simple_copy", :run]
+
+SRC = FileList['*.m', '*.c']
+OBJ = SRC.ext('o')
+
+rule '.o' => '.m' do |t|
+  sh "gcc -c -o #{t.name} #{t.source}"
+end
+
+rule '.o' => '.c' do |t|
+  sh "gcc -c -o #{t.name} #{t.source}"
+end
+
+OBJ_COPY = ['simple_copy.o', 'sc_traversal_objects.o', 'sc_tov_print.o', 'sc_resource_fork_manager.o', 'sc_finder_info_manager.o']  
+file "simple_copy" => OBJ_COPY do
+  ENV["LINK1"] = "/System/Library/Frameworks/Foundation.framework/Foundation"
+  ENV["LINK2"] = "/System/Library/Frameworks/CoreServices.framework/CoreServices"
+  objs = OBJ_COPY.join(' ')
+  sh "gcc -L \"$LINK1\" -L \"$LINK2\" -o simple_copy #{objs}"
+end
+
+# File dependencies go here ...
+file 'simple_copy.o' => ['simple_copy.m', 'sc_traversal_objects.h', 'sc_tov_print.h', 'sc_resource_fork_manager.h', 'sc_finder_info_manager.h']
+file 'sc_traversal_objects.o' => ['sc_traversal_objects.m', 'sc_traversal_objects.h']
+file 'sc_tov_print.o' => ['sc_tov_print.m', 'sc_tov_print.h', 'sc_traversal_objects.h']
+file 'sc_resource_fork_manager.o' => ['sc_resource_fork_manager.m', 'sc_resource_fork_manager.h']
+file 'sc_finder_info_manager.o' => ['sc_finder_info_manager.m', 'sc_finder_info_manager.h']
+
+
+task :run do
+  system("./simple_copy")
+end
+
+task :run2 do
+  srcdir = "/Volumes/AnalyzeCopySource/group0"
+  dstdir = "/Volumes/AnalyzeCopyDest/47_opcoders/result"
+  system("sudo ./simple_copy #{srcdir} #{dstdir}")
+end
+
+task :run3 do
+  srcdir = "/Volumes/AnalyzeCopySource/group0"
+  dstdir = "/Volumes/AnalyzeCopyDest/47_opcoders/result"
+  system("sudo ./simple_copy #{srcdir} #{dstdir} | tee tst.sh")
+  system("chmod a+x tst.sh")
+end
+
+task :test2 => ["simple_copy", :run2]
+task :test3 => ["simple_copy", :run3]

@@ -1,0 +1,13 @@
+//
+//  Debug.xcconfig
+//  NCWorkerChild
+//
+//  Created by Simon Strandgaard on 13/06/10.
+//  Copyright 2010 opcoders.com. All rights reserved.
+//
+
+//SYMROOT = ../build
+//BUILD_DIR = ../build
+//PROJECT_TEMP_DIR = ../build
+
+//OTHER_LDFLAGS = -ObjC

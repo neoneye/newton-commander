@@ -1,0 +1,399 @@
+---------------------------------
+Encapsulate the SimpleCopy in a framework that can be used within
+Newton Commander.
+
+Extend SimpleCopy with lots of checks against overwriting files.
+
+---------------------------------
+New things in Snow Leopard to support:
+ * Bookmark's are not like Aliases
+ * NSURL's are supposedly used everywhere
+
+---------------------------------
+mkdir /Users/neoneye/Desktop/test_mount_point
+mount a SFTP filesystem using MacFusion to the above mount point
+^^^^^
+What's really strange is that the mount point is
+detected as an Alias by the Finder.. But I can't detect it.. why?
+If you browse as a different user than the user that owns it
+then it's just empty. Despite me beign root!
+TODO: "browse as..." that will run the discover process as the
+specified user. 
+
+---------------------------------
+TODO: when not all files have been stat64'ed the filetype column
+shows a flash sign. If we are dealing with a really slow FTP 
+connection. Then it would be good to treat these as dirs, so
+that we can navigate around.. despite not knowing if its a dir.
+
+---------------------------------
+TODO: is_remote vs. is_local. IIRC I read somewhere in the 
+FUSE wiki that Finder reads an attribute for this.
+Perhaps we should read it too.
+
+---------------------------------
+TODO: hit enter to enter pseudo dirs, such as: DMG, ZIP, ISO files.
+This will mount the file.. will need to show a "Is mounting..." message.
+
+---------------------------------
+TODO: CTRL D -  show bookmark locations as in Total Commander
+
+---------------------------------
+
+
+TODO: copying window that shows progress of how the copy operation are doing.
+I have been looking at the source code for "/bin/cp" and it gives some clues
+to how to code it.
+
+---------------------------------
+
+TODO: install the Discover.app into /Library/PrivilegedHelperTools
+otherwise we allow users to run arbitrary code as root
+we can't risk that
+
+---------------------------------
+
+What operations do I still use Finder for?
+
+ 1. quicklook for viewing files
+ 2. unzip/zip
+ 3. move/copy/delete
+
+---------------------------------
+
+TODO: better quicklook
+prompt> /usr/bin/qlmanage -p some_movie.avi >& /dev/null
+prompt>
+
+---------------------------------
+TODO: 'kc' must bring focus to the current tab.
+and when launching keyboardcommander.app.. it must do it too.
+
+---------------------------------
+
+TODO: multiple files copy/move with progressbars
+
+
+---------------------------------
+TODO: the info pane can timeout if you navigate to the "/net" folder,
+freezing up the entire UI. Move the info pane logic to a separate process.
+
+---------------------------------
+TODO: theme. for selected rows, use a black background and white text. As in "worker".
+
+---------------------------------
+
+
+TODO: report must show "Open with..." programs (compatible programs)
+
+TODO: report must show "Open with..." default program
+
+TODO: report must show if we have "read/write/execute" permission
+so we have an explaination why we can't access a dir/folder/device...
+
+TODO: report must show "Data fork size", "Resource fork size"
+
+TODO: report must show "Physical size"
+
+TODO: report must show "Parent dir ID"
+
+TODO: report must show mac'ish filename with colons, like:  :usr:home:neoneye:blah
+
+TODO: report must show resolve symlinks/aliases
+
+TODO: parentdir navigation.. must place cursor at the dir that we came
+from. Currently this only happens when we already have been visiting the
+dir (its cached). If we havn't visited it, then the direntries needs to
+be read from disk and this operation may take a variable amount of time,
+so placing a cursor inside a non-cached dir is bad.
+For this reason we need to obtain dir-entries for the parent dir
+BEFORE the user goes to parent dir.
+
+
+TODO: report for "spotlight". When was it last run.
+How many files has it indexed.. etc.
+
+TODO: report for "timemachine". When was it last run.
+How many files has it backedup. backup media capacity. etc.
+
+
+---------------------------------
+BUG: investigate how it's possible for MDItemCopyAttributeNames() with a NULL pointer
+    to crash the parent process.. even though it's shielded off in the Report.app process.
+
+BUG: the Info panel takes up 100% cpu when "file" are being invoked.
+Not entirely sure how it happens.
+
+---------------------------------
+Remaining operations in XFile.. the one SirGarbageTruck uses
+
+ 1. Info on mount CMD SHIFT I
+ 2. duplicate file
+ 3. goto...
+ 4. goto Preferences
+ 5. connect to server  (ftp)
+ 6. disconnect from server
+ 7. eject
+ 8. Info on file
+ 9. File list column: icon
+10. File list column: inode
+11. File list column: Links
+12. File list column: Owner
+13. File list column: Group
+14. File list column: Accessed
+15. File list column: Changed
+16. File list column: Modified
+17. File list column: Mode
+18. Disk status: capacity vs. GB's available
+
+---------------------------------
+
+TODO: sort table by: fileextension, timestamps, permissions
+
+TODO: copy multiple files
+
+TODO: move multiple files
+
+
+TODO: info-panel needs its own (killable) process, to prevent
+locking up the UI. I have seen it happen with the "/net" folder.
+
+
+TODO: when a dir is empty, then write: "this dir is empty"
+
+TODO: create symlink
+
+TODO: duplicate file
+
+TODO: unzip files
+
+TODO: zip files   
+
+TODO: randomize listing of files (for pr0n viewing), 
+Example hit F3 to randomize with new seed. and SHIFT F3 for previous seed.
+
+TODO: count number of items in a dir. Count their file size as well.
+Use "du" for this.
+
+TODO: show disk usage.. calling "df" under the hood.
+
+TODO: should we call [NSFileManager changeCurrentDirectoryPath], so that
+our path is the source path all the time?
+
+
+BUG: CMD R = Reload tab.. when doing this on "/net" many many times in a row,
+then this happens: 
+"didHandshakeTakePlace left ERROR: handshake never took place"
+"TERMINATE: didHandshakeTakePlace"
+
+
+TODO: OpenInKC.app.. make it easy to install/uninstall via the
+preferences window. So it's placed in "/Applications/Scripts"
+
+TODO: "kc" executable. make it easy to install/uninstall via the
+preferences window. So it's places in "/usr/bin/kc"
+
+
+TODO: SHIFT F7 = mkdir for selected files
+Let's say you have selected the files: A B C D.
+Hit SHIFT F7 to create a new dir E
+All the selected files ends up in the E dir.
+
+TODO: make analysis HTML report of the open dir.
+ 1. google translate link
+ 2. rafb paste
+ 3. upload to flickr
+ 4. file upload (rapidshare)
+ 5. upload to youtube
+ 6. upload to facebook
+ 1. filename
+ 2. permissions. link to document about what permissions are safe.
+ 3. size
+ 4. mime type
+ 5. google-link to fileformat info
+ 6. quarantene homepage
+ 7. names found in file
+ 8. urls found in file
+ 9. emails found in file
+10. line count
+11. most common ocurring names, phrases
+
+
+IDEA: shell commands.. cdff and ff.. but for kc
+
+---------------------------------
+IDEA: CMD F7 = make file from templates:
+ 1. readme.txt with lorem ipsum
+ 2. index.html with hello world
+ 3. placeholder.png
+
+
+---------------------------------
+TODO: Recursive GREP search window with lots of search options.
+ 1. filename
+ 2. extension
+ 3. date
+ 4. permissions
+ 5. type
+
+
+---------------------------------
+
+TODO: multi-file rename
+
+TODO: chown/chgrp/acl editor
+
+TODO: reduce startup time. A program with just a MainMenu.nib can
+launch in 0.08 seconds. Right now we launch in 0.4 seconds (way too long).
+The backend that doesn't load any .nib files starts in 0.07 seconds.
+When you are clicking within Finder to open up my FileManager, then
+it takes too long for anything to happen.
+
+
+TODO: ask for password when there is some file that we don't have permission to.
+Usually I am the admin of my own computer, so I want to have access to everything.
+http://developer.apple.com/documentation/Security/Conceptual/authorization_concepts/03authtasks/authtasks.html#//apple_ref/doc/uid/TP30000995-CH206-TP9
+
+
+TODO: opendiff (FileMerge) must not block the UI.
+
+
+TODO: preferences for diff tool:
+ 1. opendiff (aka FileMerge) bundled with the apple developer tools
+ 2. diffmerge by http://www.sourcegear.com/diffmerge/index.html
+ 3. changes by http://changesapp.com/
+ 4. other...
+
+
+
+PROBLEM:
+The number of rows is not an integer, the bottom row is partially visible. This is causing problems with PageDown. When we reach the bottom of the tableview, then the tableview will scroll to make the last row visible, causing a sudden visual jump (AKA visual noise).
+
+SOLUTION:
+Insert a blank row at the bottom of the tableview.
+
+
+---------------------------------
+IDEA: indicate when Discover is hanging in the UI
+
+
+
+---------------------------------
+IDEA: indicate how many files that it is you are dragging with the mouse.
+
+
+
+---------------------------------
+IDEA: upload to FTP, it's important that a corresponding HTTP link
+is placed on the clipboard. So when configuring a FTP server, the
+also configure it's web URL's.
+
+
+---------------------------------
+IDEA: when the cursor movement slows down, then it's likely that
+the user wants to follow the link at the cursor position, thus
+it could be interesting to see if prefetching the filenames
+will have a significant effect on navigation speed.
+
+
+
+---------------------------------
+IDEA: have 2 worker processes open all the time. When one is
+to be killed then switch to the other one, this way we can
+instantly continue browsing without any delay.
+Right now the delay happens in the restart code, I guess it's 
+about a 0.3 second penalty when the worker process is restarted.
+This penalty can be completely eliminated.
+
+
+
+
+
+
+
+---------------------------------
+IDEA: Benchmark filesystem
+ 1. copy speed
+ 2. move speed
+ 3. stat speed
+
+
+---------------------------------
+IDEA: Growl integration
+
+TODO: when CMD C path to clipboard, a growl message must be shown
+that the path is now on the clipboard.
+
+
+---------------------------------
+IDEA: GIT integration
+
+Whenever a ".git" dir is discovered then offer these options:
+ 1. select modified files
+ 2. show changelog for a file
+ 3. git log
+ 4. git commit
+ 5. git push
+ 6. show size of compressed repository on server
+
+
+---------------------------------
+IDEA: SVN integration
+
+---------------------------------
+IDEA: Spotlight - control what dirs to be included/excluded
+mdimport, SetFile -a v, .noindex..
+
+
+---------------------------------
+
+
+
+---------------------------------
+IDEA: OpenVPN integration
+
+---------------------------------
+IDEA: FTP/SFTP integration
+
+---------------------------------
+getattrlist
+getattrs
+getdirentriesattr
+lstat
+fts_read
+
+searchfs
+
+
+
+
+---------------------------------
+To make OrthodoxFileManager the default file manager
+defaults write com.apple.loginwindow Finder /Applications/OrthodoxFileManager.app
+
+To restore do this
+defaults delete com.apple.loginwindow Finder
+
+
+---------------------------------
+TODO: Path Finder has many different Copy path options.
+ UNIX, HFS, Windows, Terminal, URL, Name
+
+
+---------------------------------
+mount disk image while preserving UID and GID.
+prompt> hdiutil attach TestData.dmg -owners on
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+{
+	Actions = {};
+	Outlets = {};
+	ClassName = NCPathBar;
+	SuperClass = NSView;
+}

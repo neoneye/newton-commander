@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42066B8D10EFF54200AEC870 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42066B8C10EFF54200AEC870 /* AppDelegate.mm */; };
+		42066B9010EFF57800AEC870 /* libRBSplitView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42066B4710EFF2DB00AEC870 /* libRBSplitView.a */; };
+		42066B9710EFF59300AEC870 /* RBSplitSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 42066B9210EFF59300AEC870 /* RBSplitSubview.m */; };
+		42066B9810EFF59300AEC870 /* RBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42066B9410EFF59300AEC870 /* RBSplitView.m */; };
+		42066BAC10EFF70100AEC870 /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42066B5A10EFF2E400AEC870 /* PSMTabBarControl.framework */; };
+		42066BAD10EFF70600AEC870 /* PSMTabBarControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42066B5A10EFF2E400AEC870 /* PSMTabBarControl.framework */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42066B4210EFF2DB00AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = Palette;
+		};
+		42066B4410EFF2DB00AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5E002A107328E1100594182;
+			remoteInfo = Framework;
+		};
+		42066B4610EFF2DB00AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5E003B9073298FC00594182;
+			remoteInfo = Library;
+		};
+		42066B4810EFF2DB00AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5EA8A09074CF5AB00AE807E;
+			remoteInfo = SampleApp;
+		};
+		42066B5510EFF2E400AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = PSMTabBarControl;
+		};
+		42066B5710EFF2E400AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A251BEA00959BB5B0058BC7F;
+			remoteInfo = TabBarControlDemo;
+		};
+		42066B5910EFF2E400AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53DF68FD067E5B5A0090B5B0;
+			remoteInfo = PSMTabBarControlFramework;
+		};
+		42066B9A10EFF5F400AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D5E003B8073298FC00594182;
+			remoteInfo = Library;
+		};
+		42066BAA10EFF6EC00AEC870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = PSMTabBarControlFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42066B8910EFF3C900AEC870 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42066BAD10EFF70600AEC870 /* PSMTabBarControl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* TabUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabUI_Prefix.pch; sourceTree = "<group>"; };
+		42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RBSplitView.xcodeproj; path = ../RBSplitView/RBSplitView.xcodeproj; sourceTree = SOURCE_ROOT; };
+		42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSMTabBarControl.xcodeproj; path = ../PSMTabBarControl/PSMTabBarControl.xcodeproj; sourceTree = SOURCE_ROOT; };
+		42066B8B10EFF54200AEC870 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		42066B8C10EFF54200AEC870 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		42066B9110EFF59300AEC870 /* RBSplitSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBSplitSubview.h; path = ../RBSplitView/Source/RBSplitSubview.h; sourceTree = SOURCE_ROOT; };
+		42066B9210EFF59300AEC870 /* RBSplitSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBSplitSubview.m; path = ../RBSplitView/Source/RBSplitSubview.m; sourceTree = SOURCE_ROOT; };
+		42066B9310EFF59300AEC870 /* RBSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBSplitView.h; path = ../RBSplitView/Source/RBSplitView.h; sourceTree = SOURCE_ROOT; };
+		42066B9410EFF59300AEC870 /* RBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBSplitView.m; path = ../RBSplitView/Source/RBSplitView.m; sourceTree = SOURCE_ROOT; };
+		42066B9510EFF59300AEC870 /* RBSplitView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBSplitView_Prefix.pch; path = ../RBSplitView/Source/RBSplitView_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		42066B9610EFF59300AEC870 /* RBSplitViewPrivateDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBSplitViewPrivateDefines.h; path = ../RBSplitView/Source/RBSplitViewPrivateDefines.h; sourceTree = SOURCE_ROOT; };
+		42066BA810EFF6B200AEC870 /* PSMTabBarControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSMTabBarControl.framework; path = ../PSMTabBarControl/build/Release/PSMTabBarControl.framework; sourceTree = SOURCE_ROOT; };
+		42066C1510EFFA6600AEC870 /* PSMTabBarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSMTabBarControl.h; path = ../PSMTabBarControl/source/PSMTabBarControl.h; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* TabUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42066BAC10EFF70100AEC870 /* PSMTabBarControl.framework in Frameworks */,
+				42066B9010EFF57800AEC870 /* libRBSplitView.a in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				42066B8B10EFF54200AEC870 /* AppDelegate.h */,
+				42066B8C10EFF54200AEC870 /* AppDelegate.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* TabUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TabUI */ = {
+			isa = PBXGroup;
+			children = (
+				42066BA810EFF6B200AEC870 /* PSMTabBarControl.framework */,
+				42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */,
+				42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = TabUI;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				42066C1510EFFA6600AEC870 /* PSMTabBarControl.h */,
+				42066B9110EFF59300AEC870 /* RBSplitSubview.h */,
+				42066B9210EFF59300AEC870 /* RBSplitSubview.m */,
+				42066B9310EFF59300AEC870 /* RBSplitView.h */,
+				42066B9410EFF59300AEC870 /* RBSplitView.m */,
+				42066B9510EFF59300AEC870 /* RBSplitView_Prefix.pch */,
+				42066B9610EFF59300AEC870 /* RBSplitViewPrivateDefines.h */,
+				32CA4F630368D1EE00C91783 /* TabUI_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42066B3710EFF2DB00AEC870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42066B4310EFF2DB00AEC870 /* RBSplitView.palette */,
+				42066B4510EFF2DB00AEC870 /* RBSplitView.framework */,
+				42066B4710EFF2DB00AEC870 /* libRBSplitView.a */,
+				42066B4910EFF2DB00AEC870 /* SampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42066B4B10EFF2E400AEC870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42066B5610EFF2E400AEC870 /* PSMTabBarControl.palette */,
+				42066B5810EFF2E400AEC870 /* TabBarControlDemo.app */,
+				42066B5A10EFF2E400AEC870 /* PSMTabBarControl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* TabUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TabUI" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				42066B8910EFF3C900AEC870 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42066B9B10EFF5F400AEC870 /* PBXTargetDependency */,
+				42066BAB10EFF6EC00AEC870 /* PBXTargetDependency */,
+			);
+			name = TabUI;
+			productInstallPath = "$(HOME)/Applications";
+			productName = TabUI;
+			productReference = 8D1107320486CEB800E47090 /* TabUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TabUI" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TabUI */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 42066B4B10EFF2E400AEC870 /* Products */;
+					ProjectRef = 42066B4A10EFF2E400AEC870 /* PSMTabBarControl.xcodeproj */;
+				},
+				{
+					ProductGroup = 42066B3710EFF2DB00AEC870 /* Products */;
+					ProjectRef = 42066B3610EFF2DB00AEC870 /* RBSplitView.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* TabUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		42066B4310EFF2DB00AEC870 /* RBSplitView.palette */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RBSplitView.palette;
+			remoteRef = 42066B4210EFF2DB00AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42066B4510EFF2DB00AEC870 /* RBSplitView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RBSplitView.framework;
+			remoteRef = 42066B4410EFF2DB00AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42066B4710EFF2DB00AEC870 /* libRBSplitView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRBSplitView.a;
+			remoteRef = 42066B4610EFF2DB00AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42066B4910EFF2DB00AEC870 /* SampleApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SampleApp.app;
+			remoteRef = 42066B4810EFF2DB00AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42066B5610EFF2E400AEC870 /* PSMTabBarControl.palette */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PSMTabBarControl.palette;
+			remoteRef = 42066B5510EFF2E400AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42066B5810EFF2E400AEC870 /* TabBarControlDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TabBarControlDemo.app;
+			remoteRef = 42066B5710EFF2E400AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42066B5A10EFF2E400AEC870 /* PSMTabBarControl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PSMTabBarControl.framework;
+			remoteRef = 42066B5910EFF2E400AEC870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				42066B8D10EFF54200AEC870 /* AppDelegate.mm in Sources */,
+				42066B9710EFF59300AEC870 /* RBSplitSubview.m in Sources */,
+				42066B9810EFF59300AEC870 /* RBSplitView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42066B9B10EFF5F400AEC870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Library;
+			targetProxy = 42066B9A10EFF5F400AEC870 /* PBXContainerItemProxy */;
+		};
+		42066BAB10EFF6EC00AEC870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PSMTabBarControlFramework;
+			targetProxy = 42066BAA10EFF6EC00AEC870 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../PSMTabBarControl/build/Release\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TabUI_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../RBSplitView/build/Release\"",
+				);
+				PRODUCT_NAME = TabUI;
+				SYMROOT = ../build;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../PSMTabBarControl/build/Release\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TabUI_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../RBSplitView/build/Release\"",
+				);
+				PRODUCT_NAME = TabUI;
+				SYMROOT = ../build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TabUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TabUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,14 @@
+//
+//  Common.xcconfig
+//  NCCore
+//
+//  Created by Simon Strandgaard on 13/06/10.
+//  Copyright 2010 opcoders.com. All rights reserved.
+//
+//SYMROOT = ../build
+//BUILD_DIR = ../build
+//PROJECT_TEMP_DIR = ../build
+
+GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO
+
+//OTHER_LDFLAGS = -ObjC

@@ -1,0 +1,110 @@
+PATH_TO_DOCBOOK_XSL = "/opt/local/share/xsl/docbook-xsl"
+XSL_FOR_XHTML = PATH_TO_DOCBOOK_XSL + "/xhtml/chunk.xsl"
+
+OUTPUT_DIR = "Newton Commander Help"
+OUTPUT_HELPINDEX = "#{OUTPUT_DIR}.helpindex"
+
+def make_an_empty_dir(dirname)
+  unless FileTest.exist?(dirname)
+    FileUtils.mkdir(dirname)
+  end
+  Dir.chdir(dirname) do
+    files = Dir.glob("*")
+    FileUtils.rm_r(files)
+  end
+end
+
+=begin
+If you see a warning like this:
+warning: failed to load external entity "/opt/local/share/xsl/docbook-xsl/xhtml/chunk.xsl"
+
+Then you may need to install docbook-xsl
+sudo port install docbook-xsl
+=end
+desc "compile the docbook into html"
+task :compile_to_html do
+  output_dir = OUTPUT_DIR
+  # p "outputdir: ", output_dir
+  # p "currentdir: ", Dir.pwd
+
+  make_an_empty_dir(output_dir)
+
+  ENV['XSL'] = File.join(Dir.pwd, "config.xml")
+  cmd = "xsltproc"
+  # cmd << " --verbose"
+  cmd << " --xinclude" 
+  cmd << " --timing"
+
+=begin  
+  cmd << " --stringparam html.stylesheet page_web.css"
+  cmd << " --stringparam chunk.section.depth 0"
+  cmd << " --stringparam chunk.first.sections 0"
+  # cmd << " --stringparam section.autolabel 1"
+  # cmd << " --stringparam section.autolabel.max.depth 1"
+  cmd << " --stringparam generate.section.toc.level 1"
+=end
+  
+  # Do not use the Internet to fetch DTD's, entities or documents
+  cmd << " --nonet"
+  
+  cmd << " --output ."
+  cmd << " $XSL"
+  cmd << " ../input/main.xml"
+  puts "RUN: #{cmd.inspect}"
+  Dir.chdir(output_dir) do
+    system(cmd)
+  end
+  
+  FileUtils.cp(File.join('input', 'page_web.css'), output_dir)
+  FileUtils.cp_r('images', output_dir)
+end
+
+
+desc "open the html output in the browser"
+task :open_html do
+  Dir.chdir(OUTPUT_DIR) do
+    system('open index.html')
+  end
+end
+
+
+
+desc "run the Help Indexer, produces a output.helpindex file"
+task :run_help_indexer do
+  abspath_outdir = File.join(Dir.pwd, OUTPUT_DIR)
+  dir = '/Developer/Applications/Utilities/Help Indexer.app/Contents/MacOS'
+  options = "-ShowProgress YES -LogStyle 2"
+  Dir.chdir(dir) do
+    cmd = './Help\ Indexer '
+    cmd += "'#{abspath_outdir}' "
+    cmd += options
+    system(cmd)
+  end
+end
+
+#
+# Apparently this program is not shipped with Snow Leopard.. but was with Leopard.
+#
+desc "inspect the output.helpindex file"
+task :inspect_helpindex do
+  abspath_to_file = File.join(Dir.pwd, OUTPUT_DIR, OUTPUT_HELPINDEX)
+  dir = '/Developer/Applications/Utilities/Help Indexer.app/Contents/Resources'
+  Dir.chdir(dir) do
+    cmd = './Unarchiver '
+    cmd += "'#{abspath_to_file}' "
+    system(cmd)
+  end
+end
+
+
+# the first step is to compile the xml into html
+task :default => [:compile_to_html, :open_html]
+
+# the second step is to look at the compiled html to ensure that it looks good
+task :o => :open_html
+
+# the third step is to index the help, so that you can search the help
+task :r => :run_help_indexer
+
+# the fourth step is to ensure that the indexing contains what it's supposed to contain
+task :i => :inspect_helpindex

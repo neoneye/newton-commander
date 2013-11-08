@@ -1,0 +1,6 @@
+[submodule "externals/cocoaoniguruma"]
+	path = externals/cocoaoniguruma
+	url = git://github.com/psychs/cocoaoniguruma.git
+[submodule "externals/TouchJSON"]
+	path = externals/TouchJSON
+	url = git://github.com/TouchCode/TouchJSON.git

@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42F79BD113B3E78500C6E905 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F79BD013B3E78500C6E905 /* Cocoa.framework */; };
+		42F79BDB13B3E78500C6E905 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42F79BD913B3E78500C6E905 /* InfoPlist.strings */; };
+		42F79BDE13B3E78500C6E905 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F79BDD13B3E78500C6E905 /* main.m */; };
+		42F79BE113B3E78500C6E905 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 42F79BDF13B3E78500C6E905 /* Credits.rtf */; };
+		42F79BE413B3E78500C6E905 /* LayouterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F79BE313B3E78500C6E905 /* LayouterAppDelegate.m */; };
+		42F79BE713B3E78600C6E905 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F79BE513B3E78600C6E905 /* MainMenu.xib */; };
+		42F79BF113B3E85F00C6E905 /* VerticalLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F79BF013B3E85F00C6E905 /* VerticalLayoutView.m */; };
+		42F79BF413B3EBEA00C6E905 /* DebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F79BF313B3EBEA00C6E905 /* DebugView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42F79BCC13B3E78500C6E905 /* Layouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F79BD013B3E78500C6E905 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		42F79BD313B3E78500C6E905 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		42F79BD413B3E78500C6E905 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		42F79BD513B3E78500C6E905 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42F79BD813B3E78500C6E905 /* Layouter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Layouter-Info.plist"; sourceTree = "<group>"; };
+		42F79BDA13B3E78500C6E905 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42F79BDC13B3E78500C6E905 /* Layouter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Layouter-Prefix.pch"; sourceTree = "<group>"; };
+		42F79BDD13B3E78500C6E905 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42F79BE013B3E78500C6E905 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		42F79BE213B3E78500C6E905 /* LayouterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayouterAppDelegate.h; sourceTree = "<group>"; };
+		42F79BE313B3E78500C6E905 /* LayouterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayouterAppDelegate.m; sourceTree = "<group>"; };
+		42F79BE613B3E78600C6E905 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		42F79BEF13B3E85F00C6E905 /* VerticalLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLayoutView.h; sourceTree = "<group>"; };
+		42F79BF013B3E85F00C6E905 /* VerticalLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalLayoutView.m; sourceTree = "<group>"; };
+		42F79BF213B3EBEA00C6E905 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugView.h; sourceTree = "<group>"; };
+		42F79BF313B3EBEA00C6E905 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42F79BC913B3E78500C6E905 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F79BD113B3E78500C6E905 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42F79BC113B3E78500C6E905 = {
+			isa = PBXGroup;
+			children = (
+				42F79BD613B3E78500C6E905 /* Layouter */,
+				42F79BCF13B3E78500C6E905 /* Frameworks */,
+				42F79BCD13B3E78500C6E905 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42F79BCD13B3E78500C6E905 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42F79BCC13B3E78500C6E905 /* Layouter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42F79BCF13B3E78500C6E905 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42F79BD013B3E78500C6E905 /* Cocoa.framework */,
+				42F79BD213B3E78500C6E905 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42F79BD213B3E78500C6E905 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42F79BD313B3E78500C6E905 /* AppKit.framework */,
+				42F79BD413B3E78500C6E905 /* CoreData.framework */,
+				42F79BD513B3E78500C6E905 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		42F79BD613B3E78500C6E905 /* Layouter */ = {
+			isa = PBXGroup;
+			children = (
+				42F79BF213B3EBEA00C6E905 /* DebugView.h */,
+				42F79BF313B3EBEA00C6E905 /* DebugView.m */,
+				42F79BE213B3E78500C6E905 /* LayouterAppDelegate.h */,
+				42F79BE313B3E78500C6E905 /* LayouterAppDelegate.m */,
+				42F79BE513B3E78600C6E905 /* MainMenu.xib */,
+				42F79BD713B3E78500C6E905 /* Supporting Files */,
+				42F79BEF13B3E85F00C6E905 /* VerticalLayoutView.h */,
+				42F79BF013B3E85F00C6E905 /* VerticalLayoutView.m */,
+			);
+			path = Layouter;
+			sourceTree = "<group>";
+		};
+		42F79BD713B3E78500C6E905 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42F79BD813B3E78500C6E905 /* Layouter-Info.plist */,
+				42F79BD913B3E78500C6E905 /* InfoPlist.strings */,
+				42F79BDC13B3E78500C6E905 /* Layouter-Prefix.pch */,
+				42F79BDD13B3E78500C6E905 /* main.m */,
+				42F79BDF13B3E78500C6E905 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42F79BCB13B3E78500C6E905 /* Layouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F79BEA13B3E78600C6E905 /* Build configuration list for PBXNativeTarget "Layouter" */;
+			buildPhases = (
+				42F79BC813B3E78500C6E905 /* Sources */,
+				42F79BC913B3E78500C6E905 /* Frameworks */,
+				42F79BCA13B3E78500C6E905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Layouter;
+			productName = Layouter;
+			productReference = 42F79BCC13B3E78500C6E905 /* Layouter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42F79BC313B3E78500C6E905 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 42F79BC613B3E78500C6E905 /* Build configuration list for PBXProject "Layouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42F79BC113B3E78500C6E905;
+			productRefGroup = 42F79BCD13B3E78500C6E905 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42F79BCB13B3E78500C6E905 /* Layouter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42F79BCA13B3E78500C6E905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F79BDB13B3E78500C6E905 /* InfoPlist.strings in Resources */,
+				42F79BE113B3E78500C6E905 /* Credits.rtf in Resources */,
+				42F79BE713B3E78600C6E905 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42F79BC813B3E78500C6E905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F79BDE13B3E78500C6E905 /* main.m in Sources */,
+				42F79BE413B3E78500C6E905 /* LayouterAppDelegate.m in Sources */,
+				42F79BF113B3E85F00C6E905 /* VerticalLayoutView.m in Sources */,
+				42F79BF413B3EBEA00C6E905 /* DebugView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42F79BD913B3E78500C6E905 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F79BDA13B3E78500C6E905 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42F79BDF13B3E78500C6E905 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F79BE013B3E78500C6E905 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		42F79BE513B3E78600C6E905 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F79BE613B3E78600C6E905 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42F79BE813B3E78600C6E905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		42F79BE913B3E78600C6E905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		42F79BEB13B3E78600C6E905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Layouter/Layouter-Prefix.pch";
+				INFOPLIST_FILE = "Layouter/Layouter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42F79BEC13B3E78600C6E905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Layouter/Layouter-Prefix.pch";
+				INFOPLIST_FILE = "Layouter/Layouter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42F79BC613B3E78500C6E905 /* Build configuration list for PBXProject "Layouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42F79BE813B3E78600C6E905 /* Debug */,
+				42F79BE913B3E78600C6E905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42F79BEA13B3E78600C6E905 /* Build configuration list for PBXNativeTarget "Layouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42F79BEB13B3E78600C6E905 /* Debug */,
+				42F79BEC13B3E78600C6E905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42F79BC313B3E78500C6E905 /* Project object */;
+}

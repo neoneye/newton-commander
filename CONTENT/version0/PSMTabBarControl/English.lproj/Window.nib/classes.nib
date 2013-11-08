@@ -1,0 +1,67 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = PSMTabBarControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; partnerView = id; style = id; tabView = NSTabView; }; 
+            SUPERCLASS = NSControl; 
+        }, 
+        {
+            ACTIONS = {
+                addNewTab = id; 
+                closeTab = id; 
+                configAddTabButton = id; 
+                configAllowsScrubbing = id; 
+                configAutomaticallyAnimates = id; 
+                configCanCloseOnlyTab = id; 
+                configDisableTabClose = id; 
+                configHideForSingleTab = id; 
+                configOrientation = id; 
+                configStyle = id; 
+                configTabMaxWidth = id; 
+                configTabMinWidth = id; 
+                configTabOptimumWidth = id; 
+                configTabSizeToFit = id; 
+                configTearOffStyle = id; 
+                configUseOverflowMenu = id; 
+                isEditedAction = id; 
+                isProcessingAction = id; 
+                setIconNamed = id; 
+                setObjectCount = id; 
+                setTabLabel = id; 
+                stopProcessing = id; 
+                toggleToolbar = id; 
+            }; 
+            CLASS = WindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "button_allowScrubbing" = NSButton; 
+                "button_automaticallyAnimate" = NSButton; 
+                "button_canCloseOnlyTab" = NSButton; 
+                "button_disableTabClosing" = NSButton; 
+                "button_hideForSingleTab" = NSButton; 
+                "button_showAddTab" = NSButton; 
+                "button_sizeToFit" = NSButton; 
+                "button_useOverflow" = NSButton; 
+                drawer = NSDrawer; 
+                iconButton = NSPopUpButton; 
+                isEditedButton = NSButton; 
+                isProcessingButton = NSButton; 
+                objectCounterField = NSTextField; 
+                "popUp_orientation" = NSPopUpButton; 
+                "popUp_style" = NSPopUpButton; 
+                "popUp_tearOff" = NSPopUpButton; 
+                tabBar = PSMTabBarControl; 
+                tabField = NSTextField; 
+                tabView = NSTabView; 
+                "textField_maxWidth" = NSTextField; 
+                "textField_minWidth" = NSTextField; 
+                "textField_optimumWidth" = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

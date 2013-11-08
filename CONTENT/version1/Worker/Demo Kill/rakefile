@@ -1,0 +1,61 @@
+task :default => :is_asl_conf_ok
+
+
+def does_asl_conf_contain(regex)
+  ary = IO.read('/etc/asl.conf').grep(regex)
+  (ary.count > 0)
+end
+
+desc "see if everything is configured properly"
+task :is_asl_conf_ok do
+  contain1 = does_asl_conf_contain(/Sender Kill\b/)
+  contain2 = does_asl_conf_contain(/Sender KillWorker\b/)
+  
+  if contain1 && contain2
+    puts
+    puts "STATUS: OK - you should be able to see log output in Console.app"
+  else
+    puts
+    puts "STATUS: Manual configuration needed!"
+    puts
+    puts "/etc/asl.conf does not contain all the necessary rules for this app!"
+    puts "You should add the following text to the bottom of this file."
+    puts "otherwise you wont be able to see any output in Console.app"
+    puts                                                              
+    puts "Step 1, Append the text to the /etc/asl.conf file:"
+    puts "sudo nano /etc/asl.conf"                                                              
+    puts
+    puts "Step 2, Restart syslogd:"
+    puts "rake restart_syslogd"                                      
+    puts
+    puts "Step 3, Run the Xcode project"
+    puts "it should yield output visible in Console.app"
+    puts
+
+    txt =<<TXT
+###########################
+
+# save everything from Worker Kill Demo
+? [= Sender Kill] store
+? [= Sender KillWorker] store
+
+###########################
+TXT
+    puts txt
+  end
+end
+
+
+desc "restart syslogd"
+task :restart_syslogd do
+  begin
+    cmd = 'sudo launchctl unload /System/Library/LaunchDaemons/com.apple.syslogd.plist'
+    p cmd
+    system(cmd)
+  end
+  begin
+    cmd = 'sudo launchctl load /System/Library/LaunchDaemons/com.apple.syslogd.plist'
+    p cmd
+    system(cmd)
+  end
+end 
