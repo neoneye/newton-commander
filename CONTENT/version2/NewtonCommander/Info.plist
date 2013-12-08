@@ -2,16 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleHelpBookName</key>
-	<string>Newton Commander Help</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>Newton Commander Help</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>© 2009-2010, Simon Strandgaard.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>Newton Commander Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>Newton Commander Help</string>
 	<key>CFBundleIconFile</key>
 	<string>NewtonCommander.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -30,6 +28,8 @@
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2009-2013, Simon Strandgaard.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
