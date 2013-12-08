@@ -9,7 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface NCListerCounter : NSView
+@interface NCListerCounter : NSView {
+	int _numberOfDirs;
+	int _numberOfSelectedDirs;
+	int _numberOfFiles;
+	int _numberOfSelectedFiles;
+	unsigned long long _sizeOfItems;
+	unsigned long long _sizeOfSelectedItems;
+}
 
 @property (nonatomic) int numberOfDirs;
 @property (nonatomic) int numberOfSelectedDirs;

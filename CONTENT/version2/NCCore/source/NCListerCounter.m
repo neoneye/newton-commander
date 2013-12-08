@@ -9,58 +9,57 @@
 #import "NCListerCounter.h"
 #import "NCCommon.h"
 
-
 @implementation NCListerCounter
 
-@synthesize numberOfDirs = m_number_of_dirs;
-@synthesize numberOfSelectedDirs = m_number_of_selected_dirs;
-@synthesize numberOfFiles = m_number_of_files;
-@synthesize numberOfSelectedFiles = m_number_of_selected_files;
-@synthesize sizeOfItems = m_size_of_items;
-@synthesize sizeOfSelectedItems = m_size_of_selected_items;
+@synthesize numberOfDirs = _numberOfDirs;
+@synthesize numberOfSelectedDirs = _numberOfSelectedDirs;
+@synthesize numberOfFiles = _numberOfFiles;
+@synthesize numberOfSelectedFiles = _numberOfSelectedFiles;
+@synthesize sizeOfItems = _sizeOfItems;
+@synthesize sizeOfSelectedItems = _sizeOfSelectedItems;
 
 -(id)init {
  
 	self = [super init];
 	if(self) {
-		m_number_of_dirs = 201;
-		m_number_of_selected_dirs = 101;
-		m_number_of_files = 202;
-		m_number_of_selected_files = 102;
-		m_size_of_items = 203;
-		m_size_of_selected_items = 103;
+		_numberOfDirs = 201;
+		_numberOfSelectedDirs = 101;
+		_numberOfFiles = 202;
+		_numberOfSelectedFiles = 102;
+		_sizeOfItems = 203;
+		_sizeOfSelectedItems = 103;
 	}
  
 	return self;
 }
 
 - (void)setNumberOfSelectedDirs:(int)n {
-	m_number_of_selected_dirs = n;
+	_numberOfSelectedDirs = n;
 	[self setNeedsDisplay:YES];
 }
 
 - (void)setNumberOfDirs:(int)n {
-	m_number_of_dirs = n;
+	_numberOfDirs = n;
 	[self setNeedsDisplay:YES];
 }
 
 - (void)setNumberOfSelectedFiles:(int)n {
-	m_number_of_selected_files = n;
+	_numberOfSelectedFiles = n;
 	[self setNeedsDisplay:YES];
 }
 
 - (void)setNumberOfFiles:(int)n {
-	m_number_of_files = n;
+	_numberOfFiles = n;
 	[self setNeedsDisplay:YES];
 }
 
 - (void)setSizeOfSelectedItems:(unsigned long long)n {
-	m_size_of_selected_items = n;
+	_sizeOfSelectedItems = n;
 	[self setNeedsDisplay:YES];
 }
 
 - (void)setSizeOfItems:(unsigned long long)n {
-	m_size_of_items = n;
+	_sizeOfItems = n;
 	[self setNeedsDisplay:YES];
 }
 
@@ -121,13 +120,13 @@
 	NSMutableAttributedString* s_bytes_compact = [[[NSMutableAttributedString alloc] init] autorelease];
 	
 	
-	NSUInteger dirs_total = m_number_of_dirs;
-	NSUInteger files_total = m_number_of_files;
-	unsigned long long bytes_total = m_size_of_items;
+	NSUInteger dirs_total = _numberOfDirs;
+	NSUInteger files_total = _numberOfFiles;
+	unsigned long long bytes_total = _sizeOfItems;
 
-	NSUInteger dirs_selected = m_number_of_selected_dirs;
-	NSUInteger files_selected = m_number_of_selected_files;
-	unsigned long long bytes_selected = m_size_of_selected_items;
+	NSUInteger dirs_selected = _numberOfSelectedDirs;
+	NSUInteger files_selected = _numberOfSelectedFiles;
+	unsigned long long bytes_selected = _sizeOfSelectedItems;
 	
 	BOOL zero_dirs  = (dirs_selected == 0);
 	BOOL zero_files = (files_selected == 0);

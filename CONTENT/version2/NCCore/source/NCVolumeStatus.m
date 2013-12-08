@@ -19,9 +19,9 @@
 
 @implementation NCVolumeStatus
 
-@synthesize active = m_active;
-@synthesize capacity = m_capacity;
-@synthesize available = m_available;
+@synthesize active = _active;
+@synthesize capacity = _capacity;
+@synthesize available = _available;
 
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -45,13 +45,13 @@
 }
 
 - (void)setCapacity:(unsigned long long)n {
-	m_capacity = n;
+	_capacity = n;
 	[self setNeedsDisplay:YES];
 	[self updateTooltip];
 }
 
 - (void)setAvailable:(unsigned long long)n {
-	m_available = n;
+	_available = n;
 	[self setNeedsDisplay:YES];
 	[self updateTooltip];
 }
@@ -67,8 +67,8 @@
 }
 
 -(void)updateTooltip {
-	unsigned long long capacity = m_capacity;
-	unsigned long long available = m_available;
+	unsigned long long capacity = _capacity;
+	unsigned long long available = _available;
 	long long used = capacity - available;
 	NSString* tooltip = nil;
 	if(used < 0) {
@@ -143,9 +143,9 @@
 	NSColor* fill_color_inactive = [NSColor colorWithCalibratedRed:0.479 green:0.480 blue:0.479 alpha:1.000];
 	NSColor* fill_color = self.active ? fill_color_active : fill_color_inactive;
 
-	if(m_available <= m_capacity) {
-		unsigned long long used = m_capacity - m_available;
-		double percent = (m_capacity > 1) ? (double)used / (double)m_capacity : 0;
+	if(_available <= _capacity) {
+		unsigned long long used = _capacity - _available;
+		double percent = (_capacity > 1) ? (double)used / (double)_capacity : 0;
 		NSRect rect2 = NSInsetRect(rect, 6, 6);
 		NSRect slice, junk;
 		NSDivideRect(rect2, &slice, &junk, NSWidth(rect2) * percent, NSMinXEdge);
@@ -171,7 +171,7 @@
 		shadow, NSShadowAttributeName, 
 		nil];
 
-	NSString* s = NCSuffixStringForBytes(m_available);
+	NSString* s = NCSuffixStringForBytes(_available);
 	NSAttributedString* as = [[[NSAttributedString alloc]
 	        initWithString:s attributes:txtDict] autorelease];
 
