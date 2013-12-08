@@ -120,12 +120,12 @@
 	NSMutableAttributedString* s_bytes_compact = [[[NSMutableAttributedString alloc] init] autorelease];
 	
 	
-	NSUInteger dirs_total = _numberOfDirs;
-	NSUInteger files_total = _numberOfFiles;
+	int dirs_total = _numberOfDirs;
+	int files_total = _numberOfFiles;
 	unsigned long long bytes_total = _sizeOfItems;
 
-	NSUInteger dirs_selected = _numberOfSelectedDirs;
-	NSUInteger files_selected = _numberOfSelectedFiles;
+	int dirs_selected = _numberOfSelectedDirs;
+	int files_selected = _numberOfSelectedFiles;
 	unsigned long long bytes_selected = _sizeOfSelectedItems;
 	
 	BOOL zero_dirs  = (dirs_selected == 0);
@@ -139,13 +139,13 @@
 	
 	if(none_selected) {
 		{
-			NSString* s = [NSString stringWithFormat:@"%lu %s\t", dirs_total, name_dirs];
+			NSString* s = [NSString stringWithFormat:@"%d %s\t", dirs_total, name_dirs];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_dirs_long appendAttributedString:as];
 		}
 		{
-			NSString* s = [NSString stringWithFormat:@"%lu\t", dirs_total];
+			NSString* s = [NSString stringWithFormat:@"%d\t", dirs_total];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_dirs_short appendAttributedString:as];
@@ -153,7 +153,7 @@
 		}
 	} else {
 		{ 
-			NSString* s = [NSString stringWithFormat:@"%lu", dirs_selected];
+			NSString* s = [NSString stringWithFormat:@"%d", dirs_selected];
 			NSMutableDictionary* attr = (dirs_selected == 0) ? attr0 : attr1;
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr] autorelease];
@@ -162,13 +162,13 @@
 			[s_dirs_compact appendAttributedString:as];
 		}
 		{
-			NSString* s = [NSString stringWithFormat:@" of %lu %s\t", dirs_total, name_dirs];
+			NSString* s = [NSString stringWithFormat:@" of %d %s\t", dirs_total, name_dirs];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_dirs_long appendAttributedString:as];
 		}
 		{
-			NSString* s = [NSString stringWithFormat:@" / %lu\t", dirs_total];
+			NSString* s = [NSString stringWithFormat:@" / %d\t", dirs_total];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_dirs_short appendAttributedString:as];
@@ -184,13 +184,13 @@
 
 	if(none_selected) {
 		{
-			NSString* s = [NSString stringWithFormat:@"%lu %s\t", files_total, name_files];
+			NSString* s = [NSString stringWithFormat:@"%d %s\t", files_total, name_files];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_files_long appendAttributedString:as];
 		}
 		{
-			NSString* s = [NSString stringWithFormat:@"%lu\t", files_total];
+			NSString* s = [NSString stringWithFormat:@"%d\t", files_total];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_files_short appendAttributedString:as];
@@ -198,7 +198,7 @@
 		}
 	} else {
 		{ 
-			NSString* s = [NSString stringWithFormat:@"%lu", files_selected];
+			NSString* s = [NSString stringWithFormat:@"%d", files_selected];
 			NSMutableDictionary* attr = (files_selected == 0) ? attr0 : attr1;
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr] autorelease];
@@ -207,13 +207,13 @@
 			[s_files_compact appendAttributedString:as];
 		}
 		{
-			NSString* s = [NSString stringWithFormat:@" of %lu %s\t", files_total, name_files];
+			NSString* s = [NSString stringWithFormat:@" of %d %s\t", files_total, name_files];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_files_long appendAttributedString:as];
 		}
 		{
-			NSString* s = [NSString stringWithFormat:@" / %lu\t", files_total];
+			NSString* s = [NSString stringWithFormat:@" / %d\t", files_total];
 			NSAttributedString* as = [[[NSAttributedString alloc] 
 				initWithString:s attributes:attr0] autorelease];
 			[s_files_short appendAttributedString:as];
