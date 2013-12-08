@@ -495,7 +495,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NewtonCommander" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -816,7 +816,6 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = newcmd_prefix.pch;
-				GCC_VERSION = 4.2;
 				HEADER_SEARCH_PATHS = "";
 				IBC_OVERRIDING_PLUGINS_AND_FRAMEWORKS_DIR = "";
 				IBC_PLUGINS = "";
@@ -833,7 +832,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 429DC47E11C4DB7E0028CDEC /* Common.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -847,7 +845,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 429DC47E11C4DB7E0028CDEC /* Common.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
