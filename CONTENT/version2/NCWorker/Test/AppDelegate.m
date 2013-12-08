@@ -43,7 +43,7 @@
 }
 
 -(void)worker:(NCWorker*)worker response:(NSDictionary*)dict {
-	NSLog(@"%s %@", _cmd, dict);
+	NSLog(@"%@ %@", NSStringFromSelector(_cmd), dict);
 	
 	NSString* s = [NSString stringWithFormat:@"RESPONSE\n%@\n\n", dict];
 	[self append:s];
