@@ -1,1 +1,0 @@
-benchmark - how long time does it take to spawn the worker?

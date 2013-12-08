@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'SharedCode Core+Worker' target in the 'SharedCode Core+Worker' project.
-//
-
-#ifdef __OBJC__
-	#import <Foundation/Foundation.h>
-#endif

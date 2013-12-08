@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'ReportApp' target in the 'ReportApp' project
-//
-
-#include <Cocoa/Cocoa.h>
-
-#define STATIC_CHECK(expr) \
-	typedef int _STATIC_CHECK_dummy[(expr) ? 1 : -1]

@@ -1,6 +1,0 @@
-{
-	Actions = {};
-	Outlets = {};
-	ClassName = NCInfoView;
-	SuperClass = WebView;
-}
