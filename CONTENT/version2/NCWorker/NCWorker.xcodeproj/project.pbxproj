@@ -619,6 +619,7 @@
 				GCC_PREFIX_HEADER = Test/test_prefix.pch;
 				INFOPLIST_FILE = Test/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -642,6 +643,7 @@
 				GCC_PREFIX_HEADER = Test/test_prefix.pch;
 				INFOPLIST_FILE = Test/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
