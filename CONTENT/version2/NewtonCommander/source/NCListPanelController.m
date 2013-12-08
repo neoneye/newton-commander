@@ -20,8 +20,7 @@
 #import "NCListTabController.h"
 #import "NSTabView+SwitchExtensions.h"
 
-
-@interface NCListPanelController (Private)
+@interface NCListPanelController () <PSMTabBarControlDelegate>
 
 - (IBAction)addNewTab:(id)sender;
 -(NCListTabController*)currentListTabController;
