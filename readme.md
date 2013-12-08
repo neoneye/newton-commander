@@ -2,9 +2,18 @@
 
 A dual tab file manager for Mac OS X.
 
+### Stabile features
+- Each tab runs in its own child process. 
+- Closing a tab kills the child process.
+- Copy operation
 
+### Experimental features
+- A tab can be started as a different user, allowing you to see otherwise restricted files.
+- Move operation
+
+
+### Screenshot
 ![ScreenShot](http://i.imgur.com/gtQisaE.png)
-
 
 
 # Build Instructions
