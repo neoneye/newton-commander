@@ -50,7 +50,7 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 		[result addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 			[NSNumber numberWithUnsignedLongLong:eventIds[i]], @"id",
 			[NSString stringWithUTF8String:paths[i]], @"path",
-			[NSString stringWithFormat:@"%04x",eventFlags[i]] , @"flag",
+			[NSString stringWithFormat:@"%04x",(unsigned int)eventFlags[i]] , @"flag",
 			time , @"time",
 			NULL]];
 	}
