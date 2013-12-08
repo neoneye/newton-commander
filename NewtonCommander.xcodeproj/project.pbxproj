@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		429002E318551B2D00A1C7D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 429002DA18551B2C00A1C7D4 /* NewtonCommander.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
+			remoteInfo = "Newton Commander";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		429002DA18551B2C00A1C7D4 /* NewtonCommander.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NewtonCommander.xcodeproj; path = source/NewtonCommander/NewtonCommander.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		4232839618551AA800A2737D = {
+			isa = PBXGroup;
+			children = (
+				429002DA18551B2C00A1C7D4 /* NewtonCommander.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		429002DB18551B2C00A1C7D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				429002E418551B2D00A1C7D4 /* Newton Commander.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		4232839718551AA800A2737D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 4232839A18551AA800A2737D /* Build configuration list for PBXProject "NewtonCommander" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4232839618551AA800A2737D;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 429002DB18551B2C00A1C7D4 /* Products */;
+					ProjectRef = 429002DA18551B2C00A1C7D4 /* NewtonCommander.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		429002E418551B2D00A1C7D4 /* Newton Commander.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Newton Commander.app";
+			remoteRef = 429002E318551B2D00A1C7D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin XCBuildConfiguration section */
+		4232839B18551AA800A2737D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4232839C18551AA800A2737D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4232839A18551AA800A2737D /* Build configuration list for PBXProject "NewtonCommander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4232839B18551AA800A2737D /* Debug */,
+				4232839C18551AA800A2737D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4232839718551AA800A2737D /* Project object */;
+}
