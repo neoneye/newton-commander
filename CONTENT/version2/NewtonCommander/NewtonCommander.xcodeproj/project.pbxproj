@@ -111,13 +111,6 @@
 			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
 			remoteInfo = NCWorker;
 		};
-		429D261211D64EFE0028BFA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
-			remoteInfo = PSMTabBarControl;
-		};
 		429D261411D64EFE0028BFA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
@@ -131,13 +124,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 8BD4395A1185147D00DB4AC3;
 			remoteInfo = PSMTabBarControlDemo;
-		};
-		429D261811D64F110028BFA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = PSMTabBarControl;
 		};
 		429D261A11D64F110028BFA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -438,7 +424,6 @@
 		429D260C11D64EFE0028BFA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				429D261311D64EFE0028BFA8 /* PSMTabBarControl.ibplugin */,
 				429D261511D64EFE0028BFA8 /* PSMTabBarControl.framework */,
 				429D261711D64EFE0028BFA8 /* PSMTabBarControlDemo.app */,
 			);
@@ -480,7 +465,6 @@
 			dependencies = (
 				425A7C741198790F008C328E /* PBXTargetDependency */,
 				425D7E7211C55A3800F9A9A6 /* PBXTargetDependency */,
-				429D261911D64F110028BFA8 /* PBXTargetDependency */,
 				429D261B11D64F110028BFA8 /* PBXTargetDependency */,
 			);
 			name = "Newton Commander";
@@ -564,13 +548,6 @@
 			fileType = archive.ar;
 			path = libNCWorkerLib.a;
 			remoteRef = 425D7E6D11C55A0800F9A9A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		429D261311D64EFE0028BFA8 /* PSMTabBarControl.ibplugin */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PSMTabBarControl.ibplugin;
-			remoteRef = 429D261211D64EFE0028BFA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		429D261511D64EFE0028BFA8 /* PSMTabBarControl.framework */ = {
@@ -659,11 +636,6 @@
 			isa = PBXTargetDependency;
 			name = NCWorker;
 			targetProxy = 425D7E7111C55A3800F9A9A6 /* PBXContainerItemProxy */;
-		};
-		429D261911D64F110028BFA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PSMTabBarControl;
-			targetProxy = 429D261811D64F110028BFA8 /* PBXContainerItemProxy */;
 		};
 		429D261B11D64F110028BFA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
