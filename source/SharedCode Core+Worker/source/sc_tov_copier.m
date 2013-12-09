@@ -19,6 +19,10 @@ ATTR_CMN_BKUPTIME                   ioFlBkDat    backupDate
 
 */
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCLog.h"
 #import "NCFileManager.h"
 #import "sc_tov_copier.h"
@@ -625,7 +629,7 @@ void nc_copyfile_fd(const struct stat *from_st, int from_fd, int to_fd, int flag
 -(void)setStatus:(NSUInteger)status posixError:(int)error_code message:(NSString*)message, ... {
 	va_list ap;
 	va_start(ap,message);
-	NSString* message2 = [[[NSString alloc] initWithFormat:message arguments:ap] autorelease];
+	NSString* message2 = [[NSString alloc] initWithFormat:message arguments:ap];
 	va_end(ap);
 
 	NSString* error_text = [NCFileManager errnoString:error_code];
