@@ -55,17 +55,9 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 			NULL]];
 	}
 
-	id obj = fem;
-	SEL mySelector = @selector(notify:);
-	NSInvocation* inv = [NSInvocation invocationWithMethodSignature:[obj methodSignatureForSelector:mySelector]];
-	[inv setTarget:obj];
-	[inv setSelector:mySelector];
-	[inv setArgument:&result atIndex:2]; 
-	[inv retainArguments];
-
-	[inv performSelectorOnMainThread:@selector(invoke) 
-		withObject:nil 
-		waitUntilDone:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+		[fem notify:result];
+	});
 }
 
 
