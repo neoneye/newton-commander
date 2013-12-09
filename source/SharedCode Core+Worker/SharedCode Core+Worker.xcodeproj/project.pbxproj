@@ -32,7 +32,7 @@
 		427DAE4311FA67AE0018AAC5 /* sc_tov_copier.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DAE4111FA67AE0018AAC5 /* sc_tov_copier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DAE4411FA67AE0018AAC5 /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DAE4211FA67AE0018AAC5 /* sc_tov_copier.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4288D5081200046A00DE1FFA /* NCLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4288D5061200046A00DE1FFA /* NCLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4288D5091200046A00DE1FFA /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4288D5071200046A00DE1FFA /* NCLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4288D5091200046A00DE1FFA /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4288D5071200046A00DE1FFA /* NCLog.m */; };
 		42DBA07211F201E500DD57A8 /* NCFileItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DBA07011F201E500DD57A8 /* NCFileItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42DBA07311F201E500DD57A8 /* NCFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA07111F201E500DD57A8 /* NCFileItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		42E0E41C11F11EB100029764 /* NCFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42E0E41A11F11EB100029764 /* NCFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };

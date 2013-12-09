@@ -6,6 +6,10 @@
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCLog.h"
 
 
@@ -14,8 +18,7 @@
 static NCLog* shared_instance = nil;
 
 -(id)init {
-	[self initWithName:@"noname" useStderr:YES];
-	return self;
+	return [self initWithName:@"noname" useStderr:YES];
 }
 
 -(id)initWithName:(NSString*)name useStderr:(BOOL)use_stderr {
@@ -71,7 +74,7 @@ static NCLog* shared_instance = nil;
 	va_list ap;
 
 	va_start(ap,format);
-	NSString* message = [[[NSString alloc] initWithFormat:format arguments:ap] autorelease];
+	NSString* message = [[NSString alloc] initWithFormat:format arguments:ap];
 	va_end(ap);
 
 	NSString* funcname = [NSString stringWithUTF8String:functionName];
