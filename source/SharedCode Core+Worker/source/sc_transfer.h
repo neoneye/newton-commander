@@ -38,6 +38,8 @@
 -(void)abortOperation;
 -(void)dump;
 
+-(void)threadResponse:(NSDictionary*)dict forKey:(NSString*)key;
+
 @end // class TransferOperation
 
 

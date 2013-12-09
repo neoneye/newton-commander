@@ -411,19 +411,9 @@
 }
 
 -(void)sendResponse:(NSDictionary*)dict forKey:(NSString*)key {
-	SEL sel = @selector(threadResponse:forKey:);
-	id obj = m_transfer_operation;
-	id arg2 = dict;      
-	id arg3 = key;
-	NSInvocation* inv = [NSInvocation invocationWithMethodSignature:[obj methodSignatureForSelector:sel]];
-	[inv setTarget:obj];
-	[inv setSelector:sel];
-	// arguments starts at 2, since 0 is the target and 1 is the selector
-	[inv setArgument:&arg2 atIndex:2]; 
-	[inv setArgument:&arg3 atIndex:3]; 
-	[inv retainArguments];
-	[inv performSelectorOnMainThread:@selector(invoke) 
-		withObject:nil waitUntilDone:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+		[m_transfer_operation threadResponse:dict forKey:key];
+	});
 }
 
 @end // class TransferOperationThread
