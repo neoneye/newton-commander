@@ -6,6 +6,10 @@
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 /*
 I asked on IRC and Mike Ash replied.
 Q: should I use CFAbsoluteTimeGetCurrent() or mach_absolute_time()
@@ -134,19 +138,10 @@ double subtract_times(uint64_t endTime, uint64_t startTime) {
 }
 
 - (void)dealloc {
-	[m_start_time release];
 	m_start_time = nil;
-	
-	[m_stop_time release];
 	m_stop_time = nil;
-	
-	[m_elapsed_time release];
 	m_elapsed_time = nil;
-	
-	[m_info release];
 	m_info = nil;
-	
-	[super dealloc];
 }
 
 -(void)setObject:(id)obj forKey:(NSString*)key {
