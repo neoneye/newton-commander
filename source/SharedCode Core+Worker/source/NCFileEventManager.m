@@ -6,6 +6,10 @@
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 /*
 http://developer.apple.com/mac/articles/cocoa/filesystemevents.html
 
@@ -41,7 +45,7 @@ enum {
 
 */
 static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *clientCallBackInfo, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags eventFlags[], const FSEventStreamEventId eventIds[]) {
-	NCFileEventManager* fem = (NCFileEventManager*)clientCallBackInfo;
+	NCFileEventManager* fem = (__bridge NCFileEventManager*)clientCallBackInfo;
 	NSDate *time = [NSDate date]; /* it..doesnt..tell..us..when.. ugh! */
 	NSMutableArray* result = [NSMutableArray array];
 	char **paths = eventPaths;
@@ -83,12 +87,9 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 		m_private = NULL;
 	}
 	[self setPathsToWatch:nil];
-	
-	
-	[super dealloc];	
 }
 
--(void)setDelegate:(id)delegate {
+-(void)setDelegate:(NSObject <NCFileEventManagerDelegate> *)delegate {
 	m_delegate = delegate;
 }
 
@@ -99,9 +100,9 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 	if(m_paths_to_watch == nil) return;
 	if([m_paths_to_watch count] < 1) return;
 	
-    CFArrayRef paths_to_watch = (CFArrayRef)m_paths_to_watch;
+	NSArray *paths_to_watch = m_paths_to_watch;
     
-    m_private->context.info = (void*)self;
+    m_private->context.info = (__bridge void*)self;
     m_private->context.version = 0;
     m_private->context.copyDescription = NULL;
     m_private->context.release = NULL;
@@ -117,7 +118,7 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 		NULL,
         &NCFileEventManager__Callback,
         &m_private->context,
-        paths_to_watch,
+        (__bridge CFArrayRef)paths_to_watch,
         kFSEventStreamEventIdSinceNow,
         interval,
 		flags
@@ -147,11 +148,9 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 
 -(void)notify:(NSArray*)ary {
 	// LOG_DEBUG(@"called: %@", ary);
-	SEL sel = @selector(fileEventManager:changeOccured:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self withObject:ary];
+	if ([m_delegate respondsToSelector:@selector(fileEventManager:changeOccured:)]) {
+		[m_delegate fileEventManager:self changeOccured:ary];
 	}
-	
 }
 
 -(void)setPathsToWatch:(NSArray*)paths {
@@ -160,8 +159,6 @@ static void NCFileEventManager__Callback(ConstFSEventStreamRef streamRef, void *
 	BOOL was_running = m_is_running;
 	[self stop];
 	
-	[paths retain];
-	[m_paths_to_watch release];
 	m_paths_to_watch = paths;
 
 	if(was_running) [self start];

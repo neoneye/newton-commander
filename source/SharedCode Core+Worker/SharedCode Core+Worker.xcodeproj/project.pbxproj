@@ -16,7 +16,7 @@
 		4231C57F120633CE004BBB41 /* NCTimeProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 4231C57A120633CE004BBB41 /* NCTimeProfiler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4231C580120633CE004BBB41 /* NCTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4231C57B120633CE004BBB41 /* NCTimeProfiler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		42577A30121078B1000165E1 /* NCFileEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42577A2E121078B1000165E1 /* NCFileEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42577A31121078B1000165E1 /* NCFileEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42577A2F121078B1000165E1 /* NCFileEventManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42577A31121078B1000165E1 /* NCFileEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42577A2F121078B1000165E1 /* NCFileEventManager.m */; };
 		427DADC911F945A30018AAC5 /* sc_finder_info_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADC111F945A30018AAC5 /* sc_finder_info_manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DADCA11F945A30018AAC5 /* sc_finder_info_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADC211F945A30018AAC5 /* sc_finder_info_manager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		427DADCB11F945A30018AAC5 /* sc_resource_fork_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADC311F945A30018AAC5 /* sc_resource_fork_manager.h */; settings = {ATTRIBUTES = (Public, ); }; };

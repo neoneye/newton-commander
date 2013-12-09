@@ -33,7 +33,7 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 }
 
 
-@interface NCWorkerPluginAdvanced (Private)
+@interface NCWorkerPluginAdvanced () <NCFileEventManagerDelegate>
 -(void)setWorkingDir:(NSString*)path;
 -(void)setResolvedWorkingDir:(NSString*)path;
 

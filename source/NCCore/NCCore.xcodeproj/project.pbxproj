@@ -101,20 +101,20 @@
 		42D44A0E1216EE6100CB5BF5 /* NCMoveSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A0C1216EE6100CB5BF5 /* NCMoveSheet.m */; };
 		42D44A6112172C3800CB5BF5 /* NCDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A5F12172C3800CB5BF5 /* NCDateCell.m */; };
 		42DBA09A11F2024400DD57A8 /* NCListerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA09811F2024400DD57A8 /* NCListerItem.m */; };
-		42FEEC9A12108F90000E031B /* FPOCsvWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8512108F90000E031B /* FPOCsvWriter.m */; };
-		42FEEC9B12108F90000E031B /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8612108F90000E031B /* NCDirEnumerator.m */; };
-		42FEEC9C12108F90000E031B /* NCFileEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8712108F90000E031B /* NCFileEventManager.m */; };
-		42FEEC9D12108F90000E031B /* NCFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8812108F90000E031B /* NCFileItem.m */; };
-		42FEEC9E12108F90000E031B /* NCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8912108F90000E031B /* NCFileManager.m */; };
-		42FEEC9F12108F90000E031B /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8A12108F90000E031B /* NCLog.m */; };
-		42FEECA012108F90000E031B /* NCTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8B12108F90000E031B /* NCTimeProfiler.m */; };
-		42FEECA212108F90000E031B /* sc_finder_info_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8D12108F90000E031B /* sc_finder_info_manager.m */; };
-		42FEECA412108F90000E031B /* sc_resource_fork_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8F12108F90000E031B /* sc_resource_fork_manager.m */; };
-		42FEECA612108F90000E031B /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9112108F90000E031B /* sc_scanner.m */; };
-		42FEECA812108F90000E031B /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9312108F90000E031B /* sc_tov_copier.m */; };
-		42FEECAA12108F90000E031B /* sc_tov_print.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9512108F90000E031B /* sc_tov_print.m */; };
-		42FEECAC12108F90000E031B /* sc_transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9712108F90000E031B /* sc_transfer.m */; };
-		42FEECAE12108F90000E031B /* sc_traversal_objects.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9912108F90000E031B /* sc_traversal_objects.m */; };
+		42FEEC9A12108F90000E031B /* FPOCsvWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8512108F90000E031B /* FPOCsvWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEEC9B12108F90000E031B /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8612108F90000E031B /* NCDirEnumerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEEC9C12108F90000E031B /* NCFileEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8712108F90000E031B /* NCFileEventManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		42FEEC9D12108F90000E031B /* NCFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8812108F90000E031B /* NCFileItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEEC9E12108F90000E031B /* NCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8912108F90000E031B /* NCFileManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEEC9F12108F90000E031B /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8A12108F90000E031B /* NCLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECA012108F90000E031B /* NCTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8B12108F90000E031B /* NCTimeProfiler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECA212108F90000E031B /* sc_finder_info_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8D12108F90000E031B /* sc_finder_info_manager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECA412108F90000E031B /* sc_resource_fork_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8F12108F90000E031B /* sc_resource_fork_manager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECA612108F90000E031B /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9112108F90000E031B /* sc_scanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECA812108F90000E031B /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9312108F90000E031B /* sc_tov_copier.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECAA12108F90000E031B /* sc_tov_print.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9512108F90000E031B /* sc_tov_print.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECAC12108F90000E031B /* sc_transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9712108F90000E031B /* sc_transfer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECAE12108F90000E031B /* sc_traversal_objects.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9912108F90000E031B /* sc_traversal_objects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1040,7 +1040,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42A86B85117CFE390061FC48 /* Debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1064,7 +1064,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42C150DE1151634A000A0547 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;

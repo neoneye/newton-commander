@@ -11,13 +11,21 @@
 // NCFileEventManagerPrivate is defined in the implementation file
 typedef struct NCFileEventManagerPrivate NCFileEventManagerPrivate;
 
+
+@class NCFileEventManager;
+
+@protocol NCFileEventManagerDelegate <NSObject>
+@required
+-(void)fileEventManager:(NCFileEventManager*)fileEventManager changeOccured:(NSArray*)ary;
+@end
+
 @interface NCFileEventManager : NSObject {
-	id m_delegate;
+	NSObject <NCFileEventManagerDelegate> *m_delegate;
 	NCFileEventManagerPrivate* m_private;
 	NSArray* m_paths_to_watch;
 	BOOL m_is_running;
 }
--(void)setDelegate:(id)delegate;
+-(void)setDelegate:(NSObject <NCFileEventManagerDelegate> *)delegate;
 
 -(void)start;
 -(void)stop;
@@ -28,8 +36,8 @@ typedef struct NCFileEventManagerPrivate NCFileEventManagerPrivate;
 @end
 
 
-@interface NSObject (NCFileEventManagerDelegate)
-
--(void)fileEventManager:(NCFileEventManager*)fileEventManager changeOccured:(NSArray*)ary;
-
-@end
+//@interface NSObject (NCFileEventManagerDelegate)
+//
+//-(void)fileEventManager:(NCFileEventManager*)fileEventManager changeOccured:(NSArray*)ary;
+//
+//@end
