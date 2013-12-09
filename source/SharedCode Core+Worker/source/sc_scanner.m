@@ -6,6 +6,10 @@
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCLog.h"
 #import "sc_scanner.h"
 #import "sc_traversal_objects.h"
@@ -35,10 +39,8 @@ NSNumber* number_with_inode(ino_t inode) {
 }
 
 -(void)dealloc {
-	[m_traversal_object_array release];
-	[m_inode_dict release];
-	
-    [super dealloc];
+	m_traversal_object_array = nil;
+	m_inode_dict = nil;
 }
 
 -(NSArray*)traversalObjects {
@@ -92,7 +94,7 @@ NSNumber* number_with_inode(ino_t inode) {
 			// Directory, pre-order traversal
 			id found_obj = [m_inode_dict objectForKey:inode_number];
 			if(found_obj != nil) {
-				TOHardlink* obj = [[[TOHardlink alloc] init] autorelease];
+				TOHardlink* obj = [[TOHardlink alloc] init];
 				[obj setPath:path_str];
 				[obj setLink:found_obj];
 				[m_traversal_object_array addObject:obj];
@@ -101,7 +103,7 @@ NSNumber* number_with_inode(ino_t inode) {
 				fts_set(ftsp, p, FTS_SKIP);
 				
 			} else {
-				TODirPre* obj = [[[TODirPre alloc] init] autorelease];
+				TODirPre* obj = [[TODirPre alloc] init];
 				[obj setPath:path_str];
 				[m_traversal_object_array addObject:obj];
 				[m_inode_dict setObject:obj forKey:inode_number];
@@ -111,7 +113,7 @@ NSNumber* number_with_inode(ino_t inode) {
 			break; }
 		case FTS_DP: {
 			// Directory, post-order traversal
-			TODirPost* obj = [[[TODirPost alloc] init] autorelease];
+			TODirPost* obj = [[TODirPost alloc] init];
 			[obj setPath:path_str];
 			[m_traversal_object_array addObject:obj];
 			// NOTE: does not count as an item so we dont do m_count_total++;
@@ -121,13 +123,13 @@ NSNumber* number_with_inode(ino_t inode) {
 			// File
 			id found_obj = [m_inode_dict objectForKey:inode_number];
 			if(found_obj != nil) {
-				TOHardlink* obj = [[[TOHardlink alloc] init] autorelease];
+				TOHardlink* obj = [[TOHardlink alloc] init];
 				[obj setPath:path_str];
 				[obj setLink:found_obj];
 				[m_traversal_object_array addObject:obj];
 				m_count_total++;
 			} else {
-				TOFile* obj = [[[TOFile alloc] init] autorelease];
+				TOFile* obj = [[TOFile alloc] init];
 				[obj setPath:path_str];
 				[m_traversal_object_array addObject:obj];
 				[m_inode_dict setObject:obj forKey:inode_number];
@@ -150,7 +152,7 @@ NSNumber* number_with_inode(ino_t inode) {
 				symlink_path[len] = '\0';
 				sl_path = [NSString stringWithUTF8String:symlink_path];
 			}
-			TOSymlink* obj = [[[TOSymlink alloc] init] autorelease];
+			TOSymlink* obj = [[TOSymlink alloc] init];
 			[obj setPath:path_str];
 			[obj setLinkPath:sl_path];
 			[m_traversal_object_array addObject:obj];
@@ -165,13 +167,13 @@ NSNumber* number_with_inode(ino_t inode) {
 				id found_obj = [m_inode_dict objectForKey:inode_number];
 				if(found_obj != nil) {
 					// it IS possible to create a hardlink to a fifo.
-					TOHardlink* obj = [[[TOHardlink alloc] init] autorelease];
+					TOHardlink* obj = [[TOHardlink alloc] init];
 					[obj setPath:path_str];
 					[obj setLink:found_obj];
 					[m_traversal_object_array addObject:obj];
 					m_count_total++;
 				} else {
-					TOFifo* obj = [[[TOFifo alloc] init] autorelease];
+					TOFifo* obj = [[TOFifo alloc] init];
 					[obj setPath:path_str];
 					[m_traversal_object_array addObject:obj];
 					[m_inode_dict setObject:obj forKey:inode_number];
@@ -181,7 +183,7 @@ NSNumber* number_with_inode(ino_t inode) {
 			} else
 			if(S_ISCHR(p->fts_statp->st_mode)) {
 				// CHAR DEVICE
-				TOChar* obj = [[[TOChar alloc] init] autorelease];
+				TOChar* obj = [[TOChar alloc] init];
 				[obj setMajor:major(p->fts_statp->st_rdev)];
 				[obj setMinor:minor(p->fts_statp->st_rdev)];
 				[obj setPath:path_str];
@@ -191,7 +193,7 @@ NSNumber* number_with_inode(ino_t inode) {
 			} else
 			if(S_ISBLK(p->fts_statp->st_mode)) {
 				// BLOCK DEVICE
-				TOBlock* obj = [[[TOBlock alloc] init] autorelease];
+				TOBlock* obj = [[TOBlock alloc] init];
 				[obj setMajor:major(p->fts_statp->st_rdev)];
 				[obj setMinor:minor(p->fts_statp->st_rdev)];
 				[obj setPath:path_str];
@@ -201,7 +203,7 @@ NSNumber* number_with_inode(ino_t inode) {
 			} else
 			{
 				// Sockets, Whiteout, are there any others?
-				TOOther* obj = [[[TOOther alloc] init] autorelease];
+				TOOther* obj = [[TOOther alloc] init];
 				[obj setPath:path_str];
 				[m_traversal_object_array addObject:obj];
 				m_count_total++;

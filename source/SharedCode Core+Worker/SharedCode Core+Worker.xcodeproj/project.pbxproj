@@ -28,9 +28,9 @@
 		427DADEF11F9461F0018AAC5 /* sc_transfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADED11F9461F0018AAC5 /* sc_transfer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DADF011F9461F0018AAC5 /* sc_transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADEE11F9461F0018AAC5 /* sc_transfer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		427DAE2C11FA5AD80018AAC5 /* sc_scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DAE2A11FA5AD80018AAC5 /* sc_scanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		427DAE2D11FA5AD80018AAC5 /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DAE2B11FA5AD80018AAC5 /* sc_scanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		427DAE2D11FA5AD80018AAC5 /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DAE2B11FA5AD80018AAC5 /* sc_scanner.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		427DAE4311FA67AE0018AAC5 /* sc_tov_copier.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DAE4111FA67AE0018AAC5 /* sc_tov_copier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		427DAE4411FA67AE0018AAC5 /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DAE4211FA67AE0018AAC5 /* sc_tov_copier.m */; };
+		427DAE4411FA67AE0018AAC5 /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DAE4211FA67AE0018AAC5 /* sc_tov_copier.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4288D5081200046A00DE1FFA /* NCLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4288D5061200046A00DE1FFA /* NCLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4288D5091200046A00DE1FFA /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4288D5071200046A00DE1FFA /* NCLog.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42DBA07211F201E500DD57A8 /* NCFileItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DBA07011F201E500DD57A8 /* NCFileItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
