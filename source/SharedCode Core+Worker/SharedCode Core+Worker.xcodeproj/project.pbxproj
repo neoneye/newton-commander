@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		421079D711F11407001372D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421079D611F11407001372D8 /* Foundation.framework */; };
 		421079F811F11644001372D8 /* NCDirEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 421079F611F11644001372D8 /* NCDirEnumerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		421079F911F11644001372D8 /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 421079F711F11644001372D8 /* NCDirEnumerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		421079F911F11644001372D8 /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 421079F711F11644001372D8 /* NCDirEnumerator.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4231C57C120633CE004BBB41 /* FPOCsvWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4231C577120633CE004BBB41 /* FPOCsvWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4231C57D120633CE004BBB41 /* FPOCsvWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4231C578120633CE004BBB41 /* FPOCsvWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4231C57E120633CE004BBB41 /* FPOICsvWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4231C579120633CE004BBB41 /* FPOICsvWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };

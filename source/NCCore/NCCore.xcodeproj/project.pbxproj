@@ -102,7 +102,7 @@
 		42D44A6112172C3800CB5BF5 /* NCDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A5F12172C3800CB5BF5 /* NCDateCell.m */; };
 		42DBA09A11F2024400DD57A8 /* NCListerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA09811F2024400DD57A8 /* NCListerItem.m */; };
 		42FEEC9A12108F90000E031B /* FPOCsvWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8512108F90000E031B /* FPOCsvWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		42FEEC9B12108F90000E031B /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8612108F90000E031B /* NCDirEnumerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEEC9B12108F90000E031B /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8612108F90000E031B /* NCDirEnumerator.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEEC9C12108F90000E031B /* NCFileEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8712108F90000E031B /* NCFileEventManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEEC9D12108F90000E031B /* NCFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8812108F90000E031B /* NCFileItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		42FEEC9E12108F90000E031B /* NCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8912108F90000E031B /* NCFileManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };

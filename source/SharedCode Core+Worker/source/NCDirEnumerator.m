@@ -25,6 +25,10 @@ it will not affect our main program.
 Alternatively I could just check for existence of the common cloaked files.
 
 *********************************************************************/
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCDirEnumerator.h"
 #import "NCFileManager.h"
 #import "NCLog.h"
@@ -72,7 +76,7 @@ IDEA: add an error: return argument, so that I can determine the cause of the pr
 +(NCDirEnumerator*)enumeratorWithPath:(NSString*)path error:(NSError**)err;
 */
 +(NCDirEnumerator*)enumeratorWithPath:(NSString*)path {
-	return [[[NCDirEnumerator alloc] initWithPath:path] autorelease];
+	return [[NCDirEnumerator alloc] initWithPath:path];
 }
 
 -(id)initWithPath:(NSString*)path {
@@ -99,7 +103,6 @@ IDEA: add an error: return argument, so that I can determine the cause of the pr
 
 -(void)dealloc {
 	[self teardown];
-	[super dealloc];
 }
 
 -(void)setupWithPath:(NSString*)path {
@@ -205,7 +208,7 @@ IDEA: add an error: return argument, so that I can determine the cause of the pr
 
     m_cursor += thisEnt->d_reclen;
 
-	NCDirEntry* entry = [[[NCDirEntry alloc] init] autorelease];
+	NCDirEntry* entry = [[NCDirEntry alloc] init];
 	[entry setInode:(thisEnt->d_ino)];
 	[entry setName:[NSString stringWithUTF8String:(thisEnt->d_name)]];
 	[entry setDirentType:thisEnt->d_type];

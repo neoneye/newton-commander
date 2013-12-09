@@ -42,7 +42,7 @@ wrapper around the "dirent" struct
 	unsigned char m_dirent_type;
 }
 @property unsigned long long inode;
-@property(nonatomic, retain) NSString* name;
+@property(nonatomic, strong) NSString* name;
 @property unsigned char direntType;
 
 @end
