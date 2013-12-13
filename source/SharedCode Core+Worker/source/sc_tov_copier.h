@@ -34,11 +34,11 @@ enum {
 	NSUInteger m_status_code;
 	NSString* m_status_message;
 }
-@property (retain) NSString* sourcePath;
-@property (retain) NSString* targetPath;
+@property (strong) NSString* sourcePath;
+@property (strong) NSString* targetPath;
 @property (assign) unsigned long long bytesCopied;
 @property NSUInteger statusCode;
-@property (retain) NSString* statusMessage;
+@property (strong) NSString* statusMessage;
 
 -(void)setStatus:(NSUInteger)status posixError:(int)error_code message:(NSString*)message, ...;
 

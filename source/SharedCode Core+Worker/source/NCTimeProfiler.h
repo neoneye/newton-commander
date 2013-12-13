@@ -18,8 +18,8 @@ double subtract_times( uint64_t endTime, uint64_t startTime );
 	NSFileHandle* m_handle;
 	FPOCsvWriter* m_writer;
 }
-@property (retain) NSFileHandle* handle;
-@property (retain) FPOCsvWriter* writer;
+@property (strong) NSFileHandle* handle;
+@property (strong) FPOCsvWriter* writer;
 // +(NCTimeProfilerShared*)shared;
 -(void)writeRow:(NSArray *)row;
 
