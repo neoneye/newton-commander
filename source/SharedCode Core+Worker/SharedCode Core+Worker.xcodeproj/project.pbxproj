@@ -22,7 +22,7 @@
 		427DADCB11F945A30018AAC5 /* sc_resource_fork_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADC311F945A30018AAC5 /* sc_resource_fork_manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DADCC11F945A30018AAC5 /* sc_resource_fork_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADC411F945A30018AAC5 /* sc_resource_fork_manager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		427DADCD11F945A30018AAC5 /* sc_tov_print.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADC511F945A30018AAC5 /* sc_tov_print.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		427DADCE11F945A30018AAC5 /* sc_tov_print.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADC611F945A30018AAC5 /* sc_tov_print.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		427DADCE11F945A30018AAC5 /* sc_tov_print.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADC611F945A30018AAC5 /* sc_tov_print.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		427DADCF11F945A30018AAC5 /* sc_traversal_objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADC711F945A30018AAC5 /* sc_traversal_objects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DADD011F945A30018AAC5 /* sc_traversal_objects.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADC811F945A30018AAC5 /* sc_traversal_objects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		427DADEF11F9461F0018AAC5 /* sc_transfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADED11F9461F0018AAC5 /* sc_transfer.h */; settings = {ATTRIBUTES = (Public, ); }; };

@@ -5,8 +5,8 @@
 	NSString* m_source_path;
 	NSString* m_target_path;
 }
-@property (retain) NSString* sourcePath;
-@property (retain) NSString* targetPath;
+@property (strong) NSString* sourcePath;
+@property (strong) NSString* targetPath;
 
 -(NSString*)result;
 

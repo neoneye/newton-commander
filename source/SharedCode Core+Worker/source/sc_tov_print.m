@@ -1,3 +1,7 @@
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "sc_tov_print.h"
 
 @implementation TOVPrint
@@ -13,10 +17,6 @@
     return self;
 }
 
--(void)dealloc {
-	[m_result release];
-    [super dealloc];
-}
 
 -(NSString*)result {
 	return [m_result copy];
