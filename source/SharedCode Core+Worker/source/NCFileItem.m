@@ -6,6 +6,10 @@
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCFileItem.h"
 
 
@@ -40,8 +44,8 @@
 		if([coder allowsKeyedCoding]) {
 	        m_dirent_type = [coder decodeIntForKey: @"direntType"];
 	        m_item_type = [coder decodeIntForKey: @"itemType"];
-	        m_name = [[coder decodeObjectForKey: @"name"] retain];
-	        m_link = [[coder decodeObjectForKey: @"link"] retain];
+	        m_name = [coder decodeObjectForKey: @"name"];
+	        m_link = [coder decodeObjectForKey: @"link"];
 	        m_size = [coder decodeInt64ForKey: @"dataSize"];
 	        m_resource_fork_size = [coder decodeInt64ForKey: @"rsrcSize"];
 	        m_inode = [coder decodeInt64ForKey: @"inode"];
@@ -50,22 +54,22 @@
 	        m_item_count = [coder decodeIntForKey: @"itemCount"];
 	        m_acl_count = [coder decodeIntForKey: @"aclCount"];
 	        m_xattr_count = [coder decodeIntForKey: @"xattrCount"];
-	        m_group = [[coder decodeObjectForKey: @"group"] retain];
-	        m_owner = [[coder decodeObjectForKey: @"owner"] retain];
+	        m_group = [coder decodeObjectForKey: @"group"];
+	        m_owner = [coder decodeObjectForKey: @"owner"];
 	        m_posix_permissions = [coder decodeIntForKey: @"posixPerm"];
-	        m_kind = [[coder decodeObjectForKey: @"kind"] retain];
-	        m_content_type = [[coder decodeObjectForKey: @"contentType"] retain];
-	        m_comment = [[coder decodeObjectForKey: @"comment"] retain];
-	        m_access_date = [[coder decodeObjectForKey: @"accessDate"] retain];
-	        m_content_modification_date = [[coder decodeObjectForKey: @"contentModDate"] retain];
-	        m_attribute_modification_date = [[coder decodeObjectForKey: @"attrModDate"] retain];
-	        m_creation_date = [[coder decodeObjectForKey: @"createDate"] retain];
-	        m_backup_date = [[coder decodeObjectForKey: @"backupDate"] retain];
+	        m_kind = [coder decodeObjectForKey: @"kind"];
+	        m_content_type = [coder decodeObjectForKey: @"contentType"];
+	        m_comment = [coder decodeObjectForKey: @"comment"];
+	        m_access_date = [coder decodeObjectForKey: @"accessDate"];
+	        m_content_modification_date = [coder decodeObjectForKey: @"contentModDate"];
+	        m_attribute_modification_date = [coder decodeObjectForKey: @"attrModDate"];
+	        m_creation_date = [coder decodeObjectForKey: @"createDate"];
+	        m_backup_date = [coder decodeObjectForKey: @"backupDate"];
 		} else {
 			[coder decodeValueOfObjCType:@encode(unsigned char) at:&m_dirent_type];
 			[coder decodeValueOfObjCType:@encode(int) at:&m_item_type];
-	        m_name = [[coder decodeObject] retain];    
-	        m_link = [[coder decodeObject] retain];
+	        m_name = [coder decodeObject];    
+	        m_link = [coder decodeObject];
 			[coder decodeValueOfObjCType:@encode(unsigned long long) at:&m_size];
 			[coder decodeValueOfObjCType:@encode(unsigned long long) at:&m_resource_fork_size];
 			[coder decodeValueOfObjCType:@encode(unsigned long long) at:&m_inode];
@@ -74,17 +78,17 @@
 			[coder decodeValueOfObjCType:@encode(int) at:&m_item_count];     
 			[coder decodeValueOfObjCType:@encode(int) at:&m_acl_count];
 			[coder decodeValueOfObjCType:@encode(int) at:&m_xattr_count];
-	        m_group = [[coder decodeObject] retain];    
-	        m_owner = [[coder decodeObject] retain];                   
+	        m_group = [coder decodeObject];    
+	        m_owner = [coder decodeObject];                   
 			[coder decodeValueOfObjCType:@encode(int) at:&m_posix_permissions];
-	        m_kind = [[coder decodeObject] retain];    
-	        m_content_type = [[coder decodeObject] retain];    
-	        m_comment = [[coder decodeObject] retain];    
-	        m_access_date = [[coder decodeObject] retain];    
-	        m_content_modification_date = [[coder decodeObject] retain];    
-	        m_attribute_modification_date = [[coder decodeObject] retain];    
-	        m_creation_date = [[coder decodeObject] retain];    
-	        m_backup_date = [[coder decodeObject] retain];    
+	        m_kind = [coder decodeObject];    
+	        m_content_type = [coder decodeObject];    
+	        m_comment = [coder decodeObject];    
+	        m_access_date = [coder decodeObject];    
+	        m_content_modification_date = [coder decodeObject];    
+	        m_attribute_modification_date = [coder decodeObject];    
+	        m_creation_date = [coder decodeObject];    
+	        m_backup_date = [coder decodeObject];    
 		}
     }
     return self;
