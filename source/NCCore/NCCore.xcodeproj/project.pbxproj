@@ -109,7 +109,7 @@
 		42FEEC9F12108F90000E031B /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8A12108F90000E031B /* NCLog.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEECA012108F90000E031B /* NCTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8B12108F90000E031B /* NCTimeProfiler.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEECA212108F90000E031B /* sc_finder_info_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8D12108F90000E031B /* sc_finder_info_manager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECA412108F90000E031B /* sc_resource_fork_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8F12108F90000E031B /* sc_resource_fork_manager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FEECA412108F90000E031B /* sc_resource_fork_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8F12108F90000E031B /* sc_resource_fork_manager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEECA612108F90000E031B /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9112108F90000E031B /* sc_scanner.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEECA812108F90000E031B /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9312108F90000E031B /* sc_tov_copier.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42FEECAA12108F90000E031B /* sc_tov_print.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9512108F90000E031B /* sc_tov_print.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
