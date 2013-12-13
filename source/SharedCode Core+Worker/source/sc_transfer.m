@@ -6,6 +6,10 @@
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCLog.h"
 #import "sc_transfer.h"
 #import "sc_traversal_objects.h"
@@ -38,14 +42,14 @@
 	// YES=move operation. NO=copy operation
 	BOOL m_is_move;
 }
-@property (retain) NSArray* names;
-@property (retain) NSString* fromDir;
-@property (retain) NSString* toDir;
+@property (strong) NSArray* names;
+@property (strong) NSString* fromDir;
+@property (strong) NSString* toDir;
 @property (assign) unsigned long long bytesTotal;
 @property (assign) unsigned long long countTotal;
-@property (retain) NSMutableArray* queuePending;
-@property (retain) NSMutableArray* queueCompleted;
-@property (retain) TOVCopier* copier;
+@property (strong) NSMutableArray* queuePending;
+@property (strong) NSMutableArray* queueCompleted;
+@property (strong) TOVCopier* copier;
 @property BOOL isMove;
 
 -(id)initWithTransferOperation:(TransferOperation*)transfer_operation isMove:(BOOL)is_move;
@@ -89,7 +93,7 @@
 }
 
 -(void)main {
-	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 	// LOG_DEBUG(@"TransferOperationThread.main - enter");
 	
 	/*
@@ -100,12 +104,12 @@
 	So since we want it to be a non-stoppable thread then we 
 	add a dummy input source to prevent the runloop from exiting.
 	*/
-	[[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+		[[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
 
-	[[NSRunLoop currentRunLoop] run];
+		[[NSRunLoop currentRunLoop] run];
 
-	LOG_DEBUG(@"RunLoop exited, thread is stopping");
-	[pool release];
+		LOG_DEBUG(@"RunLoop exited, thread is stopping");
+	}
 }
 
 -(void)prepareForTransfer:(NSDictionary*)dict {
@@ -124,69 +128,69 @@
 	[m_queue_pending removeAllObjects];
 	[m_queue_completed removeAllObjects];
 	
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    @autoreleasepool {
 
-	TraversalScanner* maker = [[[TraversalScanner alloc] init] autorelease];
+		TraversalScanner* maker = [[TraversalScanner alloc] init];
 
-	NSString* name;
-	NSEnumerator* en = [m_names objectEnumerator];
-	while(name = [en nextObject]) { 
-		
-		unsigned long long bytes_total0 = [maker bytesTotal];
-		unsigned long long count_total0 = [maker countTotal];
-		
-		{
-			TOProgressBefore* obj = [[[TOProgressBefore alloc] init] autorelease];
-			[obj setName:name];
-			[maker addObject:obj];
-		}
+		NSString* name;
+		NSEnumerator* en = [m_names objectEnumerator];
+		while(name = [en nextObject]) { 
+			
+			unsigned long long bytes_total0 = [maker bytesTotal];
+			unsigned long long count_total0 = [maker countTotal];
+			
+			{
+				TOProgressBefore* obj = [[TOProgressBefore alloc] init];
+				[obj setName:name];
+				[maker addObject:obj];
+			}
 
-		[maker appendTraverseDataForPath:[m_from_dir stringByAppendingPathComponent:name]];
+			[maker appendTraverseDataForPath:[m_from_dir stringByAppendingPathComponent:name]];
 
-		{
-			TOProgressAfter* obj = [[[TOProgressAfter alloc] init] autorelease];
-			[obj setName:name];
-			[maker addObject:obj];
-		}
+			{
+				TOProgressAfter* obj = [[TOProgressAfter alloc] init];
+				[obj setName:name];
+				[maker addObject:obj];
+			}
 
-		unsigned long long bytes_total1 = [maker bytesTotal];
-		unsigned long long count_total1 = [maker countTotal];
+			unsigned long long bytes_total1 = [maker bytesTotal];
+			unsigned long long count_total1 = [maker countTotal];
 
-		unsigned long long bytes_item = bytes_total1 - bytes_total0;
-		unsigned long long count_item = count_total1 - count_total0;
+			unsigned long long bytes_item = bytes_total1 - bytes_total0;
+			unsigned long long count_item = count_total1 - count_total0;
 
 
 
         /*
-		TODO: update scan-progress
-		TODO: poll max 10 times per second some counters protected with a mutex.. run it in a thread
-		*/
+			TODO: update scan-progress
+			TODO: poll max 10 times per second some counters protected with a mutex.. run it in a thread
+			*/
 
-		NSNumber* bytesTotal = [NSNumber numberWithUnsignedLongLong:[maker bytesTotal]];
-		NSNumber* countTotal = [NSNumber numberWithUnsignedLongLong:[maker countTotal]];
-		NSNumber* bytesItem = [NSNumber numberWithUnsignedLongLong:bytes_item];
-		NSNumber* countItem = [NSNumber numberWithUnsignedLongLong:count_item];
+			NSNumber* bytesTotal = [NSNumber numberWithUnsignedLongLong:[maker bytesTotal]];
+			NSNumber* countTotal = [NSNumber numberWithUnsignedLongLong:[maker countTotal]];
+			NSNumber* bytesItem = [NSNumber numberWithUnsignedLongLong:bytes_item];
+			NSNumber* countItem = [NSNumber numberWithUnsignedLongLong:count_item];
 
-		NSArray* keys = [NSArray arrayWithObjects:@"bytesTotal", @"countTotal", @"name", @"bytesItem", @"countItem", nil];
-		NSArray* objects = [NSArray arrayWithObjects:bytesTotal, countTotal, name, bytesItem, countItem, nil];
-		NSDictionary* dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];	
-		[self sendResponse:dict forKey:@"scan-progress"];
-	}
+			NSArray* keys = [NSArray arrayWithObjects:@"bytesTotal", @"countTotal", @"name", @"bytesItem", @"countItem", nil];
+			NSArray* objects = [NSArray arrayWithObjects:bytesTotal, countTotal, name, bytesItem, countItem, nil];
+			NSDictionary* dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];	
+			[self sendResponse:dict forKey:@"scan-progress"];
+		}
 
-	[m_queue_pending addObjectsFromArray:[maker traversalObjects]];
-	m_bytes_total = [maker bytesTotal];
-	m_count_total = [maker countTotal];
+		[m_queue_pending addObjectsFromArray:[maker traversalObjects]];
+		m_bytes_total = [maker bytesTotal];
+		m_count_total = [maker countTotal];
 
-	{
-		NSNumber* bytesTotal = [NSNumber numberWithUnsignedLongLong:[maker bytesTotal]];
-		NSNumber* countTotal = [NSNumber numberWithUnsignedLongLong:[maker countTotal]];
-		NSArray* keys = [NSArray arrayWithObjects:@"bytesTotal", @"countTotal", nil];
-		NSArray* objects = [NSArray arrayWithObjects:bytesTotal, countTotal, nil];
-		NSDictionary* dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];	
-		[self sendResponse:dict forKey:@"scan-complete"];
-	}
+		{
+			NSNumber* bytesTotal = [NSNumber numberWithUnsignedLongLong:[maker bytesTotal]];
+			NSNumber* countTotal = [NSNumber numberWithUnsignedLongLong:[maker countTotal]];
+			NSArray* keys = [NSArray arrayWithObjects:@"bytesTotal", @"countTotal", nil];
+			NSArray* objects = [NSArray arrayWithObjects:bytesTotal, countTotal, nil];
+			NSDictionary* dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];	
+			[self sendResponse:dict forKey:@"scan-complete"];
+		}
 	
-	[pool release];
+	}
 }
 
 -(void)performOperation {
@@ -199,7 +203,7 @@
 	m_start_time = mach_absolute_time();
 	m_elapsed_limit_triggers_progress = 0;
 
-	TOVCopier* v = [[[TOVCopier alloc] init] autorelease];
+	TOVCopier* v = [[TOVCopier alloc] init];
 	[v setSourcePath:m_from_dir];
 	[v setTargetPath:m_to_dir];
 	self.copier = v;
@@ -399,7 +403,7 @@
 	NSArray* ary = m_queue_pending;
 	NSAssert(ary, @"traversal object array must be initialized");
 
-	TOVPrint* v = [[[TOVPrint alloc] init] autorelease];
+	TOVPrint* v = [[TOVPrint alloc] init];
 	[v setSourcePath:m_from_dir];
 	[v setTargetPath:m_to_dir];
 
@@ -432,21 +436,21 @@
 
 @implementation TransferOperation
 
-@synthesize delegate = m_delegate;
+@synthesize delegate;
 @synthesize names = m_names;
 @synthesize fromDir = m_from_dir;
 @synthesize toDir = m_to_dir;
 @synthesize isMove = m_is_move;
 
 +(TransferOperation*)copyOperation {
-	TransferOperation* opera = [[[TransferOperation alloc] init] autorelease];
+	TransferOperation* opera = [[TransferOperation alloc] init];
 	[opera setIsMove:NO];
 	[opera createAndStartThread];
 	return opera;
 }
 
 +(TransferOperation*)moveOperation {
-	TransferOperation* opera = [[[TransferOperation alloc] init] autorelease];
+	TransferOperation* opera = [[TransferOperation alloc] init];
 	[opera setIsMove:YES];
 	[opera createAndStartThread];
 	return opera;
@@ -544,8 +548,8 @@
 
 -(void)threadResponse:(NSDictionary*)dict forKey:(NSString*)key {
 	// LOG_DEBUG(@"scan: %@", dict);
-	if([m_delegate respondsToSelector:@selector(transferOperation:response:forKey:)]) {
-		[m_delegate transferOperation:self response:dict forKey:key];
+	if([self.delegate respondsToSelector:@selector(transferOperation:response:forKey:)]) {
+		[self.delegate transferOperation:self response:dict forKey:key];
 	}
 }
 

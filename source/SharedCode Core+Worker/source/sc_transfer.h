@@ -15,7 +15,6 @@
 
 @interface TransferOperation : NSObject {
 	TransferOperationThread* m_thread;
-	id<TransferOperationDelegate> m_delegate;
 	NSArray* m_names;
 	NSString* m_from_dir;
 	NSString* m_to_dir; 
@@ -23,10 +22,10 @@
 	// YES=move operation. NO=copy operation
 	BOOL m_is_move;
 }
-@property (assign) id<TransferOperationDelegate> delegate;
-@property (retain) NSArray* names;
-@property (retain) NSString* fromDir;
-@property (retain) NSString* toDir;
+@property (weak) id<TransferOperationDelegate> delegate;
+@property (strong) NSArray* names;
+@property (strong) NSString* fromDir;
+@property (strong) NSString* toDir;
 @property BOOL isMove;
 
 +(TransferOperation*)copyOperation;

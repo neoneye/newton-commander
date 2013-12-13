@@ -26,7 +26,7 @@
 		427DADCF11F945A30018AAC5 /* sc_traversal_objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADC711F945A30018AAC5 /* sc_traversal_objects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DADD011F945A30018AAC5 /* sc_traversal_objects.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADC811F945A30018AAC5 /* sc_traversal_objects.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		427DADEF11F9461F0018AAC5 /* sc_transfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DADED11F9461F0018AAC5 /* sc_transfer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		427DADF011F9461F0018AAC5 /* sc_transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADEE11F9461F0018AAC5 /* sc_transfer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		427DADF011F9461F0018AAC5 /* sc_transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DADEE11F9461F0018AAC5 /* sc_transfer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		427DAE2C11FA5AD80018AAC5 /* sc_scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DAE2A11FA5AD80018AAC5 /* sc_scanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		427DAE2D11FA5AD80018AAC5 /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DAE2B11FA5AD80018AAC5 /* sc_scanner.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		427DAE4311FA67AE0018AAC5 /* sc_tov_copier.h in Headers */ = {isa = PBXBuildFile; fileRef = 427DAE4111FA67AE0018AAC5 /* sc_tov_copier.h */; settings = {ATTRIBUTES = (Public, ); }; };
