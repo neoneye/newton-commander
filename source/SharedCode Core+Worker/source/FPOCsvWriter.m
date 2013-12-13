@@ -6,6 +6,10 @@
 //  Copyright 2010 fourplusone. All rights reserved.
 //
 
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "FPOCsvWriter.h"
 
 
@@ -15,17 +19,12 @@
 {
     self = [super init];
     if(self){
-        filehandle = [fh retain];
+        filehandle = fh;
     }
     return self;
     
 }
 
--(void)dealloc
-{
-    [filehandle release];
-    [super dealloc];
-}
 
 -(NSString *)escapeString:(NSString *)s
 {
