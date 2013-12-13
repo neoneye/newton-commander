@@ -30,7 +30,7 @@
 @interface TraversalObject : NSObject {
 	NSString* m_path;
 }
-@property (retain) NSString* path;
+@property (strong) NSString* path;
 
 -(void)accept:(id <TraversalObjectVisitor>)v;
 @end
@@ -54,14 +54,14 @@ link is either set to: TODirPre, TOFile, TOFifo
 @interface TOHardlink : TraversalObject {
 	TraversalObject* m_link;
 }
-@property (retain) TraversalObject* link;
+@property (strong) TraversalObject* link;
 -(NSString*)linkPath;
 @end
 
 @interface TOSymlink : TraversalObject {
 	NSString* m_link_path;
 }
-@property (retain) NSString* linkPath;
+@property (strong) NSString* linkPath;
 @end
 
 @interface TOFifo : TraversalObject {}
@@ -96,7 +96,7 @@ It's used before copying of a major dir.
 @interface TOProgressBefore : TraversalObject {
 	NSString* m_name;
 }
-@property (retain) NSString* name;
+@property (strong) NSString* name;
 
 @end
 
@@ -109,6 +109,6 @@ It's used after a major dir has been copied.
 @interface TOProgressAfter : TraversalObject {
 	NSString* m_name;
 }
-@property (retain) NSString* name;
+@property (strong) NSString* name;
 
 @end
