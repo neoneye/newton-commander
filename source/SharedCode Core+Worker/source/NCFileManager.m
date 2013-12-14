@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 18/05/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCFileManager.h"
@@ -218,7 +221,7 @@ NSDate* get_backupdate(const char* path) {
 #pragma mark -
 
 -(NSDictionary*)attributesOfItemAtPath:(NSString*)path error:(NSError**)error {
-	NSMutableDictionary* dict = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
 
 	const char* stat_path = [path fileSystemRepresentation];
 	struct stat st;
@@ -395,11 +398,14 @@ NSDate* get_backupdate(const char* path) {
 		return nil;
 	}
 
-	NSURL* target_url = [(NSURL *)CFURLCreateFromFSRef(NULL, &ref) autorelease];
-	if(target_url == nil) {
+	CFURLRef target_cfurl = CFURLCreateFromFSRef(NULL, &ref);
+	if (!target_cfurl) {
 		// NSLog(@"%s ERROR occurred creating NSURL from FSRef", _cmd);
 		return nil;
 	}
+	NSURL* target_url = (__bridge NSURL *)target_cfurl;
+	CFBridgingRelease(target_cfurl);
+	target_cfurl = NULL;
 
 	NSString* target_path = [target_url path];
 	if(target_path == nil) {
@@ -438,7 +444,6 @@ NSDate* get_backupdate(const char* path) {
 		}
 		
 		NSString* name = [components objectAtIndex:0];
-		[[name retain] autorelease];
 		[components removeObjectAtIndex:0];
 		
 		// removing extraneous path components
@@ -522,7 +527,7 @@ NSDate* get_backupdate(const char* path) {
 
 -(NSDictionary*)aclForItemAtPath:(NSString*)path error:(NSError**)error {
 	// TODO: aclForItemAtPath needs NSError handling
-	NSMutableDictionary* dict = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
 
 	const char* fs_path = [path fileSystemRepresentation];
 
@@ -562,8 +567,8 @@ NSDate* get_backupdate(const char* path) {
 	}
 
 
-	NSMutableDictionary* dict = [[[NSMutableDictionary alloc] init] autorelease];
-	NSMutableArray* ary = [[[NSMutableArray alloc] init] autorelease];
+	NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+	NSMutableArray* ary = [[NSMutableArray alloc] init];
 
 	char* buffer = (char*)malloc(buffer_size);
 
@@ -642,7 +647,7 @@ NSDate* get_backupdate(const char* path) {
 		return nil;
 	}
 
-	NSMutableDictionary* dict = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
 
 	FSRef ref;
 	OSStatus err = FSPathMakeRef((const UInt8 *)[path fileSystemRepresentation], &ref, NULL);
@@ -653,25 +658,29 @@ NSDate* get_backupdate(const char* path) {
 	
 
 
-	NSString *kind = nil;
+	CFStringRef kind = NULL;
 	/*NSURL* url = */ [NSURL fileURLWithPath:[path stringByExpandingTildeInPath]];
-	LSCopyKindStringForRef(&ref, (CFStringRef*)&kind);
+	LSCopyKindStringForRef(&ref, &kind);
 	if(kind) {
-		[dict setObject:kind forKey:NCSpotlightKind];
-		[kind autorelease];
+		[dict setObject:(__bridge NSString *)kind forKey:NCSpotlightKind];
+		CFBridgingRelease(kind);
+		kind = NULL;
 	}
 
 
  	CFTypeRef theUTI = NULL;
     err = LSCopyItemAttribute(&ref, kLSRolesAll, kLSItemContentType, &theUTI);
-    [(id)theUTI autorelease];
 
     // we get this for e.g. doi or unrecognized schemes; let FVPreviewer handle those
     if (err == fnfErr) {
         return nil;
 	}
-	
-	[dict setObject:(NSString*)theUTI forKey:NCSpotlightContentType];
+
+	if (theUTI) {
+		[dict setObject:(__bridge NSString *)theUTI forKey:NCSpotlightContentType];
+		CFBridgingRelease(theUTI);
+		theUTI = NULL;
+	}
 
 #endif
 #if 0
@@ -682,7 +691,7 @@ NSDate* get_backupdate(const char* path) {
 	}
 
 	CFStringRef path2 = (CFStringRef)path;
-	// CFStringRef path2 = CFSTR("/Volumes/Data/movies1/aliens.avi");       
+	// CFStringRef path2 = CFSTR("/Volumes/Data/movies1/tutorial.avi");
 	// CFStringRef path2 = CFSTR("/Users/neoneye/Desktop/footer.box1");
 	// CFStringRef path2 = CFSTR("/Applications/Chess.app");
 	// CFStringRef path2 = CFSTR("/Applications/Chess.app/Contents/Info.plist");
@@ -729,7 +738,7 @@ NSDate* get_backupdate(const char* path) {
 	}
 	
 
-	NSMutableDictionary* dict = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
 	CFStringRef kind = MDItemCopyAttribute( item, kMDItemKind );
 	if(kind) {
 		LOG_DEBUG(@"file: %@  kind: %@", path, (NSString*)kind);
@@ -764,7 +773,7 @@ NSDate* get_backupdate(const char* path) {
 	NSEnumerator *e = [array objectEnumerator];
     id arrayObject;
     
-	NSMutableDictionary* dict = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     CFTypeRef ref;
     
     while ((arrayObject = [e nextObject])) {
