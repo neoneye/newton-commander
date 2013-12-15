@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 16/07/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCWorkerPluginAdvanced.h"
 #import "NCDirEnumerator.h"
@@ -74,28 +77,21 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 - (void)dealloc {
 	m_delegate = nil;
 	
-	[m_queue release];
 	m_queue = nil;
 
-	[m_working_dir release];
 	m_working_dir = nil;
 	
-	[m_resolved_working_dir release];
 	m_resolved_working_dir = nil;
 	
-	[m_items release];
 	m_items = nil;
 
-	[m_copy_operation release];
 	m_copy_operation = nil;
 
-	[m_move_operation release];
 	m_move_operation = nil;
 
 /*	[m_profiler release];
 	m_profiler = nil; */
 
-	[super dealloc];
 }
 
 #pragma mark -
@@ -107,21 +103,18 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 
 -(void)setWorkingDir:(NSString*)path {
 	if(m_working_dir != path) {
-		[m_working_dir release];
 		m_working_dir = [path copy];
 	}
 }
 
 -(void)setResolvedWorkingDir:(NSString*)path {
 	if(m_resolved_working_dir != path) {
-		[m_resolved_working_dir release];
 		m_resolved_working_dir = [path copy];
 	}
 }
 
 -(void)setItems:(NSArray*)items {
 	if(m_items != items) {
-		[m_items release];
 		m_items = [items copy];
 	}
 }
@@ -137,7 +130,6 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 	
 	// dequeue the first element
 	id obj = [m_queue objectAtIndex:0];
-	[[obj retain] autorelease];
 	[m_queue removeObjectAtIndex:0];
 	
 	// execute it
@@ -213,7 +205,7 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 	LOG_DEBUG(@"names = %@", names);*/
 	
 	if(!m_copy_operation) {
-		m_copy_operation = [[TransferOperation copyOperation] retain];
+		m_copy_operation = [TransferOperation copyOperation];
 		[m_copy_operation setDelegate:self];
 	}
 	
@@ -259,7 +251,7 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 	LOG_DEBUG(@"names = %@", names);*/
 	
 	if(!m_move_operation) {
-		m_move_operation = [[TransferOperation moveOperation] retain];
+		m_move_operation = [TransferOperation moveOperation];
 		[m_move_operation setDelegate:self];
 	}
 	
@@ -359,10 +351,10 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 }
 
 -(NSArray*)sortItems:(NSArray*)items {
-	NSSortDescriptor* sd0 = [[[NSSortDescriptor alloc] initWithKey:@"sortItemType"
-	    ascending:YES] autorelease];
-	NSSortDescriptor* sd1 = [[[NSSortDescriptor alloc] initWithKey:@"name"
-		ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease];
+	NSSortDescriptor* sd0 = [[NSSortDescriptor alloc] initWithKey:@"sortItemType"
+	    ascending:YES];
+	NSSortDescriptor* sd1 = [[NSSortDescriptor alloc] initWithKey:@"name"
+		ascending:YES selector:@selector(caseInsensitiveCompare:)];
 	NSArray* sds = [NSArray arrayWithObjects:sd0, sd1, nil];
 	return [items sortedArrayUsingDescriptors:sds];
 }
@@ -439,7 +431,7 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 		if([name isEqual:@"."]) continue;
 		if([name isEqual:@".."]) continue;
 		
-		NCFileItem* item = [[[NCFileItem alloc] init] autorelease];
+		NCFileItem* item = [[NCFileItem alloc] init];
 		[item setName:name];
 		[item setInode:inode];
 		[item setDirentType:dirent_type];

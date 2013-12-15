@@ -3,6 +3,10 @@
 IDEA: use a watchdog to protect against hangups.. maybe a 1 minute alarm is good
 This watchdog could be specified via the commandline, e.g:  NewtonCommanderHelper --watchdog=60
 */
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import <Foundation/Foundation.h>
 #import "NCLog.h"
 #import "daemonize.h"
@@ -153,7 +157,7 @@ float seconds_since_program_start() {
 		[self stop];
 	}
 	[con setRootObject:self]; // IDEA: use another seperate class as root object
-	m_connection = [con retain]; 
+	m_connection = con; 
 }
 
 -(void)connectToParent {
@@ -164,7 +168,7 @@ float seconds_since_program_start() {
 	NSPort* port = [[NSSocketPortNameServer sharedInstance] portForName:name host:@"*"];
 	NSConnection* connection = [NSConnection connectionWithReceivePort:nil sendPort:port];
 	
-	NSDistantObject* obj = [[connection rootProxy] retain]; 
+	NSDistantObject* obj = [connection rootProxy]; 
 	if(obj == nil) {
 		LOG_ERROR(@"main.could not connect to parent: %@\n\nwill terminate self: %@", name, self);
 		[self stop];
@@ -227,128 +231,128 @@ int main (int argc, const char * argv[]) {
 		return EXIT_FAILURE;
 	}
 
-    NSAutoreleasePool* pool_outer = [[NSAutoreleasePool alloc] init];
-    NSAutoreleasePool* pool_inner = [[NSAutoreleasePool alloc] init];
+    @autoreleasepool {
+        @autoreleasepool {
 
-	[NCLog setupWorker];
-	// LOG_ERROR(@"test error <---------------");
-	// LOG_WARNING(@"test warning <---------------");
-	// LOG_DEBUG(@"test debug <---------------");
+		[NCLog setupWorker];
+		// LOG_ERROR(@"test error <---------------");
+		// LOG_WARNING(@"test warning <---------------");
+		// LOG_DEBUG(@"test debug <---------------");
 
-	/*
-	argv[0] = programname
-	argv[1] = label, description of our purpose (string)
-	argv[2] = parent-name, connection name to get in touch with the frontend process (string)
-	argv[3] = child-name, our connection name, so parent can get in touch with us (string)
-	argv[4] (optional) = try run as uid (integer)
-	*/
-	if((argc < 4) || (argc > 5)) {
-		LOG_ERROR(@"ERROR: wrong number of arguments. There must be given 3 arguments and a 4th optional argument: label parent_name child_name (uid)");
-		return EXIT_FAILURE;
-	}
-
-	// parse integer if an UID is provided
-	int run_as_uid = 0;
-	BOOL should_switch_user = NO;
-	if(argc == 5) {
-		run_as_uid = strtol(argv[4], NULL, 10);
-		if((run_as_uid == 0) && (errno == EINVAL)) {
-			LOG_ERROR(@"ERROR: interpreting argument[4]. The value must be a signed integer.");
+		/*
+		argv[0] = programname
+		argv[1] = label, description of our purpose (string)
+		argv[2] = parent-name, connection name to get in touch with the frontend process (string)
+		argv[3] = child-name, our connection name, so parent can get in touch with us (string)
+		argv[4] (optional) = try run as uid (integer)
+		*/
+		if((argc < 4) || (argc > 5)) {
+			LOG_ERROR(@"ERROR: wrong number of arguments. There must be given 3 arguments and a 4th optional argument: label parent_name child_name (uid)");
 			return EXIT_FAILURE;
 		}
-		should_switch_user = YES;
-	}
-	
-	const char* label = argv[1];
-	const char* parent_name = argv[2];
-	const char* child_name = argv[3];
 
-	{
-		char buffer[500];
-		snprintf(
-			buffer, 
-			500, 
-			"arg[1]     run_as_uid: %i\n"
-			"arg[2]          label: \"%-20s\"\n"
-			"arg[3]    parent name: \"%-20s\"\n"
-			"arg[4]     child name: \"%-20s\"\n"
-			"           parent pid: %i\n"
-			"                  pid: %i\n"
-			" real / effective uid: %i / %i\n"
-			" real / effective gid: %i / %i\n",
-			run_as_uid, 
-			label,     
-			parent_name,
-			child_name,
-			getppid(),
-			getpid(),
-	        getuid(),
-	        geteuid(),
-	        getgid(),
-	        getegid()
-		);
-		LOG_DEBUG(@"Newton Commander Worker Process\n%s", buffer);
-	}
+		// parse integer if an UID is provided
+		int run_as_uid = 0;
+		BOOL should_switch_user = NO;
+		if(argc == 5) {
+			run_as_uid = strtol(argv[4], NULL, 10);
+			if((run_as_uid == 0) && (errno == EINVAL)) {
+				LOG_ERROR(@"ERROR: interpreting argument[4]. The value must be a signed integer.");
+				return EXIT_FAILURE;
+			}
+			should_switch_user = YES;
+		}
+		
+		const char* label = argv[1];
+		const char* parent_name = argv[2];
+		const char* child_name = argv[3];
+
+		{
+			char buffer[500];
+			snprintf(
+				buffer, 
+				500, 
+				"arg[1]     run_as_uid: %i\n"
+				"arg[2]          label: \"%-20s\"\n"
+				"arg[3]    parent name: \"%-20s\"\n"
+				"arg[4]     child name: \"%-20s\"\n"
+				"           parent pid: %i\n"
+				"                  pid: %i\n"
+				" real / effective uid: %i / %i\n"
+				" real / effective gid: %i / %i\n",
+				run_as_uid, 
+				label,     
+				parent_name,
+				child_name,
+				getppid(),
+				getpid(),
+		        getuid(),
+		        geteuid(),
+		        getgid(),
+		        getegid()
+			);
+			LOG_DEBUG(@"Newton Commander Worker Process\n%s", buffer);
+		}
 
 
-	/*
-	switch to a different user
-	NOTE: uid's can be negative, e.g nobody has uid=-2
-	*/
-	if(should_switch_user) {
-		if(setreuid(run_as_uid, run_as_uid)) {
-			if(errno == EPERM) {
+		/*
+		switch to a different user
+		NOTE: uid's can be negative, e.g nobody has uid=-2
+		*/
+		if(should_switch_user) {
+			if(setreuid(run_as_uid, run_as_uid)) {
+				if(errno == EPERM) {
+					/*
+					TODO: somehow notify our parent process, letting it know that we failed to switch user.
+					*/
+					LOG_ERROR(@"main() - ERROR: we don't have permission to change user! maybe setuid wasn't set?");
+					return EXIT_FAILURE;
+				}
 				/*
 				TODO: somehow notify our parent process, letting it know that we failed to switch user.
 				*/
-				LOG_ERROR(@"main() - ERROR: we don't have permission to change user! maybe setuid wasn't set?");
+				LOG_ERROR(@"main() - ERROR: change user failed!!! maybe setuid wasn't set?");
 				return EXIT_FAILURE;
 			}
-			/*
-			TODO: somehow notify our parent process, letting it know that we failed to switch user.
-			*/
-			LOG_ERROR(@"main() - ERROR: change user failed!!! maybe setuid wasn't set?");
-			return EXIT_FAILURE;
+
+			char buffer[200];
+			snprintf(
+				buffer, 
+				200, 
+				" real / effective uid: %i / %i\n"
+				" real / effective gid: %i / %i\n",
+		        getuid (),
+		        geteuid(),
+		        getgid (),
+		        getegid()
+			);
+			LOG_DEBUG(@"main() - successfully changed user\n%s", buffer);
+		} else {
+			LOG_DEBUG(@"main() - not changing user");
 		}
 
-		char buffer[200];
-		snprintf(
-			buffer, 
-			200, 
-			" real / effective uid: %i / %i\n"
-			" real / effective gid: %i / %i\n",
-	        getuid (),
-	        geteuid(),
-	        getgid (),
-	        getegid()
-		);
-		LOG_DEBUG(@"main() - successfully changed user\n%s", buffer);
-	} else {
-		LOG_DEBUG(@"main() - not changing user");
-	}
 
+		close_stdout_stderr_stdin();
+		suicide_if_we_become_a_zombie();
+		setup_signals();
+		install_exception_handler();
 
-	close_stdout_stderr_stdin();
-	suicide_if_we_become_a_zombie();
-	setup_signals();
-	install_exception_handler();
+		// raise_test_exception();
 
-	// raise_test_exception();
+		NSString* s0 = [NSString stringWithUTF8String:label];
+		NSString* s1 = [NSString stringWithUTF8String:child_name];
+		NSString* s2 = [NSString stringWithUTF8String:parent_name];
+		Main* main = [[Main2 alloc] initWithLabel:s0 childName:s1 parentName:s2];
+		[main performSelector: @selector(didEnterRunloop)
+		           withObject: nil
+		           afterDelay: 0];
 
-	NSString* s0 = [NSString stringWithUTF8String:label];
-	NSString* s1 = [NSString stringWithUTF8String:child_name];
-	NSString* s2 = [NSString stringWithUTF8String:parent_name];
-	Main* main = [[Main2 alloc] initWithLabel:s0 childName:s1 parentName:s2];
-	[main performSelector: @selector(didEnterRunloop)
-	           withObject: nil
-	           afterDelay: 0];
-
-    [pool_inner drain];
+        }
 	LOG_DEBUG(@"main() - runloop");
 	CFRunLoopRun();
 
 	LOG_DEBUG(@"main() - cleanup");
-    [pool_outer drain];
+    }
 
 	LOG_DEBUG(@"main() - leave");
     return EXIT_SUCCESS;
