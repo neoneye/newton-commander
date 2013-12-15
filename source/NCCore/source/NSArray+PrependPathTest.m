@@ -7,7 +7,7 @@
 //
 
 #import "NSArray+PrependPathTest.h"
-#import <NCCore/NSArray+PrependPath.h>
+#import "NSArray+PrependPath.h"
 
 @implementation NSArray_PrependPathTest
 

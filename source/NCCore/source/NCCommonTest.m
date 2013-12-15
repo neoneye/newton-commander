@@ -7,7 +7,7 @@
 //
 
 #import "NCCommonTest.h"
-#import <NCCore/NCCommon.h>
+#import "NCCommon.h"
 
 
 @implementation NCCommonTest
