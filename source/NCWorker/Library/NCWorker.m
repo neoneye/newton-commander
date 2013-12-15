@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 08/06/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCWorker.h"
@@ -26,7 +29,7 @@
 @implementation NSMutableArray (ShiftExtension)
 -(id)shift {
 	if([self count] < 1) return nil;
-	id obj = [[[self objectAtIndex:0] retain] autorelease];
+	id obj = [self objectAtIndex:0];
 	[self removeObjectAtIndex:0];
 	return obj;
 }
@@ -83,7 +86,7 @@
 		m_worker = worker;
 		m_controller = controller;
 		m_path = [path copy];
-		m_cwd = [[m_path stringByDeletingLastPathComponent] retain]; 
+		m_cwd = [m_path stringByDeletingLastPathComponent]; 
 		m_uid = [uid copy];
 		m_label = [label copy];
 		m_parent_name = [pname copy];
@@ -109,13 +112,13 @@
 }
 
 -(void)main {
-	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 
-	[self performSelector:@selector(threadDidStart) withObject:nil afterDelay:0.f];
-	[[NSRunLoop currentRunLoop] run];
+		[self performSelector:@selector(threadDidStart) withObject:nil afterDelay:0.f];
+		[[NSRunLoop currentRunLoop] run];
 
-	LOG_DEBUG(@"NSRunLoop exited, terminating thread for label: %@", m_label);
-	[pool release];
+		LOG_DEBUG(@"NSRunLoop exited, terminating thread for label: %@", m_label);
+	}
 }
 
 -(void)threadDidStart {
@@ -178,7 +181,7 @@
 	];
 	LOG_DEBUG(@"arguments for worker: %@", args);
 
-	NSTask* task = [[[NSTask alloc] init] autorelease];
+	NSTask* task = [[NSTask alloc] init];
 	[task setEnvironment:[NSDictionary dictionary]];
 	[task setCurrentDirectoryPath:cwd];
 	[task setLaunchPath:path];
@@ -209,7 +212,7 @@
 		return;
 	}
 
-	self.task = [task retain];
+	self.task = task;
 }
 
 -(void)callbackWeAreRunning:(NSString*)name {
@@ -239,7 +242,7 @@
 	NSPort* port = [[NSSocketPortNameServer sharedInstance] portForName:name host:@"*"];
 	NSConnection* connection = [NSConnection connectionWithReceivePort:nil sendPort:port];
 	
-	NSDistantObject* obj = [[connection rootProxy] retain];
+	NSDistantObject* obj = [connection rootProxy];
 	if(obj == nil) {
 		LOG_ERROR(@"ERROR: could not connect to child: %@\nTERMINATE: %@", name, self);
 		exit(-1);
@@ -346,7 +349,6 @@
 
 	self.connection = nil;
 
-	[m_distant_object release];
 	m_distant_object = nil;
 }
 
@@ -375,7 +377,7 @@
 		m_controller = controller;
 		m_label = [label copy];
 		m_thread = nil;
-		m_identifier = [[NCWorker createIdentifier] retain];
+		m_identifier = [NCWorker createIdentifier];
 		[self resetUid];
 		
 		NSAssert(m_controller, @"must be initialized");

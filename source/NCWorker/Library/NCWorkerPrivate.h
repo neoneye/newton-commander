@@ -40,9 +40,9 @@
 	NSMutableArray* m_request_queue;
 	NSTask* m_task;
 }
-@property(nonatomic, retain) NSConnection* connection;
-@property(nonatomic, retain) NSTask* task;
-@property(nonatomic, retain) NSString* uid;
+@property(nonatomic, strong) NSConnection* connection;
+@property(nonatomic, strong) NSTask* task;
+@property(nonatomic, strong) NSString* uid;
 
 /*
 worker:      the class that owns us
