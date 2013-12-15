@@ -136,8 +136,6 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 @interface NCListerTableView (Private)
 - (BOOL)isThisPanelActive;
 
--(void)repeatEvent:(NSEvent*)event selector:(SEL)sel0 shiftSelector:(SEL)sel1;
-
 -(void)popupContextMenuMode:(int)left_or_right;
 
 -(void)nc__moveUp;
@@ -180,49 +178,66 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 	return self;
 }
 
--(void)repeatEvent:(NSEvent*)event selector:(SEL)sel0 shiftSelector:(SEL)sel1 {
-	id del = [self delegate];
-	if([del respondsToSelector:sel0] && [del respondsToSelector:sel1]) {
-		// ok
-	} else
-	if([self respondsToSelector:sel0] && [self respondsToSelector:sel1]) {
-		del = self;
-	} else {
-		return;
-	}
+-(float)waitTimeForCount:(NSInteger)count {
+	float waittime = 0.0001;
+	if(count == 0) waittime = 0.25;
+	else
+		if(count < 10) waittime = 0.015;
+		else
+			if(count < 30) waittime = 0.0075;
+			else
+				if(count < 80) waittime = 0.005;
+				else
+					if(count < 130) waittime = 0.002;
+					else
+						if(count < 240) waittime = 0.001;
+	return waittime;
+}
 
+-(void)repeatinglyMoveUpWithEvent:(NSEvent*)event {
 	NSEvent* xevent = event;
-	for(int count=0; ; ++count) {
+	for(NSInteger count=0; ; ++count) {
 		NSEventType event_type = [xevent type];
 		if(event_type == NSKeyUp) {
 			break;
 		}
 		
-		BOOL is_shift = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
-		SEL sel = is_shift ? sel1 : sel0;
-		
-		[del performSelector:sel];
-
-		float waittime = 0.0001;
-		if(count == 0) waittime = 0.25;
-		else
-		if(count < 10) waittime = 0.015;
-		else
-		if(count < 30) waittime = 0.0075;
-		else
-		if(count < 80) waittime = 0.005;
-		else
-		if(count < 130) waittime = 0.002;
-		else
-		if(count < 240) waittime = 0.001;
-
-		NSDate* date = [NSDate dateWithTimeIntervalSinceNow:
-			waittime];
+		BOOL shiftPressed = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
+		if (shiftPressed) {
+			[self nc__moveUpAndModifySelection];
+		} else {
+			[self nc__moveUp];
+		}
+		float waittime = [self waitTimeForCount:count];
+		NSDate* date = [NSDate dateWithTimeIntervalSinceNow:waittime];
         xevent = [NSApp nextEventMatchingMask:NSAnyEventMask
-			untilDate:date 
-			inMode:NSDefaultRunLoopMode 
-			dequeue:YES
-		];
+									untilDate:date
+									   inMode:NSDefaultRunLoopMode
+									  dequeue:YES];
+	}
+}
+
+-(void)repeatinglyMoveDownWithEvent:(NSEvent*)event {
+	NSEvent* xevent = event;
+	for(NSInteger count=0; ; ++count) {
+		NSEventType event_type = [xevent type];
+		if(event_type == NSKeyUp) {
+			break;
+		}
+		
+		BOOL shiftPressed = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
+		if (shiftPressed) {
+			[self nc__moveDownAndModifySelection];
+		} else {
+			[self nc__moveDown];
+		}
+		float waittime = [self waitTimeForCount:count];
+		
+		NSDate* date = [NSDate dateWithTimeIntervalSinceNow:waittime];
+        xevent = [NSApp nextEventMatchingMask:NSAnyEventMask
+									untilDate:date
+									   inMode:NSDefaultRunLoopMode
+									  dequeue:YES];
 	}
 }
 
@@ -341,18 +356,14 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 			[m_lister navigateBackAction:self];
 			return;
 		}
-		[self repeatEvent:event 
-			selector:@selector(nc__moveUp) 
-			shiftSelector:@selector(nc__moveUpAndModifySelection)];
+		[self repeatinglyMoveUpWithEvent:event];
 		return; }
 	case NSDownArrowFunctionKey: {
 		/*if(is_command_modifier) {
 			[m_lister navigateInOrBackAction:self];
 			return;
 		}*/
-		[self repeatEvent:event 
-			selector:@selector(nc__moveDown) 
-			shiftSelector:@selector(nc__moveDownAndModifySelection)];
+		[self repeatinglyMoveDownWithEvent:event];
 		return; }
 		
 	case NSLeftArrowFunctionKey: { 
