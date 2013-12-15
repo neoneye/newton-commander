@@ -53,13 +53,13 @@
 	even though there have been changes to the dir.
 	*/
 }
-@property (retain) NSString* workingDir;
-@property (retain) NSDate* date;
+@property (strong) NSString* workingDir;
+@property (strong) NSDate* date;
 @property int selectedRow;
 @property int numberOfRows;
 @property float positionY;
-@property (retain) NSArray* items;
-@property (retain) NSString* currentName;
+@property (strong) NSArray* items;
+@property (strong) NSString* currentName;
 
 @end
 
@@ -73,7 +73,7 @@ When you navigate to another dir then you kill the stack and insert breadcrumbs 
 @interface NCListerBreadcrumbStack : NSObject {
 	NSMutableArray* m_breadcrumbs;
 }
-@property (retain) NSMutableArray* breadcrumbs;
+@property (strong) NSMutableArray* breadcrumbs;
 
 -(void)pushBreadcrumb:(NCListerBreadcrumb*)crumb;
 -(NCListerBreadcrumb*)popBreadcrumb;

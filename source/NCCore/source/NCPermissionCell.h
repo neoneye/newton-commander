@@ -23,16 +23,16 @@
 	NSAttributedString* m_value6;
 	NSAttributedString* m_value7;
 }
-@property (retain) NSAttributedString* rbit;
-@property (retain) NSAttributedString* wbit;
-@property (retain) NSAttributedString* xbit;
-@property (retain) NSAttributedString* dash;
-@property (retain) NSAttributedString* value1;
-@property (retain) NSAttributedString* value2;
-@property (retain) NSAttributedString* value3;
-@property (retain) NSAttributedString* value4;
-@property (retain) NSAttributedString* value5;
-@property (retain) NSAttributedString* value6;
-@property (retain) NSAttributedString* value7;
+@property (strong) NSAttributedString* rbit;
+@property (strong) NSAttributedString* wbit;
+@property (strong) NSAttributedString* xbit;
+@property (strong) NSAttributedString* dash;
+@property (strong) NSAttributedString* value1;
+@property (strong) NSAttributedString* value2;
+@property (strong) NSAttributedString* value3;
+@property (strong) NSAttributedString* value4;
+@property (strong) NSAttributedString* value5;
+@property (strong) NSAttributedString* value6;
+@property (strong) NSAttributedString* value7;
 
 @end

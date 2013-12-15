@@ -15,8 +15,8 @@
 	id m_menu_target;
 	SEL m_menu_action;
 }
-@property(nonatomic, retain) NSGradient* fillGradient;
-@property(nonatomic, retain) id menuTarget;
+@property(nonatomic, strong) NSGradient* fillGradient;
+@property(nonatomic, strong) id menuTarget;
 @property(nonatomic) SEL menuAction;
 
 @end

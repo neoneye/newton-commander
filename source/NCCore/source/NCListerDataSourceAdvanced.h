@@ -34,7 +34,7 @@
 	NSString* m_move_operation_source_dir;
 	NSString* m_move_operation_target_dir;
 }
-@property (retain) NCWorker* worker;
+@property (strong) NCWorker* worker;
 
 -(void)setDelegate:(id<NCListerDataSourceDelegate>)delegate;
 

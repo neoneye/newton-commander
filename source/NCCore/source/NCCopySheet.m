@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 25/04/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NCCopySheet.h"
@@ -30,7 +34,7 @@
 	NSEnumerator* en = [ary objectEnumerator];
 	while(thing = [en nextObject]) {
 		if([thing isKindOfClass:[NSString class]]) {
-			NCCopySheetItem* item = [[[NCCopySheetItem alloc] init] autorelease];
+			NCCopySheetItem* item = [[NCCopySheetItem alloc] init];
 			[item setName:(NSString*)thing];                        
 			[item setMessage:@"?"];
 			[item setCount:1];
@@ -118,7 +122,7 @@
 	NSAssert(view1, @"view1 must be initialize in nib");
 	NSAssert(window, @"window must be initialize in nib");
 
-	NSView* cv = [[[NSView alloc] initWithFrame:[window frame]] autorelease];
+	NSView* cv = [[NSView alloc] initWithFrame:[window frame]];
 	[window setContentView:cv];
 	[cv setAutoresizesSubviews:YES];
 
@@ -183,7 +187,7 @@
 	[self updateCheckboxes];
 	
 	if(!m_copy_operation) {
-		[self setCopyOperation:[[[NCCopyOperationDummy alloc] init] autorelease]];
+		[self setCopyOperation:[[NCCopyOperationDummy alloc] init]];
 	}
 	NSAssert(m_copy_operation, @"systemTransfer should not be nil at this point");
 	[m_copy_operation setCopyOperationDelegate:self];
@@ -350,7 +354,6 @@
 
     [animation startAnimation]; // because it's blocking, once it returns, we're done
 
-    [animation release];
 
 	[m_confirm_view setHidden:YES];
 	
@@ -530,7 +533,7 @@
 		message_text = @"Target item already exists";
 	}
 
-	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	NSAlert *alert = [[NSAlert alloc] init];
 	[alert addButtonWithTitle:@"OK"];
 	// [alert addButtonWithTitle:@"Cancel"];
 	[alert setMessageText:message_text];

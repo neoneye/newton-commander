@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 24/03/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCPreferencesMenuController.h"
 
@@ -22,7 +26,7 @@ NSString* kNCPreferencesMenuControllerDropType = @"NCPreferencesMenuControllerDr
 }
 
 -(id)initWithCoder:(NSCoder*)coder {
-	[super init];
+	if (!(self = [super init])) return nil;
 	[self setName:[coder decodeObjectForKey:@"name"]];
 	[self setPath:[coder decodeObjectForKey:@"path"]];
 	return self;
@@ -57,7 +61,7 @@ NSString* kNCPreferencesMenuControllerDropType = @"NCPreferencesMenuControllerDr
 	}
 	
 	NSImage* icon = [[NSWorkspace sharedWorkspace] iconForFile:path];
-	NCPreferencesMenuItem* item = [[[NCPreferencesMenuItem alloc] init] autorelease];
+	NCPreferencesMenuItem* item = [[NCPreferencesMenuItem alloc] init];
 	item.name = name;
 	item.path = path;
 	item.icon = icon;
@@ -144,7 +148,7 @@ NSString* kNCPreferencesMenuControllerDropType = @"NCPreferencesMenuControllerDr
 	while(thing = [e nextObject]) {
 		if([thing isKindOfClass:[NCPreferencesMenuItem class]] == NO) continue;
 		NCPreferencesMenuItem* pi = (NCPreferencesMenuItem*)thing;
-		NCUserDefaultMenuItem* mi = [[[NCUserDefaultMenuItem alloc] init] autorelease];
+		NCUserDefaultMenuItem* mi = [[NCUserDefaultMenuItem alloc] init];
 		[mi setName:[pi name]];
 		[mi setPath:[pi path]]; 
 		[result addObject:mi];
@@ -170,7 +174,7 @@ NSString* kNCPreferencesMenuControllerDropType = @"NCPreferencesMenuControllerDr
 		NSString* path = [mi path];
 		NSImage* icon = [[NSWorkspace sharedWorkspace] iconForFile:path];
 
-		NCPreferencesMenuItem* item = [[[NCPreferencesMenuItem alloc] init] autorelease];
+		NCPreferencesMenuItem* item = [[NCPreferencesMenuItem alloc] init];
 		item.name = name;
 		item.path = path;
 		item.icon = icon;
@@ -300,10 +304,9 @@ NSString* kNCPreferencesMenuControllerDropType = @"NCPreferencesMenuControllerDr
 	// LOG_DEBUG(@"%s %i -> %i", _cmd, index, row);
 	if(index < row) row--;
 
-	id thing = [[[m_items arrangedObjects] objectAtIndex:index] retain];
+	id thing = [[m_items arrangedObjects] objectAtIndex:index];
 	[m_items removeObjectAtArrangedObjectIndex:index];
 	[m_items insertObject:thing atArrangedObjectIndex:row]; 
-	[thing release];
 	
 	return YES;
 }

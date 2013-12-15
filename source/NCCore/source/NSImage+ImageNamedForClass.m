@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 07/05/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NSImage+ImageNamedForClass.h"
@@ -25,7 +29,7 @@
 		return nil;
 	}
 	
-	NSImage* image = [[[NSImage alloc] initWithContentsOfFile:path] autorelease];
+	NSImage* image = [[NSImage alloc] initWithContentsOfFile:path];
 	if(!image) {
 		LOG_WARNING(@"ERROR: imageFromName, cannot obtain image at path %@", path);
 		return nil;

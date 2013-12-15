@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 02/08/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 /*
 NSPathControl alternatives
 
@@ -68,8 +72,6 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 
 - (void)setPath:(NSString*)value {
     if (value != m_path) {
-		[value retain];
-        [m_path release];
         m_path = value;
     }
 	[self rebuild];
@@ -80,7 +82,7 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 	NSString* path = m_path;
 	if(!path) return;
 	
-	id cell = [[[NCPathCell alloc] init] autorelease];
+	id cell = [[NCPathCell alloc] init];
 	[self setCell:cell]; /**/
 
 	NSMutableArray* ary = [NSMutableArray array];
@@ -91,8 +93,8 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 
 	int n = [components count];
 	int i = 0;
-	for(NSString* component in components) {
-		NCPathComponentCell* cc = [[[NCPathComponentCell alloc] init] autorelease];
+	for(__strong NSString* component in components) {
+		NCPathComponentCell* cc = [[NCPathComponentCell alloc] init];
 		[cc setImage:nil];
 
 		// filter out control characters
@@ -110,7 +112,7 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 		NSColor *txtColor = [NSColor whiteColor];
 
 		// Add shadow attribute
-		NSShadow* shadow = [[[NSShadow alloc] init] autorelease];
+		NSShadow* shadow = [[NSShadow alloc] init];
 		CGFloat shadowAlpha = 0.8;
 		
 		if(i == n - 1 && m_active) {
@@ -136,8 +138,8 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 			[cc setFirst:YES];
 		}
 			
-		NSAttributedString *attrStr = [[[NSAttributedString alloc]
-		        initWithString:component attributes:txtDict] autorelease];
+		NSAttributedString *attrStr = [[NSAttributedString alloc]
+		        initWithString:component attributes:txtDict];
 		[cc setAttributedStringValue:attrStr];
 
 	
@@ -188,14 +190,14 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 		[NSColor colorWithCalibratedWhite:0.300 alpha:1.000], 1.0,
 		nil] autorelease];
     [grad drawInRect:cellFrame angle:90.0]; */
-    NSGradient* grad = [[[NSGradient alloc] initWithColorsAndLocations:
+    NSGradient* grad = [[NSGradient alloc] initWithColorsAndLocations:
 		[NSColor colorWithCalibratedWhite:0.538 alpha:1.000], 0.0,
 		[NSColor colorWithCalibratedWhite:0.568 alpha:1.000], 0.053,
 		[NSColor colorWithCalibratedWhite:0.598 alpha:1.000], 0.105,
 		[NSColor colorWithCalibratedWhite:0.607 alpha:1.000], 0.157,
 		[NSColor colorWithCalibratedWhite:0.620 alpha:1.000], 0.211,
 		[NSColor colorWithCalibratedWhite:0.620 alpha:1.000], 1.0,
-		nil] autorelease];
+		nil];
     [grad drawInRect:cellFrame angle:90.0]; /**/
 
 /*	[[NSColor colorWithCalibratedWhite:0.447 alpha:1.000] set];
@@ -296,7 +298,7 @@ http://www.cocoabuilder.com/archive/cocoa/226871-design-advice-bread-crumbs-nspa
 		   lineToPoint:NSMakePoint(NSMaxX(cellFrame) - indent, NSMaxY(cellFrame))];  
 	}
 
-	NSBezierPath *fillPath = [[strokePath0 copy] autorelease];
+	NSBezierPath *fillPath = [strokePath0 copy];
 	if([self isFirst]) {
 		[fillPath 
 		   lineToPoint:NSMakePoint(NSMinX(cellFrame), NSMaxY(cellFrame))];

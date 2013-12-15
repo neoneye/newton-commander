@@ -32,19 +32,19 @@
 	NSColor* m_cursor_row_background_inactive_color;
 
 }
-@property (retain) NCLister* lister;
+@property (strong) NCLister* lister;
 
-@property (retain) NSColor* backgroundColor;
-@property (retain) NSColor* firstRowBackgroundColor;
-@property (retain) NSColor* firstRowBackgroundInactiveColor;
-@property (retain) NSColor* evenRowBackgroundColor;
-@property (retain) NSColor* evenRowBackgroundInactiveColor;
-@property (retain) NSColor* oddRowBackgroundColor;
-@property (retain) NSColor* oddRowBackgroundInactiveColor;
-@property (retain) NSColor* selectedRowBackgroundColor;
-@property (retain) NSColor* selectedRowBackgroundInactiveColor;
-@property (retain) NSColor* cursorRowBackgroundColor;
-@property (retain) NSColor* cursorRowBackgroundInactiveColor;
+@property (strong) NSColor* backgroundColor;
+@property (strong) NSColor* firstRowBackgroundColor;
+@property (strong) NSColor* firstRowBackgroundInactiveColor;
+@property (strong) NSColor* evenRowBackgroundColor;
+@property (strong) NSColor* evenRowBackgroundInactiveColor;
+@property (strong) NSColor* oddRowBackgroundColor;
+@property (strong) NSColor* oddRowBackgroundInactiveColor;
+@property (strong) NSColor* selectedRowBackgroundColor;
+@property (strong) NSColor* selectedRowBackgroundInactiveColor;
+@property (strong) NSColor* cursorRowBackgroundColor;
+@property (strong) NSColor* cursorRowBackgroundInactiveColor;
 
 
 -(id)initWithFrame:(NSRect)frame lister:(NCLister*)lister;

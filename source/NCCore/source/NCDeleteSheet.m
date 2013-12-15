@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 28/04/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 /*
 IDEA: use a nib file for the deletesheet, because we want to show 
 many more controls.
@@ -47,7 +51,7 @@ in case someone have second thoughts.
 	NSString* msg = @"Delete the item?";
 	msg = [NSString stringWithFormat:@"Delete %i items?", n_items];
 
-	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	NSAlert *alert = [[NSAlert alloc] init];
 	[alert addButtonWithTitle:@"OK"];
 	[alert addButtonWithTitle:@"Cancel"];
 	[alert setMessageText:msg];

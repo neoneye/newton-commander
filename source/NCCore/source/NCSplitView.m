@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 18/04/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCSplitView.h"
 #import "NSGradient+PredefinedGradients.h"
@@ -50,11 +54,11 @@
 	    [g drawInRect:aRect angle:0.0];
 	}
 	if(draw_gray) {
-		NSGradient* g = [[[NSGradient alloc] initWithColorsAndLocations:
+		NSGradient* g = [[NSGradient alloc] initWithColorsAndLocations:
 			[NSColor colorWithCalibratedWhite:0.184 alpha:1.000], 0.0,
 			[NSColor colorWithCalibratedWhite:0.363 alpha:1.000], 0.5,
 			[NSColor colorWithCalibratedWhite:0.184 alpha:1.000], 1.0,
-			nil] autorelease];
+			nil];
 	    [g drawInRect:aRect angle:0.0];
 	}
 	if(draw_pathfinder) {

@@ -15,17 +15,17 @@ IDEA: merge with NCMakeFileController
 
 
 @interface NCMakeLinkController : NSWindowController {
-	id m_delegate;
+	id __unsafe_unretained m_delegate;
 	IBOutlet NSTextField* m_link_name_textfield;                         
 	IBOutlet NSTextField* m_link_target_textfield;
 	NSString* m_working_dir;          
 	NSString* m_link_name;          
 	NSString* m_link_target;          
 }
-@property (assign) IBOutlet id delegate;
-@property(nonatomic, retain) NSString* workingDir;
-@property(nonatomic, retain) NSString* linkName;
-@property(nonatomic, retain) NSString* linkTarget;
+@property (unsafe_unretained) IBOutlet id delegate;
+@property(nonatomic, strong) NSString* workingDir;
+@property(nonatomic, strong) NSString* linkName;
+@property(nonatomic, strong) NSString* linkTarget;
 +(NCMakeLinkController*)shared;
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow;

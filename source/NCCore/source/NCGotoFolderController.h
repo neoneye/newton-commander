@@ -10,11 +10,11 @@
 
 
 @interface NCGotoFolderController : NSWindowController {
-	id m_delegate;
-	NSTextField* m_textfield;
+	id __unsafe_unretained m_delegate;
+	NSTextField* __weak m_textfield;
 }
-@property (assign) IBOutlet id delegate;
-@property (assign) IBOutlet NSTextField* textfield;
+@property (unsafe_unretained) IBOutlet id delegate;
+@property (weak) IBOutlet NSTextField* textfield;
 +(NCGotoFolderController*)shared;
 
 -(void)beginSheetForWindow:(NSWindow*)window;

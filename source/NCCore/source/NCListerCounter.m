@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 15/02/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCListerCounter.h"
 #import "NCCommon.h"
@@ -86,12 +90,12 @@
 /*	[[NSColor whiteColor] set];
 	NSRectFill(rect); */
 
-	NSShadow* shadow0 = [[[NSShadow alloc] init] autorelease];
+	NSShadow* shadow0 = [[NSShadow alloc] init];
 	[shadow0 setShadowColor:[NSColor colorWithCalibratedWhite:1.0 alpha:0.2]];
 	[shadow0 setShadowOffset:NSMakeSize(0, -1)];
 	[shadow0 setShadowBlurRadius:1.0];
 
-	NSShadow* shadow1 = [[[NSShadow alloc] init] autorelease];
+	NSShadow* shadow1 = [[NSShadow alloc] init];
 	[shadow1 setShadowColor:[NSColor colorWithCalibratedWhite:1.0 alpha:0.6]];
 	[shadow1 setShadowOffset:NSMakeSize(0, -1)];
 	[shadow1 setShadowBlurRadius:1.0];
@@ -99,25 +103,25 @@
 	NSColor* color0 = [NSColor colorWithCalibratedWhite:0.08 alpha:1.000];
 	NSColor* color1 = [NSColor colorWithCalibratedWhite:0.04 alpha:1.000];
 	
-	NSMutableDictionary* attr0 = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* attr0 = [[NSMutableDictionary alloc] init];
 	[attr0 setObject:color0 forKey:NSForegroundColorAttributeName];
 	[attr0 setObject:[NSFont systemFontOfSize:12] forKey:NSFontAttributeName];
 	[attr0 setObject:shadow0 forKey:NSShadowAttributeName];
 
-	NSMutableDictionary* attr1 = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* attr1 = [[NSMutableDictionary alloc] init];
 	[attr1 setObject:color1 forKey:NSForegroundColorAttributeName];
 	[attr1 setObject:[NSFont boldSystemFontOfSize:12] forKey:NSFontAttributeName];
 	[attr1 setObject:shadow1 forKey:NSShadowAttributeName];
 	
-	NSMutableAttributedString* s_dirs_long     = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_files_long    = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_bytes_long    = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_dirs_short    = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_files_short   = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_bytes_short   = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_dirs_compact  = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_files_compact = [[[NSMutableAttributedString alloc] init] autorelease];
-	NSMutableAttributedString* s_bytes_compact = [[[NSMutableAttributedString alloc] init] autorelease];
+	NSMutableAttributedString* s_dirs_long     = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_files_long    = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_bytes_long    = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_dirs_short    = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_files_short   = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_bytes_short   = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_dirs_compact  = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_files_compact = [[NSMutableAttributedString alloc] init];
+	NSMutableAttributedString* s_bytes_compact = [[NSMutableAttributedString alloc] init];
 	
 	
 	int dirs_total = _numberOfDirs;
@@ -140,14 +144,14 @@
 	if(none_selected) {
 		{
 			NSString* s = [NSString stringWithFormat:@"%d %s\t", dirs_total, name_dirs];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_dirs_long appendAttributedString:as];
 		}
 		{
 			NSString* s = [NSString stringWithFormat:@"%d\t", dirs_total];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_dirs_short appendAttributedString:as];
 			[s_dirs_compact appendAttributedString:as];
 		}
@@ -155,28 +159,28 @@
 		{ 
 			NSString* s = [NSString stringWithFormat:@"%d", dirs_selected];
 			NSMutableDictionary* attr = (dirs_selected == 0) ? attr0 : attr1;
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr];
 			[s_dirs_long appendAttributedString:as];
 			[s_dirs_short appendAttributedString:as];
 			[s_dirs_compact appendAttributedString:as];
 		}
 		{
 			NSString* s = [NSString stringWithFormat:@" of %d %s\t", dirs_total, name_dirs];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_dirs_long appendAttributedString:as];
 		}
 		{
 			NSString* s = [NSString stringWithFormat:@" / %d\t", dirs_total];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_dirs_short appendAttributedString:as];
 		}
 		{
 			NSString* s = @"\t";
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_dirs_compact appendAttributedString:as];
 		}
 	}
@@ -185,14 +189,14 @@
 	if(none_selected) {
 		{
 			NSString* s = [NSString stringWithFormat:@"%d %s\t", files_total, name_files];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_files_long appendAttributedString:as];
 		}
 		{
 			NSString* s = [NSString stringWithFormat:@"%d\t", files_total];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_files_short appendAttributedString:as];
 			[s_files_compact appendAttributedString:as];
 		}
@@ -200,28 +204,28 @@
 		{ 
 			NSString* s = [NSString stringWithFormat:@"%d", files_selected];
 			NSMutableDictionary* attr = (files_selected == 0) ? attr0 : attr1;
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr];
 			[s_files_long appendAttributedString:as];
 			[s_files_short appendAttributedString:as]; 
 			[s_files_compact appendAttributedString:as];
 		}
 		{
 			NSString* s = [NSString stringWithFormat:@" of %d %s\t", files_total, name_files];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_files_long appendAttributedString:as];
 		}
 		{
 			NSString* s = [NSString stringWithFormat:@" / %d\t", files_total];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_files_short appendAttributedString:as];
 		}
 		{
 			NSString* s = @"\t";
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_files_compact appendAttributedString:as];
 		}
 	}
@@ -229,19 +233,19 @@
 	if(none_selected) {
 		if(bytes_total < 1000) {
 			NSString* s = [NSString stringWithFormat:@"%i %s", (int)(bytes_total), name_bytes];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_bytes_long appendAttributedString:as];
 		} else {
 			NSString* s = NCSuffixStringForBytes(bytes_total);
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_bytes_long appendAttributedString:as];
 		}
 		{
 			NSString* s = NCSuffixStringForBytes(bytes_total);
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_bytes_short appendAttributedString:as];
 			[s_bytes_compact appendAttributedString:as];
 		}
@@ -249,8 +253,8 @@
 		{ 
 			NSString* s = NCSuffixStringForBytes(bytes_selected);
 			NSMutableDictionary* attr = ((dirs_selected == 0) && (files_selected == 0)) ? attr0 : attr1;
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr];
 			[s_bytes_long appendAttributedString:as];           
 			[s_bytes_short appendAttributedString:as];
 			[s_bytes_compact appendAttributedString:as];
@@ -258,30 +262,30 @@
 		{
 			NSString* s1 = NCSuffixStringForBytes(bytes_total);
 			NSString* s = [NSString stringWithFormat:@" of %@", s1];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_bytes_long appendAttributedString:as];
 		}
 		{
 			NSString* s1 = NCSuffixStringForBytes(bytes_total);
 			NSString* s = [NSString stringWithFormat:@" / %@", s1];
-			NSAttributedString* as = [[[NSAttributedString alloc] 
-				initWithString:s attributes:attr0] autorelease];
+			NSAttributedString* as = [[NSAttributedString alloc] 
+				initWithString:s attributes:attr0];
 			[s_bytes_short appendAttributedString:as];
 		}
 	}
 
-	NSMutableAttributedString* result_long = [[[NSMutableAttributedString alloc] init] autorelease];
+	NSMutableAttributedString* result_long = [[NSMutableAttributedString alloc] init];
 	[result_long appendAttributedString:s_dirs_long];
 	[result_long appendAttributedString:s_files_long];
 	[result_long appendAttributedString:s_bytes_long];
 
-	NSMutableAttributedString* result_short = [[[NSMutableAttributedString alloc] init] autorelease];
+	NSMutableAttributedString* result_short = [[NSMutableAttributedString alloc] init];
 	[result_short appendAttributedString:s_dirs_short];
 	[result_short appendAttributedString:s_files_short];
 	[result_short appendAttributedString:s_bytes_short];
 
-	NSMutableAttributedString* result_compact = [[[NSMutableAttributedString alloc] init] autorelease];
+	NSMutableAttributedString* result_compact = [[NSMutableAttributedString alloc] init];
 	[result_compact appendAttributedString:s_dirs_compact];
 	[result_compact appendAttributedString:s_files_compact];
 	[result_compact appendAttributedString:s_bytes_compact];
@@ -309,9 +313,9 @@
 		float l2 = NSWidth(rect);
 
 		NSMutableArray* tabs = [NSMutableArray arrayWithCapacity:4];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l0] autorelease]];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l1] autorelease]];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSRightTabStopType location:l2] autorelease]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l0]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l1]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSRightTabStopType location:l2]];
 
 
 		NSMutableParagraphStyle* ps = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -336,9 +340,9 @@
 		float l2 = NSWidth(rect);
 
 		NSMutableArray* tabs = [NSMutableArray arrayWithCapacity:4];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l0] autorelease]];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l1] autorelease]];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSRightTabStopType location:l2] autorelease]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l0]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l1]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSRightTabStopType location:l2]];
 
 
 		NSMutableParagraphStyle* ps = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -360,9 +364,9 @@
 		float l2 = NSWidth(rect);
 
 		NSMutableArray* tabs = [NSMutableArray arrayWithCapacity:4];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l0] autorelease]];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l1] autorelease]];
-		[tabs addObject:[[[NSTextTab alloc] initWithType:NSRightTabStopType location:l2] autorelease]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l0]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSLeftTabStopType location:l1]];
+		[tabs addObject:[[NSTextTab alloc] initWithType:NSRightTabStopType location:l2]];
 
 
 		NSMutableParagraphStyle* ps = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];

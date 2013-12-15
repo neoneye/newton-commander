@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 17/07/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCListerItem.h"
 
@@ -17,9 +21,9 @@
 	// our superclass supports NSCoding
     if (self = [super initWithCoder: coder]) {
 		if([coder allowsKeyedCoding]) {
-	        m_icon = [[coder decodeObjectForKey: @"icon"] retain];
+	        m_icon = [coder decodeObjectForKey: @"icon"];
 		} else {
-	        m_icon = [[coder decodeObject] retain];    
+	        m_icon = [coder decodeObject];    
 		}
     }
     return self;
@@ -40,20 +44,20 @@
 	// our superclass supports NSCopying, so we use [super copyWithZone:zone].
 	NCListerItem* item = [super copyWithZone:zone];
 	if(!item) return nil;
-    [item setIcon:[[m_icon copy] autorelease]];
+    [item setIcon:[m_icon copy]];
     return item;
 }
 
 
 +(NCListerItem*)backItem {
-	NCListerItem* item = [[[NCListerItem alloc] init] autorelease];
+	NCListerItem* item = [[NCListerItem alloc] init];
 	[item setName:@"[ back ]"];
 	[item setItemType:kNCItemTypeGoBack];
 	return item;
 }
 
 +(NCListerItem*)listerItemFromFileItem:(NCFileItem*)item {
-	NCListerItem* item2 = [[[NCListerItem alloc] init] autorelease];
+	NCListerItem* item2 = [[NCListerItem alloc] init];
 	[item2 setName:[item name]];
 	[item2 setDirentType:[item direntType]];
 	[item2 setItemType:[item itemType]];

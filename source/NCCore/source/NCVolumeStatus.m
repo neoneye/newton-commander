@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 04/08/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCVolumeStatus.h"
 #import "NCCommon.h"
@@ -106,12 +110,12 @@
 	color_right = nil;
 	// color_bottom = nil;    /**/
 
-    NSGradient* grad = [[[NSGradient alloc] initWithColorsAndLocations:
+    NSGradient* grad = [[NSGradient alloc] initWithColorsAndLocations:
 		[NSColor colorWithCalibratedWhite:0.151 alpha:1.000], 0.0,
 		[NSColor colorWithCalibratedWhite:0.144 alpha:1.000], 0.3,
 		[NSColor colorWithCalibratedWhite:0.160 alpha:1.000], 0.6,
 		[NSColor colorWithCalibratedWhite:0.209 alpha:1.000], 1.0,
-		nil] autorelease];
+		nil];
     [grad drawInRect:rect angle:90.0];
 
 	if(color_left) {
@@ -157,7 +161,7 @@
 
 	NSColor *txtColor = [NSColor whiteColor];
 
-	NSShadow* shadow = [[[NSShadow alloc] init] autorelease];
+	NSShadow* shadow = [[NSShadow alloc] init];
 	CGFloat shadowAlpha = 0.8;
 	[shadow setShadowColor:[NSColor colorWithCalibratedWhite:0.2 alpha:shadowAlpha]];
 	[shadow setShadowOffset:NSMakeSize(0, -1)];
@@ -172,8 +176,8 @@
 		nil];
 
 	NSString* s = NCSuffixStringForBytes(_available);
-	NSAttributedString* as = [[[NSAttributedString alloc]
-	        initWithString:s attributes:txtDict] autorelease];
+	NSAttributedString* as = [[NSAttributedString alloc]
+	        initWithString:s attributes:txtDict];
 
 
 	NSAttributedString* title = as;

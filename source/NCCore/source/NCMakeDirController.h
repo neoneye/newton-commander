@@ -15,14 +15,14 @@ IDEA: merge with NCMakeLinkController
 
 
 @interface NCMakeDirController : NSWindowController {
-	id m_delegate;
+	id __unsafe_unretained m_delegate;
 	IBOutlet NSTextField* m_textfield;
 	NSString* m_working_dir;
 	NSString* m_suggest_name;          
 }
-@property (assign) IBOutlet id delegate;
-@property(nonatomic, retain) NSString* suggestName;
-@property(nonatomic, retain) NSString* workingDir;
+@property (unsafe_unretained) IBOutlet id delegate;
+@property(nonatomic, strong) NSString* suggestName;
+@property(nonatomic, strong) NSString* workingDir;
 +(NCMakeDirController*)shared;
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow;

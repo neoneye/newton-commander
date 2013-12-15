@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 6/23/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 /*
 
@@ -36,10 +39,6 @@ IDEA: -(void)setAlign:(int)align;  // left, center, right, both
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 -(void)setHeight:(float)value forIndex:(NSInteger)index {
 	if((index >= 0) && (index < kVerticalLayoutViewCapacity)) {

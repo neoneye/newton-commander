@@ -5,13 +5,15 @@
 //  Created by Simon Strandgaard on 04/04/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCTableHeaderView.h"
 
 
 @implementation NCTableHeaderView
-
-@synthesize delegate = m_delegate;
 
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -24,11 +26,10 @@
 
 -(NSMenu*)menuForEvent:(NSEvent*)event {
 
-	id obj = m_delegate;
-	SEL sel = @selector(menuForHeaderEvent:);
-	if([obj respondsToSelector:sel]) {
+	NSObject <NCTableHeaderViewDelegate> *obj = self.delegate;
+	if([obj respondsToSelector:@selector(menuForHeaderEvent:)]) {
 		// LOG_DEBUG(@"%s calling menuForHeaderEvent:", _cmd);
-		return [obj performSelector:sel withObject:event];
+		return [obj menuForHeaderEvent:event];
 	}
 
 	// LOG_DEBUG(@"%s", _cmd);

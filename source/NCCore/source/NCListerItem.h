@@ -14,7 +14,7 @@
 	NSImage* m_icon;
 
 }
-@property (retain) NSImage* icon;
+@property (strong) NSImage* icon;
 
 +(NCListerItem*)backItem;
 +(NCListerItem*)listerItemFromFileItem:(NCFileItem*)item;

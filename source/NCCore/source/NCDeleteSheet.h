@@ -10,11 +10,11 @@
 
 
 @interface NCDeleteSheet : NSObject {
-	id m_delegate;
+	id __unsafe_unretained m_delegate;
 	NSArray* m_paths;
 }
-@property (assign) IBOutlet id delegate;
-@property (retain) NSArray* paths;
+@property (unsafe_unretained) IBOutlet id delegate;
+@property (strong) NSArray* paths;
 +(NCDeleteSheet*)shared;
 
 -(void)beginSheetForWindow:(NSWindow*)window;

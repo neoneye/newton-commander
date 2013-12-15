@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 20/03/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCListerBreadcrumb.h"
 
@@ -66,7 +70,7 @@
 	if([m_breadcrumbs count] < 1) {
 		return nil; // stack is empty
 	}
-	NCListerBreadcrumb* crumb = [[[m_breadcrumbs lastObject] retain] autorelease];
+	NCListerBreadcrumb* crumb = [m_breadcrumbs lastObject];
 	[m_breadcrumbs removeLastObject];
 	return crumb;
 }

@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 10/07/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 /*
 IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
  1. NCFileSystemProxy
@@ -58,26 +62,19 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 - (void)dealloc {
 	m_delegate = nil;
 	
-	[m_working_dir release];
 	m_working_dir = nil;
 	
-	[m_resolved_working_dir release];
 	m_resolved_working_dir = nil;
 	
-	[m_items release];
 	m_items = nil;
 
-	[m_profiler release];
 	m_profiler = nil;
 
-	[m_worker release];
-	m_worker = nil;
 
 	[self setCopyOperationNames:nil];
 	[self setCopyOperationSourceDir:nil];
 	[self setCopyOperationTargetDir:nil];
 
-	[super dealloc];
 }
 
 
@@ -88,21 +85,18 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 
 -(void)setWorkingDir:(NSString*)path {
 	if(m_working_dir != path) {
-		[m_working_dir release];
 		m_working_dir = [path copy];
 	}
 }
 
 -(void)setResolvedWorkingDir:(NSString*)path {
 	if(m_resolved_working_dir != path) {
-		[m_resolved_working_dir release];
 		m_resolved_working_dir = [path copy];
 	}
 }
 
 -(void)setItems:(NSArray*)items {
 	if(m_items != items) {
-		[m_items release];
 		m_items = [items copy];
 	}
 }
@@ -156,7 +150,7 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 		SOLUTION: create a dummy object, lets objective C know about the class,
 		so it can be decoded correct.
 		*/
-		[[[NCFileItem alloc] init] autorelease];
+		[[NCFileItem alloc] init];
 	}
 
     NSString* phase = [dict objectForKey:@"phase"];
@@ -219,10 +213,10 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 		}
 
 
+#if 1
 		{
 			// deep copy
-			NSArray* result_items2 = [[[NSArray alloc] initWithArray:result_items copyItems:YES] autorelease];
-
+			NSArray* result_items2 = [[NSArray alloc] initWithArray:result_items copyItems:YES];
 
 			SEL sel = @selector(listerDataSource:updateItems:progress:);
 			if([m_delegate respondsToSelector:sel]) {
@@ -244,7 +238,8 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 				[inv invoke];
 			}
 		}
-
+#endif
+		
 		{
 			if([phase isEqualToString:@"last"]) {
 				SEL sel = @selector(listerDataSourceFinishedLoading:);
@@ -285,21 +280,18 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 
 -(void)setCopyOperationNames:(NSArray*)names {
 	if(m_copy_operation_names != names) {
-		[m_copy_operation_names release];
 		m_copy_operation_names = [names copy];
 	}
 }
 
 -(void)setCopyOperationSourceDir:(NSString*)fromDir {
 	if(m_copy_operation_source_dir != fromDir) {
-		[m_copy_operation_source_dir release];
 		m_copy_operation_source_dir = [fromDir copy];
 	}
 }
 
 -(void)setCopyOperationTargetDir:(NSString*)toDir {
 	if(m_copy_operation_target_dir != toDir) {
-		[m_copy_operation_target_dir release];
 		m_copy_operation_target_dir = [toDir copy];
 	}
 }
@@ -378,7 +370,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 -(void)setMoveOperationNames:(NSArray*)names {
 	// LOG_DEBUG(@"names: %@", names);
 	if(m_move_operation_names != names) {
-		[m_move_operation_names release];
 		m_move_operation_names = [names copy];
 	}
 }
@@ -386,7 +377,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 -(void)setMoveOperationSourceDir:(NSString*)fromDir {
 	// LOG_DEBUG(@"sourcedir: %@", fromDir);
 	if(m_move_operation_source_dir != fromDir) {
-		[m_move_operation_source_dir release];
 		m_move_operation_source_dir = [fromDir copy];
 	}
 }
@@ -394,7 +384,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 -(void)setMoveOperationTargetDir:(NSString*)toDir {
 	// LOG_DEBUG(@"targetdir: %@", toDir);
 	if(m_move_operation_target_dir != toDir) {
-		[m_move_operation_target_dir release];
 		m_move_operation_target_dir = [toDir copy];
 	}
 }

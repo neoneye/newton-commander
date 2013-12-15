@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 11/03/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NCTimeProfiler.h"
@@ -88,15 +92,15 @@ If there is overflow then an ellipsis char is appended.
 
 	NSAttributedString* s = nil;
 	{
-		NSMutableDictionary* attr = [[[NSMutableDictionary alloc] init] autorelease];
+		NSMutableDictionary* attr = [[NSMutableDictionary alloc] init];
 		id obj = [self color0];
 		if(obj) [attr setObject:obj forKey:NSForegroundColorAttributeName];
 
 		obj = [self font];
 		if(obj) [attr setObject:obj forKey:NSFontAttributeName];
 
-		s = [[[NSAttributedString alloc] 
-			initWithString:[self stringValue] attributes:attr] autorelease];
+		s = [[NSAttributedString alloc] 
+			initWithString:[self stringValue] attributes:attr];
 	}
 	// NSAttributedString* s = [self attributedStringValue];
 
@@ -153,7 +157,7 @@ If there is overflow then an ellipsis char is appended.
 		font = [NSFont systemFontOfSize:fontsize];
 	}
 
-	NSMutableDictionary* attr = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* attr = [[NSMutableDictionary alloc] init];
 	[attr setObject:text_color forKey:NSForegroundColorAttributeName];
 	[attr setObject:font forKey:NSFontAttributeName];
 
@@ -163,11 +167,10 @@ If there is overflow then an ellipsis char is appended.
 	[shadow setShadowBlurRadius:1];
 	[shadow setShadowColor:shadow_color];
 	[attr setValue:shadow forKey:NSShadowAttributeName];
-	[shadow release];
 
 	
-	NSAttributedString* as = [[[NSAttributedString alloc] 
-		initWithString:s attributes:attr] autorelease];
+	NSAttributedString* as = [[NSAttributedString alloc] 
+		initWithString:s attributes:attr];
 
 
 	float padding_left = 17;

@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 14/08/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NCMoveSheet.h"
@@ -28,7 +32,7 @@
 	NSEnumerator* en = [ary objectEnumerator];
 	while(thing = [en nextObject]) {
 		if([thing isKindOfClass:[NSString class]]) {
-			NCMoveSheetItem* item = [[[NCMoveSheetItem alloc] init] autorelease];
+			NCMoveSheetItem* item = [[NCMoveSheetItem alloc] init];
 			[item setName:(NSString*)thing];                        
 			[item setMessage:@"?"];
 			[item setCount:1];
@@ -112,7 +116,7 @@
 	NSAssert(view1, @"view1 must be initialize in nib");
 	NSAssert(window, @"window must be initialize in nib");
 
-	NSView* cv = [[[NSView alloc] initWithFrame:[window frame]] autorelease];
+	NSView* cv = [[NSView alloc] initWithFrame:[window frame]];
 	[window setContentView:cv];
 	[cv setAutoresizesSubviews:YES];
 
@@ -154,7 +158,7 @@
 	// [self updateCheckboxes];
 	
 	if(!m_move_operation) {
-		[self setMoveOperation:[[[NCMoveOperationDummy alloc] init] autorelease]];
+		[self setMoveOperation:[[NCMoveOperationDummy alloc] init]];
 	}
 	NSAssert(m_move_operation, @"moveOperation should not be nil at this point");
 	[m_move_operation setMoveOperationDelegate:self];
@@ -253,7 +257,6 @@
 
     [animation startAnimation]; // because it's blocking, once it returns, we're done
 
-    [animation release];
 
 	[m_confirm_view setHidden:YES];
 	

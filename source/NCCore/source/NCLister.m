@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 03/02/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 /*
 
@@ -387,7 +391,6 @@ BOOL is_the_cocoa_simulator_running() {
 	
 	[self setDataSource:nil];
 	
-	[super dealloc];	
 }
 
 -(void)setup {
@@ -400,7 +403,7 @@ BOOL is_the_cocoa_simulator_running() {
 
 	[self setWorkingDir:@"/"];
 	
-	[self setBreadcrumbStack:[[[NCListerBreadcrumbStack alloc] init] autorelease]];
+	[self setBreadcrumbStack:[[NCListerBreadcrumbStack alloc] init]];
 	[self setSelectedIndexes:[NSMutableIndexSet indexSet]];
 	
 	
@@ -423,7 +426,7 @@ BOOL is_the_cocoa_simulator_running() {
 -(void)populateImageCacheIfNeeded {
 	if(m_image_cache) return; // already initialized
 	
-	[self setImageCache:[[[NCImageCache alloc] init] autorelease]];
+	[self setImageCache:[[NCImageCache alloc] init]];
 
 	{
 		NSImage* img = [NSImage imageNamed:@"go_back" forClass:[self class]];
@@ -469,8 +472,7 @@ BOOL is_the_cocoa_simulator_running() {
 
 -(void)setDataSource:(id<NCListerDataSource>)dataSource {
 	if(m_lister_data_source != dataSource) {
-		[m_lister_data_source release];
-		m_lister_data_source = [dataSource retain];
+		m_lister_data_source = dataSource;
 	}
 	if(m_lister_data_source) {
 		[m_lister_data_source setDelegate:self];
@@ -758,7 +760,7 @@ BOOL is_the_cocoa_simulator_running() {
 }
 
 - (NSString*)workingDir {
-	return [[m_working_dir retain] autorelease];
+	return m_working_dir;
 }
 
 - (void)setWorkingDir:(NSString*)path {
@@ -790,7 +792,6 @@ BOOL is_the_cocoa_simulator_running() {
 	}
 
     if (m_working_dir != path) {
-        [m_working_dir release];
         m_working_dir = [path copy];
     }
 
@@ -1113,57 +1114,57 @@ BOOL is_the_cocoa_simulator_running() {
 		];
 
 		{
-			NCListerTableTextCell* cell = [[[NCListerTableTextCell alloc] initTextCell:@"general_text"] autorelease];
+			NCListerTableTextCell* cell = [[NCListerTableTextCell alloc] initTextCell:@"general_text"];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_text_column = cell;
 		}
 		{
-			NCImageAndTextCell* cell = [[[NCImageAndTextCell alloc] init] autorelease];
+			NCImageAndTextCell* cell = [[NCImageAndTextCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			[cell setWidthOfImageBox:34];
 			[cell setPaddingLeft:0];
 			cell_imagetext_column = cell;
 		}
 		{
-			NCPermissionCell* cell = [[[NCPermissionCell alloc] init] autorelease];
+			NCPermissionCell* cell = [[NCPermissionCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_permission_column = cell;
 		}
 		{
-			NCDateCell* cell = [[[NCDateCell alloc] init] autorelease];
+			NCDateCell* cell = [[NCDateCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_date_column0 = cell;
 		}
 		{
-			NCDateCell* cell = [[[NCDateCell alloc] init] autorelease];
+			NCDateCell* cell = [[NCDateCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_date_column1 = cell;
 		}
 		{
-			NCDateCell* cell = [[[NCDateCell alloc] init] autorelease];
+			NCDateCell* cell = [[NCDateCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_date_column2 = cell;
 		}
 		{
-			NCDateCell* cell = [[[NCDateCell alloc] init] autorelease];
+			NCDateCell* cell = [[NCDateCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_date_column3 = cell;
 		}
 		{
-			NCDateCell* cell = [[[NCDateCell alloc] init] autorelease];
+			NCDateCell* cell = [[NCDateCell alloc] init];
 			[cell adjustThemeForDictionary:theme_dict];
 			cell_date_column4 = cell;
 		}
 
 		{
-			NCListerTableTextCell* cell = [[[NCListerTableTextCell alloc] initTextCell:@"size_column"] autorelease];
+			NCListerTableTextCell* cell = [[NCListerTableTextCell alloc] initTextCell:@"size_column"];
 			[cell adjustThemeForDictionary:theme_dict];
 			[cell setAlignment:NSRightTextAlignment];
 			cell_size_column = cell;
 		}
 
 		{
-			NCListerTableTextCell* cell = [[[NCListerTableTextCell alloc] initTextCell:@"general_integer"] autorelease];
+			NCListerTableTextCell* cell = [[NCListerTableTextCell alloc] initTextCell:@"general_integer"];
 			[cell adjustThemeForDictionary:theme_dict];
 			[cell setAlignment:NSRightTextAlignment];
 			cell_integer_column = cell;
@@ -1435,12 +1436,12 @@ BOOL is_the_cocoa_simulator_running() {
 		
         if (!is_lion_or_better) {
             NSRect vframe = [[scrollView verticalScroller] frame];
-            NCScroller* vscroller = [[[NCScroller alloc] initWithFrame:vframe] autorelease];
+            NCScroller* vscroller = [[NCScroller alloc] initWithFrame:vframe];
             [scrollView setVerticalScroller:vscroller];
             // m_vertical_scroller = vscroller;
             
             NSRect hframe = [[scrollView horizontalScroller] frame];
-            NCScroller* hscroller = [[[NCScroller alloc] initWithFrame:hframe] autorelease];
+            NCScroller* hscroller = [[NCScroller alloc] initWithFrame:hframe];
             [scrollView setHorizontalScroller:hscroller];
             // m_horizontal_scroller = hscroller;
         }
@@ -1502,11 +1503,11 @@ BOOL is_the_cocoa_simulator_running() {
 	}
 	// LOG_DEBUG(@"ofs: %0.2f\ntoprow: %i", ofs, range.location);
 
-	NSArray* items = [[[NSArray alloc] initWithArray:m_items copyItems:YES] autorelease]; // deep copy
+	NSArray* items = [[NSArray alloc] initWithArray:m_items copyItems:YES]; // deep copy
 	NSString* current_name = [self currentName];
 	NSString* wdir = [self workingDir];
 	
-	NCListerBreadcrumb* crumb = [[[NCListerBreadcrumb alloc] init] autorelease];
+	NCListerBreadcrumb* crumb = [[NCListerBreadcrumb alloc] init];
 	[crumb setWorkingDir:wdir];
 	[crumb setSelectedRow:selected_row];
 	[crumb setPositionY:ofs];
@@ -1737,7 +1738,7 @@ If clear_history == NO then we go the the previos path in the history
 	if(!crumb) {
 		// crumb = [self createBreadcrumb];
 
-		crumb = [[[NCListerBreadcrumb alloc] init] autorelease];
+		crumb = [[NCListerBreadcrumb alloc] init];
 		[crumb setWorkingDir:wdir];
 		[crumb setDate:[NSDate date]];
 		[crumb setCurrentName:current_name];
@@ -1880,112 +1881,112 @@ Navigate into a subdir or if cursor is on top-most row then navigate out of this
 	
 	NSSortDescriptor* sd = nil;
 	if([identifier isEqualToString:kNCListerColumnIdentifierName]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"name"
 	        ascending:m_sort_reverse
-	        selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+	        selector:@selector(localizedCaseInsensitiveCompare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierSize]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"size"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierRsrcSize]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"resourceForkSize"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierMode]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"posixPermissions"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierOwner]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"owner"
 	        ascending:m_sort_reverse
-	        selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+	        selector:@selector(localizedCaseInsensitiveCompare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierOwner]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"group"
 	        ascending:m_sort_reverse
-	        selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+	        selector:@selector(localizedCaseInsensitiveCompare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierAccessed]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"accessDate"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierDataModified]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"contentModificationDate"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierStatChanged]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"attributeModificationDate"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierCreated]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"creationDate"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierBackup]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"backupDate"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierRef]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"referenceCount"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierACL]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"aclCount"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierXAttr]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"xattrCount"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierInode]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"inode"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierFlags]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"flags"
 	        ascending:m_sort_reverse
-	        selector:@selector(compare:)] autorelease];
+	        selector:@selector(compare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierKind]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"kind"
 	        ascending:m_sort_reverse
-	        selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+	        selector:@selector(localizedCaseInsensitiveCompare:)];
 	} else
 	if([identifier isEqualToString:kNCListerColumnIdentifierType]) {
-		sd = [[[NSSortDescriptor alloc]
+		sd = [[NSSortDescriptor alloc]
 	        initWithKey:@"contentType"
 	        ascending:m_sort_reverse
-	        selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+	        selector:@selector(localizedCaseInsensitiveCompare:)];
 	}
 
 	NSArray* ary = (sd != nil) ? [NSArray arrayWithObject:sd] : [NSArray array];
@@ -2244,7 +2245,7 @@ Navigate into a subdir or if cursor is on top-most row then navigate out of this
 	// SOLUTION: we resolve the path so quicklook can do it's preview stuff
 	NCFileManager* ncfm = [NCFileManager shared];
 	path = [ncfm resolvePath:path];
-	return [[[NSURL alloc] initFileURLWithPath:path] autorelease];
+	return [[NSURL alloc] initFileURLWithPath:path];
 }
 
 -(BOOL)previewPanel:(QLPreviewPanel*)panel handleEvent:(NSEvent*)event {
@@ -2473,7 +2474,7 @@ it's hidden and I don't like automatic scrolling.
 	if(![thing isKindOfClass:[NCListerItem class]]) return nil;
 	NCListerItem* item = (NCListerItem*)thing;
 	
-	return [[item retain] autorelease];
+	return item;
 }
 
 -(NSArray*)selectedItemsOrCurrentItem {
@@ -2867,8 +2868,8 @@ traps escape key so you can cancel the operation
 
 -(void)showContextMenu:(NSMenu*)menu {
 	if(!menu) {
-		menu = [[[NSMenu alloc] initWithTitle:@"menu"] autorelease];
-		[menu addItem:[[[NSMenuItem alloc] initWithTitle:@"Empty" action:nil keyEquivalent:@""] autorelease]];
+		menu = [[NSMenu alloc] initWithTitle:@"menu"];
+		[menu addItem:[[NSMenuItem alloc] initWithTitle:@"Empty" action:nil keyEquivalent:@""]];
 	}
 	
 	float offset_x = -16;
@@ -2944,7 +2945,7 @@ traps escape key so you can cancel the operation
 
 -(NSMenu*)headerMenuForColumn:(int)column_index {
 	// LOG_DEBUG(@"%s %i", _cmd, column_index);
-	NSMenu* menu = [[[NSMenu alloc] initWithTitle:@"Header Menu"] autorelease];
+	NSMenu* menu = [[NSMenu alloc] initWithTitle:@"Header Menu"];
 	if(column_index >= 0) {
 		NSString* title = @"Auto Size Column";
 		NSMenuItem* mi = [menu addItemWithTitle:title action:@selector(autoSizeThisColumnMenuAction:) keyEquivalent:@""];

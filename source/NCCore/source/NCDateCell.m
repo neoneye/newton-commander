@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 14/08/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 /*
 
 YYYY-MM-dd HH:mm:ss
@@ -234,7 +238,6 @@ CFStringRef CFStringCreateCompactFromTime(double seconds_until_now) {
 		m_attr1 = NULL;
 	}
     
-    [super dealloc];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -779,7 +782,7 @@ If there is overflow then an ellipsis char is appended.
 		CGColorRef cgColor1 = CGColorCreateFromNSColor(colorSpace, color1);
 		CGColorSpaceRelease (colorSpace);
 
-		CTFontRef cgFont = (CTFontRef)font;  // NOTE: toll free bridge between NSFont and CFFont so we can safely cast
+		CTFontRef cgFont = (__bridge CTFontRef)font;  // NOTE: toll free bridge between NSFont and CFFont so we can safely cast
 
 		// lazy initialize the attr0 dictionary so we don't spend time on allocating it over and over
 		if(m_attr0 == NULL) {
@@ -877,7 +880,7 @@ If there is overflow then an ellipsis char is appended.
 			ss = NULL;
 		} else {
 			if(m_date_formatter_compact == nil) {
-				NSDateFormatter* date_formatter = [[[NSDateFormatter alloc] init] autorelease];
+				NSDateFormatter* date_formatter = [[NSDateFormatter alloc] init];
 				[date_formatter setDateFormat:@"yyyy-MM-dd"];
 				self.dateFormatterCompact = date_formatter;
 			}
@@ -894,7 +897,7 @@ If there is overflow then an ellipsis char is appended.
 	// if everything else fails then fallback to using the verbose format
 	if(CFAttributedStringGetLength(attrString) < 1) {
 		if(m_date_formatter_verbose == nil) {
-			NSDateFormatter* date_formatter = [[[NSDateFormatter alloc] init] autorelease];
+			NSDateFormatter* date_formatter = [[NSDateFormatter alloc] init];
 			[date_formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 			self.dateFormatterVerbose = date_formatter;
 		}

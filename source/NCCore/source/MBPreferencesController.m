@@ -22,6 +22,10 @@
  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  OTHER DEALINGS IN THE SOFTWARE.
  */
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "MBPreferencesController.h"
 
@@ -49,7 +53,6 @@ NSString *MBPreferencesSelectionAutosaveKey = @"MBPreferencesSelection";
 		[prefsWindow setShowsToolbarButton:NO];
 		[prefsWindow setHidesOnDeactivate:NO];
 		self.window = prefsWindow;
-		[prefsWindow release];
 		
 		[self _setupToolbar];
 	}
@@ -59,7 +62,6 @@ NSString *MBPreferencesSelectionAutosaveKey = @"MBPreferencesSelection";
 - (void)dealloc
 {
 	self.modules = nil;
-	[super dealloc];
 }
 
 + (MBPreferencesController *)sharedController {
@@ -122,14 +124,14 @@ NSString *MBPreferencesSelectionAutosaveKey = @"MBPreferencesSelection";
 	
 	NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
 	if (!module)
-		return [item autorelease];
+		return item;
 	
 	
 	[item setLabel:[module title]];
 	[item setImage:[module image]];
 	[item setTarget:self];
 	[item setAction:@selector(_selectModule:)];
-	return [item autorelease];
+	return item;
 }
 
 - (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar
@@ -153,12 +155,11 @@ NSString *MBPreferencesSelectionAutosaveKey = @"MBPreferencesSelection";
 - (void)setModules:(NSArray *)newModules
 {
 	if (_modules) {
-		[_modules release];
 		_modules = nil;
 	}
 	
 	if (newModules != _modules) {
-		_modules = [newModules retain];
+		_modules = newModules;
 		
 		// Reset the toolbar items
 		NSToolbar *toolbar = [self.window toolbar];

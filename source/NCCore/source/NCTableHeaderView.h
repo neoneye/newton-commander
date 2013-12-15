@@ -8,17 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol NCTableHeaderViewDelegate <NSObject>
 
-@interface NCTableHeaderView : NSTableHeaderView {
-	id m_delegate;
-}
-@property(assign) id delegate;
+-(NSMenu*)menuForHeaderEvent:(NSEvent*)event;
 
 @end
 
 
-@interface NSObject (NCTableHeaderViewDelegate)
-
--(NSMenu*)menuForHeaderEvent:(NSEvent*)event;
+@interface NCTableHeaderView : NSTableHeaderView
+@property(unsafe_unretained) NSObject <NCTableHeaderViewDelegate> *delegate;
 
 @end

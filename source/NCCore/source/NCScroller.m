@@ -9,6 +9,10 @@ Original header blob:
 	BSD licensed
 
 */
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 #import "NCScroller.h"
 
 enum {
@@ -18,19 +22,19 @@ enum {
 typedef NSUInteger ESScrollerArrowsSetting;
 
 @interface NCScroller ()
-@property(retain) NSGradient *knobSlotGradient;
-@property(retain) NSGradient *activeKnobGradient;
-@property(retain) NSGradient *inactiveKnobGradient;
-@property(retain) NSGradient *activeButtonGradient;
-@property(retain) NSGradient *highlightButtonGradient;
-@property(retain) NSGradient *inactiveButtonGradient;
-@property(retain) NSGradient *activeArrowGradient;
-@property(retain) NSGradient *inactiveArrowGradient;
-@property(retain) NSColor *activeKnobOutlineColor;
-@property(retain) NSColor *inactiveKnobOutlineColor;
-@property(retain) NSColor *activeLineColor;
-@property(retain) NSColor *highlightLineColor;
-@property(retain) NSColor *inactiveLineColor;
+@property(strong) NSGradient *knobSlotGradient;
+@property(strong) NSGradient *activeKnobGradient;
+@property(strong) NSGradient *inactiveKnobGradient;
+@property(strong) NSGradient *activeButtonGradient;
+@property(strong) NSGradient *highlightButtonGradient;
+@property(strong) NSGradient *inactiveButtonGradient;
+@property(strong) NSGradient *activeArrowGradient;
+@property(strong) NSGradient *inactiveArrowGradient;
+@property(strong) NSColor *activeKnobOutlineColor;
+@property(strong) NSColor *inactiveKnobOutlineColor;
+@property(strong) NSColor *activeLineColor;
+@property(strong) NSColor *highlightLineColor;
+@property(strong) NSColor *inactiveLineColor;
 @property(readonly) BOOL isActive;
 @property(readonly) BOOL isVertical;
 @property(readonly) CGFloat fillAngle;
@@ -68,20 +72,19 @@ typedef NSUInteger ESScrollerArrowsSetting;
 
 - (void)dealloc;
 {
-	[self.knobSlotGradient release];
-	[self.activeKnobGradient release];
-	[self.inactiveKnobGradient release];
-	[self.activeButtonGradient release];
-	[self.highlightButtonGradient release];
-	[self.inactiveButtonGradient release];
-	[self.activeArrowGradient release];
-	[self.inactiveArrowGradient release];
-	[self.activeKnobOutlineColor release];
-	[self.inactiveKnobOutlineColor release];
-	[self.activeLineColor release];
-	[self.highlightLineColor release];
-	[self.inactiveLineColor release];
-	[super dealloc];
+	self.knobSlotGradient;
+	self.activeKnobGradient;
+	self.inactiveKnobGradient;
+	self.activeButtonGradient;
+	self.highlightButtonGradient;
+	self.inactiveButtonGradient;
+	self.activeArrowGradient;
+	self.inactiveArrowGradient;
+	self.activeKnobOutlineColor;
+	self.inactiveKnobOutlineColor;
+	self.activeLineColor;
+	self.highlightLineColor;
+	self.inactiveLineColor;
 }
 
 - (void)drawRect:(NSRect)frame;
@@ -195,7 +198,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	if (self.arrowsSetting == ESScrollerArrowsTogether)
 		buttonPath = [NSBezierPath bezierPathWithRect:buttonRect];
 	else {
-		buttonPath = [[[NSBezierPath alloc] init] autorelease];
+		buttonPath = [[NSBezierPath alloc] init];
 		NSPoint buttonCorners[4];
 		if (self.isVertical) {
 			buttonCorners[0] = NSMakePoint(NSMaxX(buttonRect), NSMinY(buttonRect));
@@ -217,7 +220,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	[(highlight ? self.highlightButtonGradient : (self.isActive ? self.activeButtonGradient : self.inactiveButtonGradient)) drawInBezierPath:buttonPath angle:self.fillAngle];
 
 	// draw the outline
-	NSBezierPath *outline = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *outline = [[NSBezierPath alloc] init];
 	if (self.arrowsSetting == ESScrollerArrowsTogether) {
 		if (self.isVertical) {
 			[outline moveToPoint:NSMakePoint(NSMinX(buttonRect) + 0.5, NSMaxY(buttonRect))];		
@@ -239,7 +242,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	[outline stroke];	
 	
 	// draw the arrow
-	NSBezierPath *arrowGlyph = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *arrowGlyph = [[NSBezierPath alloc] init];
 	NSPoint points[3];
 	points[0] = self.isVertical ? NSMakePoint(NSMidX(buttonRect), NSMidY(buttonRect) + 2.5) : NSMakePoint(NSMidX(buttonRect) + 2.5, NSMidY(buttonRect));
 	points[1] = self.isVertical ? NSMakePoint(NSMidX(buttonRect) + 3.5, NSMidY(buttonRect) - 3) : NSMakePoint(NSMidX(buttonRect) - 3, NSMidY(buttonRect) + 3.5);
@@ -253,7 +256,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	NSRect buttonRect = [self rectForPart:NSScrollerDecrementLine];
 	
 	// draw the button
-	NSBezierPath *buttonPath = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *buttonPath = [[NSBezierPath alloc] init];
 	NSPoint buttonCorners[4];
 	if (self.arrowsSetting == ESScrollerArrowsTogether) {
 		if (self.isVertical) {
@@ -292,7 +295,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	[(highlight ? self.highlightButtonGradient : (self.isActive ? self.activeButtonGradient : self.inactiveButtonGradient)) drawInBezierPath:buttonPath angle:self.fillAngle];
 	
 	// draw the outline
-	NSBezierPath *outline = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *outline = [[NSBezierPath alloc] init];
 	if (self.arrowsSetting == ESScrollerArrowsTogether) {
 		if (self.isVertical) {
 			[outline moveToPoint:NSMakePoint(NSMinX(buttonRect) + 0.5, NSMaxY(buttonRect))];
@@ -314,7 +317,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	[outline stroke];
 	
 	// draw the arrow
-	NSBezierPath *arrowGlyph = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *arrowGlyph = [[NSBezierPath alloc] init];
 	NSPoint points[3];
 	points[0] = self.isVertical ? NSMakePoint(NSMidX(buttonRect), NSMidY(buttonRect) - 2.5) : NSMakePoint(NSMidX(buttonRect) - 2.5, NSMidY(buttonRect));
 	points[1] = self.isVertical ? NSMakePoint(NSMidX(buttonRect) + 3.5, NSMidY(buttonRect) + 3) : NSMakePoint(NSMidX(buttonRect) + 3, NSMidY(buttonRect) + 3.5);
@@ -333,7 +336,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 
 - (void)drawTopSection;
 {
-	NSBezierPath *buttonPath = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *buttonPath = [[NSBezierPath alloc] init];
 	NSRect buttonRect;
 	NSPoint buttonCorners[4];
 	if (self.isVertical) {
@@ -356,7 +359,7 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	[buttonPath closePath];
 	[self.isActive ? self.activeButtonGradient : self.inactiveButtonGradient drawInBezierPath:buttonPath angle:self.fillAngle];
 	
-	NSBezierPath *outline = [[[NSBezierPath alloc] init] autorelease];
+	NSBezierPath *outline = [[NSBezierPath alloc] init];
 	if (self.isVertical) {
 		[outline moveToPoint:NSMakePoint(NSMinX(buttonRect) + 0.5, NSMinY(buttonRect))];
 		[outline appendBezierPathWithArcWithCenter:NSMakePoint(NSMidX(buttonRect), NSMaxY(buttonRect) + NSHeight(buttonRect)/2 + 5) radius:NSWidth(buttonRect)/2 startAngle:180 endAngle:0];
@@ -419,28 +422,28 @@ typedef NSUInteger ESScrollerArrowsSetting;
 
 +(NSDictionary*)grayBlueTheme {
 	return [NSDictionary dictionaryWithObjectsAndKeys:
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.6 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.8 alpha:1.0],0.1,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.25,[NSColor colorWithCalibratedWhite:0.95 alpha:1.0],0.67,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.85,[NSColor colorWithCalibratedWhite:0.88 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.6 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.8 alpha:1.0],0.1,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.25,[NSColor colorWithCalibratedWhite:0.95 alpha:1.0],0.67,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.85,[NSColor colorWithCalibratedWhite:0.88 alpha:1.0],1.0,nil],
 		@"knobSlotGradient",
 	
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil],
 		@"activeKnobGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.89 green:0.89 blue:0.89 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.684 green:0.688 blue:0.688 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.89 green:0.89 blue:0.89 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.684 green:0.688 blue:0.688 alpha:1.0],1.0,nil],
 		@"inactiveKnobGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.93 green:0.93 blue:0.93 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.671 green:0.671 blue:0.671 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.93 green:0.93 blue:0.93 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.671 green:0.671 blue:0.671 alpha:1.0],1.0,nil],
 		@"activeButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil],
 		@"highlightButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.90 green:0.90 blue:0.90 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.90 green:0.90 blue:0.90 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:1.0],1.0,nil],
 		@"inactiveButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.3 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.2 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.3 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.2 alpha:1.0],1.0,nil],
 		@"activeArrowGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.47 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.45 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.47 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.45 alpha:1.0],1.0,nil],
 		@"inactiveArrowGradient",
 
 		[NSColor colorWithCalibratedWhite:0.4 alpha:1.0],
@@ -465,28 +468,28 @@ typedef NSUInteger ESScrollerArrowsSetting;
 
 +(NSDictionary*)grayTheme {
 	return [NSDictionary dictionaryWithObjectsAndKeys:
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.6 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.8 alpha:1.0],0.1,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.25,[NSColor colorWithCalibratedWhite:0.95 alpha:1.0],0.67,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.85,[NSColor colorWithCalibratedWhite:0.88 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.6 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.8 alpha:1.0],0.1,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.25,[NSColor colorWithCalibratedWhite:0.95 alpha:1.0],0.67,[NSColor colorWithCalibratedWhite:0.92 alpha:1.0],0.85,[NSColor colorWithCalibratedWhite:0.88 alpha:1.0],1.0,nil],
 		@"knobSlotGradient",
 	
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.89 green:0.89 blue:0.89 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.684 green:0.688 blue:0.688 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.89 green:0.89 blue:0.89 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.684 green:0.688 blue:0.688 alpha:1.0],1.0,nil],
 		@"activeKnobGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.89 green:0.89 blue:0.89 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.684 green:0.688 blue:0.688 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.89 green:0.89 blue:0.89 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.684 green:0.688 blue:0.688 alpha:1.0],1.0,nil],
 		@"inactiveKnobGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.90 green:0.90 blue:0.90 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.90 green:0.90 blue:0.90 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:1.0],1.0,nil],
 		@"activeButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil],
 		@"highlightButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.90 green:0.90 blue:0.90 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.90 green:0.90 blue:0.90 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.64 green:0.64 blue:0.64 alpha:1.0],1.0,nil],
 		@"inactiveButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.47 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.45 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.47 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.45 alpha:1.0],1.0,nil],
 		@"activeArrowGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.47 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.45 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedWhite:0.47 alpha:1.0],0.0,[NSColor colorWithCalibratedWhite:0.45 alpha:1.0],1.0,nil],
 		@"inactiveArrowGradient",
 
 		[NSColor colorWithCalibratedWhite:0.6 alpha:1.0],
@@ -513,28 +516,28 @@ typedef NSUInteger ESScrollerArrowsSetting;
 	// return [NCScroller grayBlueTheme];
 #if 1
 	return [NSDictionary dictionaryWithObjectsAndKeys:
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.271 alpha:1.0],0.0, [NSColor colorWithCalibratedRed:0.311 green:0.314 blue:0.310 alpha:1.0],0.1, [NSColor colorWithCalibratedWhite:0.380 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.388 alpha:1.0],0.67, [NSColor colorWithCalibratedWhite:0.376 alpha:1.0],0.85, [NSColor colorWithCalibratedWhite:0.176 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.271 alpha:1.0],0.0, [NSColor colorWithCalibratedRed:0.311 green:0.314 blue:0.310 alpha:1.0],0.1, [NSColor colorWithCalibratedWhite:0.380 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.388 alpha:1.0],0.67, [NSColor colorWithCalibratedWhite:0.376 alpha:1.0],0.85, [NSColor colorWithCalibratedWhite:0.176 alpha:1.0],1.0,nil],
 		@"knobSlotGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.204 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.318 alpha:1.0],0.1, [NSColor colorWithCalibratedWhite:0.243 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.173 alpha:1.0],0.67, [NSColor colorWithCalibratedWhite:0.110 alpha:1.0],0.85, [NSColor colorWithCalibratedRed:0.173 green:0.172 blue:0.169 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.204 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.318 alpha:1.0],0.1, [NSColor colorWithCalibratedWhite:0.243 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.173 alpha:1.0],0.67, [NSColor colorWithCalibratedWhite:0.110 alpha:1.0],0.85, [NSColor colorWithCalibratedRed:0.173 green:0.172 blue:0.169 alpha:1.0],1.0,nil],
 		@"activeKnobGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.204 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.318 alpha:1.0],0.1, [NSColor colorWithCalibratedWhite:0.243 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.173 alpha:1.0],0.67, [NSColor colorWithCalibratedWhite:0.110 alpha:1.0],0.85, [NSColor colorWithCalibratedRed:0.173 green:0.172 blue:0.169 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.204 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.318 alpha:1.0],0.1, [NSColor colorWithCalibratedWhite:0.243 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.173 alpha:1.0],0.67, [NSColor colorWithCalibratedWhite:0.110 alpha:1.0],0.85, [NSColor colorWithCalibratedRed:0.173 green:0.172 blue:0.169 alpha:1.0],1.0,nil],
 		@"inactiveKnobGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.220 alpha:1.0],0.0, [NSColor colorWithCalibratedRed:0.400 green:0.400 blue:0.396 alpha:1.0],0.1, [NSColor colorWithCalibratedRed:0.388 green:0.388 blue:0.385 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.275 alpha:1.0],0.67, [NSColor colorWithCalibratedRed:0.207 green:0.204 blue:0.208 alpha:1.0],0.85, [NSColor colorWithCalibratedWhite:0.176 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.220 alpha:1.0],0.0, [NSColor colorWithCalibratedRed:0.400 green:0.400 blue:0.396 alpha:1.0],0.1, [NSColor colorWithCalibratedRed:0.388 green:0.388 blue:0.385 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.275 alpha:1.0],0.67, [NSColor colorWithCalibratedRed:0.207 green:0.204 blue:0.208 alpha:1.0],0.85, [NSColor colorWithCalibratedWhite:0.176 alpha:1.0],1.0,nil],
 		@"activeButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithCalibratedRed:0.604 green:0.663 blue:0.745 alpha:1.0],0.0,[NSColor colorWithCalibratedRed:0.373 green:0.447 blue:0.569 alpha:1.0],1.0,nil],
 		@"highlightButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.220 alpha:1.0],0.0, [NSColor colorWithCalibratedRed:0.400 green:0.400 blue:0.396 alpha:1.0],0.1, [NSColor colorWithCalibratedRed:0.388 green:0.388 blue:0.385 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.275 alpha:1.0],0.67, [NSColor colorWithCalibratedRed:0.207 green:0.204 blue:0.208 alpha:1.0],0.85, [NSColor colorWithCalibratedWhite:0.176 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.220 alpha:1.0],0.0, [NSColor colorWithCalibratedRed:0.400 green:0.400 blue:0.396 alpha:1.0],0.1, [NSColor colorWithCalibratedRed:0.388 green:0.388 blue:0.385 alpha:1.0],0.25, [NSColor colorWithCalibratedWhite:0.275 alpha:1.0],0.67, [NSColor colorWithCalibratedRed:0.207 green:0.204 blue:0.208 alpha:1.0],0.85, [NSColor colorWithCalibratedWhite:0.176 alpha:1.0],1.0,nil],
 		@"inactiveButtonGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],1.0,nil],
 		@"activeArrowGradient",
 
-		[[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],1.0,nil] autorelease],
+		[[NSGradient alloc] initWithColorsAndLocations: [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],0.0, [NSColor colorWithCalibratedWhite:0.137 alpha:1.0],1.0,nil],
 		@"inactiveArrowGradient",
 
 		[NSColor colorWithCalibratedRed:0.655 green:0.644 blue:0.651 alpha:1.0],

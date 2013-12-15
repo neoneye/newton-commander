@@ -28,13 +28,13 @@
 	CFDictionaryRef m_attr0;
 	CFDictionaryRef m_attr1;
 }
-@property (retain) NSTextStorage* textStorage;
-@property (retain) NSTextContainer* textContainer;
-@property (retain) NSLayoutManager* layoutManager;
-@property (retain) NSMutableParagraphStyle* paraStyle;
-@property (retain) NSDictionary* attr;
-@property (retain) NSDateFormatter* dateFormatterVerbose;
-@property (retain) NSDateFormatter* dateFormatterCompact;
+@property (strong) NSTextStorage* textStorage;
+@property (strong) NSTextContainer* textContainer;
+@property (strong) NSLayoutManager* layoutManager;
+@property (strong) NSMutableParagraphStyle* paraStyle;
+@property (strong) NSDictionary* attr;
+@property (strong) NSDateFormatter* dateFormatterVerbose;
+@property (strong) NSDateFormatter* dateFormatterCompact;
 @property float widthOfVerboseText;
 
 @end

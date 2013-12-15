@@ -13,7 +13,7 @@
 	NSString* m_path;
 	BOOL m_active;
 }
-@property (nonatomic, retain) NSString* path;
+@property (nonatomic, strong) NSString* path;
 
 -(void)rebuild;
 

@@ -28,52 +28,52 @@
 @class NCPathControl;
 
 @interface NCMoveSheet : NSWindowController <NCMoveOperationDelegate> {
-	id m_delegate;
-	NSView* m_confirm_view;
-	NSView* m_progress_view;
+	id __unsafe_unretained m_delegate;
+	NSView* __weak m_confirm_view;
+	NSView* __weak m_progress_view;
 
 	NSArray* m_names;
 	NSString* m_source_dir;
 	NSString* m_target_dir;
 
 	// confirm sheet
-	NSTextField* m_confirm_summary;
-	NSButton* m_confirm_button;
-	NSButton* m_confirm_close_when_finished_button;
-	NCPathControl* m_confirm_source_path;
-	NCPathControl* m_confirm_target_path;
+	NSTextField* __weak m_confirm_summary;
+	NSButton* __weak m_confirm_button;
+	NSButton* __weak m_confirm_close_when_finished_button;
+	NCPathControl* __weak m_confirm_source_path;
+	NCPathControl* __weak m_confirm_target_path;
 
 	// progress sheet
-	NSTextField* m_progress_summary;
-	NSProgressIndicator* m_progress_indicator;
-	NSButton* m_abort_button;
-	NSButton* m_progress_close_when_finished_button;
-	NCPathControl* m_progress_source_path;
-	NCPathControl* m_progress_target_path;
+	NSTextField* __weak m_progress_summary;
+	NSProgressIndicator* __weak m_progress_indicator;
+	NSButton* __weak m_abort_button;
+	NSButton* __weak m_progress_close_when_finished_button;
+	NCPathControl* __weak m_progress_source_path;
+	NCPathControl* __weak m_progress_target_path;
 
-	NSArrayController* m_progress_items;
+	NSArrayController* __weak m_progress_items;
 	
 	id <NCMoveOperationProtocol> m_move_operation;
 }
-@property (assign) id delegate;
-@property (assign) IBOutlet NSView* confirmView;
-@property (assign) IBOutlet NSView* progressView;
-@property (assign) IBOutlet NSTextField* confirmSummary;
-@property (assign) IBOutlet NSButton* confirmButton;
-@property (assign) IBOutlet NSButton* abortButton;
-@property (assign) IBOutlet NSButton* confirmCloseWhenFinishedButton;
-@property (assign) IBOutlet NSButton* progressCloseWhenFinishedButton;
-@property (assign) IBOutlet NSTextField* progressSummary;
-@property (assign) IBOutlet NSProgressIndicator* progressIndicator;
-@property (assign) IBOutlet NSArrayController* progressItems;
-@property (assign) IBOutlet NCPathControl* confirmSourcePath;
-@property (assign) IBOutlet NCPathControl* confirmTargetPath;
-@property (assign) IBOutlet NCPathControl* progressSourcePath;
-@property (assign) IBOutlet NCPathControl* progressTargetPath;
+@property (unsafe_unretained) id delegate;
+@property (weak) IBOutlet NSView* confirmView;
+@property (weak) IBOutlet NSView* progressView;
+@property (weak) IBOutlet NSTextField* confirmSummary;
+@property (weak) IBOutlet NSButton* confirmButton;
+@property (weak) IBOutlet NSButton* abortButton;
+@property (weak) IBOutlet NSButton* confirmCloseWhenFinishedButton;
+@property (weak) IBOutlet NSButton* progressCloseWhenFinishedButton;
+@property (weak) IBOutlet NSTextField* progressSummary;
+@property (weak) IBOutlet NSProgressIndicator* progressIndicator;
+@property (weak) IBOutlet NSArrayController* progressItems;
+@property (weak) IBOutlet NCPathControl* confirmSourcePath;
+@property (weak) IBOutlet NCPathControl* confirmTargetPath;
+@property (weak) IBOutlet NCPathControl* progressSourcePath;
+@property (weak) IBOutlet NCPathControl* progressTargetPath;
 @property (copy) NSArray* names;
 @property (copy) NSString* sourceDir;
 @property (copy) NSString* targetDir;
-@property (retain) id <NCMoveOperationProtocol> moveOperation;
+@property (strong) id <NCMoveOperationProtocol> moveOperation;
 +(NCMoveSheet*)shared;
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow;

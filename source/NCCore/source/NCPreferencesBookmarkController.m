@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 22/04/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCPreferencesBookmarkController.h"
 #import "NSImage+ImageNamedForClass.h"
@@ -26,7 +30,7 @@ NSString* kNCUserDefaultBookmarkItems = @"kNCUserDefaultBookmarkItems";
 }
 
 -(id)initWithCoder:(NSCoder*)coder {
-	[super init];
+	if (!(self = [super init])) return nil;
 	[self setName:[coder decodeObjectForKey:@"name"]];
 	[self setPath:[coder decodeObjectForKey:@"path"]];
 	return self;
@@ -54,7 +58,7 @@ NSString* kNCUserDefaultBookmarkItems = @"kNCUserDefaultBookmarkItems";
 
 +(NCPreferencesBookmarkItem*)itemWithPath:(NSString*)path {	
 	if(path == nil) return nil;
-	NCPreferencesBookmarkItem* item = [[[NCPreferencesBookmarkItem alloc] init] autorelease];
+	NCPreferencesBookmarkItem* item = [[NCPreferencesBookmarkItem alloc] init];
 	item.name = [path lastPathComponent];
 	item.path = path;
 	item.shortcut = @"none";
@@ -62,7 +66,7 @@ NSString* kNCUserDefaultBookmarkItems = @"kNCUserDefaultBookmarkItems";
 }
 
 +(NCPreferencesBookmarkItem*)itemWithName:(NSString*)name path:(NSString*)path {	
-	NCPreferencesBookmarkItem* item = [[[NCPreferencesBookmarkItem alloc] init] autorelease];
+	NCPreferencesBookmarkItem* item = [[NCPreferencesBookmarkItem alloc] init];
 	item.name = name;
 	item.path = path;
 	item.shortcut = @"none";
@@ -144,7 +148,7 @@ NSString* kNCUserDefaultBookmarkItems = @"kNCUserDefaultBookmarkItems";
 	while(thing = [e nextObject]) {
 		if([thing isKindOfClass:[NCPreferencesBookmarkItem class]] == NO) continue;
 		NCPreferencesBookmarkItem* pi = (NCPreferencesBookmarkItem*)thing;
-		NCUserDefaultBookmarkItem* mi = [[[NCUserDefaultBookmarkItem alloc] init] autorelease];
+		NCUserDefaultBookmarkItem* mi = [[NCUserDefaultBookmarkItem alloc] init];
 		[mi setName:[pi name]];
 		[mi setPath:[pi path]]; 
 		[result addObject:mi];
@@ -171,7 +175,7 @@ NSString* kNCUserDefaultBookmarkItems = @"kNCUserDefaultBookmarkItems";
 		NSString* name = [mi name];
 		NSString* path = [mi path];
 
-		NCPreferencesBookmarkItem* item = [[[NCPreferencesBookmarkItem alloc] init] autorelease];
+		NCPreferencesBookmarkItem* item = [[NCPreferencesBookmarkItem alloc] init];
 		item.name = name;
 		item.path = path;   
 		item.shortcut = @"none";
@@ -331,10 +335,9 @@ NSString* kNCUserDefaultBookmarkItems = @"kNCUserDefaultBookmarkItems";
 	// LOG_DEBUG(@"%s %i -> %i", _cmd, index, row);
 	if(index < row) row--;
 
-	id thing = [[[m_items arrangedObjects] objectAtIndex:index] retain];
+	id thing = [[m_items arrangedObjects] objectAtIndex:index];
 	[m_items removeObjectAtArrangedObjectIndex:index];
 	[m_items insertObject:thing atArrangedObjectIndex:row]; 
-	[thing release];
 
 	return YES;
 }

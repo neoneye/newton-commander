@@ -75,7 +75,7 @@ typedef struct {
 {
 	NSString* m_auto_save_name;
 
-	id<NCListerDelegate> m_delegate;
+	id<NCListerDelegate> __unsafe_unretained m_delegate;
 	NCListerTableView* m_lister_tableview;
 	
 	id<NCListerDataSource> m_lister_data_source;
@@ -143,45 +143,45 @@ typedef struct {
 	// renaming
 	NSString* m_edit_name;
 }
-@property (retain) NSString* autoSaveName;
-@property (assign) IBOutlet id<NCListerDelegate> delegate;
-@property (retain) id<NCListerDataSource> listerDataSource;
+@property (strong) NSString* autoSaveName;
+@property (unsafe_unretained) IBOutlet id<NCListerDelegate> delegate;
+@property (strong) id<NCListerDataSource> listerDataSource;
 @property (readonly) BOOL active;
-@property (retain) NSTableColumn* tableColumnName;
-@property (retain) NSTableColumn* tableColumnSize;
-@property (retain) NSTableColumn* tableColumnResourceForkSize;
-@property (retain) NSTableColumn* tableColumnPermissions;
-@property (retain) NSTableColumn* tableColumnOwner;
-@property (retain) NSTableColumn* tableColumnGroup;
-@property (retain) NSTableColumn* tableColumnAccessed;
-@property (retain) NSTableColumn* tableColumnContentModified;
-@property (retain) NSTableColumn* tableColumnAttributeModified;
-@property (retain) NSTableColumn* tableColumnCreated; 
-@property (retain) NSTableColumn* tableColumnBackup; 
-@property (retain) NSTableColumn* tableColumnRefCount;
-@property (retain) NSTableColumn* tableColumnAclCount;
-@property (retain) NSTableColumn* tableColumnXattrCount;
-@property (retain) NSTableColumn* tableColumnInode; 
-@property (retain) NSTableColumn* tableColumnFlags;
-@property (retain) NSTableColumn* tableColumnKind;
-@property (retain) NSTableColumn* tableColumnContentType;
-@property (retain) NSTableColumn* tableColumnComment;
-@property (retain) NSArray* items;             
-@property (retain) NSArray* sortedItems;             
-@property (retain) NSMutableIndexSet* selectedIndexes;             
-@property (retain) NCListerBreadcrumb* currentBreadcrumb;
-@property (retain) NCListerBreadcrumbStack* breadcrumbStack;
-@property (retain) NSColor* highlightedSelectedTextColor;
-@property (retain) NSColor* highlightedTextColor;
-@property (retain) NSColor* selectedTextColor;
-@property (retain) NSColor* textColor;
-@property (retain) NSColor* selectedBackgroundColor;
-@property (retain) NSColor* gridColor;
-@property (retain) NCImageCache* imageCache;
+@property (strong) NSTableColumn* tableColumnName;
+@property (strong) NSTableColumn* tableColumnSize;
+@property (strong) NSTableColumn* tableColumnResourceForkSize;
+@property (strong) NSTableColumn* tableColumnPermissions;
+@property (strong) NSTableColumn* tableColumnOwner;
+@property (strong) NSTableColumn* tableColumnGroup;
+@property (strong) NSTableColumn* tableColumnAccessed;
+@property (strong) NSTableColumn* tableColumnContentModified;
+@property (strong) NSTableColumn* tableColumnAttributeModified;
+@property (strong) NSTableColumn* tableColumnCreated; 
+@property (strong) NSTableColumn* tableColumnBackup; 
+@property (strong) NSTableColumn* tableColumnRefCount;
+@property (strong) NSTableColumn* tableColumnAclCount;
+@property (strong) NSTableColumn* tableColumnXattrCount;
+@property (strong) NSTableColumn* tableColumnInode; 
+@property (strong) NSTableColumn* tableColumnFlags;
+@property (strong) NSTableColumn* tableColumnKind;
+@property (strong) NSTableColumn* tableColumnContentType;
+@property (strong) NSTableColumn* tableColumnComment;
+@property (strong) NSArray* items;             
+@property (strong) NSArray* sortedItems;             
+@property (strong) NSMutableIndexSet* selectedIndexes;             
+@property (strong) NCListerBreadcrumb* currentBreadcrumb;
+@property (strong) NCListerBreadcrumbStack* breadcrumbStack;
+@property (strong) NSColor* highlightedSelectedTextColor;
+@property (strong) NSColor* highlightedTextColor;
+@property (strong) NSColor* selectedTextColor;
+@property (strong) NSColor* textColor;
+@property (strong) NSColor* selectedBackgroundColor;
+@property (strong) NSColor* gridColor;
+@property (strong) NCImageCache* imageCache;
 @property (copy) NSString* editName;
-@property (retain) NSMutableDictionary* nameToIndex;
-@property (retain) NSMutableDictionary* inodeToIndex;
-@property (retain) NSArray* sortDescriptors;
+@property (strong) NSMutableDictionary* nameToIndex;
+@property (strong) NSMutableDictionary* inodeToIndex;
+@property (strong) NSArray* sortDescriptors;
 @property (readonly) NCListerCountersStruct counters;
 
 

@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 01/04/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCTableHeaderCell.h"
 #import "NSGradient+PredefinedGradients.h"
@@ -42,10 +46,10 @@
 	NCTableHeaderCell* cell = (NCTableHeaderCell*)[super copyWithZone:zone];
 	cell->m_sort_indicator = m_sort_indicator;
 	cell->m_padding_cell = m_padding_cell;
-	cell->m_gradient = [m_gradient retain];
-	cell->m_pressed_gradient = [m_pressed_gradient retain];
-	cell->m_selected_gradient = [m_selected_gradient retain];
-	cell->m_selected_pressed_gradient = [m_selected_pressed_gradient retain];
+	cell->m_gradient = m_gradient;
+	cell->m_pressed_gradient = m_pressed_gradient;
+	cell->m_selected_gradient = m_selected_gradient;
+	cell->m_selected_pressed_gradient = m_selected_pressed_gradient;
     return cell;
 }
 
@@ -116,7 +120,7 @@
 	// NSColor* color1 = [NSColor colorWithCalibratedWhite:0.125 alpha:1]; 
 	NSColor* color1 = [NSColor colorWithCalibratedWhite:0.2 alpha:1]; 
 
-	NSMutableDictionary* attr0 = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* attr0 = [[NSMutableDictionary alloc] init];
 	[attr0 setObject:color1 forKey:NSForegroundColorAttributeName];
 	[attr0 setObject:[NSFont boldSystemFontOfSize:11] forKey:NSFontAttributeName];
 	if(1) {
@@ -136,19 +140,18 @@
 	[shadow setShadowBlurRadius:1];
 	[shadow setShadowColor:shadow_color];
 	[attr0 setValue:shadow forKey:NSShadowAttributeName];
-	[shadow release];
 
 
 	/*****************************************************
 	draw the text
 	*****************************************************/
-	NSAttributedString* as0 = [[[NSAttributedString alloc] 
-		initWithString:s attributes:attr0] autorelease];
+	NSAttributedString* as0 = [[NSAttributedString alloc] 
+		initWithString:s attributes:attr0];
 	NSSize size0 = [as0 size];
 
 	NSString* ssort = (m_sort_indicator > 0) ? @"▲" : @"▼";
-	NSAttributedString* as1 = [[[NSAttributedString alloc] 
-		initWithString:ssort attributes:attr0] autorelease];
+	NSAttributedString* as1 = [[NSAttributedString alloc] 
+		initWithString:ssort attributes:attr0];
 	NSSize size1 = [as1 size];
 
 	float padding = 9;

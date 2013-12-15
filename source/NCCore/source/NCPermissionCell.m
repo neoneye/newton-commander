@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 24/05/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NCTimeProfiler.h"
@@ -242,7 +246,7 @@ If there is overflow then an ellipsis char is appended.
 }
 
 -(NSAttributedString*)pretty:(NSUInteger)bits {
-	NSMutableAttributedString* s = [[[NSMutableAttributedString alloc] init] autorelease];
+	NSMutableAttributedString* s = [[NSMutableAttributedString alloc] init];
 	[s appendAttributedString:((bits & 4) ? m_rbit : m_dash)];
 	[s appendAttributedString:((bits & 2) ? m_wbit : m_dash)];
 	[s appendAttributedString:((bits & 1) ? m_xbit : m_dash)];
@@ -250,7 +254,7 @@ If there is overflow then an ellipsis char is appended.
 }
 
 -(NSAttributedString*)prettyOctal:(NSUInteger)bits {
-	NSMutableAttributedString* s = [[[NSMutableAttributedString alloc] init] autorelease];
+	NSMutableAttributedString* s = [[NSMutableAttributedString alloc] init];
 	int i;
 	for(i=0; i<3; i++) {
 		NSAttributedString* as = m_dash;
@@ -273,35 +277,35 @@ If there is overflow then an ellipsis char is appended.
 	NSColor* color1 = [self color1];
 	NSFont* font = [self font];
 
-	NSMutableDictionary* attr0 = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* attr0 = [[NSMutableDictionary alloc] init];
 	if(color0) [attr0 setObject:color0 forKey:NSForegroundColorAttributeName];
 	if(font) [attr0 setObject:font forKey:NSFontAttributeName];
-	NSMutableDictionary* attr1 = [[[NSMutableDictionary alloc] init] autorelease];
+	NSMutableDictionary* attr1 = [[NSMutableDictionary alloc] init];
 	if(color1) [attr1 setObject:color1 forKey:NSForegroundColorAttributeName];
 	if(font) [attr1 setObject:font forKey:NSFontAttributeName];
 
-	NSAttributedString* s_dash = [[[NSAttributedString alloc] 
-		initWithString:@"-" attributes:attr1] autorelease];
-	NSAttributedString* s_r = [[[NSAttributedString alloc] 
-		initWithString:@"r" attributes:attr0] autorelease];
-	NSAttributedString* s_w = [[[NSAttributedString alloc] 
-		initWithString:@"w" attributes:attr0] autorelease];
-	NSAttributedString* s_x = [[[NSAttributedString alloc] 
-		initWithString:@"x" attributes:attr0] autorelease];
-	NSAttributedString* s_1 = [[[NSAttributedString alloc] 
-		initWithString:@"1" attributes:attr0] autorelease];
-	NSAttributedString* s_2 = [[[NSAttributedString alloc] 
-		initWithString:@"2" attributes:attr0] autorelease];
-	NSAttributedString* s_3 = [[[NSAttributedString alloc] 
-		initWithString:@"3" attributes:attr0] autorelease];
-	NSAttributedString* s_4 = [[[NSAttributedString alloc] 
-		initWithString:@"4" attributes:attr0] autorelease];
-	NSAttributedString* s_5 = [[[NSAttributedString alloc] 
-		initWithString:@"5" attributes:attr0] autorelease];
-	NSAttributedString* s_6 = [[[NSAttributedString alloc] 
-		initWithString:@"6" attributes:attr0] autorelease];
-	NSAttributedString* s_7 = [[[NSAttributedString alloc] 
-		initWithString:@"7" attributes:attr0] autorelease];
+	NSAttributedString* s_dash = [[NSAttributedString alloc] 
+		initWithString:@"-" attributes:attr1];
+	NSAttributedString* s_r = [[NSAttributedString alloc] 
+		initWithString:@"r" attributes:attr0];
+	NSAttributedString* s_w = [[NSAttributedString alloc] 
+		initWithString:@"w" attributes:attr0];
+	NSAttributedString* s_x = [[NSAttributedString alloc] 
+		initWithString:@"x" attributes:attr0];
+	NSAttributedString* s_1 = [[NSAttributedString alloc] 
+		initWithString:@"1" attributes:attr0];
+	NSAttributedString* s_2 = [[NSAttributedString alloc] 
+		initWithString:@"2" attributes:attr0];
+	NSAttributedString* s_3 = [[NSAttributedString alloc] 
+		initWithString:@"3" attributes:attr0];
+	NSAttributedString* s_4 = [[NSAttributedString alloc] 
+		initWithString:@"4" attributes:attr0];
+	NSAttributedString* s_5 = [[NSAttributedString alloc] 
+		initWithString:@"5" attributes:attr0];
+	NSAttributedString* s_6 = [[NSAttributedString alloc] 
+		initWithString:@"6" attributes:attr0];
+	NSAttributedString* s_7 = [[NSAttributedString alloc] 
+		initWithString:@"7" attributes:attr0];
 		
 	[self setRbit:s_r];
 	[self setWbit:s_w];

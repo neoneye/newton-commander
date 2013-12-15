@@ -19,10 +19,10 @@
 	
 	int m_sort_indicator;
 }
-@property(nonatomic, retain) NSGradient* gradient;
-@property(nonatomic, retain) NSGradient* pressedGradient;
-@property(nonatomic, retain) NSGradient* selectedGradient;
-@property(nonatomic, retain) NSGradient* selectedPressedGradient;
+@property(nonatomic, strong) NSGradient* gradient;
+@property(nonatomic, strong) NSGradient* pressedGradient;
+@property(nonatomic, strong) NSGradient* selectedGradient;
+@property(nonatomic, strong) NSGradient* selectedPressedGradient;
 
 // -1 = descending, 0 = none, 1 = ascending
 @property(nonatomic) int sortIndicator;

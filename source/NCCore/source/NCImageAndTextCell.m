@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 24/05/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NCTimeProfiler.h"
@@ -69,15 +73,11 @@ If there is overflow then an ellipsis char is appended.
 }
 
 - (void)dealloc {
-    [m_image2 release];
 	m_image2 = nil;
-    [super dealloc];
 }
 
 -(void)setImage2:(NSImage *)anImage {
     if (anImage != m_image2) {
-		[anImage retain];
-        [m_image2 release];
         m_image2 = anImage;
     }
 }
@@ -91,7 +91,7 @@ If there is overflow then an ellipsis char is appended.
     NCImageAndTextCell* cell = (NCImageAndTextCell*)[super copyWithZone:zone];
 
     // The image ivar will be directly copied; we need to retain or copy it.
-    cell->m_image2 = [m_image2 retain];
+    cell->m_image2 = m_image2;
 
 	cell->m_width_of_image_box = m_width_of_image_box;
 
@@ -181,15 +181,15 @@ If there is overflow then an ellipsis char is appended.
 	
 	NSAttributedString* s = nil;
 	{
-		NSMutableDictionary* attr = [[[NSMutableDictionary alloc] init] autorelease];
+		NSMutableDictionary* attr = [[NSMutableDictionary alloc] init];
 		id obj = [self color0];
 		if(obj) [attr setObject:obj forKey:NSForegroundColorAttributeName];
 
 		obj = [self font];
 		if(obj) [attr setObject:obj forKey:NSFontAttributeName];
 
-		s = [[[NSAttributedString alloc] 
-			initWithString:[self stringValue] attributes:attr] autorelease];
+		s = [[NSAttributedString alloc] 
+			initWithString:[self stringValue] attributes:attr];
 	}
 	// NSAttributedString* s = [self attributedStringValue];
 
