@@ -65,7 +65,6 @@ names1
 #import "NCScroller.h"
 #import "NCTableHeaderCell.h"
 #import "NCTableHeaderView.h"
-#import "NCTableCornerView.h"
 #import "NCFileManager.h"
 #import "NCListerDataSource.h"
 #import "NSImage+ImageNamedForClass.h"
@@ -1285,11 +1284,6 @@ BOOL is_the_cocoa_simulator_running() {
 		NCTableHeaderView* hv = [[NCTableHeaderView alloc] initWithFrame:hvr];
 		[hv setDelegate:self];
 
-		NSRect cvr = NSMakeRect(0, 0, 17, header_height);
-		NCTableCornerView* cv = [[NCTableCornerView alloc] initWithFrame:cvr];
-		[cv setMenuTarget:self];
-		[cv setMenuAction:@selector(showMenuAction:)];
-
 		NSView* superView = self;
 
 		NSRect svrect = [superView bounds];
@@ -1305,7 +1299,6 @@ BOOL is_the_cocoa_simulator_running() {
 			lister:self
 		];
 		[tableView setHeaderView:hv];
-		[tableView setCornerView:cv];
 
 		// NCListerTableHeaderView* hv = [[NCListerTableHeaderView alloc] initWithFrame:NSMakeRect(0, 0, 100, 20)];
 		// [tableView setHeaderView:hv];
@@ -3050,30 +3043,6 @@ traps escape key so you can cancel the operation
 	return [self headerMenuForColumn:column_index];
 }
 
--(void)showMenuAction:(id)sender {
-	NSEvent* cur_event = [NSApp currentEvent];
-	// LOG_DEBUG(@"%s %@", _cmd, cur_event);
-	
-	// only show the menu when CTRL is pressed.. or right mouse button is used
-/*	BOOL is_ctrl_key = ([cur_event modifierFlags] & NSControlKeyMask);
-	BOOL is_right_mouse = ([cur_event type] == NSRightMouseDown); 
-	BOOL satisfied = is_ctrl_key | is_right_mouse;
-	if(!satisfied) return; */
-
-	NSMenu* menu = [self headerMenuForColumn:-1];
-	NSPoint location = [cur_event locationInWindow];
-	NSEvent* event = [NSEvent otherEventWithType:NSApplicationDefined
-		location:location 
-		modifierFlags:0 
-		timestamp:0
-		windowNumber:[[self window] windowNumber]
-		context:[[self window] graphicsContext]
-		subtype:100
-		data1:0
-		data2:0
-	];
-    [NSMenu popUpContextMenu:menu withEvent:event forView:self];
-}
 
 #pragma mark -
 #pragma mark Auto Save Column Layout
