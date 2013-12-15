@@ -62,7 +62,6 @@ names1
 #import "NCListerBreadcrumb.h"
 #import "NCListerItem.h"
 #import "NCDirEnumerator.h"
-#import "NCScroller.h"
 #import "NCTableHeaderCell.h"
 #import "NCTableHeaderView.h"
 #import "NCFileManager.h"
@@ -72,7 +71,6 @@ names1
 #import "NSArray+PrependPath.h"
 #import "NSGradient+PredefinedGradients.h"
 #import "NSTableView+ColumnLayout.h"
-#import "NCScrollView.h"
 #import "NCTimeProfiler.h"
 #import "NCImageCache.h"
 #import "NCListerCell.h"
@@ -1183,57 +1181,6 @@ BOOL is_the_cocoa_simulator_running() {
 		[m_tablecolumn_content_type setDataCell:cell_text_column];
 		// [m_tablecolumn_comment setDataCell:cell_text_column];
 	}
-	
-	do {
-		id theme = nil; 
-		switch(color_index) {
-		default:
-
-		// white
-		case 0:
-		
-		// gray
-		case 1: {
-			theme = [NCScroller grayTheme]; 
-			if(m_active) {
-				theme = [NCScroller grayBlueTheme]; 
-			}
-			break; }
-
-		// black
-		case 2: {
-			theme = [NCScroller darkTheme]; 
-			if(m_active) {
-				// LOG_DEBUG(@"black is active");
-			    NSMutableDictionary* t = [theme mutableCopy];
-				// NSGradient* grad = [NSGradient pinkGradient];
-				NSGradient* grad = [NSGradient blueSelectedRowGradient];
-			    [t setObject:grad forKey:@"activeKnobGradient"];
-				theme = [t copy];
-			}
-			break; }
-		}
-		
-		if(theme == nil) break;
-		
-		NSScrollView* sv = [m_lister_tableview enclosingScrollView];
-		{
-			id thing = [sv horizontalScroller];
-			if([thing isKindOfClass:[NCScroller class]]) {
-				NCScroller* scroller = (NCScroller*)thing;
-				[scroller adjustThemeForDictionary:theme];
-			}
-		}
-		{
-			id thing = [sv verticalScroller];
-			if([thing isKindOfClass:[NCScroller class]]) {
-				NCScroller* scroller = (NCScroller*)thing;
-				[scroller adjustThemeForDictionary:theme];
-			}
-		}
-		[sv setNeedsDisplay:YES];
-	} while(0);
-
 
 	{
 		[m_lister_tableview setGridColor:self.gridColor];
@@ -1398,39 +1345,11 @@ BOOL is_the_cocoa_simulator_running() {
 		// NCListerScroller* scroller = [[NCListerScroller alloc] initWithFrame:sr];
 		
 
-        NSScrollView* scrollView = nil;
-        
-        // Revert to the default iPad-like scrollbars on Lion and later
-        SInt32 majorVersion, minorVersion;
-        Gestalt(gestaltSystemVersionMajor, &majorVersion);
-        Gestalt(gestaltSystemVersionMinor, &minorVersion);
-        BOOL is_lion_or_better = ((majorVersion >= 10 && minorVersion >= 7));
-        
-        if (is_lion_or_better) {
-            // On Lion or later, reverting to default scroll bar
-            scrollView = [[NSScrollView alloc] initWithFrame:svrect];
-        } else {
-            // show iTunes scrollers on Snow Leopard or earlier
-            scrollView = [[NCScrollView alloc] initWithFrame:svrect];
-        }
+        NSScrollView* scrollView = [[NSScrollView alloc] initWithFrame:svrect];
 
 		[scrollView setHasVerticalScroller:YES];
 		[scrollView setHasHorizontalScroller:YES];
 		[scrollView setAutohidesScrollers:YES];
-		
-        if (!is_lion_or_better) {
-            NSRect vframe = [[scrollView verticalScroller] frame];
-            NCScroller* vscroller = [[NCScroller alloc] initWithFrame:vframe];
-            [scrollView setVerticalScroller:vscroller];
-            // m_vertical_scroller = vscroller;
-            
-            NSRect hframe = [[scrollView horizontalScroller] frame];
-            NCScroller* hscroller = [[NCScroller alloc] initWithFrame:hframe];
-            [scrollView setHorizontalScroller:hscroller];
-            // m_horizontal_scroller = hscroller;
-        }
-		
-		
 		
 		[scrollView setDocumentView:tableView];
 		[scrollView setFocusRingType:NSFocusRingTypeNone];

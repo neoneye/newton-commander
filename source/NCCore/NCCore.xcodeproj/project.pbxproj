@@ -86,7 +86,6 @@
 		42C1556C115615B7000A0547 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C1556B115615B7000A0547 /* Quartz.framework */; };
 		42C1F47C12074D3C00C1BCB5 /* NCPathControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C1F47A12074D3C00C1BCB5 /* NCPathControl.m */; };
 		42C1F67E1209E69800C1BCB5 /* NCVolumeStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C1F67C1209E69800C1BCB5 /* NCVolumeStatus.m */; };
-		42C1F792120AC32C00C1BCB5 /* NCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C1F790120AC32C00C1BCB5 /* NCScrollView.m */; };
 		42C218711124911B007097ED /* NCListerTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C2186F1124911B007097ED /* NCListerTableHeaderView.m */; };
 		42C219471129C9B6007097ED /* NCListerScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C219451129C9B6007097ED /* NCListerScroller.m */; };
 		42C219841129F4E6007097ED /* NCListerCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C219821129F4E6007097ED /* NCListerCounter.m */; };
@@ -97,7 +96,6 @@
 		42D158AF11614A5F00F66068 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D158AD11614A5F00F66068 /* MAAttachedWindow.m */; };
 		42D159B9116BA27500F66068 /* NCTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D159AD116BA27500F66068 /* NCTableHeaderView.m */; };
 		42D159BB116BA27500F66068 /* NCTableHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D159AF116BA27500F66068 /* NCTableHeaderCell.m */; };
-		42D159C3116BA27500F66068 /* NCScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D159B7116BA27500F66068 /* NCScroller.m */; };
 		42D44A0E1216EE6100CB5BF5 /* NCMoveSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A0C1216EE6100CB5BF5 /* NCMoveSheet.m */; };
 		42D44A6112172C3800CB5BF5 /* NCDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A5F12172C3800CB5BF5 /* NCDateCell.m */; };
 		42DBA09A11F2024400DD57A8 /* NCListerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA09811F2024400DD57A8 /* NCListerItem.m */; };
@@ -288,8 +286,6 @@
 		42C1F47A12074D3C00C1BCB5 /* NCPathControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPathControl.m; sourceTree = "<group>"; };
 		42C1F67B1209E69800C1BCB5 /* NCVolumeStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCVolumeStatus.h; sourceTree = "<group>"; };
 		42C1F67C1209E69800C1BCB5 /* NCVolumeStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCVolumeStatus.m; sourceTree = "<group>"; };
-		42C1F78F120AC32C00C1BCB5 /* NCScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScrollView.h; sourceTree = "<group>"; };
-		42C1F790120AC32C00C1BCB5 /* NCScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScrollView.m; sourceTree = "<group>"; };
 		42C2186E1124911B007097ED /* NCListerTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerTableHeaderView.h; sourceTree = "<group>"; };
 		42C2186F1124911B007097ED /* NCListerTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerTableHeaderView.m; sourceTree = "<group>"; };
 		42C219441129C9B6007097ED /* NCListerScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerScroller.h; sourceTree = "<group>"; };
@@ -310,8 +306,6 @@
 		42D159AE116BA27500F66068 /* NCTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTableHeaderView.h; sourceTree = "<group>"; };
 		42D159AF116BA27500F66068 /* NCTableHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTableHeaderCell.m; sourceTree = "<group>"; };
 		42D159B0116BA27500F66068 /* NCTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTableHeaderCell.h; sourceTree = "<group>"; };
-		42D159B7116BA27500F66068 /* NCScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScroller.m; sourceTree = "<group>"; };
-		42D159B8116BA27500F66068 /* NCScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScroller.h; sourceTree = "<group>"; };
 		42D44A0B1216EE6100CB5BF5 /* NCMoveSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMoveSheet.h; sourceTree = "<group>"; };
 		42D44A0C1216EE6100CB5BF5 /* NCMoveSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMoveSheet.m; sourceTree = "<group>"; };
 		42D44A5E12172C3800CB5BF5 /* NCDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDateCell.h; sourceTree = "<group>"; };
@@ -596,8 +590,6 @@
 				42D159AE116BA27500F66068 /* NCTableHeaderView.h */,
 				42D159AF116BA27500F66068 /* NCTableHeaderCell.m */,
 				42D159B0116BA27500F66068 /* NCTableHeaderCell.h */,
-				42D159B7116BA27500F66068 /* NCScroller.m */,
-				42D159B8116BA27500F66068 /* NCScroller.h */,
 				42D158AC11614A5F00F66068 /* MAAttachedWindow.h */,
 				42D158AD11614A5F00F66068 /* MAAttachedWindow.m */,
 				4297057F111768D300830B40 /* NCBackground.h */,
@@ -643,8 +635,6 @@
 				42C1F47A12074D3C00C1BCB5 /* NCPathControl.m */,
 				42C1F67B1209E69800C1BCB5 /* NCVolumeStatus.h */,
 				42C1F67C1209E69800C1BCB5 /* NCVolumeStatus.m */,
-				42C1F78F120AC32C00C1BCB5 /* NCScrollView.h */,
-				42C1F790120AC32C00C1BCB5 /* NCScrollView.m */,
 				42D44A0B1216EE6100CB5BF5 /* NCMoveSheet.h */,
 				42D44A0C1216EE6100CB5BF5 /* NCMoveSheet.m */,
 				42D44A5E12172C3800CB5BF5 /* NCDateCell.h */,
@@ -852,7 +842,6 @@
 				42D158AF11614A5F00F66068 /* MAAttachedWindow.m in Sources */,
 				42D159B9116BA27500F66068 /* NCTableHeaderView.m in Sources */,
 				42D159BB116BA27500F66068 /* NCTableHeaderCell.m in Sources */,
-				42D159C3116BA27500F66068 /* NCScroller.m in Sources */,
 				42A86A75117B48C40061FC48 /* NCSplitView.m in Sources */,
 				42A86D0E1182C8CD0061FC48 /* NCPreferencesBookmarkController.m in Sources */,
 				42A86D101182C8CD0061FC48 /* NCPreferencesGeneralController.m in Sources */,
@@ -877,7 +866,6 @@
 				42010DDD1206B66B0002191E /* NCHelpView.m in Sources */,
 				42C1F47C12074D3C00C1BCB5 /* NCPathControl.m in Sources */,
 				42C1F67E1209E69800C1BCB5 /* NCVolumeStatus.m in Sources */,
-				42C1F792120AC32C00C1BCB5 /* NCScrollView.m in Sources */,
 				42D44A0E1216EE6100CB5BF5 /* NCMoveSheet.m in Sources */,
 				42D44A6112172C3800CB5BF5 /* NCDateCell.m in Sources */,
 				423CD53512259BBD00659683 /* NCImageCache.m in Sources */,
