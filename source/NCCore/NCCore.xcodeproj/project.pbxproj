@@ -39,6 +39,7 @@
 		423451F2123E95E000FDAAA5 /* NCPermissionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 423451F0123E95E000FDAAA5 /* NCPermissionSheet.m */; };
 		42398B7313C25DD000220EA6 /* VerticalLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42398B7013C25DD000220EA6 /* VerticalLayoutView.m */; };
 		423CD53512259BBD00659683 /* NCImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 423CD53312259BBD00659683 /* NCImageCache.m */; };
+		423FC89C185DE2A2007425DA /* libSharedCodeCoreWorker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 423FC899185DE28D007425DA /* libSharedCodeCoreWorker.a */; };
 		425A7E6F11992317008C328E /* mkdir.png in Resources */ = {isa = PBXBuildFile; fileRef = 425A7E6D11992317008C328E /* mkdir.png */; };
 		425A7E7011992317008C328E /* mkfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 425A7E6E11992317008C328E /* mkfile.png */; };
 		425A7EB011992B4B008C328E /* cd_parent_dir2.png in Resources */ = {isa = PBXBuildFile; fileRef = 425A7EAC11992B4B008C328E /* cd_parent_dir2.png */; };
@@ -101,20 +102,6 @@
 		42D44A0E1216EE6100CB5BF5 /* NCMoveSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A0C1216EE6100CB5BF5 /* NCMoveSheet.m */; };
 		42D44A6112172C3800CB5BF5 /* NCDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D44A5F12172C3800CB5BF5 /* NCDateCell.m */; };
 		42DBA09A11F2024400DD57A8 /* NCListerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DBA09811F2024400DD57A8 /* NCListerItem.m */; };
-		42FEEC9A12108F90000E031B /* FPOCsvWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8512108F90000E031B /* FPOCsvWriter.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEEC9B12108F90000E031B /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8612108F90000E031B /* NCDirEnumerator.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEEC9C12108F90000E031B /* NCFileEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8712108F90000E031B /* NCFileEventManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEEC9D12108F90000E031B /* NCFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8812108F90000E031B /* NCFileItem.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEEC9E12108F90000E031B /* NCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8912108F90000E031B /* NCFileManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEEC9F12108F90000E031B /* NCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8A12108F90000E031B /* NCLog.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECA012108F90000E031B /* NCTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8B12108F90000E031B /* NCTimeProfiler.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECA212108F90000E031B /* sc_finder_info_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8D12108F90000E031B /* sc_finder_info_manager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECA412108F90000E031B /* sc_resource_fork_manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC8F12108F90000E031B /* sc_resource_fork_manager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECA612108F90000E031B /* sc_scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9112108F90000E031B /* sc_scanner.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECA812108F90000E031B /* sc_tov_copier.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9312108F90000E031B /* sc_tov_copier.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECAA12108F90000E031B /* sc_tov_print.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9512108F90000E031B /* sc_tov_print.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECAC12108F90000E031B /* sc_transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9712108F90000E031B /* sc_transfer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42FEECAE12108F90000E031B /* sc_traversal_objects.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FEEC9912108F90000E031B /* sc_traversal_objects.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +111,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = NCCoreFramework;
+		};
+		423FC898185DE28D007425DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423FC894185DE28D007425DA /* SharedCode Core+Worker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = SharedCodeCoreWorker;
+		};
+		423FC89A185DE299007425DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423FC894185DE28D007425DA /* SharedCode Core+Worker.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = SharedCodeCoreWorker;
 		};
 		425D7DEE11C54E5500F9A9A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -204,6 +205,7 @@
 		42398B7113C25DD000220EA6 /* VerticalLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLayoutView.h; sourceTree = "<group>"; };
 		423CD53212259BBD00659683 /* NCImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImageCache.h; sourceTree = "<group>"; };
 		423CD53312259BBD00659683 /* NCImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImageCache.m; sourceTree = "<group>"; };
+		423FC894185DE28D007425DA /* SharedCode Core+Worker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SharedCode Core+Worker.xcodeproj"; path = "../SharedCode Core+Worker/SharedCode Core+Worker.xcodeproj"; sourceTree = "<group>"; };
 		42577A421210790F000165E1 /* NCFileEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCFileEventManager.h; path = "../SharedCode Core+Worker/source/NCFileEventManager.h"; sourceTree = SOURCE_ROOT; };
 		425A7C0F1198736B008C328E /* NCCoreFramework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NCCoreFramework-Info.plist"; sourceTree = "<group>"; };
 		425A7E6D11992317008C328E /* mkdir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mkdir.png; path = images_framework/mkdir.png; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423FC89C185DE2A2007425DA /* libSharedCodeCoreWorker.a in Frameworks */,
 				42271FB911D14AF400E5FFE1 /* WebKit.framework in Frameworks */,
 				425D7DF911C54EDB00F9A9A6 /* libNCWorkerLib.a in Frameworks */,
 				13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */,
@@ -376,6 +379,7 @@
 		0259C574FE90428111CA0C5A /* NCToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				423FC894185DE28D007425DA /* SharedCode Core+Worker.xcodeproj */,
 				42107A2011F11820001372D8 /* Headers Worker */,
 				42107A1A11F117DD001372D8 /* SharedCode */,
 				425D7DE811C54E5500F9A9A6 /* NCWorker.xcodeproj */,
@@ -505,6 +509,14 @@
 				427A8A3911DEA17200DE7391 /* NSTabView+SwitchExtensions.m */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		423FC895185DE28D007425DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				423FC899185DE28D007425DA /* libSharedCodeCoreWorker.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		425D7DE911C54E5500F9A9A6 /* Products */ = {
@@ -687,6 +699,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				423FC89B185DE299007425DA /* PBXTargetDependency */,
 				425D7DF511C54E6B00F9A9A6 /* PBXTargetDependency */,
 				425D7DF711C54E7000F9A9A6 /* PBXTargetDependency */,
 			);
@@ -720,6 +733,10 @@
 					ProductGroup = 425D7DE911C54E5500F9A9A6 /* Products */;
 					ProjectRef = 425D7DE811C54E5500F9A9A6 /* NCWorker.xcodeproj */;
 				},
+				{
+					ProductGroup = 423FC895185DE28D007425DA /* Products */;
+					ProjectRef = 423FC894185DE28D007425DA /* SharedCode Core+Worker.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -731,6 +748,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		423FC899185DE28D007425DA /* libSharedCodeCoreWorker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSharedCodeCoreWorker.a;
+			remoteRef = 423FC898185DE28D007425DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		425D7DEF11C54E5500F9A9A6 /* NCWorkerTest.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -860,20 +884,6 @@
 				42C1F47C12074D3C00C1BCB5 /* NCPathControl.m in Sources */,
 				42C1F67E1209E69800C1BCB5 /* NCVolumeStatus.m in Sources */,
 				42C1F792120AC32C00C1BCB5 /* NCScrollView.m in Sources */,
-				42FEEC9A12108F90000E031B /* FPOCsvWriter.m in Sources */,
-				42FEEC9B12108F90000E031B /* NCDirEnumerator.m in Sources */,
-				42FEEC9C12108F90000E031B /* NCFileEventManager.m in Sources */,
-				42FEEC9D12108F90000E031B /* NCFileItem.m in Sources */,
-				42FEEC9E12108F90000E031B /* NCFileManager.m in Sources */,
-				42FEEC9F12108F90000E031B /* NCLog.m in Sources */,
-				42FEECA012108F90000E031B /* NCTimeProfiler.m in Sources */,
-				42FEECA212108F90000E031B /* sc_finder_info_manager.m in Sources */,
-				42FEECA412108F90000E031B /* sc_resource_fork_manager.m in Sources */,
-				42FEECA612108F90000E031B /* sc_scanner.m in Sources */,
-				42FEECA812108F90000E031B /* sc_tov_copier.m in Sources */,
-				42FEECAA12108F90000E031B /* sc_tov_print.m in Sources */,
-				42FEECAC12108F90000E031B /* sc_transfer.m in Sources */,
-				42FEECAE12108F90000E031B /* sc_traversal_objects.m in Sources */,
 				42D44A0E1216EE6100CB5BF5 /* NCMoveSheet.m in Sources */,
 				42D44A6112172C3800CB5BF5 /* NCDateCell.m in Sources */,
 				423CD53512259BBD00659683 /* NCImageCache.m in Sources */,
@@ -896,6 +906,11 @@
 			isa = PBXTargetDependency;
 			target = 53DF68FC067E5B5A0090B5B0 /* NCCoreFramework */;
 			targetProxy = 422F200411A84DDB0029C47A /* PBXContainerItemProxy */;
+		};
+		423FC89B185DE299007425DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SharedCodeCoreWorker;
+			targetProxy = 423FC89A185DE299007425DA /* PBXContainerItemProxy */;
 		};
 		425D7DF511C54E6B00F9A9A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
