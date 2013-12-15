@@ -45,7 +45,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 
 - (id)init {
     if(self = [super init]) {
-		m_delegate = nil;
 		m_working_dir = nil;
 		m_resolved_working_dir = nil;
 		m_items = nil;
@@ -60,8 +59,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 }
 
 - (void)dealloc {
-	m_delegate = nil;
-	
 	m_working_dir = nil;
 	
 	m_resolved_working_dir = nil;
@@ -75,11 +72,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 	[self setCopyOperationSourceDir:nil];
 	[self setCopyOperationTargetDir:nil];
 
-}
-
-
--(void)setDelegate:(id<NCListerDataSourceDelegate>)delegate {
-	m_delegate = delegate;
 }
 
 
@@ -187,9 +179,8 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
     NSString* resolved_path = [dict objectForKey:@"resolved_path"];
 	if(resolved_path) {
 		// LOG_DEBUG(@"resolved_path: %@", resolved_path);
-		SEL sel = @selector(listerDataSource:resolvedPath:);
-		if([m_delegate respondsToSelector:sel]) {
-			[m_delegate performSelector:sel withObject:self withObject:resolved_path];
+		if([self.delegate respondsToSelector:@selector(listerDataSource:resolvedPath:)]) {
+			[self.delegate listerDataSource:self resolvedPath:resolved_path];
 		}
 	} else {
 		// LOG_DEBUG(@"not resolved");
@@ -219,9 +210,9 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 			NSArray* result_items2 = [[NSArray alloc] initWithArray:result_items copyItems:YES];
 
 			SEL sel = @selector(listerDataSource:updateItems:progress:);
-			if([m_delegate respondsToSelector:sel]) {
+			if([self.delegate respondsToSelector:sel]) {
 
-				id obj = m_delegate;
+				id obj = self.delegate;
 				id arg2 = self;
 				id arg3 = result_items2;
 				NSUInteger arg4 = progress;
@@ -242,9 +233,8 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 		
 		{
 			if([phase isEqualToString:@"last"]) {
-				SEL sel = @selector(listerDataSourceFinishedLoading:);
-				if([m_delegate respondsToSelector:sel]) {
-					[m_delegate performSelector:sel withObject:self];
+				if([self.delegate respondsToSelector:@selector(listerDataSourceFinishedLoading:)]) {
+					[self.delegate listerDataSourceFinishedLoading:self];
 				}
 			}
 		}
@@ -258,9 +248,8 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 
 -(void)workerResponseMonitor:(NSDictionary*)dict {
 	// LOG_DEBUG(@"this dir needs reload");
-	SEL sel = @selector(fileSystemDidChange:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(fileSystemDidChange:)]) {
+		[self.delegate fileSystemDidChange:self];
 	}
 }
 

@@ -17,7 +17,6 @@
 	NCTimeProfilerSetWorkingDir* m_profiler;
 
 	// file listing
-	id<NCListerDataSourceDelegate> m_delegate;
 	NSString* m_working_dir;
 	NSString* m_resolved_working_dir;
 	NSArray* m_items;
@@ -36,7 +35,7 @@
 }
 @property (strong) NCWorker* worker;
 
--(void)setDelegate:(id<NCListerDataSourceDelegate>)delegate;
+@property (nonatomic, weak) id<NCListerDataSourceDelegate> delegate;
 
 -(void)setWorkingDir:(NSString*)path;
 

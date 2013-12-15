@@ -28,6 +28,8 @@
 
 -(void)listerDataSource:(id<NCListerDataSource>)dataSource updateItems:(NSArray*)items progress:(NSUInteger)progress;
 
+-(void)listerDataSourceFinishedLoading:(id<NCListerDataSource>)dataSource;
+
 -(void)fileSystemDidChange:(id<NCListerDataSource>)dataSource;
 
 @end
