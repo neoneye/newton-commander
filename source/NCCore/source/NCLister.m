@@ -206,15 +206,6 @@ static const int font_index = 1;
 
 
 
-static int compareListerItemsUsingSelector(id item1, id item2, void *context) {
-    // cast context to what we know it really is:  a SEL
-    SEL methodSelector = (SEL)context;
-    id value1 = [item1 performSelector:methodSelector];
-    id value2 = [item2 performSelector:methodSelector];
-    return [value1 caseInsensitiveCompare:value2];
-}
-
-
 #if 0
 @interface MyDebugColumn : NSTableColumn {
 }

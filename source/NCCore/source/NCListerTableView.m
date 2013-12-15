@@ -136,7 +136,6 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 @interface NCListerTableView (Private)
 - (BOOL)isThisPanelActive;
 
--(void)ofmRepeatEvent:(NSEvent*)event selector:(SEL)sel notification:(NSNotification*)note;
 -(void)repeatEvent:(NSEvent*)event selector:(SEL)sel0 shiftSelector:(SEL)sel1;
 
 -(void)popupContextMenuMode:(int)left_or_right;
@@ -179,48 +178,6 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 		[self adjustThemeForDictionary:[NCListerTableView whiteTheme]];
 	}
 	return self;
-}
-
--(void)ofmRepeatEvent:(NSEvent*)event selector:(SEL)sel notification:(NSNotification*)note {
-	id del = [self delegate];
-	if([del respondsToSelector:sel]) {
-		// ok
-	} else
-	if([self respondsToSelector:sel]) {
-		del = self;
-	} else {
-		return;
-	}
-
-	NSEvent* xevent = event;
-	for(int count=0; ; ++count) {
-		NSEventType event_type = [xevent type];
-		if(event_type == NSKeyUp) {
-			break;
-		}
-		[del performSelector:sel withObject:note];
-
-		float waittime = 0.0001;
-		if(count == 0) waittime = 0.25;
-		else
-		if(count < 10) waittime = 0.015;
-		else
-		if(count < 30) waittime = 0.0075;
-		else
-		if(count < 80) waittime = 0.005;
-		else
-		if(count < 130) waittime = 0.002;
-		else
-		if(count < 240) waittime = 0.001;
-
-		NSDate* date = [NSDate dateWithTimeIntervalSinceNow:
-			waittime];
-        xevent = [NSApp nextEventMatchingMask:NSAnyEventMask
-			untilDate:date 
-			inMode:NSDefaultRunLoopMode 
-			dequeue:YES
-		];
-	}
 }
 
 -(void)repeatEvent:(NSEvent*)event selector:(SEL)sel0 shiftSelector:(SEL)sel1 {
