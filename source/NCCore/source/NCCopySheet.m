@@ -11,6 +11,7 @@
 #import "NSView+SubviewExtensions.h"
 #import "NCCopyOperationDummy.h"
 #import "NCCommon.h"
+#import "NCPathControl.h"
 // #import <QuartzCore/CAAnimation.h>
 // #import <QuartzCore/QuartzCore.h>
 

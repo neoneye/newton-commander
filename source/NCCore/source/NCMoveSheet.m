@@ -11,6 +11,7 @@
 #import "NSView+SubviewExtensions.h"
 #import "NCMoveOperationDummy.h"
 #import "NCCommon.h"
+#import "NCPathControl.h"
 
 
 @implementation NCMoveSheetItem
