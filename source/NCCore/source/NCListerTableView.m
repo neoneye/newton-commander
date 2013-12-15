@@ -406,7 +406,11 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 	
 	// LOG_DEBUG(@"%s this panel is active", _cmd);
 
-	id del = [self delegate];
+	id <NCListerTableViewDelegate> del = nil;
+	id tableViewDelegate = [self delegate];
+	if ([tableViewDelegate conformsToProtocol:@protocol(NCListerTableViewDelegate)]) {
+		del = (id <NCListerTableViewDelegate>)tableViewDelegate;
+	}
 	
 /*	id sv = [self enclosingScrollView];
 	LOG_DEBUG(@"%s self: %@   del: %@    sv: %@", _cmd, self, del, sv);*/
@@ -444,14 +448,12 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 			all, because only NCLister is supposed to create instances of this class.
 			*/
 			// LOG_DEBUG(@"self: %@ (%08x) -  switch to prev tab: %@", self, (void*)self, m_lister);
-			SEL sel = @selector(switchToPrevTab:);
-			if([del respondsToSelector:sel]) {
-				[del performSelector:sel withObject:self];
+			if([del respondsToSelector:@selector(switchToPrevTab:)]) {
+				[del switchToPrevTab:self];
 			}
 		} else {
-			SEL sel = @selector(switchToNextTab:);
-			if([del respondsToSelector:sel]) {
-				[del performSelector:sel withObject:self];
+			if([del respondsToSelector:@selector(switchToNextTab:)]) {
+				[del switchToNextTab:self];
 			}
 		}
 		return YES; }
@@ -471,9 +473,8 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 		}
 		// LOG_DEBUG(@"%s close tab", _cmd);
 
-		SEL sel = @selector(closeTab:);
-		if([del respondsToSelector:sel]) {
-			[del performSelector:sel withObject:self];
+		if([del respondsToSelector:@selector(closeTab:)]) {
+			[del closeTab:self];
 		}
 		
 		return YES; }

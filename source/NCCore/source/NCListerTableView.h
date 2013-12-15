@@ -9,6 +9,20 @@
 #import <Cocoa/Cocoa.h>
 
 @class NCLister;
+@class NCListerTableView;
+
+
+@protocol NCListerTableViewDelegate <NSObject>
+-(void)tableView:(NCListerTableView*)tableview markRow:(int)row;
+-(void)tabKeyPressed:(id)sender;
+-(void)switchToNextTab:(id)sender;
+-(void)switchToPrevTab:(id)sender;
+-(void)closeTab:(id)sender;
+-(void)activateTableView:(id)sender;
+-(BOOL)isActiveTableView;
+-(void)showLeftContextMenu:(id)sender;
+-(void)showRightContextMenu:(id)sender;
+@end
 
 @interface NCListerTableView : NSTableView {
 	NCLister* m_lister;
@@ -57,14 +71,3 @@
 
 @end
 
-@interface NSObject (NCListerTableViewDelegate)
--(void)tableView:(NCListerTableView*)tableview markRow:(int)row;
--(void)tabKeyPressed:(id)sender;
--(void)switchToNextTab:(id)sender;
--(void)switchToPrevTab:(id)sender;
--(void)closeTab:(id)sender;
--(void)activateTableView:(id)sender;
--(BOOL)isActiveTableView;
--(void)showLeftContextMenu:(id)sender;
--(void)showRightContextMenu:(id)sender;
-@end

@@ -254,7 +254,7 @@ BOOL is_the_cocoa_simulator_running() {
 
 
 
-@interface NCLister (Private)
+@interface NCLister ()
 
 -(void)setup;
 

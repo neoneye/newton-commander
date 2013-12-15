@@ -14,6 +14,7 @@
 
 
 #import "NCListerDataSource.h"
+#import "NCListerTableView.h"
 
 @class NCLister;
 
@@ -71,7 +72,7 @@ typedef struct {
 } NCListerCountersStruct;
 
 
-@interface NCLister : NSView <NSTableViewDelegate, NSTableViewDataSource, QLPreviewPanelDataSource, QLPreviewPanelDelegate, NCListerDataSourceDelegate>
+@interface NCLister : NSView <NSTableViewDelegate, NSTableViewDataSource, QLPreviewPanelDataSource, QLPreviewPanelDelegate, NCListerDataSourceDelegate, NCListerTableViewDelegate>
 {
 	NSString* m_auto_save_name;
 
