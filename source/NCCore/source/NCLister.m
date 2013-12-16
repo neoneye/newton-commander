@@ -1919,13 +1919,6 @@ Navigate into a subdir or if cursor is on top-most row then navigate out of this
 	[self reload];
 }
 
-- (void)tableView:(NSTableView *)tableView mouseDownInHeaderOfTableColumn:(NSTableColumn *)tableColumn {
-	SEL sel = @selector(activateTableView:);
-	if([self.delegate respondsToSelector:sel]) {
-		[self.delegate performSelector:sel withObject:m_lister_tableview];
-	}
-}
-
 - (id)tableView:(NSTableView *)aTableView
     objectValueForTableColumn:(NSTableColumn*)aTableColumn
     row:(NSInteger)rowIndex
