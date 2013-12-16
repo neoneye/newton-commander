@@ -336,9 +336,8 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 -(void)workerResponseCopy:(NSDictionary*)dict {
 	// LOG_DEBUG(@"response: %@", dict);
 	// update the progressbar with the progress value we get back
-	SEL sel = @selector(copyOperation:response:);
-	if([m_copy_operation_delegate respondsToSelector:sel]) {
-		[m_copy_operation_delegate performSelector:sel withObject:self withObject:dict];
+	if([m_copy_operation_delegate respondsToSelector:@selector(copyOperation:response:)]) {
+		[m_copy_operation_delegate copyOperation:self response:dict];
 	}
 }
 
@@ -430,9 +429,8 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 -(void)workerResponseMove:(NSDictionary*)dict {
 	// LOG_DEBUG(@"response: %@", dict);
 	// update the progressbar with the progress value we get back
-	SEL sel = @selector(moveOperation:response:);
-	if([m_move_operation_delegate respondsToSelector:sel]) {
-		[m_move_operation_delegate performSelector:sel withObject:self withObject:dict];
+	if([m_move_operation_delegate respondsToSelector:@selector(moveOperation:response:)]) {
+		[m_move_operation_delegate moveOperation:self response:dict];
 	}
 }
 
