@@ -142,7 +142,7 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 		SOLUTION: create a dummy object, lets objective C know about the class,
 		so it can be decoded correct.
 		*/
-		[[NCFileItem alloc] init];
+		(void) [[NCFileItem alloc] init];
 	}
 
     NSString* phase = [dict objectForKey:@"phase"];
