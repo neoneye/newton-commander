@@ -82,20 +82,6 @@ names1
 // #define RANDOMIZE_ITEMS
 
 
-#define DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(selector_name) \
-	do { \
-		SEL sel = @selector(selector_name); \
-		if([m_delegate respondsToSelector:sel]) { \
-			[m_delegate performSelector:sel withObject:self]; \
-		} \
-	} while(0);
-
-
-
-
-
-
-
 
 #define kNCListerPreferencesContext @"NCListerPreferencesContext"
 
@@ -311,7 +297,6 @@ BOOL is_the_cocoa_simulator_running() {
 #pragma mark Initialization / Teardown
 
 
-@synthesize delegate = m_delegate;
 @synthesize listerDataSource = m_lister_data_source;
 @synthesize active = m_active;
 @synthesize tableColumnName = m_tablecolumn_name;
@@ -511,7 +496,9 @@ BOOL is_the_cocoa_simulator_running() {
 	later the worker may contact us with a "resolvedPath" request containing
 	the fully resolved path. When that happens we send out this notification again
 	*/
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerWillLoad:);
+	if([self.delegate respondsToSelector:@selector(listerWillLoad:)]) {
+		[self.delegate listerWillLoad:self];
+	}
 }
 
 -(void)listerDataSource:(id<NCListerDataSource>)dataSource resolvedPath:(NSString*)path {
@@ -522,13 +509,17 @@ BOOL is_the_cocoa_simulator_running() {
 	[self inner_setWorkingDir:path];
 	
 	// send out a notification that the path has been resolved
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerDidResolveWorkingDirectory:);
+	if([self.delegate respondsToSelector:@selector(listerDidResolveWorkingDirectory:)]) {
+		[self.delegate listerDidResolveWorkingDirectory:self];
+	}
 }
 
 -(void)listerDataSourceFinishedLoading:(id<NCListerDataSource>)dataSource {
 	NSParameterAssert(dataSource);
 
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerDidLoad:);
+	if([self.delegate respondsToSelector:@selector(listerDidLoad:)]) {
+		[self.delegate listerDidLoad:self];
+	}
 }
 
 -(void)listerDataSource:(id<NCListerDataSource>)dataSource 
@@ -736,7 +727,9 @@ BOOL is_the_cocoa_simulator_running() {
 	SET_COUNTER(m_counters.size_of_selected_items, size_of_selected_items);
 
 	if(changed) {
-		DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerDidUpdateCounters:);
+		if([self.delegate respondsToSelector:@selector(listerDidUpdateCounters:)]) {
+			[self.delegate listerDidUpdateCounters:self];
+		}
 	}
 
 	// LOG_DEBUG(@"counters: %i %i %llu", sum_dirs, sum_files, sum_bytes);
@@ -783,7 +776,9 @@ BOOL is_the_cocoa_simulator_running() {
         m_working_dir = [path copy];
     }
 
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerDidChangeWorkingDirectory:);
+	if([self.delegate respondsToSelector:@selector(listerDidChangeWorkingDirectory:)]) {
+		[self.delegate listerDidChangeWorkingDirectory:self];
+	}
 }
 
 -(NSString*)currentName {
@@ -1727,23 +1722,33 @@ Navigate into a subdir or if cursor is on top-most row then navigate out of this
 #pragma mark Focus and tab cycling
 
 -(void)tabKeyPressed:(id)sender {
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerTabKeyPressed:);
+	if([self.delegate respondsToSelector:@selector(listerTabKeyPressed:)]) {
+		[self.delegate listerTabKeyPressed:self];
+	}
 }
 
 -(void)switchToNextTab:(id)sender {
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerSwitchToNextTab:);
+	if([self.delegate respondsToSelector:@selector(listerSwitchToNextTab:)]) {
+		[self.delegate listerSwitchToNextTab:self];
+	}
 }
 
 -(void)switchToPrevTab:(id)sender {
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerSwitchToPrevTab:);
+	if([self.delegate respondsToSelector:@selector(listerSwitchToPrevTab:)]) {
+		[self.delegate listerSwitchToPrevTab:self];
+	}
 }
 
 -(void)closeTab:(id)sender {
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerCloseTab:);
+	if([self.delegate respondsToSelector:@selector(listerCloseTab:)]) {
+		[self.delegate listerCloseTab:self];
+	}
 }
 
 -(void)activateTableView:(id)sender {
-	DELEGATE_TRY_PERFORM_SELECTOR_WITH_SELF(listerActivateTableView:);
+	if([self.delegate respondsToSelector:@selector(listerActivateTableView:)]) {
+		[self.delegate listerActivateTableView:self];
+	}
 }
 
 
@@ -1916,8 +1921,8 @@ Navigate into a subdir or if cursor is on top-most row then navigate out of this
 
 - (void)tableView:(NSTableView *)tableView mouseDownInHeaderOfTableColumn:(NSTableColumn *)tableColumn {
 	SEL sel = @selector(activateTableView:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:m_lister_tableview];
+	if([self.delegate respondsToSelector:sel]) {
+		[self.delegate performSelector:sel withObject:m_lister_tableview];
 	}
 }
 
@@ -2753,18 +2758,16 @@ traps escape key so you can cancel the operation
 
 -(void)showLeftContextMenu:(id)sender {
 	NSMenu* menu = nil;
-	SEL sel = @selector(listerLeftMenu:);
-	if([m_delegate respondsToSelector:sel]) {
-		menu = [m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(listerLeftMenu:)]) {
+		menu = [self.delegate listerLeftMenu:self];
 	}
 	[self showContextMenu:menu];
 }
 
 -(void)showRightContextMenu:(id)sender {
 	NSMenu* menu = nil;
-	SEL sel = @selector(listerRightMenu:);
-	if([m_delegate respondsToSelector:sel]) {
-		menu = [m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(listerRightMenu:)]) {
+		menu = [self.delegate listerRightMenu:self];
 	}
 	[self showContextMenu:menu];
 }

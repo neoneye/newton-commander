@@ -76,7 +76,6 @@ typedef struct {
 {
 	NSString* m_auto_save_name;
 
-	id<NCListerDelegate> __unsafe_unretained m_delegate;
 	NCListerTableView* m_lister_tableview;
 	
 	id<NCListerDataSource> m_lister_data_source;
