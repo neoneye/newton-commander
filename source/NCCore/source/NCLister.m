@@ -237,7 +237,7 @@ BOOL is_the_cocoa_simulator_running() {
 
 
 
-@interface NCLister ()
+@interface NCLister () <NCTableHeaderViewDelegate>
 
 -(void)setup;
 
