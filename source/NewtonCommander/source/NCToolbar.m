@@ -12,25 +12,25 @@
 #include <pwd.h>
 #include <grp.h>
 
-#define opcoders_filter_left_panel_toolbar_item_identifier @"Opcoders Filter Left Panel Toolboar Item"
-#define opcoders_filter_right_panel_toolbar_item_identifier @"Opcoders Filter Right Panel Toolboar Item"
-#define opcoders_reload_toolbar_item_identifier @"Opcoders Reload Toolboar Item"
-#define opcoders_help_toolbar_item_identifier @"Opcoders Help Toolboar Item"
-#define opcoders_menu_toolbar_item_identifier @"Opcoders Menu Toolboar Item"
-#define opcoders_view_toolbar_item_identifier @"Opcoders View Toolboar Item"
-#define opcoders_edit_toolbar_item_identifier @"Opcoders Edit Toolboar Item"
-#define opcoders_copy_toolbar_item_identifier @"Opcoders Copy Toolboar Item"
-#define opcoders_move_toolbar_item_identifier @"Opcoders Move Toolboar Item"
-#define opcoders_mkdir_toolbar_item_identifier @"Opcoders MakeDir Toolboar Item"
-#define opcoders_delete_toolbar_item_identifier @"Opcoders Delete Toolboar Item"
-#define opcoders_switch_user_toolbar_item_identifier @"Opcoders Switch User Toolboar Item"
+#define opcoders_filter_left_panel_toolbar_item_identifier "Opcoders Filter Left Panel Toolboar Item"
+#define opcoders_filter_right_panel_toolbar_item_identifier "Opcoders Filter Right Panel Toolboar Item"
+#define opcoders_reload_toolbar_item_identifier "Opcoders Reload Toolboar Item"
+#define opcoders_help_toolbar_item_identifier "Opcoders Help Toolboar Item"
+#define opcoders_menu_toolbar_item_identifier "Opcoders Menu Toolboar Item"
+#define opcoders_view_toolbar_item_identifier "Opcoders View Toolboar Item"
+#define opcoders_edit_toolbar_item_identifier "Opcoders Edit Toolboar Item"
+#define opcoders_copy_toolbar_item_identifier "Opcoders Copy Toolboar Item"
+#define opcoders_move_toolbar_item_identifier "Opcoders Move Toolboar Item"
+#define opcoders_mkdir_toolbar_item_identifier "Opcoders MakeDir Toolboar Item"
+#define opcoders_delete_toolbar_item_identifier "Opcoders Delete Toolboar Item"
+#define opcoders_switch_user_toolbar_item_identifier "Opcoders Switch User Toolboar Item"
 
 
 struct ItemDescriptor {
-	NSString* identifier;
-	NSString* label;
-	NSString* tooltip;      
-	NSString* iconname;
+	const char* identifier;
+	const char* label;
+	const char* tooltip;
+	const char* iconname;
 	int tag;
 	int is_button;
 };
@@ -39,10 +39,10 @@ struct ItemDescriptor {
 struct ItemDescriptor item_descriptors[] = {
 	// reload
 	opcoders_reload_toolbar_item_identifier,
-	@"Reload",
-	@"Refresh the info",
+	"Reload",
+	"Refresh the info",
 	// @"color_reload",
-	@"icon_reload",
+	"icon_reload",
 	// @"icon_reload2",
 	// @"icon_reload3",
 	kNCReloadToolbarItemTag,
@@ -50,80 +50,80 @@ struct ItemDescriptor item_descriptors[] = {
 
 	// help
 	opcoders_help_toolbar_item_identifier,
-    @"Help",
-    @"Help make sense of the current item (F1)",
+    "Help",
+	"Help make sense of the current item (F1)",
 	// @"color_help",
-	@"icon_info",
+	"icon_info",
 	kNCHelpToolbarItemTag,
 	1,
 
 	// menu
 	opcoders_menu_toolbar_item_identifier,
-	@"Menu",
-	@"User menu (F2)",
+	"Menu",
+	"User menu (F2)",
 	// nil,
-	@"icon_gear",
+	"icon_gear",
 	kNCMenuToolbarItemTag,
 	1,
 
 	// view
 	opcoders_view_toolbar_item_identifier,
-	@"View",
-	@"View the content of the file (F3)",
+	"View",
+	"View the content of the file (F3)",
 	// @"color_view",
-	@"icon_eye",
+	"icon_eye",
 	kNCViewToolbarItemTag,
 	1,
 
 	// edit
 	opcoders_edit_toolbar_item_identifier,
-	@"Edit",
-	@"Edit the content of the file (F4)",
+	"Edit",
+	"Edit the content of the file (F4)",
 	// @"color_edit",   
-	@"icon_pencil",
+	"icon_pencil",
 	kNCEditToolbarItemTag,
 	1,
 
 	// copy
 	opcoders_copy_toolbar_item_identifier,
-	@"Copy",
-	@"Copy items (F5)",
+	"Copy",
+	"Copy items (F5)",
 	// @"color_copy",
-	@"icon_copy",
+	"icon_copy",
 	kNCCopyToolbarItemTag,
 	1,
 
 	// move
 	opcoders_move_toolbar_item_identifier,
-	@"Move",
-	@"Move items (F6)",
+	"Move",
+	"Move items (F6)",
 	// @"color_move",
-	@"icon_move",
+	"icon_move",
 	kNCMoveToolbarItemTag,
 	1,
 
 	// mkdir (or mkfile or mklink)
 	opcoders_mkdir_toolbar_item_identifier,
-	@"MkDir",
-	@"Create a new folder (F7)",
+	"MkDir",
+	"Create a new folder (F7)",
 	// @"color_mkdir",
-	@"icon_create",
+	"icon_create",
 	kNCMakeDirToolbarItemTag,
 	1,
 
 	// delete
 	opcoders_delete_toolbar_item_identifier,
-	@"Delete",
-	@"Move items to trash (F8)",
+	"Delete",
+	"Move items to trash (F8)",
 	// @"color_delete",
-	@"icon_remove",
+	"icon_remove",
 	kNCDeleteToolbarItemTag,
 	1,
 
 	// switch user
 	opcoders_switch_user_toolbar_item_identifier,
-	@"Switch User",
-	@"Run as a different user",
+	"Switch User",
+	"Run as a different user",
 	nil,
 	kNCSwitchUserToolbarItemTag,
 	0,
@@ -157,19 +157,19 @@ struct ItemDescriptor item_descriptors[] = {
 
 -(NSArray*)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar {
     return [NSArray arrayWithObjects:
-//		opcoders_filter_left_panel_toolbar_item_identifier,
-//		opcoders_filter_right_panel_toolbar_item_identifier,	
-		opcoders_switch_user_toolbar_item_identifier,
-		opcoders_help_toolbar_item_identifier,
-		opcoders_menu_toolbar_item_identifier,
-		opcoders_view_toolbar_item_identifier,
-		opcoders_edit_toolbar_item_identifier,
-		opcoders_copy_toolbar_item_identifier,
-		opcoders_move_toolbar_item_identifier,
-		opcoders_mkdir_toolbar_item_identifier,
-		opcoders_delete_toolbar_item_identifier,
-		opcoders_reload_toolbar_item_identifier,                       
-        NSToolbarFlexibleSpaceItemIdentifier, 
+//		[NSString stringWithUTF8String:opcoders_filter_left_panel_toolbar_item_identifier],
+//		[NSString stringWithUTF8String:opcoders_filter_right_panel_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_switch_user_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_help_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_menu_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_view_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_edit_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_copy_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_move_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_mkdir_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_delete_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_reload_toolbar_item_identifier],
+        NSToolbarFlexibleSpaceItemIdentifier,
         NSToolbarSpaceItemIdentifier, 
         NSToolbarSeparatorItemIdentifier, 
 		nil
@@ -178,20 +178,20 @@ struct ItemDescriptor item_descriptors[] = {
 
 -(NSArray*)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar {
     return [NSArray arrayWithObjects:
-//		opcoders_filter_left_panel_toolbar_item_identifier,
-		opcoders_switch_user_toolbar_item_identifier,
-        NSToolbarFlexibleSpaceItemIdentifier, 
-		opcoders_help_toolbar_item_identifier,
-		opcoders_menu_toolbar_item_identifier,
-		opcoders_view_toolbar_item_identifier,
-		opcoders_edit_toolbar_item_identifier,
-		opcoders_copy_toolbar_item_identifier,
-		opcoders_move_toolbar_item_identifier,
-		opcoders_mkdir_toolbar_item_identifier,
-		opcoders_delete_toolbar_item_identifier,
-        NSToolbarFlexibleSpaceItemIdentifier, 
-		opcoders_reload_toolbar_item_identifier, 
-//		opcoders_filter_right_panel_toolbar_item_identifier,	
+//		[NSString stringWithUTF8String:opcoders_filter_left_panel_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_switch_user_toolbar_item_identifier],
+		NSToolbarFlexibleSpaceItemIdentifier,
+		[NSString stringWithUTF8String:opcoders_help_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_menu_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_view_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_edit_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_copy_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_move_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_mkdir_toolbar_item_identifier],
+		[NSString stringWithUTF8String:opcoders_delete_toolbar_item_identifier],
+		 NSToolbarFlexibleSpaceItemIdentifier,
+		[NSString stringWithUTF8String:opcoders_reload_toolbar_item_identifier],
+//		[NSString stringWithUTF8String:opcoders_filter_right_panel_toolbar_item_identifier],
 		nil
 	];
 }
@@ -204,16 +204,24 @@ struct ItemDescriptor item_descriptors[] = {
 
 	int i;
 	for(i=0; i<n; i++) {
-		NSString* identifier = item_descriptors[i].identifier;
+		const char *c_identifier = item_descriptors[i].identifier;
+		NSString* identifier = [NSString stringWithUTF8String:c_identifier];
 		if(![ident isEqualTo:identifier]) continue;
 
 		int tag = item_descriptors[i].tag;
-		NSString* tooltip = item_descriptors[i].tooltip;
-		NSString* label = item_descriptors[i].label;
-		NSString* iconname = item_descriptors[i].iconname;
+		const char* c_tooltip = item_descriptors[i].tooltip;
+		const char* c_label = item_descriptors[i].label;
+		const char* c_iconname = item_descriptors[i].iconname;
 		BOOL is_button = (item_descriptors[i].is_button != 0);
 
-		NSImage* icon = (iconname != nil) ? [NSImage imageNamed:iconname] : nil;
+		NSString* tooltip = [NSString stringWithUTF8String:c_tooltip];
+		NSString* label = [NSString stringWithUTF8String:c_label];
+		
+		NSImage* icon = nil;
+		if (c_iconname) {
+			NSString* iconname = [NSString stringWithUTF8String:c_iconname];
+			icon = [NSImage imageNamed:iconname];
+		}
 
 
 	    NSToolbarItem* item = [[[NSToolbarItem alloc] initWithItemIdentifier:identifier] autorelease];
@@ -233,7 +241,7 @@ struct ItemDescriptor item_descriptors[] = {
 	        [item setTag:tag];
 			[item setView:v];
 		} else
-		if(iconname) {
+		if(icon) {
 	        [item setImage:icon];
 	        [item setTarget:self];
 	        [item setAction:@selector(toolbarAction:)];
