@@ -18,8 +18,8 @@
 	BOOL						_isEdited;
 }
 
-@property(nonatomic, retain) NCListTabController* controller;
-@property(nonatomic, retain) NSImage* icon;
+@property(nonatomic, strong) NCListTabController* controller;
+@property(nonatomic, strong) NSImage* icon;
 
 // creation/destruction
 - (id)init;

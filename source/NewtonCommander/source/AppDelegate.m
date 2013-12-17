@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 24/01/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "AppDelegate.h"
 #import "NCMainWindowController.h"
@@ -348,7 +351,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 	}
 
 	{
-		NSMenuItem* mi = [[[NSMenuItem alloc] initWithTitle:@"Bookmark This Dir" action:@selector(bookmarkThisDirAction:) keyEquivalent:@"d"] autorelease];
+		NSMenuItem* mi = [[NSMenuItem alloc] initWithTitle:@"Bookmark This Dir" action:@selector(bookmarkThisDirAction:) keyEquivalent:@"d"];
 		[mi setKeyEquivalentModifierMask:NSCommandKeyMask];
 		[mi setTarget:self];
 		[menu addItem:mi];
@@ -386,8 +389,8 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 			alternate = YES;
 		}
 
-		NSMenuItem* mi = [[[NSMenuItem alloc] initWithTitle:[bmi name]
-			action:@selector(bookmarkMenuAction:) keyEquivalent:s] autorelease];
+		NSMenuItem* mi = [[NSMenuItem alloc] initWithTitle:[bmi name]
+			action:@selector(bookmarkMenuAction:) keyEquivalent:s];
 		[mi setKeyEquivalentModifierMask:mask];
 		[mi setAlternate:alternate];
 		[mi setRepresentedObject:[bmi path]];
@@ -398,7 +401,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 	[menu addItem:[NSMenuItem separatorItem]];
 
 	{
-		NSMenuItem* mi = [[[NSMenuItem alloc] initWithTitle:@"Customize…" action:@selector(showBookmarkPaneInPreferencesPanel:) keyEquivalent:@"b"] autorelease];
+		NSMenuItem* mi = [[NSMenuItem alloc] initWithTitle:@"Customize…" action:@selector(showBookmarkPaneInPreferencesPanel:) keyEquivalent:@"b"];
 		[mi setKeyEquivalentModifierMask:NSCommandKeyMask | NSAlternateKeyMask];
 		[mi setTarget:self];
 		[menu addItem:mi];
@@ -418,7 +421,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 -(void)bookmarkThisDirAction:(id)sender {
 	NSString* path = [myWindowController activeWorkingDir];
 	// LOG_DEBUG(@"path: %@", path);
-	NCUserDefaultBookmarkItem* item = [[[NCUserDefaultBookmarkItem alloc] init] autorelease];
+	NCUserDefaultBookmarkItem* item = [[NCUserDefaultBookmarkItem alloc] init];
 	[item setPath:path];
 	[item setName:[path lastPathComponent]];
 
@@ -476,11 +479,11 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 	if([[ctrl modules] count] == 0) {
 		NSBundle* b = [NSBundle bundleForClass:[MBPreferencesController class]];
 		NSAssert(b, @"must be in the framework bundle");
-		NCPreferencesGeneralController* mod0 = [[[NCPreferencesGeneralController alloc] initWithNibName:@"PreferencesGeneral" bundle:b] autorelease];
-		NCPreferencesLeftMenuController* mod1 = [[[NCPreferencesLeftMenuController alloc] initWithNibName:@"PreferencesMenu" bundle:b] autorelease];
-		NCPreferencesRightMenuController* mod2 = [[[NCPreferencesRightMenuController alloc] initWithNibName:@"PreferencesMenu" bundle:b] autorelease];
-		NCPreferencesBookmarkController* mod3 = [[[NCPreferencesBookmarkController alloc] initWithNibName:@"PreferencesBookmark" bundle:b] autorelease];
-		NCPreferencesAdvancedController* mod4 = [[[NCPreferencesAdvancedController alloc] initWithNibName:@"PreferencesAdvanced" bundle:b] autorelease];
+		NCPreferencesGeneralController* mod0 = [[NCPreferencesGeneralController alloc] initWithNibName:@"PreferencesGeneral" bundle:b];
+		NCPreferencesLeftMenuController* mod1 = [[NCPreferencesLeftMenuController alloc] initWithNibName:@"PreferencesMenu" bundle:b];
+		NCPreferencesRightMenuController* mod2 = [[NCPreferencesRightMenuController alloc] initWithNibName:@"PreferencesMenu" bundle:b];
+		NCPreferencesBookmarkController* mod3 = [[NCPreferencesBookmarkController alloc] initWithNibName:@"PreferencesBookmark" bundle:b];
+		NCPreferencesAdvancedController* mod4 = [[NCPreferencesAdvancedController alloc] initWithNibName:@"PreferencesAdvanced" bundle:b];
 		[ctrl setModules:[NSArray arrayWithObjects:mod0, mod1, mod2, mod3, mod4, nil]];
 	}
 	[ctrl showWindow:sender];

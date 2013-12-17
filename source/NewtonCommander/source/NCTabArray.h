@@ -18,8 +18,8 @@
 	// TODO: horizontal scroll position
 	NSString* m_cursor_name;
 }
-@property(nonatomic, retain) NSString* workingDir;
-@property(nonatomic, retain) NSString* cursorName;
+@property(nonatomic, strong) NSString* workingDir;
+@property(nonatomic, strong) NSString* cursorName;
 
 @end
 
@@ -28,7 +28,7 @@
 	NSMutableArray* m_array;
 	int m_index;
 }
-@property(nonatomic, retain) NSString* identifier;
+@property(nonatomic, strong) NSString* identifier;
 
 +(NCTabArray*)arrayLeft;
 +(NCTabArray*)arrayRight;

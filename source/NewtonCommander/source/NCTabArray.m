@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 07/04/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCTabArray.h"
@@ -51,29 +54,27 @@
 		m_index = 0;
 		m_array = [[NSMutableArray alloc] initWithCapacity:100];
 
-		NCTabArrayItem* item = [[[NCTabArrayItem alloc] init] autorelease];
+		NCTabArrayItem* item = [[NCTabArrayItem alloc] init];
 		[m_array addObject:item];
     }
     return self;
 }
 
 +(NCTabArray*)arrayLeft {
-	NCTabArray* ary = [[[NCTabArray alloc] init] autorelease];
+	NCTabArray* ary = [[NCTabArray alloc] init];
 	[ary setIdentifier:@"Left"];
 	return ary;
 }
 
 +(NCTabArray*)arrayRight {
-	NCTabArray* ary = [[[NCTabArray alloc] init] autorelease];
+	NCTabArray* ary = [[NCTabArray alloc] init];
 	[ary setIdentifier:@"Right"];
 	return ary;
 }
 
 -(void)dealloc {
-	[m_array release];
 	m_array = nil;
 	
-	[super dealloc];
 }
 
 -(NSString*)description { 
@@ -138,7 +139,7 @@
 -(void)insertNewTab {
 	// LOG_DEBUG(@"BEFORE %@", self);
 
-	NCTabArrayItem* item = [[[NCTabArrayItem alloc] init] autorelease];
+	NCTabArrayItem* item = [[NCTabArrayItem alloc] init];
 	int n = [m_array count];
 	m_index++;
 	if(m_index > n) m_index = n;
@@ -247,7 +248,7 @@
 		NSEnumerator* enumerator = [(NSArray*)thing objectEnumerator];
 		while((thing = [enumerator nextObject])) {
 
-			NCTabArrayItem* item = [[[NCTabArrayItem alloc] init] autorelease];
+			NCTabArrayItem* item = [[NCTabArrayItem alloc] init];
 			[item setWorkingDir:@"/"];
 			[item setCursorName:@""];
 			[m_array addObject:item];
@@ -276,7 +277,7 @@
 
 	if([m_array count] < 1) {
 		LOG_DEBUG(@"load didn't find any NCTabStates, inserting blank state");
-		NCTabArrayItem* item = [[[NCTabArrayItem alloc] init] autorelease];
+		NCTabArrayItem* item = [[NCTabArrayItem alloc] init];
 		[item setWorkingDir:@"/"];
 		[item setCursorName:@""];
 		[m_array addObject:item];
