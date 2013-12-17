@@ -70,23 +70,8 @@
 	[m_tabbar setSelectsTabsOnMouseDown:YES];
 
 	
-	// [m_tabbar setStyleNamed:@"Unified"];
-	// [m_tabbar setStyleNamed:@"Aqua"];
-	// [m_tabbar setStyleNamed:@"Adium"];
-
-	if(0) {
-		[m_tabbar setDisableTabClose:NO];
-	} else {
-		[m_tabbar setDisableTabClose:YES];
-	}
-	if(0) {
-		// hook up add tab button
-		[m_tabbar setShowAddTabButton:YES];
-		[[m_tabbar addTabButton] setTarget:self];
-		[[m_tabbar addTabButton] setAction:@selector(addNewTab:)];
-	} else {
-		[m_tabbar setShowAddTabButton:NO];
-	}
+	[m_tabbar setDisableTabClose:YES];
+	[m_tabbar setShowAddTabButton:NO];
 
 
 	// remove any tabs present in the nib
