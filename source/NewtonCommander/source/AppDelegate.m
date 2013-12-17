@@ -77,7 +77,7 @@ bail:
 
 
 
-NSString* kNCUserDefaultBookmarkItemsContext = @"kNCUserDefaultBookmarkItemsContext";
+static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultBookmarkItemsContext;
 
 
 @interface NSString (HFSUnicodeString)
