@@ -53,7 +53,7 @@
 		42C21A4B112DBBC7007097ED /* NCDualPaneStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4A112DBBC7007097ED /* NCDualPaneStateView.m */; };
 		42C21A4E112DBBD2007097ED /* NCDualPaneStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4D112DBBD2007097ED /* NCDualPaneStateInfo.m */; };
 		42C21A53112DBE08007097ED /* NCDualPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A52112DBE08007097ED /* NCDualPane.m */; };
-		42C21E9C11479F26007097ED /* NCToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21E9B11479F26007097ED /* NCToolbar.m */; };
+		42C21E9C11479F26007097ED /* NCToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21E9B11479F26007097ED /* NCToolbar.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42D159131161622B00F66068 /* NewtonCommander.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42D159121161622B00F66068 /* NewtonCommander.icns */; };
 		42D15AF6116D1D3C00F66068 /* NCTabArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D15AF5116D1D3C00F66068 /* NCTabArray.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42D449F41216EDF600CB5BF5 /* MoveSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D449F21216EDF600CB5BF5 /* MoveSheet.xib */; };

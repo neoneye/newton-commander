@@ -36,6 +36,7 @@
 #import <objc/runtime.h>
 
 
+#define isDrawingCustomFrame YES
 
 
 @interface NSObject (NSWindowFlagsChangeDelegate)
@@ -45,7 +46,7 @@
 @end
 
 
-@interface NCMainWindowController (Private)
+@interface NCMainWindowController () <NCToolbarDelegate>
 
 -(void)replaceLeftView:(NSView*)view;
 -(void)replaceRightView:(NSView*)view;
@@ -61,9 +62,6 @@
 @end
 
 @implementation NCMainWindowController
-
-BOOL	isDrawingCustomFrame = YES;
-
 
 @synthesize splitView = m_split_view;
 @synthesize leftView = m_left_view;
@@ -538,6 +536,11 @@ BOOL	isDrawingCustomFrame = YES;
 
 #pragma mark -
 #pragma mark Custom window background
+
+- (float)roundedCornerRadius
+{
+	return 2.f;
+}
 
 - (void)drawRect:(NSRect)rect
 {

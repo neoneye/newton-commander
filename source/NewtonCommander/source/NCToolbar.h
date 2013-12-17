@@ -23,25 +23,13 @@ enum {
 	kNCSwitchUserToolbarItemTag = 1300,
 };
 
-@interface NCToolbar : NSObject <NSToolbarDelegate> {
-	id m_delegate;
-	NSToolbarItem* m_item6;
-	NSToolbarItem* m_item7;
-}
-@property (nonatomic,assign) IBOutlet id delegate;
-@property (retain) NSToolbarItem* item6;
-@property (retain) NSToolbarItem* item7;
-
-
+@protocol NCToolbarDelegate <NSObject>
+-(void)didClickToolbarItem:(int)tag;
+-(void)switchToUser:(int)user_id;
 @end
 
-@interface NSObject (NCToolbarDelegate)
-
+@interface NCToolbar : NSObject <NSToolbarDelegate>
+@property (nonatomic, weak) NSObject <NCToolbarDelegate> *delegate;
 -(void)attachToWindow:(NSWindow*)window;
-
--(void)didClickToolbarItem:(int)tag;
-
--(void)switchToUser:(int)user_id;
-
 -(void)update;
 @end

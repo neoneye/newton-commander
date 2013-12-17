@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 10/03/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCToolbar.h"
@@ -130,15 +133,18 @@ struct ItemDescriptor item_descriptors[] = {
 };
 
 
-@implementation NCToolbar
+@interface NCToolbar ()
 
-@synthesize delegate = m_delegate;
-@synthesize item6 = m_item6;
-@synthesize item7 = m_item7;
+@property (strong) NSToolbarItem* item6;
+@property (strong) NSToolbarItem* item7;
+
+@end
+
+@implementation NCToolbar
 
 -(void)attachToWindow:(NSWindow*)window {
     // create the toolbar object
-    NSToolbar* tb = [[[NSToolbar alloc] initWithIdentifier:@"MainWindowToolbar"] autorelease];
+    NSToolbar* tb = [[NSToolbar alloc] initWithIdentifier:@"MainWindowToolbar"];
 
     // set initial toolbar properties
     [tb setAllowsUserCustomization:YES];
@@ -224,13 +230,13 @@ struct ItemDescriptor item_descriptors[] = {
 		}
 
 
-	    NSToolbarItem* item = [[[NSToolbarItem alloc] initWithItemIdentifier:identifier] autorelease];
+	    NSToolbarItem* item = [[NSToolbarItem alloc] initWithItemIdentifier:identifier];
         [item setLabel:label];
         [item setPaletteLabel:label];
         [item setToolTip:tooltip];
 		
 		if(is_button) {
-			NSButton* v = [[[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 40, 25)] autorelease];
+			NSButton* v = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 40, 25)];
 			[v setTitle:@""];
 			[v setBezelStyle:NSTexturedRoundedBezelStyle];
 			[v setImagePosition:NSImageOnly];
@@ -258,7 +264,7 @@ struct ItemDescriptor item_descriptors[] = {
 			const char* username = getlogin();
 			// LOG_DEBUG(@"username: %s", username);
 
-			NSPopUpButton* button = [[[NSPopUpButton alloc] initWithFrame:NSMakeRect(0, 0, 200, 24) pullsDown:NO] autorelease];
+			NSPopUpButton* button = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(0, 0, 200, 24) pullsDown:NO];
 			NSMenu* menu = [button menu];
 
 			/*
@@ -288,7 +294,7 @@ struct ItemDescriptor item_descriptors[] = {
 			setpwent();
 			while ((pw = getpwent())) {
 				NSString* title = [NSString stringWithFormat:@"%s | %d", pw->pw_name, pw->pw_uid];
-				NSMenuItem* mi = [[[NSMenuItem alloc] initWithTitle:title action:nil keyEquivalent:@""] autorelease];
+				NSMenuItem* mi = [[NSMenuItem alloc] initWithTitle:title action:nil keyEquivalent:@""];
 				[mi setTag:pw->pw_uid];
 				
 				if(strcmp(username, pw->pw_name) == 0) {
@@ -331,7 +337,7 @@ struct ItemDescriptor item_descriptors[] = {
 	NSMenuItem* mi = [sender selectedItem];
 	int tag = [mi tag];
 	// LOG_DEBUG(@"mi: %@  tag: %i", mi, tag);
-	id del = m_delegate;
+	NSObject <NCToolbarDelegate> *del = self.delegate;
 	SEL sel = @selector(switchToUser:);
 	if([del respondsToSelector:sel]) {
 		NSMethodSignature* sig = [del methodSignatureForSelector:sel];
@@ -347,7 +353,7 @@ struct ItemDescriptor item_descriptors[] = {
 -(IBAction)toolbarAction:(id)sender {
 	int tag = [sender tag];
 	// LOG_DEBUG(@"%i", tag);
-	id del = m_delegate;
+	NSObject <NCToolbarDelegate> *del = self.delegate;
 	SEL sel = @selector(didClickToolbarItem:);
 	if([del respondsToSelector:sel]) {
 		NSMethodSignature* sig = [del methodSignatureForSelector:sel];
@@ -371,27 +377,27 @@ struct ItemDescriptor item_descriptors[] = {
 	
 
 	if(is_shft) {
-	    // [m_item7 setImage:[NSImage imageNamed:@"color_mkfile"]];
-        [m_item7 setLabel:@"MkFile"];
-        // [m_item7 setTooltip:@"no tooltip"];
-        [m_item7 setTag:kNCMakeFileToolbarItemTag];
+	    // [self.item7 setImage:[NSImage imageNamed:@"color_mkfile"]];
+        [self.item7 setLabel:@"MkFile"];
+        // [self.item7 setTooltip:@"no tooltip"];
+        [self.item7 setTag:kNCMakeFileToolbarItemTag];
 	} else {
-        // [m_item7 setImage:[NSImage imageNamed:@"color_mkdir"]];
-        [m_item7 setLabel:@"MkDir"];
-        // [m_item7 setTooltip:@"no tooltip"];
-        [m_item7 setTag:kNCMakeDirToolbarItemTag];
+        // [self.item7 setImage:[NSImage imageNamed:@"color_mkdir"]];
+        [self.item7 setLabel:@"MkDir"];
+        // [self.item7 setTooltip:@"no tooltip"];
+        [self.item7 setTag:kNCMakeDirToolbarItemTag];
 	}
 
 	if(is_shft) {
-        // [m_item6 setImage:[NSImage imageNamed:@"color_rename"]];
-        [m_item6 setLabel:@"Rename"];
-        // [m_item6 setTooltip:@"no tooltip"];
-        [m_item6 setTag:kNCRenameToolbarItemTag];
+        // [self.item6 setImage:[NSImage imageNamed:@"color_rename"]];
+        [self.item6 setLabel:@"Rename"];
+        // [self.item6 setTooltip:@"no tooltip"];
+        [self.item6 setTag:kNCRenameToolbarItemTag];
 	} else {
-	    // [m_item6 setImage:[NSImage imageNamed:@"color_move"]];
-        [m_item6 setLabel:@"Move"];
-        // [m_item6 setTooltip:@"no tooltip"];
-        [m_item6 setTag:kNCMoveToolbarItemTag];
+	    // [self.item6 setImage:[NSImage imageNamed:@"color_move"]];
+        [self.item6 setLabel:@"Move"];
+        // [self.item6 setTooltip:@"no tooltip"];
+        [self.item6 setTag:kNCMoveToolbarItemTag];
 	}
 }
 
