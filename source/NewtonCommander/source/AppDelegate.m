@@ -291,7 +291,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 -(IBAction)newDocument:(id)sender
 {	
 	if (myWindowController == nil)
-		myWindowController = [[NCMainWindowController alloc] initWithWindowNibName:@"MainWindow"];
+		myWindowController = [NCMainWindowController mainWindowController];
 	
 	[myWindowController showWindow:self];
 }

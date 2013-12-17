@@ -10,38 +10,19 @@
 
 
 @class NCListPanelController;
-@class NCHelpPanelController;    
-@class NCInfoPanelController;
-@class NCViewPanelController;
 @class NCDualPane;
 @class NCDualPaneState;
 @class NCToolbar;
 
-@interface NCMainWindowController : NSWindowController {
-	NCListPanelController* m_list_panel_controller_left;
-	NCListPanelController* m_list_panel_controller_right;
-	NCHelpPanelController* m_help_panel_controller_left;
-	NCHelpPanelController* m_help_panel_controller_right;
-	NCInfoPanelController* m_info_panel_controller_left;
-	NCInfoPanelController* m_info_panel_controller_right;
-	NCViewPanelController* m_view_panel_controller_left;
-	NCViewPanelController* m_view_panel_controller_right;
-	
-	NSView* m_left_view;
-	NSView* m_right_view;
-	NSSplitView* m_split_view;
-	
-	NCDualPane* m_dualpane;
-	
-	NCToolbar* m_toolbar;
-}
-@property(assign) IBOutlet NSSplitView* splitView;
-@property(assign) IBOutlet NSView* leftView;
-@property(assign) IBOutlet NSView* rightView;
-@property(nonatomic, retain) NCDualPane* dualPane;
-@property(nonatomic, retain) NCToolbar* toolbar;
+@interface NCMainWindowController : NSWindowController
+
+@property(nonatomic, strong) NCDualPane* dualPane;
+@property(nonatomic, strong) NCToolbar* toolbar;
 @property(nonatomic, readonly) NCListPanelController* listPanelControllerLeft;
 @property(nonatomic, readonly) NCListPanelController* listPanelControllerRight;
+
++ (NCMainWindowController*)mainWindowController;
+
 
 -(void)stateDidChange:(NCDualPaneState*)snew oldResponder:(NSResponder*)resp oldState:(NCDualPaneState*)sold;
 

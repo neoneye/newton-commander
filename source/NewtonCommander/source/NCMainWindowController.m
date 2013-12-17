@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 25/01/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCMainWindowController.h"
@@ -36,6 +39,8 @@
 #import <objc/runtime.h>
 
 
+//#define CUSTOM_WINDOW_BACKGROUND
+
 #define isDrawingCustomFrame YES
 
 
@@ -46,15 +51,35 @@
 @end
 
 
-@interface NCMainWindowController () <NCToolbarDelegate>
+@interface NCMainWindowController () <NCToolbarDelegate> {
+	NCListPanelController* m_list_panel_controller_left;
+	NCListPanelController* m_list_panel_controller_right;
+	NCHelpPanelController* m_help_panel_controller_left;
+	NCHelpPanelController* m_help_panel_controller_right;
+	NCInfoPanelController* m_info_panel_controller_left;
+	NCInfoPanelController* m_info_panel_controller_right;
+	NCViewPanelController* m_view_panel_controller_left;
+	NCViewPanelController* m_view_panel_controller_right;
+	
+	NCDualPane* m_dualpane;
+	
+	NCToolbar* m_toolbar;
+}
+
+@property(strong) NSSplitView* splitView;
+@property(strong) NSView* leftView;
+@property(strong) NSView* rightView;
+
 
 -(void)replaceLeftView:(NSView*)view;
 -(void)replaceRightView:(NSView*)view;
 
 -(void)refreshWindowTitle;
 
+#ifdef CUSTOM_WINDOW_BACKGROUND
 - (float)roundedCornerRadius;
 - (void)drawRectOriginal:(NSRect)rect;
+#endif
 
 -(NCListPanelController*)activePanel;
 -(NCListPanelController*)otherPanel;
@@ -63,13 +88,14 @@
 
 @implementation NCMainWindowController
 
-@synthesize splitView = m_split_view;
-@synthesize leftView = m_left_view;
-@synthesize rightView = m_right_view;
 @synthesize dualPane = m_dualpane;
 @synthesize toolbar = m_toolbar;
 @synthesize listPanelControllerLeft = m_list_panel_controller_left;
 @synthesize listPanelControllerRight = m_list_panel_controller_right;
+
++ (NCMainWindowController*)mainWindowController {
+	return [[NCMainWindowController alloc] initWithWindowNibName:@"MainWindow"];
+}
 
 - (id)initWithWindowNibName:(NSString *)windowNibName {
 	self = [super initWithWindowNibName:windowNibName];
@@ -92,7 +118,7 @@
 	if(1) {
 		NSWindow* w = [self window];
 		NSView* v = [w contentView];
-		NSRect frame = [m_split_view frame];
+		NSRect frame = [v frame];
 		NCSplitView* sv = [[NCSplitView alloc] initWithFrame:frame];
 		[sv setVertical:YES];
 		[sv setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
@@ -108,14 +134,13 @@
 		[sv setPosition:NSWidth(rect_l) ofDividerAtIndex:0];
 		[v addSubview:sv];
 		
-		m_left_view = view_l;
-		m_right_view = view_r;
-
-		[m_split_view removeFromSuperview];
-		m_split_view = sv;
+		self.leftView = view_l;
+		self.rightView = view_r;
+		self.splitView = sv;
 	}
-	
-	// draw a custom window background 
+
+#ifdef CUSTOM_WINDOW_BACKGROUND
+	// draw a custom window background
 	if(0) {
 		/*
 		IDEA: figure out how to only show the gradient background for certain windows
@@ -138,6 +163,7 @@
 		Method m2 = class_getInstanceMethod(class, @selector(drawRectOriginal:));
 		method_exchangeImplementations(m1, m2);
 	}
+#endif // CUSTOM_WINDOW_BACKGROUND
     
     // show a toggle fullscreen mode icon in the top/right corner of the window
     [[self window] setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
@@ -216,7 +242,7 @@
 	LOG_DEBUG(@"done initializing panel controllers");
 	
 	{
-		NCToolbar* toolbar = [[[NCToolbar alloc] init] autorelease];
+		NCToolbar* toolbar = [[NCToolbar alloc] init];
 		[toolbar setDelegate:self];
 		[toolbar attachToWindow:[self window]];
 		[self setToolbar:toolbar];
@@ -245,11 +271,11 @@
 }
 
 -(void)replaceLeftView:(NSView*)view {
-	[m_left_view replaceSubviewsWithView:view];
+	[self.leftView replaceSubviewsWithView:view];
 }
 
 -(void)replaceRightView:(NSView*)view {
-	[m_right_view replaceSubviewsWithView:view];
+	[self.rightView replaceSubviewsWithView:view];
 }
 
 - (BOOL)acceptsFirstResponder {
@@ -533,6 +559,7 @@
 
 
 
+#ifdef CUSTOM_WINDOW_BACKGROUND
 
 #pragma mark -
 #pragma mark Custom window background
@@ -592,6 +619,7 @@
     [grad drawInRect:rect_top angle:270.0];
 }
 
+#endif // CUSTOM_WINDOW_BACKGROUND
 
 #pragma mark -
 #pragma mark NCMainWindow callback for flags changed
