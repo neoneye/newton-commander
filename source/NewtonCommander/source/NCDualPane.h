@@ -65,6 +65,8 @@ And the event is send further down the chain in case nobody deals with the event
 -(void)setup;
 -(void)shutdown;
 
+-(void)setNextResponderForLeftAndRightStates:(NSResponder *)aResponder;
+
 -(void)changeState:(NCDualPaneState*)newState;
 
 -(void)tabKeyPressed:(id)sender;

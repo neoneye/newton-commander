@@ -83,6 +83,18 @@
 	[self setStateRightView:nil];
 }
 
+-(void)setNextResponderForLeftAndRightStates:(NSResponder *)aResponder {
+	[[self stateLeftList]  setNextResponder:aResponder];
+	[[self stateLeftHelp]  setNextResponder:aResponder];
+	[[self stateLeftInfo]  setNextResponder:aResponder];
+	[[self stateLeftView]  setNextResponder:aResponder];
+	[[self stateRightList] setNextResponder:aResponder];
+	[[self stateRightHelp] setNextResponder:aResponder];
+	[[self stateRightInfo] setNextResponder:aResponder];
+	[[self stateRightView] setNextResponder:aResponder];
+}
+
+
 -(BOOL)acceptsFirstResponder {
 	return NO;
 }

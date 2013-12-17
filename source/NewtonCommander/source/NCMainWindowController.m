@@ -147,15 +147,7 @@ BOOL	isDrawingCustomFrame = YES;
 	m_dualpane = [[NCDualPane alloc] init];
 	[m_dualpane setWindowController:self];
 	[m_dualpane setup];
-
-	[[m_dualpane stateLeftList]  setNextResponder:self];
-	[[m_dualpane stateLeftHelp]  setNextResponder:self];
-	[[m_dualpane stateLeftInfo]  setNextResponder:self];
-	[[m_dualpane stateLeftView]  setNextResponder:self]; 
-	[[m_dualpane stateRightList] setNextResponder:self];
-	[[m_dualpane stateRightHelp] setNextResponder:self];
-	[[m_dualpane stateRightInfo] setNextResponder:self];
-	[[m_dualpane stateRightView] setNextResponder:self]; 
+	[m_dualpane setNextResponderForLeftAndRightStates:self];
 
 
 	{
