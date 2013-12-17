@@ -5,6 +5,10 @@
 //  Created by Simon Strandgaard on 02/08/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
+
 
 #import "NCLog.h"
 #import "NCHelpPanelController.h"                  
@@ -13,8 +17,6 @@
 
 
 @implementation NCHelpPanelController
-
-@synthesize infoView = m_info_view;
 
 - (void)awakeFromNib
 {
@@ -44,7 +46,7 @@
 	NSArray* objects = [NSArray arrayWithObjects:name, nil];
 	NSDictionary* dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];	
 	
-	[m_info_view setDict:dict];
+	[self.infoView setDict:dict];
 }
 
 @end

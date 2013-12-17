@@ -10,9 +10,8 @@
 
 @class NCInfoView;
 
-@interface NCInfoPanelController : NSViewController {
-	NCInfoView* m_info_view;
-}
-@property (assign) IBOutlet NCInfoView* infoView;
+@interface NCInfoPanelController : NSViewController
+
+@property (weak) IBOutlet NCInfoView* infoView;
 
 @end

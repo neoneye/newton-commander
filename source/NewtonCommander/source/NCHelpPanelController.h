@@ -11,10 +11,8 @@
 @class NCHelpView;
 @class NCListPanelController;
 
-@interface NCHelpPanelController : NSViewController {
-	NCHelpView* m_info_view;
-}
-@property (assign) IBOutlet NCHelpView* infoView;
+@interface NCHelpPanelController : NSViewController
+@property (weak) IBOutlet NCHelpView* infoView;
 
 -(void)gatherInfo:(NCListPanelController*)listPanel;
 

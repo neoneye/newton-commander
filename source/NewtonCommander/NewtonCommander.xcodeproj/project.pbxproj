@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42010DF21206B77B0002191E /* NCHelpPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010DF11206B77B0002191E /* NCHelpPanelController.m */; };
+		42010DF21206B77B0002191E /* NCHelpPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010DF11206B77B0002191E /* NCHelpPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42010E0A1206B86B0002191E /* NCDualPaneStateHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010E091206B86B0002191E /* NCDualPaneStateHelp.m */; };
 		42010E0E1206BC2B0002191E /* HelpPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42010E0C1206BC2B0002191E /* HelpPanel.xib */; };
 		42071EEA12120E9900977D06 /* icon_info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EE912120E9900977D06 /* icon_info.pdf */; };
@@ -45,7 +45,7 @@
 		42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155011155B09C000A0547 /* QuickLook.framework */; };
 		42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155211155B1B3000A0547 /* Quartz.framework */; };
 		42C21A34112DB561007097ED /* InfoPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A32112DB561007097ED /* InfoPanel.xib */; };
-		42C21A38112DB626007097ED /* NCInfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A37112DB626007097ED /* NCInfoPanelController.m */; };
+		42C21A38112DB626007097ED /* NCInfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A37112DB626007097ED /* NCInfoPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42C21A3B112DB68F007097ED /* NCViewPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A3A112DB68F007097ED /* NCViewPanelController.m */; };
 		42C21A3E112DB6B1007097ED /* ViewPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A3C112DB6B1007097ED /* ViewPanel.xib */; };
 		42C21A45112DBB98007097ED /* NCDualPaneState.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A44112DBB98007097ED /* NCDualPaneState.m */; };
