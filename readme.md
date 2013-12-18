@@ -13,7 +13,8 @@ A dual tab file manager for Mac OS X.
 
 
 ### Screenshot
-![ScreenShot](http://i.imgur.com/gtQisaE.png)
+![Screenshot of copy sheet](http://i.imgur.com/gtQisaE.png)
+![Screenshot of child-process running as root](http://i.imgur.com/NNVUq6m.jpg)
 
 
 # Build Instructions
