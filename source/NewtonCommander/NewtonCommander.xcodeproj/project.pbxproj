@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42010DF21206B77B0002191E /* NCHelpPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010DF11206B77B0002191E /* NCHelpPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42010E0A1206B86B0002191E /* NCDualPaneStateHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010E091206B86B0002191E /* NCDualPaneStateHelp.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
+		42010DF21206B77B0002191E /* NCHelpPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010DF11206B77B0002191E /* NCHelpPanelController.m */; };
+		42010E0A1206B86B0002191E /* NCDualPaneStateHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 42010E091206B86B0002191E /* NCDualPaneStateHelp.m */; };
 		42010E0E1206BC2B0002191E /* HelpPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42010E0C1206BC2B0002191E /* HelpPanel.xib */; };
 		42071EEA12120E9900977D06 /* icon_info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EE912120E9900977D06 /* icon_info.pdf */; };
 		42071EF2121210AF00977D06 /* icon_gear.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EF1121210AF00977D06 /* icon_gear.pdf */; };
 		42071EFA1212115D00977D06 /* icon_pencil.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EF91212115D00977D06 /* icon_pencil.pdf */; };
 		42222ADA11D75C6600475062 /* ListPanelTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42222AD811D75C6600475062 /* ListPanelTab.xib */; };
-		42222B1E11D766F000475062 /* NCListPanelTabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222B1D11D766F000475062 /* NCListPanelTabModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		42222B1E11D766F000475062 /* NCListPanelTabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222B1D11D766F000475062 /* NCListPanelTabModel.m */; };
+		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; };
 		4222E12A11E39F3B0040E6D4 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 4222E12811E39F3B0040E6D4 /* Credits.html */; };
-		42271DF911CFF09400E5FFE1 /* NCMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42271DF811CFF09400E5FFE1 /* NCMainWindow.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		42271DF911CFF09400E5FFE1 /* NCMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42271DF811CFF09400E5FFE1 /* NCMainWindow.m */; };
 		423451FF123E962700FDAAA5 /* PermissionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423451FD123E962700FDAAA5 /* PermissionSheet.xib */; };
 		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
@@ -31,9 +31,9 @@
 		4282544B12382E3A00EA3618 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4282544A12382E3A00EA3618 /* Carbon.framework */; };
 		4289AC06120EB12B0073AC9B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4289AC05120EB12B0073AC9B /* Security.framework */; };
 		4289AC4D120EC39A0073AC9B /* install.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4289AC4B120EC3940073AC9B /* install.sh */; };
-		428AB2C0110E44B600708EDB /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2BF110E44B600708EDB /* NCMainWindowController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		428AB2C0110E44B600708EDB /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2BF110E44B600708EDB /* NCMainWindowController.m */; };
 		428AB2C4110E472D00708EDB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428AB2C2110E472D00708EDB /* MainWindow.xib */; };
-		428AB2FD110E4F7C00708EDB /* NCListPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2FC110E4F7C00708EDB /* NCListPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		428AB2FD110E4F7C00708EDB /* NCListPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2FC110E4F7C00708EDB /* NCListPanelController.m */; };
 		428DD03B11EBB43B0048B3C6 /* icon_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DD03A11EBB43B0048B3C6 /* icon_copy.png */; };
 		428DD04911EBBB510048B3C6 /* icon_move.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DD04811EBBB510048B3C6 /* icon_move.png */; };
 		4295BD27121203D900DEDCDE /* icon_eye.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD26121203D900DEDCDE /* icon_eye.pdf */; };
@@ -45,19 +45,19 @@
 		42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155011155B09C000A0547 /* QuickLook.framework */; };
 		42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155211155B1B3000A0547 /* Quartz.framework */; };
 		42C21A34112DB561007097ED /* InfoPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A32112DB561007097ED /* InfoPanel.xib */; };
-		42C21A38112DB626007097ED /* NCInfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A37112DB626007097ED /* NCInfoPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42C21A3B112DB68F007097ED /* NCViewPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A3A112DB68F007097ED /* NCViewPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		42C21A38112DB626007097ED /* NCInfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A37112DB626007097ED /* NCInfoPanelController.m */; };
+		42C21A3B112DB68F007097ED /* NCViewPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A3A112DB68F007097ED /* NCViewPanelController.m */; };
 		42C21A3E112DB6B1007097ED /* ViewPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A3C112DB6B1007097ED /* ViewPanel.xib */; };
-		42C21A45112DBB98007097ED /* NCDualPaneState.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A44112DBB98007097ED /* NCDualPaneState.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42C21A48112DBBA9007097ED /* NCDualPaneStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A47112DBBA9007097ED /* NCDualPaneStateList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42C21A4B112DBBC7007097ED /* NCDualPaneStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4A112DBBC7007097ED /* NCDualPaneStateView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42C21A4E112DBBD2007097ED /* NCDualPaneStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4D112DBBD2007097ED /* NCDualPaneStateInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42C21A53112DBE08007097ED /* NCDualPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A52112DBE08007097ED /* NCDualPane.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42C21E9C11479F26007097ED /* NCToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21E9B11479F26007097ED /* NCToolbar.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		42C21A45112DBB98007097ED /* NCDualPaneState.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A44112DBB98007097ED /* NCDualPaneState.m */; };
+		42C21A48112DBBA9007097ED /* NCDualPaneStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A47112DBBA9007097ED /* NCDualPaneStateList.m */; };
+		42C21A4B112DBBC7007097ED /* NCDualPaneStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4A112DBBC7007097ED /* NCDualPaneStateView.m */; };
+		42C21A4E112DBBD2007097ED /* NCDualPaneStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4D112DBBD2007097ED /* NCDualPaneStateInfo.m */; };
+		42C21A53112DBE08007097ED /* NCDualPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A52112DBE08007097ED /* NCDualPane.m */; };
+		42C21E9C11479F26007097ED /* NCToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21E9B11479F26007097ED /* NCToolbar.m */; };
 		42D159131161622B00F66068 /* NewtonCommander.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42D159121161622B00F66068 /* NewtonCommander.icns */; };
-		42D15AF6116D1D3C00F66068 /* NCTabArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D15AF5116D1D3C00F66068 /* NCTabArray.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		42D15AF6116D1D3C00F66068 /* NCTabArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D15AF5116D1D3C00F66068 /* NCTabArray.m */; };
 		42D449F41216EDF600CB5BF5 /* MoveSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D449F21216EDF600CB5BF5 /* MoveSheet.xib */; };
-		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -806,6 +806,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 429DC47E11C4DB7E0028CDEC /* Common.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -819,6 +820,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 429DC47E11C4DB7E0028CDEC /* Common.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
