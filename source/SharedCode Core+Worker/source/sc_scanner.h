@@ -1,11 +1,7 @@
 //
-//  sc_scanner.h
-//  SharedCode Core+Worker
+// sc_scanner.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 24/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #include <Foundation/Foundation.h>
 
 

@@ -1,3 +1,7 @@
+//
+// sc_tov_print.h
+// Newton Commander
+//
 #import "sc_traversal_objects.h"
 
 @interface TOVPrint : NSObject <TraversalObjectVisitor> {

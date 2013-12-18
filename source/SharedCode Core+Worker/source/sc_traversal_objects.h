@@ -1,3 +1,7 @@
+//
+// sc_traversal_objects.h
+// Newton Commander
+//
 #import <Foundation/Foundation.h>
 
 @class TODirPre;

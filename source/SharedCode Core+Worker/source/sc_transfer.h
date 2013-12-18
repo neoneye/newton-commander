@@ -1,9 +1,6 @@
 //
-//  sc_transfer.h
-//  SharedCode Core+Worker
-//
-//  Created by Simon Strandgaard on 23/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// sc_transfer.h
+// Newton Commander
 //
 #include <Foundation/Foundation.h>
 

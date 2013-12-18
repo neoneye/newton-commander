@@ -1,9 +1,6 @@
 //
-//  sc_tov_copier.m
-//  SharedCode Core+Worker
-//
-//  Created by Simon Strandgaard on 24/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// sc_tov_copier.m
+// Newton Commander
 //
 
 /*

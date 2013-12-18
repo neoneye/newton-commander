@@ -1,3 +1,7 @@
+//
+// sc_finder_info_manager.h
+// Newton Commander
+//
 #include <Foundation/Foundation.h>
 
 @interface FinderInfoManager : NSObject {

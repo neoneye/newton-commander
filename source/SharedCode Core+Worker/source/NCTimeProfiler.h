@@ -1,11 +1,7 @@
 //
-//  NCTimeProfiler.h
-//  NCCore
+// NCTimeProfiler.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 14/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 

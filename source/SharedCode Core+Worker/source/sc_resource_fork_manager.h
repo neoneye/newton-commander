@@ -1,3 +1,7 @@
+//
+// sc_resource_fork_manager.h
+// Newton Commander
+//
 #include <Foundation/Foundation.h>
 
 @interface ResourceForkManager : NSObject {

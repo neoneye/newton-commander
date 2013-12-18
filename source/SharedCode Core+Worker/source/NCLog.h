@@ -1,11 +1,7 @@
 //
-//  NCLog.h
-//  SharedCode Core+Worker
+// NCLog.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 28/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #include <Foundation/Foundation.h>
 #include <asl.h>
 

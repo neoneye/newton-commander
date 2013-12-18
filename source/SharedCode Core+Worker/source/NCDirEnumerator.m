@@ -1,7 +1,10 @@
+//
+// NCDirEnumerator.m
+// Newton Commander
+//
+
 /*********************************************************************
 NCDirEnumerator.m - wrapper for the arcane getdirentries api
-Copyright (c) 2009 - opcoders.com
-Simon Strandgaard <simon@opcoders.com>
 
 This is an objc wrapper around getdirentries() code found in the
 Apple's FSMegaInfo sample project.

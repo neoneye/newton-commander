@@ -1,11 +1,7 @@
 //
-//  NCFileItem.h
-//  NCCore
+// NCFileItem.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 21/03/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 enum {

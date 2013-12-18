@@ -1,11 +1,7 @@
 //
-//  sc_tov_copier.h
-//  SharedCode Core+Worker
+// sc_tov_copier.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 24/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "sc_traversal_objects.h"
 

@@ -1,11 +1,7 @@
 //
-//  NCFileEventManager.h
-//  NCCore
+// NCFileEventManager.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 24/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 // NCFileEventManagerPrivate is defined in the implementation file

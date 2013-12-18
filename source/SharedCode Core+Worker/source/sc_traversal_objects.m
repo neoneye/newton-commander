@@ -1,3 +1,7 @@
+//
+// sc_traversal_objects.m
+// Newton Commander
+//
 #import "sc_traversal_objects.h"
 
 @implementation TraversalObject
