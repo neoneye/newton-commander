@@ -51,7 +51,7 @@
 @end
 
 
-@interface NCMainWindowController () <NCToolbarDelegate> {
+@interface NCMainWindowController () <NCToolbarDelegate, NCPanelControllerDelegate> {
 	NCListPanelController* m_list_panel_controller_left;
 	NCListPanelController* m_list_panel_controller_right;
 	NCHelpPanelController* m_help_panel_controller_left;

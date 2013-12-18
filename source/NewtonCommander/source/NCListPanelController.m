@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 25/01/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCListPanelController.h"
@@ -20,9 +23,16 @@
 #import "NCListTabController.h"
 #import "NSTabView+SwitchExtensions.h"
 
-@interface NCListPanelController () <PSMTabBarControlDelegate>
+@interface NCListPanelController () <PSMTabBarControlDelegate> {
+	PSMTabBarControl* __weak m_tabbar;
+	NSTabView* __weak m_tabview;
+	
+	BOOL m_is_left_panel;
+}
 
-- (IBAction)addNewTab:(id)sender;
+@property (weak) IBOutlet PSMTabBarControl* tabBar;
+@property (weak) IBOutlet NSTabView* tabView;
+
 -(NCListTabController*)currentListTabController;
 -(void)loadWithTabArray:(NCTabArray*)tabarray;    
 
@@ -94,10 +104,10 @@
 }
 
 - (IBAction)addNewTab:(id)sender {
-	NCListPanelTabModel* model = [[[NCListPanelTabModel alloc] init] autorelease];
-	NSTabViewItem* item = [[[NSTabViewItem alloc] initWithIdentifier:model] autorelease];
+	NCListPanelTabModel* model = [[NCListPanelTabModel alloc] init];
+	NSTabViewItem* item = [[NSTabViewItem alloc] initWithIdentifier:model];
 
-	NCListTabController* lpt = [[[NCListTabController alloc] initAsLeftPanel:m_is_left_panel] autorelease];
+	NCListTabController* lpt = [[NCListTabController alloc] initAsLeftPanel:m_is_left_panel];
 	[model setController:lpt];
 	[lpt setDelegate:self];
 	[lpt setTabModel:model];
@@ -227,9 +237,8 @@
 
 -(void)tabKeyPressed:(id)sender {
 	// LOG_DEBUG(@"pressed");
-	SEL sel = @selector(tabKeyPressed:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([m_delegate respondsToSelector:@selector(tabKeyPressed:)]) {
+		[m_delegate tabKeyPressed:self];
 	}
 }
 
@@ -277,9 +286,8 @@
 }
 
 -(void)activateTableView:(id)sender {
-	SEL sel = @selector(clickToActivatePanel:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([m_delegate respondsToSelector:@selector(clickToActivatePanel:)]) {
+		[m_delegate clickToActivatePanel:self];
 	}
 }
 
@@ -289,9 +297,8 @@
 		[[m_tabview selectedTabViewItem] setLabel:label];
 	}
 
-	SEL sel = @selector(workingDirDidChange:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([m_delegate respondsToSelector:@selector(workingDirDidChange:)]) {
+		[m_delegate workingDirDidChange:self];
 	}
 }
 
@@ -460,9 +467,8 @@ there are two kind of dragndrop operations:
 	}
 
 	// LOG_DEBUG(@"dragndrop outside the panel");
-	SEL sel = @selector(tabViewItemsDidChange:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([m_delegate respondsToSelector:@selector(tabViewItemsDidChange:)]) {
+		[m_delegate tabViewItemsDidChange:self];
 	}
 
 	// activate the panel and deactivate the other panel
@@ -485,17 +491,17 @@ there are two kind of dragndrop operations:
 	
 	// grabs whole window image
 	NSWindow* window = [m_tabview window];
-	NSImage *viewImage = [[[NSImage alloc] init] autorelease];
+	NSImage *viewImage = [[NSImage alloc] init];
 	NSRect contentFrame = [[window contentView] frame];
 	[[window contentView] lockFocus];
-	NSBitmapImageRep *viewRep = [[[NSBitmapImageRep alloc] initWithFocusedViewRect:contentFrame] autorelease];
+	NSBitmapImageRep *viewRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:contentFrame];
 	[viewImage addRepresentation:viewRep];
 	[[window contentView] unlockFocus];
 
 	// grabs snapshot of dragged tabViewItem's view (represents content being dragged)
 	NSView *viewForImage = [tabViewItem view];
 	NSRect viewRect = [viewForImage frame];
-	NSImage *tabViewImage = [[[NSImage alloc] initWithSize:viewRect.size] autorelease];
+	NSImage *tabViewImage = [[NSImage alloc] initWithSize:viewRect.size];
 	[tabViewImage lockFocus];
 	[viewForImage drawRect:[viewForImage bounds]];
 	[tabViewImage unlockFocus];

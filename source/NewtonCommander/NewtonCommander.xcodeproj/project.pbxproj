@@ -33,7 +33,7 @@
 		4289AC4D120EC39A0073AC9B /* install.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4289AC4B120EC3940073AC9B /* install.sh */; };
 		428AB2C0110E44B600708EDB /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2BF110E44B600708EDB /* NCMainWindowController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		428AB2C4110E472D00708EDB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428AB2C2110E472D00708EDB /* MainWindow.xib */; };
-		428AB2FD110E4F7C00708EDB /* NCListPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2FC110E4F7C00708EDB /* NCListPanelController.m */; };
+		428AB2FD110E4F7C00708EDB /* NCListPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428AB2FC110E4F7C00708EDB /* NCListPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		428DD03B11EBB43B0048B3C6 /* icon_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DD03A11EBB43B0048B3C6 /* icon_copy.png */; };
 		428DD04911EBBB510048B3C6 /* icon_move.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DD04811EBBB510048B3C6 /* icon_move.png */; };
 		4295BD27121203D900DEDCDE /* icon_eye.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD26121203D900DEDCDE /* icon_eye.pdf */; };

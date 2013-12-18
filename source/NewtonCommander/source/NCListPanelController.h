@@ -10,22 +10,23 @@
 
 
 @class NCTabArray;
-@class PSMTabBarControl;
 @protocol NCCopyOperationProtocol;
 @protocol NCMoveOperationProtocol;
 
-@interface NCListPanelController : NSViewController {
-	id m_delegate;
+@protocol NCPanelControllerDelegate <NSObject>
+@optional
+-(void)tabKeyPressed:(id)sender;
+-(void)switchToNextTab:(id)sender;
+-(void)switchToPrevTab:(id)sender;
+-(void)closeTab:(id)sender;
+-(void)clickToActivatePanel:(id)sender;
+-(void)workingDirDidChange:(id)sender;
+-(void)tabViewItemsDidChange:(id)sender;
+@end
 
-	PSMTabBarControl* m_tabbar;
-	NSTabView* m_tabview;
+@interface NCListPanelController : NSViewController
 
-	BOOL m_is_left_panel;
-}
-
-@property (assign) IBOutlet id delegate;
-@property (assign) IBOutlet PSMTabBarControl* tabBar;
-@property (assign) IBOutlet NSTabView* tabView;
+@property (weak) NSObject <NCPanelControllerDelegate> *delegate;
 
 -(id)initAsLeftPanel:(BOOL)is_left_panel;
 
@@ -62,14 +63,4 @@
 -(id<NCCopyOperationProtocol>)copyOperation;
 -(id<NCMoveOperationProtocol>)moveOperation;
 
-@end
-
-@interface NSObject (NCPanelControllerDelegate)
--(void)tabKeyPressed:(id)sender;
--(void)switchToNextTab:(id)sender;
--(void)switchToPrevTab:(id)sender;
--(void)closeTab:(id)sender;
--(void)clickToActivatePanel:(id)sender;
--(void)workingDirDidChange:(id)sender;
--(void)tabViewItemsDidChange:(id)sender;
 @end
