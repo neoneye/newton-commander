@@ -1,3 +1,8 @@
+//
+// main.m
+// Newton Commander
+//
+
 /*
 
 IDEA: use a watchdog to protect against hangups.. maybe a 1 minute alarm is good

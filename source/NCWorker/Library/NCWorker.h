@@ -1,11 +1,7 @@
 //
-//  NCWorkerParent.h
-//  NCWorker
+// NCWorker.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 08/06/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 

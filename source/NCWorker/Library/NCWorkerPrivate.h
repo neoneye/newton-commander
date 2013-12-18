@@ -1,11 +1,7 @@
 //
-//  NCWorkerPrivate.h
-//  NCWorker
+// NCWorkerPrivate.m
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 11/06/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import "NCWorker.h"
 #import "NCWorkerProtocol.h"
 

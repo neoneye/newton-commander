@@ -1,11 +1,7 @@
 //
-//  NCWorkerPlugin.h
-//  NCWorker
+// NCWorkerPlugin.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 16/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 
 // forward
 @protocol NCWorkerPluginDelegate;

@@ -1,9 +1,6 @@
 //
-//  signal.h
-//  NCWorkerChild
-//
-//  Created by Simon Strandgaard on 05/06/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// signal.h
+// Newton Commander
 //
 
 void setup_signals();

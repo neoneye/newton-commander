@@ -1,10 +1,9 @@
-/*********************************************************************
-NCWorkerProtocol.h - communication between NewtonCommander.app and NCWorker.app
-
-Copyright (c) 2010 - opcoders.com
-Simon Strandgaard <simon@opcoders.com>
-*********************************************************************/
-
+//
+// NCWorkerProtocol.h
+// Newton Commander
+//
+// Communication between NewtonCommander.app and NCWorker.app
+//
 
 @protocol NCWorkerChildCallbackProtocol <NSObject>
 

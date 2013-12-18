@@ -1,9 +1,6 @@
 //
-//  zombie.m
-//  NCWorkerChild
-//
-//  Created by Simon Strandgaard on 05/06/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// zombie.m
+// Newton Commander
 //
 
 /*

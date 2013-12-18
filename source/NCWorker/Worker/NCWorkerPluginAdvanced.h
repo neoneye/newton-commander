@@ -1,11 +1,7 @@
 //
-//  NCWorkerPluginAdvanced.h
-//  NCWorker
+// NCWorkerPluginAdvanced.h
+// Newton Commander
 //
-//  Created by Simon Strandgaard on 16/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import "NCWorkerPlugin.h"
 #import "sc_transfer.h"
 
