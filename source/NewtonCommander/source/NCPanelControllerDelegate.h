@@ -18,5 +18,6 @@
 -(void)clickToActivatePanel:(id)sender;
 -(void)workingDirDidChange:(id)sender;
 -(void)tabViewItemsDidChange:(id)sender;
+-(void)activateTableView:(id)sender;
 
 @end

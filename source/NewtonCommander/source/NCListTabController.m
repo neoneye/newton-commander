@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 27/06/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"                                                  
 #import "NCListTabController.h"
@@ -28,7 +31,6 @@
 
 @implementation NCListTabController
 
-@synthesize delegate = m_delegate;
 @synthesize lister = m_lister;
 @synthesize listerCounter = m_lister_counter;
 // @synthesize background = m_background;
@@ -49,7 +51,7 @@
 
 	NSAssert(m_lister_counter, @"must be initialized by nib");
 
-	NCListerDataSourceAdvanced* data_source = [[[NCListerDataSourceAdvanced alloc] init] autorelease];
+	NCListerDataSourceAdvanced* data_source = [[NCListerDataSourceAdvanced alloc] init];
 	[m_lister setDataSource:data_source];
 	[self setDataSource:data_source];
 	
@@ -168,37 +170,32 @@
 }
 
 -(void)listerTabKeyPressed:(NCLister*)aLister {
-	SEL sel = @selector(tabKeyPressed:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(tabKeyPressed:)]) {
+		[self.delegate tabKeyPressed:self];
 	}
 }
 
 -(void)listerSwitchToNextTab:(NCLister*)aLister {
-	SEL sel = @selector(switchToNextTab:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(switchToNextTab:)]) {
+		[self.delegate switchToNextTab:self];
 	}
 }
 
 -(void)listerSwitchToPrevTab:(NCLister*)aLister {
-	SEL sel = @selector(switchToPrevTab:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(switchToPrevTab:)]) {
+		[self.delegate switchToPrevTab:self];
 	}
 }
 
 -(void)listerCloseTab:(NCLister*)aLister {
-	SEL sel = @selector(closeTab:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(closeTab:)]) {
+		[self.delegate closeTab:self];
 	}
 }
 
 -(void)listerActivateTableView:(NCLister*)aLister {
-	SEL sel = @selector(activateTableView:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(activateTableView:)]) {
+		[self.delegate activateTableView:self];
 	}
 }
 
@@ -233,10 +230,8 @@
 
 	[self updateVolumeStatus];
 
-
-	SEL sel = @selector(workingDirDidChange:);
-	if([m_delegate respondsToSelector:sel]) {
-		[m_delegate performSelector:sel withObject:self];
+	if([self.delegate respondsToSelector:@selector(workingDirDidChange:)]) {
+		[self.delegate workingDirDidChange:self];
 	}
 }
 
@@ -311,7 +306,7 @@
 }
 
 -(NSMenu*)buildMenuWithItems:(NSArray*)items customizeMenuTag:(int)customize_menu_tag {
-	NSMenu* menu = [[[NSMenu alloc] initWithTitle:@"Menu"] autorelease];
+	NSMenu* menu = [[NSMenu alloc] initWithTitle:@"Menu"];
 
 	// build menu items from whats stored in user defaults
 	id thing;
@@ -320,10 +315,10 @@
 		if([thing isKindOfClass:[NCUserDefaultMenuItem class]] == NO) continue;
 		NCUserDefaultMenuItem* ami = (NCUserDefaultMenuItem*)thing;
 
-		NSMenuItem* mi = [[[NSMenuItem alloc] 
+		NSMenuItem* mi = [[NSMenuItem alloc] 
 			initWithTitle:[ami name]
 			action:@selector(contextMenuAction:) 
-			keyEquivalent:@""] autorelease];
+			keyEquivalent:@""];
 		[mi setTag:1];
 		[mi setRepresentedObject:ami];
 		[mi setTarget:self];
@@ -332,10 +327,10 @@
 
 	[menu addItem:[NSMenuItem separatorItem]];
 	{
-		NSMenuItem* mi = [[[NSMenuItem alloc] 
+		NSMenuItem* mi = [[NSMenuItem alloc] 
 			initWithTitle:@"Customize…" 
 			action:@selector(contextMenuAction:) 
-			keyEquivalent:@""] autorelease];
+			keyEquivalent:@""];
 		[mi setTag:customize_menu_tag];
 		[mi setTarget:self];
 		[menu addItem:mi];

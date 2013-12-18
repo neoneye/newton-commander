@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NCPanelControllerDelegate.h"
 
 #import "NCLister.h"
 
@@ -22,26 +23,25 @@
 @protocol NCMoveOperationProtocol;
 
 @interface NCListTabController : NSViewController <NCListerDelegate> {
-	id m_delegate;
-	NCLister* m_lister;                               
-	NCListerCounter* m_lister_counter;
+	NCLister* __weak m_lister;
+	NCListerCounter* __weak m_lister_counter;
 	// NCBackground* m_background;
-	NCPathControl* m_path_control;
-	NCVolumeStatus* m_volume_status;
+	NCPathControl* __weak m_path_control;
+	NCVolumeStatus* __weak m_volume_status;
 
 	BOOL m_is_left_panel;
 	NCListPanelTabModel* m_tab_model;
 
 	NCListerDataSourceAdvanced* m_data_source;
 }
-@property (assign) IBOutlet id delegate;
-@property (assign) IBOutlet NCLister* lister;
-@property (assign) IBOutlet NCListerCounter* listerCounter;
+@property (weak) NSObject <NCPanelControllerDelegate> *delegate;
+@property (weak) IBOutlet NCLister* lister;
+@property (weak) IBOutlet NCListerCounter* listerCounter;
 // @property (assign) IBOutlet NCBackground* background;
-@property (assign) IBOutlet NCPathControl* pathControl;
-@property (assign) IBOutlet NCVolumeStatus* volumeStatus;
-@property (nonatomic, retain) NCListerDataSourceAdvanced* dataSource;
-@property (nonatomic, retain) NCListPanelTabModel* tabModel;
+@property (weak) IBOutlet NCPathControl* pathControl;
+@property (weak) IBOutlet NCVolumeStatus* volumeStatus;
+@property (nonatomic, strong) NCListerDataSourceAdvanced* dataSource;
+@property (nonatomic, strong) NCListPanelTabModel* tabModel;
 
 - (id)initAsLeftPanel:(BOOL)is_left_panel;
 

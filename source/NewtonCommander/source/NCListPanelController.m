@@ -23,7 +23,7 @@
 #import "NCListTabController.h"
 #import "NSTabView+SwitchExtensions.h"
 
-@interface NCListPanelController () <PSMTabBarControlDelegate> {
+@interface NCListPanelController () <PSMTabBarControlDelegate, NCPanelControllerDelegate> {
 	PSMTabBarControl* __weak m_tabbar;
 	NSTabView* __weak m_tabview;
 	

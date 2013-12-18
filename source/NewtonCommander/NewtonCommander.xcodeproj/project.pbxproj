@@ -17,7 +17,7 @@
 		42071EFA1212115D00977D06 /* icon_pencil.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EF91212115D00977D06 /* icon_pencil.pdf */; };
 		42222ADA11D75C6600475062 /* ListPanelTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42222AD811D75C6600475062 /* ListPanelTab.xib */; };
 		42222B1E11D766F000475062 /* NCListPanelTabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222B1D11D766F000475062 /* NCListPanelTabModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; };
+		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4222E12A11E39F3B0040E6D4 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 4222E12811E39F3B0040E6D4 /* Credits.html */; };
 		42271DF911CFF09400E5FFE1 /* NCMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42271DF811CFF09400E5FFE1 /* NCMainWindow.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		423451FF123E962700FDAAA5 /* PermissionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423451FD123E962700FDAAA5 /* PermissionSheet.xib */; };
