@@ -1,11 +1,7 @@
 //
 //  AppDelegate.h
-//  NewtonCommander
+//  Newton Commander
 //
-//  Created by Simon Strandgaard on 24/01/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 @class NCMainWindowController;

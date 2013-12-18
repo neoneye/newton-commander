@@ -1,11 +1,7 @@
 //
 //  NCDualPaneStateHelp.h
-//  NewtonCommander
+//  Newton Commander
 //
-//  Created by Simon Strandgaard on 02/08/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import "NCDualPaneState.h"
 
 

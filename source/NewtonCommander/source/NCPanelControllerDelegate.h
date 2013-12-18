@@ -1,11 +1,7 @@
 //
 //  NCPanelControllerDelegate.h
-//  NewtonCommander
+//  Newton Commander
 //
-//  Created by Simon Strandgaard on 12/18/13.
-//
-//
-
 #import <Foundation/Foundation.h>
 
 @protocol NCPanelControllerDelegate <NSObject>

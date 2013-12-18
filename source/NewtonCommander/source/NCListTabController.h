@@ -1,9 +1,6 @@
 //
-//  NCListPanelTab.h
-//  NewtonCommander
-//
-//  Created by Simon Strandgaard on 27/06/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+//  NCListTabController.h
+//  Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

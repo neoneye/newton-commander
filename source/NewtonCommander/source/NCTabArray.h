@@ -1,11 +1,7 @@
 //
 //  NCTabArray.h
-//  NewtonCommander
+//  Newton Commander
 //
-//  Created by Simon Strandgaard on 07/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 

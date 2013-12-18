@@ -1,9 +1,6 @@
 //
 //  NCTabArray.m
-//  NewtonCommander
-//
-//  Created by Simon Strandgaard on 07/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+//  Newton Commander
 //
 #if ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
