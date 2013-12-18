@@ -37,30 +37,18 @@ And the event is send further down the chain in case nobody deals with the event
 
 
 */
-@interface NCDualPane : NSResponder {
-	NCDualPaneState* m_state;
-	
-	NCDualPaneStateList* m_state_left_list;
-	NCDualPaneStateHelp* m_state_left_help;
-	NCDualPaneStateInfo* m_state_left_info;
-	NCDualPaneStateView* m_state_left_view;
-	NCDualPaneStateList* m_state_right_list;
-	NCDualPaneStateHelp* m_state_right_help;
-	NCDualPaneStateInfo* m_state_right_info;
-	NCDualPaneStateView* m_state_right_view;
+@interface NCDualPane : NSResponder
 
-	NCMainWindowController* m_windowcontroller;
-}
-@property(readonly, assign) NCDualPaneState* state;
-@property(nonatomic, retain) NCDualPaneStateList* stateLeftList;
-@property(nonatomic, retain) NCDualPaneStateHelp* stateLeftHelp;
-@property(nonatomic, retain) NCDualPaneStateInfo* stateLeftInfo;
-@property(nonatomic, retain) NCDualPaneStateView* stateLeftView;
-@property(nonatomic, retain) NCDualPaneStateList* stateRightList;
-@property(nonatomic, retain) NCDualPaneStateHelp* stateRightHelp;
-@property(nonatomic, retain) NCDualPaneStateInfo* stateRightInfo;
-@property(nonatomic, retain) NCDualPaneStateView* stateRightView;
-@property(nonatomic, retain) NCMainWindowController* windowController;
+@property(readonly, weak) NCDualPaneState* state;
+@property(nonatomic, strong) NCDualPaneStateList* stateLeftList;
+@property(nonatomic, strong) NCDualPaneStateHelp* stateLeftHelp;
+@property(nonatomic, strong) NCDualPaneStateInfo* stateLeftInfo;
+@property(nonatomic, strong) NCDualPaneStateView* stateLeftView;
+@property(nonatomic, strong) NCDualPaneStateList* stateRightList;
+@property(nonatomic, strong) NCDualPaneStateHelp* stateRightHelp;
+@property(nonatomic, strong) NCDualPaneStateInfo* stateRightInfo;
+@property(nonatomic, strong) NCDualPaneStateView* stateRightView;
+@property(nonatomic, strong) NCMainWindowController* windowController;
 
 -(void)setup;
 -(void)shutdown;

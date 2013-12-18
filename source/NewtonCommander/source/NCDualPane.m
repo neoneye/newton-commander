@@ -5,6 +5,9 @@
 //  Created by Simon Strandgaard on 18/02/10.
 //  Copyright 2010 opcoders.com. All rights reserved.
 //
+#if ! __has_feature(objc_arc)
+#error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 #import "NCLog.h"
 #import "NCDualPane.h"
@@ -18,27 +21,16 @@
 
 @implementation NCDualPane
 
-@synthesize state = m_state;
-@synthesize stateLeftList  = m_state_left_list;
-@synthesize stateLeftHelp  = m_state_left_help;
-@synthesize stateLeftInfo  = m_state_left_info;
-@synthesize stateLeftView  = m_state_left_view;
-@synthesize stateRightList = m_state_right_list;
-@synthesize stateRightHelp = m_state_right_help;
-@synthesize stateRightInfo = m_state_right_info;
-@synthesize stateRightView = m_state_right_view;
-@synthesize windowController = m_windowcontroller;
-
 -(void)setup {
 	
-	NCMainWindowController* wc = m_windowcontroller;
+	NCMainWindowController* wc = self.windowController;
 	NSAssert(wc, @"windowcontroller must be initialized before setup");
 
 	{
-		NCDualPaneStateList* state_list = [[[NCDualPaneStateList alloc] initWithSide:NCSideLeft] autorelease];
-		NCDualPaneStateHelp* state_help = [[[NCDualPaneStateHelp alloc] initWithSide:NCSideLeft] autorelease];
-		NCDualPaneStateInfo* state_info = [[[NCDualPaneStateInfo alloc] initWithSide:NCSideLeft] autorelease];
-		NCDualPaneStateView* state_view = [[[NCDualPaneStateView alloc] initWithSide:NCSideLeft] autorelease];
+		NCDualPaneStateList* state_list = [[NCDualPaneStateList alloc] initWithSide:NCSideLeft];
+		NCDualPaneStateHelp* state_help = [[NCDualPaneStateHelp alloc] initWithSide:NCSideLeft];
+		NCDualPaneStateInfo* state_info = [[NCDualPaneStateInfo alloc] initWithSide:NCSideLeft];
+		NCDualPaneStateView* state_view = [[NCDualPaneStateView alloc] initWithSide:NCSideLeft];
 	
 		[state_list setDualPane:self];
 		[state_help setDualPane:self];
@@ -52,10 +44,10 @@
 	}
 
 	{
-		NCDualPaneStateList* state_list = [[[NCDualPaneStateList alloc] initWithSide:NCSideRight] autorelease];
-		NCDualPaneStateHelp* state_help = [[[NCDualPaneStateHelp alloc] initWithSide:NCSideRight] autorelease];
-		NCDualPaneStateInfo* state_info = [[[NCDualPaneStateInfo alloc] initWithSide:NCSideRight] autorelease];
-		NCDualPaneStateView* state_view = [[[NCDualPaneStateView alloc] initWithSide:NCSideRight] autorelease];
+		NCDualPaneStateList* state_list = [[NCDualPaneStateList alloc] initWithSide:NCSideRight];
+		NCDualPaneStateHelp* state_help = [[NCDualPaneStateHelp alloc] initWithSide:NCSideRight];
+		NCDualPaneStateInfo* state_info = [[NCDualPaneStateInfo alloc] initWithSide:NCSideRight];
+		NCDualPaneStateView* state_view = [[NCDualPaneStateView alloc] initWithSide:NCSideRight];
 	
 		[state_list setDualPane:self];
 		[state_help setDualPane:self];
@@ -112,31 +104,31 @@
 -(void)changeState:(NCDualPaneState*)new_state {
 	// LOG_DEBUG(@"NCDualPane change state %s from %@ to %@", _cmd, m_state, new_state);
 
-	NCDualPaneState* old_state = m_state;
-	NSResponder* fr = [[m_windowcontroller window] firstResponder];
+	NCDualPaneState* old_state = self.state;
+	NSResponder* fr = [[self.windowController window] firstResponder];
 
-	m_state = new_state;
-	[self setNextResponder:m_state];
+	_state = new_state;
+	[self setNextResponder:self.state];
 
-	[m_windowcontroller stateDidChange:new_state oldResponder:fr oldState:old_state];
+	[self.windowController stateDidChange:new_state oldResponder:fr oldState:old_state];
 }
 
 -(void)tabKeyPressed:(id)sender {
-	[m_state tabKeyPressed:sender];
+	[self.state tabKeyPressed:sender];
 }
 
 // YES if the left panel is a lister panel that is active
 -(BOOL)leftActive {
-	return [m_state leftActive];
+	return [self.state leftActive];
 }
 
 // YES if the right panel is a lister panel that is active
 -(BOOL)rightActive {
-	return [m_state rightActive];
+	return [self.state rightActive];
 }
 
 -(void)saveState {
-	NSString* ident = [m_state identifier];
+	NSString* ident = [self.state identifier];
 	// LOG_DEBUG(@"saving state: %@", ident);
 	[[NSUserDefaults standardUserDefaults] setObject:ident forKey:@"DualPaneState"];
 }
@@ -147,14 +139,14 @@
 	NCDualPaneState* found_state = nil;
 	
 	NSArray* states = [NSArray arrayWithObjects:
-		m_state_left_list,
-		m_state_left_help,
-		m_state_left_info,
-		m_state_left_view,
-		m_state_right_list,
-		m_state_right_help,
-		m_state_right_info,
-		m_state_right_view,
+		_stateLeftList,
+		_stateLeftHelp,
+		_stateLeftInfo,
+		_stateLeftView,
+		_stateRightList,
+		_stateRightHelp,
+		_stateRightInfo,
+		_stateRightView,
 		nil
 	];
 	for(NCDualPaneState* state in states) {
