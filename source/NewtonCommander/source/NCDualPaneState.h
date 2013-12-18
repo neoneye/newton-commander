@@ -18,10 +18,9 @@ enum {
 
 @class NCDualPane;
 
-@interface NCDualPaneState : NSResponder {
-	NCDualPane* m_dualpane;
-}
-@property(nonatomic, assign) NCDualPane* dualPane;
+@interface NCDualPaneState : NSResponder
+
+@property(nonatomic, weak) NCDualPane* dualPane;
 
 -(void)changeState:(NCDualPaneState*)newState;
 

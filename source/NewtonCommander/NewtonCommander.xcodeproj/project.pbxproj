@@ -48,7 +48,7 @@
 		42C21A38112DB626007097ED /* NCInfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A37112DB626007097ED /* NCInfoPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42C21A3B112DB68F007097ED /* NCViewPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A3A112DB68F007097ED /* NCViewPanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42C21A3E112DB6B1007097ED /* ViewPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A3C112DB6B1007097ED /* ViewPanel.xib */; };
-		42C21A45112DBB98007097ED /* NCDualPaneState.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A44112DBB98007097ED /* NCDualPaneState.m */; };
+		42C21A45112DBB98007097ED /* NCDualPaneState.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A44112DBB98007097ED /* NCDualPaneState.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42C21A48112DBBA9007097ED /* NCDualPaneStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A47112DBBA9007097ED /* NCDualPaneStateList.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42C21A4B112DBBC7007097ED /* NCDualPaneStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4A112DBBC7007097ED /* NCDualPaneStateView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		42C21A4E112DBBD2007097ED /* NCDualPaneStateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21A4D112DBBD2007097ED /* NCDualPaneStateInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
