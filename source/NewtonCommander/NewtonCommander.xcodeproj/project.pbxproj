@@ -221,6 +221,7 @@
 		4295BD2A121204B500DEDCDE /* icon_reload.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_reload.pdf; path = images/icon_reload.pdf; sourceTree = "<group>"; };
 		429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSMTabBarControl.xcodeproj; path = ../PSMTabBarControl/PSMTabBarControl.xcodeproj; sourceTree = SOURCE_ROOT; };
 		429DC47E11C4DB7E0028CDEC /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		42BA70991861FAA60083C2D3 /* NCPanelControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPanelControllerDelegate.h; sourceTree = "<group>"; };
 		42C0E78A1215AC71005C6EA0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/CopySheet.xib; sourceTree = "<group>"; };
 		42C150FF1151662A000A0547 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		42C155011155B09C000A0547 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
@@ -307,6 +308,7 @@
 				42010DF11206B77B0002191E /* NCHelpPanelController.m */,
 				42010E081206B86B0002191E /* NCDualPaneStateHelp.h */,
 				42010E091206B86B0002191E /* NCDualPaneStateHelp.m */,
+				42BA70991861FAA60083C2D3 /* NCPanelControllerDelegate.h */,
 			);
 			path = source;
 			sourceTree = "<group>";
