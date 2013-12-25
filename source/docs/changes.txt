@@ -1,3 +1,11 @@
+2013-12-18 Simon Strandgaard
+
+    * Migrated to ARC.
+
+2013-11-08 Simon Strandgaard
+
+    * Made Newton Commander open source under MIT license.
+
 2011-07-16 Simon Strandgaard
 
     * fullscreen support on Lion.
