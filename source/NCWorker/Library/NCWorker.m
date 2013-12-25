@@ -250,10 +250,16 @@
 	}
 	[obj setProtocolForProxy:@protocol(NCWorkerChildCallbackProtocol)];
 	id <NCWorkerChildCallbackProtocol> proxy = (id <NCWorkerChildCallbackProtocol>)obj;
-	if([proxy handshakeAcknowledge:42] != 43) {
-		LOG_ERROR(@"ERROR: failed creating two-way connection. child: %@", name);
+	LOG_INFO(@"Will handshake with child");
+	double t0 = CFAbsoluteTimeGetCurrent();
+	int rc = [proxy handshakeAcknowledge:42];
+	double t1 = CFAbsoluteTimeGetCurrent();
+	double elapsed = t1 - t0;
+	if(rc != 43) {
+		LOG_ERROR(@"ERROR: failed creating two-way connection. child: %@  elapsed: %.6f", name, elapsed);
 		return;
 	}
+	LOG_INFO(@"Did handshake with child. elapsed: %.6f", elapsed);
 
 	m_connection_established = YES;
 	m_distant_object = obj;
