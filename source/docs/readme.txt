@@ -1,11 +1,4 @@
-Opcoders File Manager version 2
-
-Version 2 originally had the goal of getting into the MacAppStore. This required that some
-really difficult obstacles got solved first. It needed get AEWP approved. 
-However AEWP violates sandboxing badly. Luckily Apple has provided an alternative:
-GateKeeper -- Sadly, no way to get in the MacAppStore, but better than nothing.
-
-
+Newton Commander todos
 
 == Primary TODOes
 
@@ -24,12 +17,41 @@ copy+move sheets must work.. by using the Worker component and satisfy the copym
 
 == Secondary TODOes
 
-
-Finegrained progressbars in copy sheet.
+duplicate folder
+I use this a lot at my job, instead I use the Finder for this. CMD-D
 
 
 CMD Arrow-Left to open the folder that cursor is hovering over.. in the opposite panel.
 CMD Arrow-Right to do the same.
+
+
+delete a single file/folder, should preserver the Y position of the cursor
+
+
+F1 inspector
+
+
+Change permissions sheet
+
+
+Rework NSConnection code between parent process and child process to use NSXPCConnection.
+Not sure if this allows us to run as a different user. 
+Create a proof of concept, where the child process runs as a different user.
+
+
+faster navigation.. navigating to parent dir is incredibly slow, compared to navigating into a subdir.
+What is causing this slowdown?
+Navigate out to parent dir is too damn slow. This can be optimized by caching everything in the parent dir. Breadcrumbs must restore NCListerItems, so that when you later hit backspace, then you get
+the cached data.
+
+
+Finegrained progressbars in copy sheet.
+
+
+AirDrop integration.
+
+
+iCloud integration.
 
 
 https://github.com/peterb180369/iMedia/tree/experimental-SandboxedVersion
@@ -37,19 +59,9 @@ has read-access to the entire file system.
 But what if you have read-access and there is a directory that your user don't have access to browse.. can you then browse it? 
 
 
-I probably should wait until the dust have settled. The sandboxing is not mature yet. The AEWP alternatives is not yet accepted in the Mac App Store. I guess it will cause way too many problems trying to put together a file manager under the current conditions.
-
-
 Why have I never tried out the SFAuthorizationView ?
 http://developer.apple.com/library/mac/#documentation/Security/Reference/SecurityInterfaceFramework/Classes/SFAuthorizationView_Class/Reference/Reference.html
 http://www.bdunagan.com/2009/12/13/system-preferences-pane-lock/
-
-
-Maybe it would be wise to wait until november when the Mac App Store will start requiring sandboxed apps. Then I can see how other file managers accomplishes it. However there are presently not any file manager out there that can run as a different user, so I am pretty much on my own.
-
-
-compile the Worker using Xcode4. Make it fully working.
-When Worker is ready, then NCWorker must be changed to Worker.
 
 
 PSMTabBarControl uses a non NSString instance that it passes around, instead
@@ -58,15 +70,12 @@ Really difficult to solve because "identifier" is supposed to be a string, but P
 Perhaps I should write to PSM himself and ask how to approach it. Maybe he has a few great idea.. he is a genius. 
 
 
-A really old idea strikes me.. I need a layout-manager, that
-can resize subviews correctly. Then I can avoid quite a few
-nib files. It was something I originally wanted to do BEFORE
-I started using ibplugins.
-Alternative start using the auto-layout that comes with Lion.
-Should my app be Lion only?
+Don't use .xib files nor .storyboard files.
+It's difficult to see what has been changed in a commit.
 
 
 NSFileVersion support. Introduce a column that shows how many version exists of a file.
+
 
 magic trackpad integration.. three finger swipe down to show context menu.. maybe
 [NSResponder swipeWithEvent:(NSEvent *)event]
@@ -74,37 +83,18 @@ or two finger pinch to show context menu.. maybe
 [NSResponder magnifyWithEvent:(NSEvent *)event]
 
 
-duplicate folder <--- I use this a lot at my job, instead I use the Finder for this
-
-delete a single file/folder, should preserver the Y position of the cursor
-
-AirDrop integration.
-
-iCloud integration.
-
-
-If I drop support for Snow Leopard then I can get rid of the NCScroller and NCScrollView classes that is based on the iTunes Scroller.
-
-faster navigation.. navigating to parent dir is incredibly slow, compared to navigating into a subdir.
-What is causing this slowdown?
-Navigate out to parent dir is too damn slow. This can be optimized by caching everything in the parent dir. Breadcrumbs must restore NCListerItems, so that when you later hit backspace, then you get
-the cached data.
-
-F1 inspector
-
-Change permissions sheet
-
-for some reason on Simon Lynge's Mac copy entered an infinite loop.. investigate
-
 replace the NCPathControl with GCJumpBar instead. Much more powerful and nice too.
+
 
 too damn unreliable when browsing SSH via MacFUSE. Hangs, crashes, cannot close tabs.
 I guess this is due to the poor NCWorker component. The new Worker component will hopefully be more robust to 
 when the child dies/crashes.
 
+
 Kill the helper process when the lister is hanging.
 2010_09_21 - It is sometimes hanging when using MacFusion connected with SFTP to a remote site. So a kill is still much needed.
 This will probably be solved when switching from NCWorker to the new Worker
+
 
 bug: on my work when browsing the Samba share "S01", it sometimes hangs forever and the Finder asks me if I want to
 disconnect. But NewtonCommander just hangs forever. Here it would be necessary to kill the worker process.
@@ -863,32 +853,6 @@ but it's file size is only 3.791 bytes, which is better than my old icon 308 Kby
 
 
 
-
-== HOMEPAGE
-
-
-[ 15:26:07 ~/lab/ibplugin_hello_world ] $ nslookup newtoncommander.com
-Server:         217.116.227.8
-Address:        217.116.227.8#53
-
-** server can't find newtoncommander.com: NXDOMAIN
-
-
-[ 15:17:42 ~/lab/ibplugin_hello_world ] $ nslookup newcmd.com
-Server:         217.116.227.8
-Address:        217.116.227.8#53
-
-** server can't find newcmd.com: NXDOMAIN
-
-
-
-
-/\/\/\__   > <   /
-\ \/ /  \__> <__/
-/ /\ \__/  > <  \
-\/\/\/     > <   \
-
-
 == CRASH REPORTER FRAMEWORK
 
 Summary of frameworks
@@ -1341,54 +1305,8 @@ http://superuser.com/questions/138527/dual-pane-file-manager-for-mac-os-x
 
 
 
-== Scenarios to make money on it
-
-Ads
-Make it free, but with ads
-show ads in the top of the lister panes.
-make them go away the same way as in Thermo, where you pay $1 and then there is no ads.
-
-Plugins
-in app purchase (possible with OS X 10.7 Lion)
-special themes cost money, e.g. black theme = $5 USD.
-
-
-
-
 
 == Naming
 
 The newton (symbol: N) is the SI derived unit of force, named after Isaac Newton in recognition of his work on classical mechanics.
-
-
-
-== Considerations regarding IPC mechanism
-
-I want to use worker processes. The file system has a tendency to cause some file operation to hang.
-
-Decide wether to:
-run as a NSPipe process <------ exploring this approach right now
-run as a REST webservice <----- not yet tried this approach
-run as a NSProxy <------------- the first thing I tried, impossible to debug, experiencing glitches
-run as XPC service <----------- new and promising.. but probably will not allow me to run as a different user
-
-conclusion: use NSProxy.. has fewest problems after all.
-I have tried all the others and with a great number of problems.
-So my original idea to use NSProxy was best.
-
-So NSProxy is what I'm using.
-
-
-
-
-
-== Inspiration Mollify
-
-online file manager
-http://www.mollify.org/demo.php
-
-
-
-a competitor
-http://www.moroshkaproject.ru/
 
