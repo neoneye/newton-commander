@@ -488,6 +488,24 @@ display column: Summary.
  2. Audio files:  Duration Bitrate
  3. Movie files:  Duration
 
+music:
+display column: Music category (rock, samba, polka)
+
+music:
+display column: Music rating
+
+movies:
+display column: Movie rating on IMDB/Rotten tomatoes
+
+movies:
+display column: Movie category (scifi, cartoon) from IMDB
+
+movies:
+F1=info about movie files
+ 1. pull IMDB details
+ 2. show movie category, rating, plot summary, year, etc.
+ 3. show movie poster
+
 Copy path to clipboard
 .. POSIX path
 .. Server afp URL
