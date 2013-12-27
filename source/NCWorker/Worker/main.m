@@ -139,7 +139,7 @@ float seconds_since_program_start() {
 	
 	[self performSelector: @selector(dieIfHandshakeFailed)
 	           withObject: nil
-	           afterDelay: 3.f];
+	           afterDelay: 23.f];
 
 	/*
 	startup takes about 0.02 seconds on my macmini 1.8 GHz,
