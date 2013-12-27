@@ -14,11 +14,12 @@
 #import "NCWorkerPrivate.h"
 #import "NCWorkerProtocol.h"
 #include <unistd.h>
+#include <spawn.h>
 
+//#define USE_POSIX_SPAWN
 
 #pragma mark -
 #pragma mark Callback Class
-
 
 
 @interface NSMutableArray (ShiftExtension)
@@ -126,7 +127,9 @@
 
 	NSAssert((m_task == nil), @"task must not already be running");
 	[self startTask];
+#ifndef USE_POSIX_SPAWN
 	NSAssert((m_task != nil), @"at this point the task must be running");
+#endif
 	// LOG_DEBUG(@"thread started");
 }
 
@@ -156,6 +159,123 @@
 }
 
 -(void)startTask {
+#ifdef USE_POSIX_SPAWN
+	[self startTaskWithSpawn];
+#else
+	[self startTaskWithNSTask];
+#endif
+}
+
+-(void)startTaskWithSpawn {
+	NSAssert(m_task == nil, @"task must not already be running");
+	
+	NSString* path = m_path;
+	NSString* uid = m_uid;
+	NSString* label = m_label;
+	NSString* parent_name = m_parent_name;
+	NSString* child_name = m_child_name;
+	NSString* cwd = m_cwd;
+	
+	NSAssert(path, @"path must be initialized");
+	NSAssert(uid, @"uid must be initialized");
+	NSAssert(label, @"label must be initialized");
+	NSAssert(parent_name, @"parent_name must be initialized");
+	NSAssert(child_name, @"child_name must be initialized");
+	NSAssert(cwd, @"cwd must be initialized");
+	
+	NSArray* args = [NSArray arrayWithObjects:
+					 label,
+					 parent_name,
+					 child_name,
+					 uid,
+					 nil
+					 ];
+	LOG_DEBUG(@"arguments for worker: %@", args);
+	
+	
+	// path to the executable file of the child process
+	const char *spawnPath = [path UTF8String];
+
+	// commandline arguments for the child process
+	char *spawnArgs[10];
+	for (int i=0; i<10; i++) {
+		spawnArgs[i] = NULL;
+	}
+	NSString *programName = [path lastPathComponent];
+	NSArray *allArgs = [[NSArray arrayWithObject:programName] arrayByAddingObjectsFromArray:args];
+	for (int i=0; i<allArgs.count; i++) {
+		NSString *s = [allArgs objectAtIndex:i];
+		const char *ptr = [s UTF8String];
+		spawnArgs[i] = strdup(ptr);
+	}
+	
+	
+#define NC_PIPE_READ 0
+#define NC_PIPE_WRITE 1
+	
+	int p_stdin[2];
+	int p_stdout[2];
+	int p_stderr[2];
+	int p_stdin2[2];
+	int p_stdout2[2];
+	
+	// create pipes
+	pipe(p_stdin);
+	pipe(p_stdout);
+	pipe(p_stderr);
+	pipe(p_stdin2);
+	pipe(p_stdout2);
+	
+	posix_spawn_file_actions_t actions;
+	posix_spawn_file_actions_init(&actions);
+	
+	// prepare the child process to connect with our pipes
+	posix_spawn_file_actions_adddup2(&actions, p_stdin[NC_PIPE_READ], 0);
+	posix_spawn_file_actions_adddup2(&actions, p_stdout[NC_PIPE_WRITE], 1);
+	posix_spawn_file_actions_adddup2(&actions, p_stderr[NC_PIPE_WRITE], 2);
+	posix_spawn_file_actions_adddup2(&actions, p_stdin2[NC_PIPE_READ], 3);
+	posix_spawn_file_actions_adddup2(&actions, p_stdout2[NC_PIPE_WRITE], 4);
+	
+	// start the child process
+	int pid;
+	posix_spawnp(&pid, spawnPath, &actions, NULL, spawnArgs, NULL);
+	
+	posix_spawn_file_actions_destroy(&actions);
+	
+	// close the child process' end of the pipes
+	close(p_stdin[NC_PIPE_READ]);
+	close(p_stdout[NC_PIPE_WRITE]);
+	close(p_stderr[NC_PIPE_WRITE]);
+	close(p_stdin2[NC_PIPE_READ]);
+	close(p_stdout2[NC_PIPE_WRITE]);
+	
+
+#if 0
+	int handle_xxx = p_stdout2[NC_PIPE_READ];
+	
+	struct timeval tv;
+	fd_set readfds;
+	tv.tv_sec = 3;
+	tv.tv_usec = 0;
+	FD_ZERO(&readfds);
+	FD_SET(handle_xxx, &readfds);
+	
+	LOG_DEBUG(@"waiting for activity");
+	select(handle_xxx + 1, &readfds, NULL, NULL, &tv);
+	
+	if(FD_ISSET(handle_xxx, &readfds)) {
+		LOG_DEBUG(@"we got activity");
+		char buff[5] = "";
+		read(handle_xxx, buff, 4);
+		buff[4] = '\0';
+		LOG_DEBUG(@"message: %s", buff);
+	} else {
+		LOG_DEBUG(@"no activity");
+	}
+#endif
+}
+
+-(void)startTaskWithNSTask {
 	NSAssert(m_task == nil, @"task must not already be running");
 	
 	NSString* path = m_path;                   
