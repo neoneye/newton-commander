@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4200DE3D186F7B0A00B35616 /* NCFileItem+FileItemsForPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4200DE3C186F7B0A00B35616 /* NCFileItem+FileItemsForPath.m */; };
 		421079A811F0FC66001372D8 /* NCWorkerPluginAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = 421079A611F0FC66001372D8 /* NCWorkerPluginAdvanced.m */; };
 		42107B8D11F11AE7001372D8 /* libSharedCodeCoreWorker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421079EB11F11458001372D8 /* libSharedCodeCoreWorker.a */; };
 		429DC6E711C534440028CDEC /* NCWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 429DC6E411C534440028CDEC /* NCWorker.h */; };
@@ -100,6 +101,8 @@
 
 /* Begin PBXFileReference section */
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4200DE3B186F7B0A00B35616 /* NCFileItem+FileItemsForPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NCFileItem+FileItemsForPath.h"; path = "Worker/NCFileItem+FileItemsForPath.h"; sourceTree = "<group>"; };
+		4200DE3C186F7B0A00B35616 /* NCFileItem+FileItemsForPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NCFileItem+FileItemsForPath.m"; path = "Worker/NCFileItem+FileItemsForPath.m"; sourceTree = "<group>"; };
 		421079A311F0FC66001372D8 /* NCWorkerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCWorkerPlugin.h; path = Worker/NCWorkerPlugin.h; sourceTree = "<group>"; };
 		421079A511F0FC66001372D8 /* NCWorkerPluginAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCWorkerPluginAdvanced.h; path = Worker/NCWorkerPluginAdvanced.h; sourceTree = "<group>"; };
 		421079A611F0FC66001372D8 /* NCWorkerPluginAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCWorkerPluginAdvanced.m; path = Worker/NCWorkerPluginAdvanced.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 		08FB7795FE84155DC02AAC07 /* Source Worker */ = {
 			isa = PBXGroup;
 			children = (
+				4200DE3B186F7B0A00B35616 /* NCFileItem+FileItemsForPath.h */,
+				4200DE3C186F7B0A00B35616 /* NCFileItem+FileItemsForPath.m */,
 				421079A311F0FC66001372D8 /* NCWorkerPlugin.h */,
 				421079A511F0FC66001372D8 /* NCWorkerPluginAdvanced.h */,
 				421079A611F0FC66001372D8 /* NCWorkerPluginAdvanced.m */,
@@ -446,6 +451,7 @@
 			files = (
 				429DC7D511C53E6D0028CDEC /* daemonize.m in Sources */,
 				429DC7D611C53E6D0028CDEC /* exception.m in Sources */,
+				4200DE3D186F7B0A00B35616 /* NCFileItem+FileItemsForPath.m in Sources */,
 				429DC7D811C53E6D0028CDEC /* main.m in Sources */,
 				429DC7D911C53E6D0028CDEC /* signal.m in Sources */,
 				429DC7DA11C53E6D0028CDEC /* zombie.m in Sources */,
