@@ -976,7 +976,8 @@ This function only makes sense when you consider FTP mounted volumes.
 		
 		
 		unsigned long long rsrc_size = 0;
-		if([item direntType] != NCDirEntryTypeDir) {
+		BOOL isDir = (itemtype == kNCItemTypeDir) || (itemtype == kNCItemTypeDirGuess);
+		if(!isDir) {
 			rsrc_size = [ncfm sizeOfResourceFork:path];
 		}
 		[item setResourceForkSize:rsrc_size];
