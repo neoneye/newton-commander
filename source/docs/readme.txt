@@ -479,6 +479,9 @@ not residing on the SnowLeopard volume. So I cannot see any metadata
 for files on other volumes! sigh Finder can do it, so can Path Finder. 
 But how do they do it?
 
+display column: Version control
+Show GIT status and commit
+
 display column: Color
 
 display column: Dimensions
