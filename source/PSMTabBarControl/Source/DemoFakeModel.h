@@ -17,9 +17,9 @@
 	BOOL        _isEdited;
 }
 
-@property (retain) NSImage *largeImage;
-@property (retain) NSImage *icon;
-@property (retain) NSString *iconName;
+@property (strong) NSImage *largeImage;
+@property (strong) NSImage *icon;
+@property (strong) NSString *iconName;
 
 @property (assign) BOOL isProcessing;
 @property (assign) NSInteger objectCount;

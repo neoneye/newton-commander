@@ -12,7 +12,7 @@
 @implementation NSString (AITruncation)
 
 + (id)ellipsis {
-	return [NSString stringWithUTF8String:"\xE2\x80\xA6"];
+	return @"\xE2\x80\xA6";
 }
 
 - (NSString *)stringWithEllipsisByTruncatingToLength:(NSUInteger)length {
@@ -23,7 +23,7 @@
 		returnString = [[self substringToIndex:length - 1] stringByAppendingString:[NSString ellipsis]];
 	} else {
 		//We don't need to truncate, so don't append an ellipsis
-		returnString = [[self copy] autorelease];
+		returnString = [self copy];
 	}
 
 	return returnString;

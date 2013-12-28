@@ -53,7 +53,7 @@ typedef enum PSMTabBarCellTrackingAreaType : NSUInteger
 @property (assign) BOOL hasIcon;
 @property (assign) BOOL hasLargeImage;
 @property (assign) NSInteger count;
-@property (retain) NSColor *countColor;
+@property (strong) NSColor *countColor;
 @property (assign) BOOL isPlaceholder;
 @property (assign) BOOL isEdited;
 @property (assign) BOOL closeButtonPressed;

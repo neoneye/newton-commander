@@ -49,19 +49,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [cardCloseButton release];
-    [cardCloseButtonDown release];
-    [cardCloseButtonOver release];
-    [cardCloseDirtyButton release];
-    [cardCloseDirtyButtonDown release];
-    [cardCloseDirtyButtonOver release]; 
-    [_addTabButtonImage release];
-    [_addTabButtonPressedImage release];
-    [_addTabButtonRolloverImage release];
-        
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark Control Specific
@@ -155,7 +142,6 @@
     if (gradient) {
         [gradient drawInRect:bounds angle:270];
     
-        [gradient release];
         }
 }
 
@@ -215,7 +201,7 @@
 
         if (gradient != nil) {
             [gradient drawInBezierPath:bezier angle:90.0f];
-            [gradient release], gradient = nil;
+            gradient = nil;
             }
     } else {
         [[NSColor windowBackgroundColor] set];

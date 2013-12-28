@@ -33,11 +33,10 @@
 
 -(void)dealloc {
     
-    [_icon release], _icon = nil;
-    [_iconName release], _iconName = nil;
-    [_largeImage release], _largeImage = nil;
+    _icon = nil;
+    _iconName = nil;
+    _largeImage = nil;
 
-    [super dealloc];
 }
 
 @end

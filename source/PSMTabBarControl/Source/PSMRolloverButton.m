@@ -27,10 +27,9 @@
 
     [self removeObserver:self forKeyPath:@"usualImage"];
 
-    [_usualImage release], _usualImage = nil;
-    [_rolloverImage release], _rolloverImage = nil;
+    _usualImage = nil;
+    _rolloverImage = nil;
     
-	[super dealloc];
 }
 
 // override for rollover effect
@@ -84,7 +83,7 @@
     // We make the view the owner, and it delegates the calls back to the cell after it is properly setup for the corresponding row/column in the outlineview
     area = [[NSTrackingArea alloc] initWithRect:cellFrame options:options owner:self userInfo:userInfo];
     [self addTrackingArea:area];
-    [area release], area = nil;
+    area = nil;
 }
 
 -(void)updateTrackingAreas {
@@ -123,8 +122,8 @@
 	self = [super initWithCoder:aDecoder];
 	if(self) {
 		if([aDecoder allowsKeyedCoding]) {
-			_rolloverImage = [[aDecoder decodeObjectForKey:@"rolloverImage"] retain];
-			_usualImage = [[aDecoder decodeObjectForKey:@"usualImage"] retain];
+			_rolloverImage = [aDecoder decodeObjectForKey:@"rolloverImage"];
+			_usualImage = [aDecoder decodeObjectForKey:@"usualImage"];
 		}
 	}
 	return self;

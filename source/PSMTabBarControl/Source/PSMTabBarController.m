@@ -38,10 +38,6 @@
 	return self;
 }
 
-- (void)dealloc {
-	[_cellFrames release];
-	[super dealloc];
-}
 
 /*!
     @method     overflowMenu
@@ -66,7 +62,7 @@
 	NSRect rect;
 
 	if(index > -1 && index < [_cellFrames count]) {
-		rect = [[_cellFrames objectAtIndex:index] rectValue];
+		rect = [_cellFrames[index] rectValue];
 	} else {
 		NSLog(@"cellFrameAtIndex: Invalid index (%ld)", (long)index);
 		rect = NSZeroRect;
@@ -109,12 +105,12 @@
 		NSInteger cellIndex = [cells indexOfObject:cell];
 
 		if(cellIndex > 0) {
-			nextCell = [cells objectAtIndex:cellIndex - 1];
+			nextCell = cells[cellIndex - 1];
 			[nextCell setTabState:[nextCell tabState] | PSMTab_RightIsSelectedMask];
 		}
 
 		if(cellIndex < [cells count] - 1) {
-			nextCell = [cells objectAtIndex:cellIndex + 1];
+			nextCell = cells[cellIndex + 1];
 			[nextCell setTabState:[nextCell tabState] | PSMTab_LeftIsSelectedMask];
 		}
 	}
@@ -160,13 +156,12 @@
 		changed = NO;
 
 		for(NSInteger q = (count - 1); q >= 0; q--) {
-			CGFloat cellWidth = [[newWidths objectAtIndex:q] doubleValue];
+			CGFloat cellWidth = [newWidths[q] doubleValue];
 			if(cellWidth - 1 >= minimum) {
 				cellWidth--;
 				totalWidths--;
 
-				[newWidths replaceObjectAtIndex:q
-				 withObject:[NSNumber numberWithDouble:cellWidth]];
+				newWidths[q] = @(cellWidth);
 
 				changed = YES;
 			}
@@ -191,7 +186,7 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 	NSInteger count = [array count];
 
 	for(NSInteger i = 0; i < count; i++) {
-		NSInteger currentValue = [[array objectAtIndex:i] integerValue];
+		NSInteger currentValue = [array[i] integerValue];
 		runningTotal += MIN(currentValue, minimum);
 	}
 
@@ -221,7 +216,7 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 	}
 
 	for(i = 0; i < cellCount; i++) {
-		currentCell = [cells objectAtIndex:i];
+		currentCell = cells[i];
 
 		// supress close button?
 		[currentCell setCloseButtonSuppressed:((cellCount == 1 && [_control canCloseOnlyTab] == NO) ||
@@ -254,8 +249,8 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 					[newWidths removeAllObjects];
 
 					for(j = 0; j < cellCount; j++) {
-						CGFloat desiredWidth = [[cells objectAtIndex:j] desiredWidthOfCell];
-						[newWidths addObject:[NSNumber numberWithDouble:(desiredWidth < averageWidth && [_control sizeCellsToFit]) ? desiredWidth : averageWidth]];
+						CGFloat desiredWidth = [cells[j] desiredWidthOfCell];
+						[newWidths addObject:@((desiredWidth < averageWidth && [_control sizeCellsToFit]) ? desiredWidth : averageWidth)];
 					}
 
 					break;
@@ -282,7 +277,7 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 						 *
 						 * This allows average and minimum aggregates on the NSArray to work.
 						 */
-						[newWidths addObject:[NSNumber numberWithDouble:width]];
+						[newWidths addObject:@(width)];
 						numberOfVisibleCells++;
 
 						totalOccupiedWidth += width;
@@ -326,8 +321,8 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 								NSInteger q;
 								for(q = numberOfVisibleCells - 1; q >= 0; q--) {
 									NSInteger desiredAddition = (NSInteger)leftoverWidth / (q + 1);
-									NSInteger newCellWidth = (NSInteger)[[newWidths objectAtIndex:q] doubleValue] + desiredAddition;
-									[newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:newCellWidth]];
+									NSInteger newCellWidth = (NSInteger)[newWidths[q] doubleValue] + desiredAddition;
+									newWidths[q] = @(newCellWidth);
 									leftoverWidth -= desiredAddition;
 									totalOccupiedWidth += desiredAddition;
 								}
@@ -345,8 +340,8 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 						NSInteger q;
 						for(q = i - 1; q >= 0; q--) {
 							NSInteger desiredAddition = (NSInteger)leftoverWidth / (q + 1);
-							NSInteger newCellWidth = (NSInteger)[[newWidths objectAtIndex:q] doubleValue] + desiredAddition;
-							[newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:newCellWidth]];
+							NSInteger newCellWidth = (NSInteger)[newWidths[q] doubleValue] + desiredAddition;
+							newWidths[q] = @(newCellWidth);
 							leftoverWidth -= desiredAddition;
 						}
 
@@ -365,11 +360,11 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 						totalOccupiedWidth = 0;
 
 						for(q = 0; q < [newWidths count]; q++) {
-							[newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:revisedWidth]];
+							newWidths[q] = @(revisedWidth);
 							totalOccupiedWidth += revisedWidth;
 						}
 						// just squeezed this one in...
-						[newWidths addObject:[NSNumber numberWithDouble:revisedWidth]];
+						[newWidths addObject:@(revisedWidth)];
 						totalOccupiedWidth += revisedWidth;
 						numberOfVisibleCells++;
                         
@@ -387,7 +382,7 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
                             totalOccupiedWidth = 0;
 
                             for(q = 0; q < [newWidths count]; q++) {
-                                [newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:revisedWidth]];
+                                newWidths[q] = @(revisedWidth);
                                 totalOccupiedWidth += revisedWidth;
                             }
                         } else {
@@ -406,7 +401,7 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
                                     totalOccupiedWidth = 0;
 
                                     for(q = 0; q < [newWidths count]; q++) {
-                                        [newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:revisedWidth]];
+                                        newWidths[q] = @(revisedWidth);
                                         totalOccupiedWidth += revisedWidth;
                                     }
                                 }
@@ -419,13 +414,13 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 			} else {
 				//(totalOccupiedWidth < availableWidth)
 				numberOfVisibleCells = cellCount;
-				[newWidths addObject:[NSNumber numberWithDouble:width]];
+				[newWidths addObject:@(width)];
 				totalOccupiedWidth += width;
 			}
 		} else {
 			//lay out vertical tabs
 			if(currentOrigin + cellRect.size.height <= [_control availableCellHeight]) {
-				[newWidths addObject:[NSNumber numberWithDouble:currentOrigin]];
+				[newWidths addObject:@(currentOrigin)];
 				numberOfVisibleCells++;
 				currentOrigin += cellRect.size.height;
 			} else {
@@ -437,22 +432,22 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 	//make sure there are at least two items in the horizontal tab bar
 	if([_control orientation] == PSMTabBarHorizontalOrientation) {
 		if(numberOfVisibleCells < 2 && [cells count] > 1) {
-			PSMTabBarCell *cell1 = [cells objectAtIndex:0], *cell2 = [cells objectAtIndex:1];
+			PSMTabBarCell *cell1 = cells[0], *cell2 = cells[1];
 			NSNumber *cellWidth;
 
 			[newWidths removeAllObjects];
 			totalOccupiedWidth = 0;
 
-			cellWidth = [NSNumber numberWithDouble:[cell1 desiredWidthOfCell] < availableWidth * 0.5f ?[cell1 desiredWidthOfCell] : availableWidth * 0.5f];
+			cellWidth = @([cell1 desiredWidthOfCell] < availableWidth * 0.5f ?[cell1 desiredWidthOfCell] : availableWidth * 0.5f);
 			[newWidths addObject:cellWidth];
 			totalOccupiedWidth += [cellWidth doubleValue];
 
-			cellWidth = [NSNumber numberWithDouble:[cell2 desiredWidthOfCell] < (availableWidth - totalOccupiedWidth) ?[cell2 desiredWidthOfCell] : (availableWidth - totalOccupiedWidth)];
+			cellWidth = @([cell2 desiredWidthOfCell] < (availableWidth - totalOccupiedWidth) ?[cell2 desiredWidthOfCell] : (availableWidth - totalOccupiedWidth));
 			[newWidths addObject:cellWidth];
 			totalOccupiedWidth += [cellWidth doubleValue];
 
 			if(totalOccupiedWidth < availableWidth) {
-				[newWidths replaceObjectAtIndex:0 withObject:[NSNumber numberWithDouble:availableWidth - [cellWidth doubleValue]]];
+				newWidths[0] = @(availableWidth - [cellWidth doubleValue]);
 			}
 		}
 	}
@@ -473,20 +468,20 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 	NSTabViewItem *selectedTabViewItem = [[_control tabView] selectedTabViewItem];
 	NSMenuItem *menuItem;
 
-	[_overflowMenu release], _overflowMenu = nil;
+	_overflowMenu = nil;
 
 	for(i = 0; i < cellCount; i++) {
-		cell = [cells objectAtIndex:i];
+		cell = cells[i];
 
 		if(i < [widths count]) {
 			tabState = 0;
 
 			// set cell frame
 			if([_control orientation] == PSMTabBarHorizontalOrientation) {
-				cellRect.size.width = [[widths objectAtIndex:i] doubleValue];
+				cellRect.size.width = [widths[i] doubleValue];
 			} else {
 				cellRect.size.width = [_control frame].size.width;
-				cellRect.origin.y = [[widths objectAtIndex:i] doubleValue];
+				cellRect.origin.y = [widths[i] doubleValue];
 				cellRect.origin.x = 0;
 			}
 
@@ -497,13 +492,13 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 				tabState |= PSMTab_SelectedMask;
 				// previous cell
 				if(i > 0) {
-					[[cells objectAtIndex:i - 1] setTabState:([(PSMTabBarCell *)[cells objectAtIndex:i - 1] tabState] | PSMTab_RightIsSelectedMask)];
+					[cells[i - 1] setTabState:([(PSMTabBarCell *)cells[i - 1] tabState] | PSMTab_RightIsSelectedMask)];
 				}
 				// next cell - see below
 			} else {
 				[cell setState:NSOffState];
 				// see if prev cell was selected
-				if((i > 0) && ([[cells objectAtIndex:i - 1] state] == NSOnState)) {
+				if((i > 0) && ([cells[i - 1] state] == NSOnState)) {
 					tabState |= PSMTab_LeftIsSelectedMask;
 				}
 			}
@@ -530,7 +525,7 @@ static NSInteger potentialMinimumForArray(NSArray *array, NSInteger minimum){
 
 			// next...
             if ([_control orientation] == PSMTabBarHorizontalOrientation)
-                cellRect.origin.x += [[widths objectAtIndex:i] doubleValue];
+                cellRect.origin.x += [widths[i] doubleValue];
             else
                 cellRect.origin.y += cellRect.size.height;
 		} else {

@@ -61,23 +61,6 @@
 	_gradientImage = [[NSImage alloc] initByReferencingFile:[[PSMTabBarControl bundle] pathForImageResource:@"AdiumGradient"]];
 }
 
-- (void)dealloc {
-	[_closeButton release];
-	[_closeButtonDown release];
-	[_closeButtonOver release];
-
-	[_closeDirtyButton release];
-	[_closeDirtyButtonDown release];
-	[_closeDirtyButtonOver release];
-
-	[_addTabButtonImage release];
-	[_addTabButtonPressedImage release];
-	[_addTabButtonRolloverImage release];
-
-	[_gradientImage release];
-
-	[super dealloc];
-}
 
 #pragma mark -
 #pragma mark Drawing Style Accessors
@@ -178,7 +161,7 @@
 - (NSAttributedString *)attributedStringValueForTabCell:(PSMTabBarCell *)cell {
     NSMutableAttributedString *attrStr;
     NSString *contents = [cell title];
-    attrStr = [[[NSMutableAttributedString alloc] initWithString:contents] autorelease];
+    attrStr = [[NSMutableAttributedString alloc] initWithString:contents];
     NSRange range = NSMakeRange(0, [contents length]);
     
     [attrStr addAttribute:NSFontAttributeName value:[NSFont systemFontOfSize:11.0] range:range];
@@ -187,7 +170,7 @@
     // Paragraph Style for Truncating Long Text
     static NSMutableParagraphStyle *truncatingTailParagraphStyle = nil;
     if(!truncatingTailParagraphStyle) {
-        truncatingTailParagraphStyle = [[[NSParagraphStyle defaultParagraphStyle] mutableCopy] retain];
+        truncatingTailParagraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         [truncatingTailParagraphStyle setLineBreakMode:NSLineBreakByTruncatingTail];
     }
     [attrStr addAttribute:NSParagraphStyleAttributeName value:truncatingTailParagraphStyle range:range];
@@ -318,13 +301,7 @@
     if (orientation == PSMTabBarHorizontalOrientation) {
         result = NSMakeRect(drawingRect.origin.x, drawingRect.origin.y, scaledIconSize.width, scaledIconSize.height);
     } else {
-        NSRect constrainedDrawingRect = drawingRect;
-        
-        NSRect indicatorRect = [cell indicatorRectForBounds:theRect];
-        if (!NSEqualRects(indicatorRect, NSZeroRect))
-            constrainedDrawingRect.size.width -= NSWidth(indicatorRect) + kPSMTabBarCellPadding;
-        
-        result = NSMakeRect(NSMaxX(constrainedDrawingRect)-scaledIconSize.width, drawingRect.origin.y, scaledIconSize.width, scaledIconSize.height);
+        result = NSMakeRect(NSMaxX(drawingRect)-scaledIconSize.width, drawingRect.origin.y, scaledIconSize.width, scaledIconSize.height);
     }
     
     // center in available space (in case icon image is smaller than kPSMTabBarIconWidth)
@@ -343,11 +320,6 @@
 
 - (NSRect)titleRectForBounds:(NSRect)theRect ofTabCell:(PSMTabBarCell *)cell {
 
-    //Don't bother calculating anything if we don't have a string
-    NSAttributedString *attrString = [cell attributedStringValue];
-    if ([attrString length] == 0)
-        return NSZeroRect;
-    
     PSMTabBarControl *tabBarControl = [cell controlView];
     PSMTabBarOrientation orientation = [tabBarControl orientation];
         
@@ -366,35 +338,37 @@
         constrainedDrawingRect.size.width -= kPSMAdiumImageWidth + kPSMTabBarCellPadding;
     }
 
-    NSRect closeButtonRect = [cell closeButtonRectForBounds:theRect];
-    NSRect counterBadgeRect = [cell objectCounterRectForBounds:theRect];
-    NSRect iconRect = [cell iconRectForBounds:theRect];
-    CGFloat maxIconOrClose = MAX(NSWidth(closeButtonRect),NSWidth(iconRect));
     if (orientation == PSMTabBarHorizontalOrientation) {
 
+        NSRect closeButtonRect = [cell closeButtonRectForBounds:theRect];
+        NSRect iconRect = [cell iconRectForBounds:theRect];
+    
         if (!NSEqualRects(closeButtonRect, NSZeroRect) || !NSEqualRects(iconRect, NSZeroRect)) {
-            constrainedDrawingRect.origin.x += maxIconOrClose + kPSMTabBarCellPadding;
-            constrainedDrawingRect.size.width -= maxIconOrClose + kPSMTabBarCellPadding;
+            constrainedDrawingRect.origin.x += MAX(NSWidth(closeButtonRect),NSWidth(iconRect)) + kPSMTabBarCellPadding;
+            constrainedDrawingRect.size.width -= MAX(NSWidth(closeButtonRect),NSWidth(iconRect)) + kPSMTabBarCellPadding;
         }
         
+        NSRect counterBadgeRect = [cell objectCounterRectForBounds:theRect];
         if (!NSEqualRects(counterBadgeRect, NSZeroRect)) {
             constrainedDrawingRect.size.width -= NSWidth(counterBadgeRect) + kPSMTabBarCellPadding;
         }
     } else {
     
+        NSRect closeButtonRect = [cell closeButtonRectForBounds:theRect];
+        NSRect counterBadgeRect = [cell objectCounterRectForBounds:theRect];
+
         if (!NSEqualRects(closeButtonRect, NSZeroRect) || !NSEqualRects(counterBadgeRect, NSZeroRect)) {
-            constrainedDrawingRect.size.width -= MAX(maxIconOrClose,NSWidth(counterBadgeRect)) + kPSMTabBarCellPadding;
-        }
+            constrainedDrawingRect.size.width -= MAX(NSWidth(closeButtonRect),NSWidth(counterBadgeRect)) + kPSMTabBarCellPadding;
+        }    
     }
 
-    //Don't show a title if there's only enough space for a character
     if (constrainedDrawingRect.size.width <= 2)
         return NSZeroRect;
     
-    //Make sure there's enough padding between the icon/close button and the text
-    if (NSMaxX(constrainedDrawingRect)-MAX(NSMinX(iconRect), NSMinX(closeButtonRect)) <= 2)
-        constrainedDrawingRect.size.width--;
-    
+    NSAttributedString *attrString = [cell attributedStringValue];
+    if ([attrString length] == 0)
+        return NSZeroRect;
+        
     NSSize stringSize = [attrString size];
     
     NSRect result = NSMakeRect(constrainedDrawingRect.origin.x, drawingRect.origin.y+ceil((drawingRect.size.height-stringSize.height)/2), constrainedDrawingRect.size.width, stringSize.height);
@@ -460,7 +434,7 @@
     if (!image)
         return NSZeroRect;
     
-    NSSize scaledImageSize = [cell scaleImageWithSize:[image size] toFitInSize:NSMakeSize(MIN(constrainedDrawingRect.size.width, kPSMAdiumImageWidth), constrainedDrawingRect.size.height) scalingType:NSImageScaleProportionallyUpOrDown];
+    NSSize scaledImageSize = [cell scaleImageWithSize:[image size] toFitInSize:NSMakeSize(constrainedDrawingRect.size.width, constrainedDrawingRect.size.height) scalingType:NSImageScaleProportionallyUpOrDown];
     
     NSRect result = NSMakeRect(constrainedDrawingRect.origin.x,
                                          constrainedDrawingRect.origin.y - ((constrainedDrawingRect.size.height - scaledImageSize.height) / 2),
@@ -470,7 +444,7 @@
         result.origin.x += (kPSMTabBarCellPadding + kPSMAdiumImageWidth - scaledImageSize.width) / 2.0;
     }
     if(scaledImageSize.height < constrainedDrawingRect.size.height) {
-        result.origin.y += (constrainedDrawingRect.size.height - scaledImageSize.height);
+        result.origin.y += (constrainedDrawingRect.size.height - scaledImageSize.height) / 2.0;
     }
         
     return result;    
@@ -492,7 +466,6 @@
 			if([tabBarControl isWindowActive]) {
                 NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.835 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.843 alpha:1.0]];
                 [gradient drawInRect:rect angle:90.0];
-                [gradient release];
 			} else {
 				[[NSColor windowBackgroundColor] set];
 				NSRectFill(rect);
@@ -586,7 +559,6 @@
 	}
 	}
 
-	[shadow release];
 	[NSGraphicsContext restoreGraphicsState];
 }
 
@@ -621,7 +593,6 @@
                 
                     NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.835 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.843 alpha:1.0]];
                     [gradient drawInRect:aRect angle:90.0];
-                    [gradient release];                
 				} else {
 					[[NSColor windowBackgroundColor] set];
 					NSRectFill(aRect);
@@ -670,7 +641,6 @@
                 
                     NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.835 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.843 alpha:1.0]];
                     [gradient drawInRect:aRect angle:90.0];
-                    [gradient release];
 				} else {
 					[[NSColor windowBackgroundColor] set];
 					NSRectFill(aRect);
@@ -685,7 +655,6 @@
                 }
                 
                 [gradient drawInRect:aRect angle:0.0];
-                [gradient release];
 			}
 
 			// frame
@@ -743,7 +712,6 @@
 	}
 
 	[NSGraphicsContext restoreGraphicsState];
-	[shadow release];
 }
 
 - (void)drawIconOfTabCell:(PSMTabBarCell *)cell withFrame:(NSRect)frame inTabBarControl:(PSMTabBarControl *)tabBarControl {
@@ -803,15 +771,15 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	if((self = [super init])) {
 		if([aDecoder allowsKeyedCoding]) {
-			_closeButton = [[aDecoder decodeObjectForKey:@"closeButton"] retain];
-			_closeButtonDown = [[aDecoder decodeObjectForKey:@"closeButtonDown"] retain];
-			_closeButtonOver = [[aDecoder decodeObjectForKey:@"closeButtonOver"] retain];
-			_closeDirtyButton = [[aDecoder decodeObjectForKey:@"closeDirtyButton"] retain];
-			_closeDirtyButtonDown = [[aDecoder decodeObjectForKey:@"closeDirtyButtonDown"] retain];
-			_closeDirtyButtonOver = [[aDecoder decodeObjectForKey:@"closeDirtyButtonOver"] retain];
-			_addTabButtonImage = [[aDecoder decodeObjectForKey:@"addTabButtonImage"] retain];
-			_addTabButtonPressedImage = [[aDecoder decodeObjectForKey:@"addTabButtonPressedImage"] retain];
-			_addTabButtonRolloverImage = [[aDecoder decodeObjectForKey:@"addTabButtonRolloverImage"] retain];
+			_closeButton = [aDecoder decodeObjectForKey:@"closeButton"];
+			_closeButtonDown = [aDecoder decodeObjectForKey:@"closeButtonDown"];
+			_closeButtonOver = [aDecoder decodeObjectForKey:@"closeButtonOver"];
+			_closeDirtyButton = [aDecoder decodeObjectForKey:@"closeDirtyButton"];
+			_closeDirtyButtonDown = [aDecoder decodeObjectForKey:@"closeDirtyButtonDown"];
+			_closeDirtyButtonOver = [aDecoder decodeObjectForKey:@"closeDirtyButtonOver"];
+			_addTabButtonImage = [aDecoder decodeObjectForKey:@"addTabButtonImage"];
+			_addTabButtonPressedImage = [aDecoder decodeObjectForKey:@"addTabButtonPressedImage"];
+			_addTabButtonRolloverImage = [aDecoder decodeObjectForKey:@"addTabButtonRolloverImage"];
 			_drawsUnified = [aDecoder decodeBoolForKey:@"drawsUnified"];
 			_drawsRight = [aDecoder decodeBoolForKey:@"drawsRight"];
 		}
