@@ -38,8 +38,6 @@
 		428DD04911EBBB510048B3C6 /* icon_move.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DD04811EBBB510048B3C6 /* icon_move.png */; };
 		4295BD27121203D900DEDCDE /* icon_eye.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD26121203D900DEDCDE /* icon_eye.pdf */; };
 		4295BD2B121204B500DEDCDE /* icon_reload.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD2A121204B500DEDCDE /* icon_reload.pdf */; };
-		429D261C11D64F310028BFA8 /* PSMTabBarControl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 429D261511D64EFE0028BFA8 /* PSMTabBarControl.framework */; };
-		429D261D11D64F350028BFA8 /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429D261511D64EFE0028BFA8 /* PSMTabBarControl.framework */; };
 		42C0E78B1215AC71005C6EA0 /* CopySheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C0E7891215AC71005C6EA0 /* CopySheet.xib */; };
 		42C0E79C1215C2E6005C6EA0 /* NewtonCommanderHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 425D7E6C11C55A0800F9A9A6 /* NewtonCommanderHelper */; };
 		42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155011155B09C000A0547 /* QuickLook.framework */; };
@@ -59,6 +57,7 @@
 		42D449F41216EDF600CB5BF5 /* MoveSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D449F21216EDF600CB5BF5 /* MoveSheet.xib */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8E6025E3A4724DEB9F1C344C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163361FD76D44F7BD42672C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,27 +110,6 @@
 			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
 			remoteInfo = NCWorker;
 		};
-		429D261411D64EFE0028BFA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53DF68FD067E5B5A0090B5B0;
-			remoteInfo = PSMTabBarControlFramework;
-		};
-		429D261611D64EFE0028BFA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8BD4395A1185147D00DB4AC3;
-			remoteInfo = PSMTabBarControlDemo;
-		};
-		429D261A11D64F110028BFA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
-			remoteInfo = PSMTabBarControlFramework;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -162,7 +140,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				429D261C11D64F310028BFA8 /* PSMTabBarControl.framework in Copy Frameworks */,
 				425A7C7511987929008C328E /* NCCore.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -172,6 +149,7 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1163361FD76D44F7BD42672C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -219,7 +197,6 @@
 		428DD04811EBBB510048B3C6 /* icon_move.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_move.png; path = images/icon_move.png; sourceTree = "<group>"; };
 		4295BD26121203D900DEDCDE /* icon_eye.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_eye.pdf; path = images/icon_eye.pdf; sourceTree = "<group>"; };
 		4295BD2A121204B500DEDCDE /* icon_reload.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_reload.pdf; path = images/icon_reload.pdf; sourceTree = "<group>"; };
-		429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSMTabBarControl.xcodeproj; path = ../PSMTabBarControl/PSMTabBarControl.xcodeproj; sourceTree = SOURCE_ROOT; };
 		429DC47E11C4DB7E0028CDEC /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		42BA70991861FAA60083C2D3 /* NCPanelControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPanelControllerDelegate.h; sourceTree = "<group>"; };
 		42C0E78A1215AC71005C6EA0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/CopySheet.xib; sourceTree = "<group>"; };
@@ -250,6 +227,7 @@
 		42D449F31216EDF600CB5BF5 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MoveSheet.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Newton Commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Newton Commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F03D45E3A45413FBD3C2D61 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,13 +235,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				429D261D11D64F350028BFA8 /* PSMTabBarControl.framework in Frameworks */,
 				425A7C78119879A6008C328E /* NCCore.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */,
 				42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */,
 				4289AC06120EB12B0073AC9B /* Security.framework in Frameworks */,
 				4282544B12382E3A00EA3618 /* Carbon.framework in Frameworks */,
+				8E6025E3A4724DEB9F1C344C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,13 +325,13 @@
 			isa = PBXGroup;
 			children = (
 				4288D521120004F700DE1FFA /* SharedCode */,
-				429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */,
 				425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */,
 				428AAF68110C785E00708EDB /* NCCore.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				9F03D45E3A45413FBD3C2D61 /* Pods.xcconfig */,
 			);
 			name = TestNCToolkit;
 			sourceTree = "<group>";
@@ -393,6 +371,7 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				1163361FD76D44F7BD42672C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -423,15 +402,6 @@
 			name = SharedCode;
 			sourceTree = "<group>";
 		};
-		429D260C11D64EFE0028BFA8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				429D261511D64EFE0028BFA8 /* PSMTabBarControl.framework */,
-				429D261711D64EFE0028BFA8 /* PSMTabBarControlDemo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		42C21DD611430C94007097ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,19 +425,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Newton Commander" */;
 			buildPhases = (
+				1F52B913A329447EB954D1FB /* Check Pods Manifest.lock */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				428AAF78110C789800708EDB /* Copy Frameworks */,
 				425D7E7611C55A4400F9A9A6 /* CopyFiles */,
 				423EAF9613D199D1007A5897 /* CopyFiles */,
+				9DC76CF6A7794DB9BFC056FF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				425A7C741198790F008C328E /* PBXTargetDependency */,
 				425D7E7211C55A3800F9A9A6 /* PBXTargetDependency */,
-				429D261B11D64F110028BFA8 /* PBXTargetDependency */,
 			);
 			name = "Newton Commander";
 			productInstallPath = "$(HOME)/Applications";
@@ -503,10 +474,6 @@
 				{
 					ProductGroup = 425D7E6411C55A0800F9A9A6 /* Products */;
 					ProjectRef = 425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */;
-				},
-				{
-					ProductGroup = 429D260C11D64EFE0028BFA8 /* Products */;
-					ProjectRef = 429D260B11D64EFE0028BFA8 /* PSMTabBarControl.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -552,20 +519,6 @@
 			remoteRef = 425D7E6D11C55A0800F9A9A6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		429D261511D64EFE0028BFA8 /* PSMTabBarControl.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PSMTabBarControl.framework;
-			remoteRef = 429D261411D64EFE0028BFA8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		429D261711D64EFE0028BFA8 /* PSMTabBarControlDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = PSMTabBarControlDemo.app;
-			remoteRef = 429D261611D64EFE0028BFA8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -599,6 +552,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F52B913A329447EB954D1FB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC76CF6A7794DB9BFC056FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -638,11 +624,6 @@
 			isa = PBXTargetDependency;
 			name = NCWorker;
 			targetProxy = 425D7E7111C55A3800F9A9A6 /* PBXContainerItemProxy */;
-		};
-		429D261B11D64F110028BFA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PSMTabBarControlFramework;
-			targetProxy = 429D261A11D64F110028BFA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -756,7 +737,7 @@
 /* Begin XCBuildConfiguration section */
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 425A7D7F11989304008C328E /* Debug.xcconfig */;
+			baseConfigurationReference = 9F03D45E3A45413FBD3C2D61 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -781,7 +762,7 @@
 		};
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42C150FF1151662A000A0547 /* Release.xcconfig */;
+			baseConfigurationReference = 9F03D45E3A45413FBD3C2D61 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
