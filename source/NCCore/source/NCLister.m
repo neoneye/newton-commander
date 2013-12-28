@@ -61,7 +61,6 @@ names1
 #import "NCDateCell.h"
 #import "NCListerBreadcrumb.h"
 #import "NCListerItem.h"
-#import "NCDirEnumerator.h"
 #import "NCTableHeaderCell.h"
 #import "NCTableHeaderView.h"
 #import "NCFileManager.h"

@@ -59,7 +59,6 @@
 +(NCListerItem*)listerItemFromFileItem:(NCFileItem*)item {
 	NCListerItem* item2 = [[NCListerItem alloc] init];
 	[item2 setName:[item name]];
-	[item2 setDirentType:[item direntType]];
 	[item2 setItemType:[item itemType]];
 	[item2 setLink:[item link]];
 	[item2 setSize:[item size]];

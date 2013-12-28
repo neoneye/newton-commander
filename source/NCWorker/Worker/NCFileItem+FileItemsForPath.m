@@ -4,7 +4,6 @@
 //
 
 #import "NCFileItem+FileItemsForPath.h"
-#import "NCDirEnumerator.h"
 #include <sys/stat.h>
 #include <err.h>
 #include <fts.h>
@@ -27,7 +26,6 @@
 			NCFileItem* item = [NCFileItem new];
 			item.name = name;
 			item.inode = inode;
-			item.direntType = NCDirEntryTypeDir;
 			item.itemType = kNCItemTypeDirGuess;
 			item.owner = @"?";
 			item.group = @"?";
@@ -43,7 +41,6 @@
 			NCFileItem* item = [NCFileItem new];
 			item.name = name;
 			item.inode = inode;
-			item.direntType = NCDirEntryTypeFile;
 			item.itemType = kNCItemTypeFileOrAlias;
 			item.owner = @"?";
 			item.group = @"?";
@@ -60,7 +57,6 @@
 			NCFileItem* item = [NCFileItem new];
 			item.name = name;
 			item.inode = inode;
-			item.direntType = NCDirEntryTypeLink;
 			item.itemType = kNCItemTypeLinkToDirGuess;
 			item.owner = @"?";
 			item.group = @"?";
@@ -79,7 +75,6 @@
 			NCFileItem* item = [NCFileItem new];
 			item.name = name;
 			item.inode = inode;
-			item.direntType = NCDirEntryTypeUnknown;
 			item.itemType = kNCItemTypeUnknown;
 			item.owner = @"?";
 			item.group = @"?";

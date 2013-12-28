@@ -11,7 +11,6 @@
 
 @implementation NCFileItem
 
-@synthesize direntType = m_dirent_type;
 @synthesize itemType = m_item_type;
 @synthesize name = m_name;
 @synthesize link = m_link;
@@ -38,7 +37,6 @@
 -(id)initWithCoder:(NSCoder*)coder {
     if (self = [super init]) {
 		if([coder allowsKeyedCoding]) {
-	        m_dirent_type = [coder decodeIntForKey: @"direntType"];
 	        m_item_type = [coder decodeIntForKey: @"itemType"];
 	        m_name = [coder decodeObjectForKey: @"name"];
 	        m_link = [coder decodeObjectForKey: @"link"];
@@ -62,7 +60,6 @@
 	        m_creation_date = [coder decodeObjectForKey: @"createDate"];
 	        m_backup_date = [coder decodeObjectForKey: @"backupDate"];
 		} else {
-			[coder decodeValueOfObjCType:@encode(unsigned char) at:&m_dirent_type];
 			[coder decodeValueOfObjCType:@encode(int) at:&m_item_type];
 	        m_name = [coder decodeObject];    
 	        m_link = [coder decodeObject];
@@ -92,7 +89,6 @@
 
 -(void)encodeWithCoder:(NSCoder*)coder {
 	if([coder allowsKeyedCoding]) {
-	    [coder encodeInt:m_dirent_type forKey: @"direntType"];
 	    [coder encodeInt:m_item_type forKey: @"itemType"];
 	    [coder encodeObject:m_name forKey: @"name"];
 	    [coder encodeObject:m_link forKey: @"link"];
@@ -116,7 +112,6 @@
 	    [coder encodeObject:m_creation_date forKey: @"createDate"];
 	    [coder encodeObject:m_backup_date forKey: @"backupDate"];
 	} else {
-		[coder encodeValueOfObjCType:@encode(unsigned char) at:&m_dirent_type];
 		[coder encodeValueOfObjCType:@encode(int) at:&m_item_type];
 	    [coder encodeObject:m_name];              
 	    [coder encodeObject:m_link];

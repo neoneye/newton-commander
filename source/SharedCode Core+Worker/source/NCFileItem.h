@@ -42,8 +42,6 @@ enum {
 };
 
 @interface NCFileItem : NSObject <NSCopying, NSCoding> {
-	unsigned char m_dirent_type;
-
 	int m_item_type;
 	
 	// the file name
@@ -83,7 +81,6 @@ enum {
 	NSDate* m_creation_date;
 	NSDate* m_backup_date;
 }
-@property unsigned char direntType;
 @property int itemType;
 @property (copy) NSString* name;
 @property (copy) NSString* link;

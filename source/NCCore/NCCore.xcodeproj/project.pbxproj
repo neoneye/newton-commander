@@ -180,7 +180,6 @@
 		421078A711EF6639001372D8 /* NCListerBreadcrumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerBreadcrumb.m; sourceTree = "<group>"; };
 		4210796211F0B75C001372D8 /* NCListerDataSourceAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerDataSourceAdvanced.h; sourceTree = "<group>"; };
 		4210796311F0B75C001372D8 /* NCListerDataSourceAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerDataSourceAdvanced.m; sourceTree = "<group>"; };
-		42107A1C11F1180A001372D8 /* NCDirEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCDirEnumerator.h; path = "../SharedCode Core+Worker/source/NCDirEnumerator.h"; sourceTree = SOURCE_ROOT; };
 		421F1EAB13C8BE2900CE9AB8 /* NSMutableArray+Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffling.h"; sourceTree = "<group>"; };
 		421F1EAC13C8BE2900CE9AB8 /* NSMutableArray+Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffling.m"; sourceTree = "<group>"; };
 		422229D711D6CFA200475062 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = framework/English.lproj/GotoFolder.xib; sourceTree = "<group>"; };
@@ -315,7 +314,6 @@
 		42DBA09811F2024400DD57A8 /* NCListerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerItem.m; sourceTree = "<group>"; };
 		42E0E41F11F11ECC00029764 /* NCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCFileManager.h; path = "../SharedCode Core+Worker/source/NCFileManager.h"; sourceTree = SOURCE_ROOT; };
 		42FEEC8512108F90000E031B /* FPOCsvWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPOCsvWriter.m; path = "../SharedCode Core+Worker/source/FPOCsvWriter.m"; sourceTree = SOURCE_ROOT; };
-		42FEEC8612108F90000E031B /* NCDirEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCDirEnumerator.m; path = "../SharedCode Core+Worker/source/NCDirEnumerator.m"; sourceTree = SOURCE_ROOT; };
 		42FEEC8712108F90000E031B /* NCFileEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCFileEventManager.m; path = "../SharedCode Core+Worker/source/NCFileEventManager.m"; sourceTree = SOURCE_ROOT; };
 		42FEEC8812108F90000E031B /* NCFileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCFileItem.m; path = "../SharedCode Core+Worker/source/NCFileItem.m"; sourceTree = SOURCE_ROOT; };
 		42FEEC8912108F90000E031B /* NCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCFileManager.m; path = "../SharedCode Core+Worker/source/NCFileManager.m"; sourceTree = SOURCE_ROOT; };
@@ -449,7 +447,6 @@
 			isa = PBXGroup;
 			children = (
 				42FEEC8512108F90000E031B /* FPOCsvWriter.m */,
-				42FEEC8612108F90000E031B /* NCDirEnumerator.m */,
 				42FEEC8712108F90000E031B /* NCFileEventManager.m */,
 				42FEEC8812108F90000E031B /* NCFileItem.m */,
 				42FEEC8912108F90000E031B /* NCFileManager.m */,
@@ -476,7 +473,6 @@
 				4288D5381200058000DE1FFA /* NCLog.h */,
 				42DBA07E11F2020D00DD57A8 /* NCFileItem.h */,
 				42E0E41F11F11ECC00029764 /* NCFileManager.h */,
-				42107A1C11F1180A001372D8 /* NCDirEnumerator.h */,
 			);
 			name = SharedCode;
 			sourceTree = "<group>";

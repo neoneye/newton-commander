@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		421079D711F11407001372D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421079D611F11407001372D8 /* Foundation.framework */; };
-		421079F811F11644001372D8 /* NCDirEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 421079F611F11644001372D8 /* NCDirEnumerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		421079F911F11644001372D8 /* NCDirEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 421079F711F11644001372D8 /* NCDirEnumerator.m */; };
 		4231C57C120633CE004BBB41 /* FPOCsvWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4231C577120633CE004BBB41 /* FPOCsvWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4231C57D120633CE004BBB41 /* FPOCsvWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4231C578120633CE004BBB41 /* FPOCsvWriter.m */; };
 		4231C57E120633CE004BBB41 /* FPOICsvWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4231C579120633CE004BBB41 /* FPOICsvWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,8 +40,6 @@
 /* Begin PBXFileReference section */
 		32DBCF5E0370ADEE00C91783 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		421079D611F11407001372D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		421079F611F11644001372D8 /* NCDirEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCDirEnumerator.h; path = source/NCDirEnumerator.h; sourceTree = "<group>"; };
-		421079F711F11644001372D8 /* NCDirEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCDirEnumerator.m; path = source/NCDirEnumerator.m; sourceTree = "<group>"; };
 		42107A2511F118FF001372D8 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		42107A2611F118FF001372D8 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		42107A2711F118FF001372D8 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -141,8 +137,6 @@
 				42E0E41A11F11EB100029764 /* NCFileManager.h */,
 				42E0E41B11F11EB100029764 /* NCFileManager.m */,
 				32DBCF5E0370ADEE00C91783 /* prefix.pch */,
-				421079F611F11644001372D8 /* NCDirEnumerator.h */,
-				421079F711F11644001372D8 /* NCDirEnumerator.m */,
 				427DAE2A11FA5AD80018AAC5 /* sc_scanner.h */,
 				427DAE2B11FA5AD80018AAC5 /* sc_scanner.m */,
 				427DAE4111FA67AE0018AAC5 /* sc_tov_copier.h */,
@@ -170,7 +164,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421079F811F11644001372D8 /* NCDirEnumerator.h in Headers */,
 				42E0E41C11F11EB100029764 /* NCFileManager.h in Headers */,
 				42DBA07211F201E500DD57A8 /* NCFileItem.h in Headers */,
 				427DADC911F945A30018AAC5 /* sc_finder_info_manager.h in Headers */,
@@ -241,7 +234,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421079F911F11644001372D8 /* NCDirEnumerator.m in Sources */,
 				42E0E41D11F11EB100029764 /* NCFileManager.m in Sources */,
 				42DBA07311F201E500DD57A8 /* NCFileItem.m in Sources */,
 				427DADCA11F945A30018AAC5 /* sc_finder_info_manager.m in Sources */,

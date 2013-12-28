@@ -7,30 +7,12 @@
 #endif
 
 #import "NCWorkerPluginAdvanced.h"
-#import "NCDirEnumerator.h"
 #import "NCFileItem.h"
 #import "NCFileManager.h"
 #import "NCLog.h"
 #import "sc_transfer.h"
 #import "NCFileEventManager.h"
-
-unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
-	switch(dirent_type) {
-	case NCDirEntryTypeUnknown:  
-		// happens all the time with FTP connections
-		return kNCItemTypeDirGuess;
-	case NCDirEntryTypeFifo:     return kNCItemTypeFifo;
-	case NCDirEntryTypeChar:     return kNCItemTypeChar;
-	case NCDirEntryTypeSocket:   return kNCItemTypeSocket;
-	case NCDirEntryTypeBlock:    return kNCItemTypeBlock;
-	case NCDirEntryTypeWhiteout: return kNCItemTypeWhiteout;
-	case NCDirEntryTypeFile:     return kNCItemTypeFileOrAlias;
-	case NCDirEntryTypeDir:      return kNCItemTypeDir;
-	case NCDirEntryTypeLink:     return kNCItemTypeLinkToDirGuess;
-	}
-	LOG_WARNING(@"map_dirent_to_itemtype() - unknown dirent_type %i, guessing it's a dir", (int)dirent_type);
-	return kNCItemTypeDirGuess;
-}
+#import "NCFileItem+FileItemsForPath.h"
 
 
 @interface NCWorkerPluginAdvanced () <NCFileEventManagerDelegate>
@@ -411,34 +393,9 @@ unsigned int map_dirent_to_itemtype3(unsigned int dirent_type) {
 		// LOG_DEBUG(@"now monitoring: %@", paths);
 	}
 
-
-	NCDirEnumerator* e = [NCDirEnumerator enumeratorWithPath:wdir];
-	if(!e) {
-		LOG_ERROR(@"cannot create enumerator for path");
-		return;
-	}
-
-	NSMutableArray* items = [NSMutableArray arrayWithCapacity:10000];
-	NCDirEntry* entry;
-	while ( (entry = [e nextObject]) ) {
-		NSString* name = [entry name];
-		unsigned char dirent_type = [entry direntType];
-		unsigned long long inode = [entry inode];
-
-		if([name isEqual:@"."]) continue;
-		if([name isEqual:@".."]) continue;
-		
-		NCFileItem* item = [[NCFileItem alloc] init];
-		[item setName:name];
-		[item setInode:inode];
-		[item setDirentType:dirent_type];
-		[item setItemType:map_dirent_to_itemtype3(dirent_type)];
-		[item setOwner:@"?"];
-		[item setGroup:@"?"];
-		[items addObject:item];
-	}
+	// Uses FTS for traversing the file hierarchy
+	NSArray* items = [NCFileItem fileItemsForPath:wdir];
 	// LOG_DEBUG(@"worker.listStep2ObtainNames %@ -> %@", wdir, items);
-
 	[self setItems:[self sortItems:items]];
 
 	{

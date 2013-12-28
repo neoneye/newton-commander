@@ -22,7 +22,6 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 
 #import "NCLog.h"
 #import "NCListerDataSourceAdvanced.h"
-#import "NCDirEnumerator.h"
 #import "NCListerItem.h"
 #import "NCFileItem.h"
 #import "NCFileManager.h"
