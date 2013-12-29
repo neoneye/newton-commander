@@ -6,6 +6,6 @@ pod 'PSMTabBarControl', :git => 'https://github.com/neoneye/PSMTabBarControl.git
 
 pod 'newton-commander-quark'
 pod 'newton-commander-browse'
-pod 'newton-commander-ui', :git => 'https://github.com/neoneye/newton-commander-ui.git'
+pod 'newton-commander-ui'
 #pod 'newton-commander-ui', :path => '~/git/opcoders_commander_ui'
 

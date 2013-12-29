@@ -9,12 +9,10 @@ PODS:
 DEPENDENCIES:
   - newton-commander-browse
   - newton-commander-quark
-  - newton-commander-ui (from `https://github.com/neoneye/newton-commander-ui.git`)
+  - newton-commander-ui
   - PSMTabBarControl (from `https://github.com/neoneye/PSMTabBarControl.git`)
 
 EXTERNAL SOURCES:
-  newton-commander-ui:
-    :git: https://github.com/neoneye/newton-commander-ui.git
   PSMTabBarControl:
     :git: https://github.com/neoneye/PSMTabBarControl.git
 
