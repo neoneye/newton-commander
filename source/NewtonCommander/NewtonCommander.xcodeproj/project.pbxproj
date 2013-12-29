@@ -24,7 +24,7 @@
 		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
 		424B58D8120BED8400B20152 /* icon_create.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D7120BED8400B20152 /* icon_create.pdf */; };
-		424D3CDA18706E3B00C94D60 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 424D3CD918706E3B00C94D60 /* main.c */; };
+		424D3CE4187085F000C94D60 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 424D3CE3187085F000C94D60 /* main.c */; };
 		425A7CC411987E2F008C328E /* VolumeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A7CC111987E2F008C328E /* VolumeInfo.xib */; };
 		427A8B3811DF2FEB00DE7391 /* ListPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427A8B3611DF2FEB00DE7391 /* ListPanel.xib */; };
 		4282544B12382E3A00EA3618 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4282544A12382E3A00EA3618 /* Carbon.framework */; };
@@ -68,15 +68,6 @@
 				423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		424D3CD318706E3B00C94D60 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
 		};
 		425D7E7611C55A4400F9A9A6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -131,9 +122,9 @@
 		423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Nothing to see here. Move along."; path = "deploy_resources/Nothing to see here. Move along."; sourceTree = "<group>"; };
 		424B58D3120BED4400B20152 /* icon_remove.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_remove.pdf; path = images/icon_remove.pdf; sourceTree = "<group>"; };
 		424B58D7120BED8400B20152 /* icon_create.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_create.pdf; path = images/icon_create.pdf; sourceTree = "<group>"; };
-		424D3CD518706E3B00C94D60 /* spawn-browse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "spawn-browse"; sourceTree = BUILT_PRODUCTS_DIR; };
+		424D3CD518706E3B00C94D60 /* newton-commander-spawner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "newton-commander-spawner"; sourceTree = BUILT_PRODUCTS_DIR; };
 		424D3CD618706E3B00C94D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		424D3CD918706E3B00C94D60 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		424D3CE3187085F000C94D60 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		425A7CC011987E2F008C328E /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/TestViews.xib; sourceTree = "<group>"; };
 		425A7CC211987E2F008C328E /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/VolumeInfo.xib; sourceTree = "<group>"; };
 		425A7D7F11989304008C328E /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -277,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Newton Commander.app */,
-				424D3CD518706E3B00C94D60 /* spawn-browse */,
+				424D3CD518706E3B00C94D60 /* newton-commander-spawner */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,8 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* source */,
+				424D3CE2187085EF00C94D60 /* newton-commander-spawner */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				424D3CD818706E3B00C94D60 /* spawn-browse */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				9F03D45E3A45413FBD3C2D61 /* Pods.xcconfig */,
@@ -336,12 +327,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		424D3CD818706E3B00C94D60 /* spawn-browse */ = {
+		424D3CE2187085EF00C94D60 /* newton-commander-spawner */ = {
 			isa = PBXGroup;
 			children = (
-				424D3CD918706E3B00C94D60 /* main.c */,
+				424D3CE3187085F000C94D60 /* main.c */,
 			);
-			path = "spawn-browse";
+			path = "newton-commander-spawner";
 			sourceTree = "<group>";
 		};
 		42C21DD611430C94007097ED /* Images */ = {
@@ -363,21 +354,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		424D3CD418706E3B00C94D60 /* spawn-browse */ = {
+		424D3CD418706E3B00C94D60 /* newton-commander-spawner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 424D3CE118706E3B00C94D60 /* Build configuration list for PBXNativeTarget "spawn-browse" */;
+			buildConfigurationList = 424D3CE118706E3B00C94D60 /* Build configuration list for PBXNativeTarget "newton-commander-spawner" */;
 			buildPhases = (
 				424D3CD118706E3B00C94D60 /* Sources */,
 				424D3CD218706E3B00C94D60 /* Frameworks */,
-				424D3CD318706E3B00C94D60 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "spawn-browse";
+			name = "newton-commander-spawner";
 			productName = "spawn-browse";
-			productReference = 424D3CD518706E3B00C94D60 /* spawn-browse */;
+			productReference = 424D3CD518706E3B00C94D60 /* newton-commander-spawner */;
 			productType = "com.apple.product-type.tool";
 		};
 		8D1107260486CEB800E47090 /* Newton Commander */ = {
@@ -426,7 +416,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Newton Commander */,
-				424D3CD418706E3B00C94D60 /* spawn-browse */,
+				424D3CD418706E3B00C94D60 /* newton-commander-spawner */,
 			);
 		};
 /* End PBXProject section */
@@ -501,7 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424D3CDA18706E3B00C94D60 /* main.c in Sources */,
+				424D3CE4187085F000C94D60 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,13 +771,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		424D3CE118706E3B00C94D60 /* Build configuration list for PBXNativeTarget "spawn-browse" */ = {
+		424D3CE118706E3B00C94D60 /* Build configuration list for PBXNativeTarget "newton-commander-spawner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				424D3CDF18706E3B00C94D60 /* Debug */,
 				424D3CE018706E3B00C94D60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Newton Commander" */ = {
 			isa = XCConfigurationList;

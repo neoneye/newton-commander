@@ -1,20 +1,20 @@
 //
 // main.m
-// spawn-browse
+// newton-commander-spawner
 //
 // Run these commands to enable SETUID
-//   sudo chown -h root:wheel spawn-browse
-//   sudo chmod -h 111 spawn-browse
-//   sudo chmod -h u+s spawn-browse
+//   sudo chown -h root:wheel newton-commander-spawner
+//   sudo chmod -h 111 newton-commander-spawner
+//   sudo chmod -h u+s newton-commander-spawner
 //
 // Start without arguments, prints how-to-use help
-//   ./spawn-browse
+//   ./newton-commander-spawner
 //
 // Start with a "no" argument, runs without changing the user
-//   ./spawn-browse no
+//   ./newton-commander-spawner no
 //
 // Start with an integer argument, runs as the user 0 (root)
-//   ./spawn-browse 0
+//   ./newton-commander-spawner 0
 //
 
 #include <stdio.h>
@@ -29,10 +29,10 @@ void print_usage()
 	"USAGE\n"
 	"\n"
 	"Start as same user as the current user\n"
-	"spawn-browse -1\n"
+	"newton-commander-spawner -1\n"
 	"\n"
 	"Start as another user than the current user\n"
-	"spawn-browse 123\n";
+	"newton-commander-spawner 123\n";
 	printf("%s", usage);
 }
 
