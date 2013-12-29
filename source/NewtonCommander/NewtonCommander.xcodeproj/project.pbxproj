@@ -24,7 +24,6 @@
 		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
 		424B58D8120BED8400B20152 /* icon_create.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D7120BED8400B20152 /* icon_create.pdf */; };
-		424D3CD718706E3B00C94D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424D3CD618706E3B00C94D60 /* Foundation.framework */; };
 		424D3CDA18706E3B00C94D60 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 424D3CD918706E3B00C94D60 /* main.c */; };
 		425A7CC411987E2F008C328E /* VolumeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A7CC111987E2F008C328E /* VolumeInfo.xib */; };
 		427A8B3811DF2FEB00DE7391 /* ListPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427A8B3611DF2FEB00DE7391 /* ListPanel.xib */; };
@@ -190,7 +189,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424D3CD718706E3B00C94D60 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +668,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -699,6 +698,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
