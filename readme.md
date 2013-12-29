@@ -67,3 +67,16 @@ Run this in a terminal:
 
     pod repo remove all-newton-commander-cocoapods
 
+
+# Contact
+
+Simon Strandgaard
+
+- http://github.com/neoneye
+- http://twitter.com/neoneye
+- neoneye@gmail.com
+
+
+# License
+
+Newton Commander is available under the MIT License. See the LICENSE file for more info.
