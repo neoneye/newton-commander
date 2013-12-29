@@ -2,19 +2,17 @@
 
 A dual tab file manager for Mac OS X.
 
-### Stabile features
+Features:
 - Each tab runs in its own child process. 
 - Closing a tab kills the child process.
 - A tab can be started as a different user, allowing you to see otherwise restricted files.
-- Copy operation
 
-### Experimental features
-- Move operation
+Source Code:
+- Uses ARC.
+- Uses CocoaPods.
 
-
-### Screenshot
-![Screenshot of copy sheet](http://i.imgur.com/gtQisaE.png)
-![Screenshot of child-process running as root](http://i.imgur.com/NNVUq6m.jpg)
+![Screenshot of copy sheet](https://raw.github.com/neoneye/newton-commander/master/source/docs/screenshot001.jpg)
+![Screenshot of child-process running as root](https://raw.github.com/neoneye/newton-commander/master/source/docs/screenshot002.jpg)
 
 
 # Build Instructions
