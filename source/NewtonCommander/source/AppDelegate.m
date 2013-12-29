@@ -198,10 +198,9 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 }*/
 
 +(NSString*)pathToWorker {
-	NSString *bundlePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"NewtonCommanderBrowse.bundle"];
-	NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+	NSBundle* bundle = [NSBundle mainBundle];
 	NSAssert(bundle, @"cannot find our bundle");
-	NSString *path = [bundle.resourcePath stringByAppendingPathComponent:@"NewtonCommanderHelper"];
+	NSString *path = [bundle pathForAuxiliaryExecutable:@"NewtonCommanderHelper"];
 	NSAssert(path, @"bundle does not contain the worker");
 	return path;
 }

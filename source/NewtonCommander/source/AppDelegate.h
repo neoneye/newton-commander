@@ -12,6 +12,8 @@
 	IBOutlet NSMenu* m_bookmarks_menu;
 }
 
++(NSString*)pathToWorker;
+
 
 -(IBAction)showHelp:(id)sender;
 

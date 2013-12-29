@@ -48,7 +48,7 @@
 
 	NSAssert(m_lister_counter, @"must be initialized by nib");
 
-	NCListerDataSourceAdvanced* data_source = [[NCListerDataSourceAdvanced alloc] init];
+	NCListerDataSourceAdvanced* data_source = [[NCListerDataSourceAdvanced alloc] initWithWorkerPath:[AppDelegate pathToWorker]];
 	[m_lister setDataSource:data_source];
 	[self setDataSource:data_source];
 	
