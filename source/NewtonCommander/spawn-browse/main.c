@@ -57,13 +57,13 @@ void switch_to_user(uid_t run_as_uid) {
 			/*
 			 TODO: somehow notify our parent process, letting it know that we failed to switch user.
 			 */
-			printf("main() - ERROR: we don't have permission to change user! maybe setuid wasn't set?");
+			printf("main() - ERROR: we don't have permission to change user! maybe setuid wasn't set?\n");
 			exit(EXIT_FAILURE);
 		}
 		/*
 		 TODO: somehow notify our parent process, letting it know that we failed to switch user.
 		 */
-		printf("main() - ERROR: change user failed!!! maybe setuid wasn't set?");
+		printf("main() - ERROR: change user failed!!! maybe setuid wasn't set?\n");
 		exit(EXIT_FAILURE);
 	}
 	printf("did switch to user %d\n", (int)run_as_uid);
@@ -81,7 +81,7 @@ void maybe_switch_to_user(const char *argument_string) {
 	if (should_switch_user) {
 		long run_as_uid = strtol(argument_string, NULL, 10);
 		if((run_as_uid == 0) && (errno == EINVAL)) {
-			printf("ERROR: interpreting argument[0]. The value must be a signed integer.");
+			printf("ERROR: interpreting argument[0]. The value must be a signed integer.\n");
 			exit(EXIT_FAILURE);
 		}
 		switch_to_user((uid_t)run_as_uid);
