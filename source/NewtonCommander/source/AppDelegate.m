@@ -14,6 +14,7 @@
 #import "NCPreferencesAdvancedController.h"
 #import "NCPreferencesMenuController.h"
 #import "NCPreferencesBookmarkController.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 #import "NCLog.h"
 #import "NCCommon.h"
 #import "NCWorker.h"
@@ -483,7 +484,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 -(IBAction)showPreferencesPanel:(id)sender {
 	MBPreferencesController* ctrl = [MBPreferencesController sharedController];
 	if([[ctrl modules] count] == 0) {
-		NSBundle* b = [NSBundle bundleForClass:[MBPreferencesController class]];
+		NSBundle* b = [NSBundle newtonCommanderUIBundle];
 		NSAssert(b, @"must be in the framework bundle");
 		NCPreferencesGeneralController* mod0 = [[NCPreferencesGeneralController alloc] initWithNibName:@"PreferencesGeneral" bundle:b];
 		NCPreferencesLeftMenuController* mod1 = [[NCPreferencesLeftMenuController alloc] initWithNibName:@"PreferencesMenu" bundle:b];
