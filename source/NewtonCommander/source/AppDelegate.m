@@ -16,6 +16,7 @@
 #import "NCPreferencesBookmarkController.h"
 #import "NCLog.h"
 #import "NCCommon.h"
+#import "NCWorker.h"
 #include <sys/stat.h>
 // Carbon included for help API 
 #include <Carbon/Carbon.h>
@@ -196,10 +197,17 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 	[self repairPermissions];
 }*/
 
--(BOOL)isWorkerInstalled {
-	NSBundle* bundle = [NSBundle mainBundle];
++(NSString*)pathToWorker {
+	NSString *bundlePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"NewtonCommanderBrowse.bundle"];
+	NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
 	NSAssert(bundle, @"cannot find our bundle");
-	NSString* path_to_worker = [bundle pathForAuxiliaryExecutable:@"NewtonCommanderHelper"];
+	NSString *path = [bundle.resourcePath stringByAppendingPathComponent:@"NewtonCommanderHelper"];
+	NSAssert(path, @"bundle does not contain the worker");
+	return path;
+}
+
+-(BOOL)isWorkerInstalled {
+	NSString *path_to_worker = [AppDelegate pathToWorker];
 	const char* stat_path = [path_to_worker fileSystemRepresentation];
 
 	struct stat st;
@@ -222,6 +230,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 }
 
 -(void)repairPermissions {
+	NSString *path_to_worker = [AppDelegate pathToWorker];
 
 	int path_capacity = 2000;
 	char path_install[2000];
@@ -238,7 +247,8 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 		assert(success);
 	}
     {
-		CFStringRef exe_name = CFSTR("NewtonCommanderHelper");
+		CFStringRef exe_name = (__bridge CFStringRef)path_to_worker;
+//		CFStringRef exe_name = CFSTR("NewtonCommanderHelper");
 	    CFURLRef url_to_exe = CFBundleCopyAuxiliaryExecutableURL(bundle, exe_name);
 	    Boolean success = CFURLGetFileSystemRepresentation(
 			url_to_exe, true, (UInt8*)path_worker, path_capacity);

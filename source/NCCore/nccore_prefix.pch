@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'NCCore' target in the 'NCCore' project.
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-    #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
-#endif

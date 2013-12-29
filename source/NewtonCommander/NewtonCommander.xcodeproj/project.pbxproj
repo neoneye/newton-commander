@@ -24,8 +24,6 @@
 		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
 		424B58D8120BED8400B20152 /* icon_create.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D7120BED8400B20152 /* icon_create.pdf */; };
-		425A7C7511987929008C328E /* NCCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 425A7C54119876CA008C328E /* NCCore.framework */; };
-		425A7C78119879A6008C328E /* NCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A7C54119876CA008C328E /* NCCore.framework */; };
 		425A7CC411987E2F008C328E /* VolumeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A7CC111987E2F008C328E /* VolumeInfo.xib */; };
 		427A8B3811DF2FEB00DE7391 /* ListPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427A8B3611DF2FEB00DE7391 /* ListPanel.xib */; };
 		4282544B12382E3A00EA3618 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4282544A12382E3A00EA3618 /* Carbon.framework */; };
@@ -39,7 +37,6 @@
 		4295BD27121203D900DEDCDE /* icon_eye.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD26121203D900DEDCDE /* icon_eye.pdf */; };
 		4295BD2B121204B500DEDCDE /* icon_reload.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD2A121204B500DEDCDE /* icon_reload.pdf */; };
 		42C0E78B1215AC71005C6EA0 /* CopySheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C0E7891215AC71005C6EA0 /* CopySheet.xib */; };
-		42C0E79C1215C2E6005C6EA0 /* NewtonCommanderHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 425D7E6C11C55A0800F9A9A6 /* NewtonCommanderHelper */; };
 		42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155011155B09C000A0547 /* QuickLook.framework */; };
 		42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155211155B1B3000A0547 /* Quartz.framework */; };
 		42C21A34112DB561007097ED /* InfoPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A32112DB561007097ED /* InfoPanel.xib */; };
@@ -60,58 +57,6 @@
 		8E6025E3A4724DEB9F1C344C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163361FD76D44F7BD42672C /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		422F200111A84DD50029C47A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 428AAF68110C785E00708EDB /* NCCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 422F1FFC11A84DD40029C47A;
-			remoteInfo = "NCCore Test";
-		};
-		425A7C53119876CA008C328E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 428AAF68110C785E00708EDB /* NCCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 53DF68FD067E5B5A0090B5B0;
-			remoteInfo = NCCoreFramework;
-		};
-		425A7C731198790F008C328E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 428AAF68110C785E00708EDB /* NCCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
-			remoteInfo = NCCoreFramework;
-		};
-		425D7E6911C55A0800F9A9A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 429DC6F011C5348F0028CDEC;
-			remoteInfo = NCWorkerTest;
-		};
-		425D7E6B11C55A0800F9A9A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
-			remoteInfo = NCWorker;
-		};
-		425D7E6D11C55A0800F9A9A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 429DC6D511C533940028CDEC;
-			remoteInfo = NCWorkerLib;
-		};
-		425D7E7111C55A3800F9A9A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
-			remoteInfo = NCWorker;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		423EAF9613D199D1007A5897 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -129,7 +74,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				42C0E79C1215C2E6005C6EA0 /* NewtonCommanderHelper in CopyFiles */,
 				4289AC4D120EC39A0073AC9B /* install.sh in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +84,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				425A7C7511987929008C328E /* NCCore.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,13 +124,11 @@
 		425A7CC011987E2F008C328E /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/TestViews.xib; sourceTree = "<group>"; };
 		425A7CC211987E2F008C328E /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/VolumeInfo.xib; sourceTree = "<group>"; };
 		425A7D7F11989304008C328E /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NCWorker.xcodeproj; path = ../NCWorker/NCWorker.xcodeproj; sourceTree = SOURCE_ROOT; };
 		427A8B3711DF2FEB00DE7391 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ListPanel.xib; sourceTree = "<group>"; };
 		4282544A12382E3A00EA3618 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4282555C123ABF0600EA3618 /* Newton Commander Help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Newton Commander Help"; path = "helpbook/Newton Commander Help"; sourceTree = "<group>"; };
 		4289AC05120EB12B0073AC9B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4289AC4B120EC3940073AC9B /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
-		428AAF68110C785E00708EDB /* NCCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NCCore.xcodeproj; path = ../NCCore/NCCore.xcodeproj; sourceTree = SOURCE_ROOT; };
 		428AB2BE110E44B600708EDB /* NCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindowController.h; sourceTree = "<group>"; };
 		428AB2BF110E44B600708EDB /* NCMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMainWindowController.m; sourceTree = "<group>"; };
 		428AB2C3110E472D00708EDB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -235,7 +176,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425A7C78119879A6008C328E /* NCCore.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */,
 				42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */,
@@ -324,9 +264,6 @@
 		29B97314FDCFA39411CA2CEA /* TestNCToolkit */ = {
 			isa = PBXGroup;
 			children = (
-				4288D521120004F700DE1FFA /* SharedCode */,
-				425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */,
-				428AAF68110C785E00708EDB /* NCCore.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -376,32 +313,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		425A7C4C119876CA008C328E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				425A7C54119876CA008C328E /* NCCore.framework */,
-				422F200211A84DD50029C47A /* NCCore Test.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		425D7E6411C55A0800F9A9A6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				425D7E6A11C55A0800F9A9A6 /* NCWorkerTest.app */,
-				425D7E6C11C55A0800F9A9A6 /* NewtonCommanderHelper */,
-				425D7E6E11C55A0800F9A9A6 /* libNCWorkerLib.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4288D521120004F700DE1FFA /* SharedCode */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SharedCode;
-			sourceTree = "<group>";
-		};
 		42C21DD611430C94007097ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,8 +348,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				425A7C741198790F008C328E /* PBXTargetDependency */,
-				425D7E7211C55A3800F9A9A6 /* PBXTargetDependency */,
 			);
 			name = "Newton Commander";
 			productInstallPath = "$(HOME)/Applications";
@@ -466,60 +375,12 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* TestNCToolkit */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 425A7C4C119876CA008C328E /* Products */;
-					ProjectRef = 428AAF68110C785E00708EDB /* NCCore.xcodeproj */;
-				},
-				{
-					ProductGroup = 425D7E6411C55A0800F9A9A6 /* Products */;
-					ProjectRef = 425D7E6311C55A0800F9A9A6 /* NCWorker.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Newton Commander */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		422F200211A84DD50029C47A /* NCCore Test.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "NCCore Test.octest";
-			remoteRef = 422F200111A84DD50029C47A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		425A7C54119876CA008C328E /* NCCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = NCCore.framework;
-			remoteRef = 425A7C53119876CA008C328E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		425D7E6A11C55A0800F9A9A6 /* NCWorkerTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = NCWorkerTest.app;
-			remoteRef = 425D7E6911C55A0800F9A9A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		425D7E6C11C55A0800F9A9A6 /* NewtonCommanderHelper */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = NewtonCommanderHelper;
-			remoteRef = 425D7E6B11C55A0800F9A9A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		425D7E6E11C55A0800F9A9A6 /* libNCWorkerLib.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libNCWorkerLib.a;
-			remoteRef = 425D7E6D11C55A0800F9A9A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -613,19 +474,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		425A7C741198790F008C328E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NCCoreFramework;
-			targetProxy = 425A7C731198790F008C328E /* PBXContainerItemProxy */;
-		};
-		425D7E7211C55A3800F9A9A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NCWorker;
-			targetProxy = 425D7E7111C55A3800F9A9A6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
