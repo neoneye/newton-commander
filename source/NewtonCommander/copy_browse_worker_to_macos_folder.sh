@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd $TARGET_BUILD_DIR
+cd "${BUILT_PRODUCTS_DIR}"
 cd Newton\ Commander.app/Contents
 
 if [ -f "MacOS/NewtonCommanderHelper" ]; then
