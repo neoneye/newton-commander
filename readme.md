@@ -1,6 +1,6 @@
 # Newton Commander
 
-A dual tab file manager for Mac OS X.
+A dual-pane file manager with tabs for Mac OS X.
 
 
 # Download
