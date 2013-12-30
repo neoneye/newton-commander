@@ -2,6 +2,16 @@
 
 A dual tab file manager for Mac OS X.
 
+
+# Download
+
+[Newton Commander.zip](https://github.com/neoneye/newton-commander/releases/download/0.1.0/Newton.Commander.zip)
+
+[Release notes](https://github.com/neoneye/newton-commander/releases/tag/0.1.0)
+
+
+# Overview
+
 Features:
 - Each tab runs in its own child process. 
 - Closing a tab kills the child process.
