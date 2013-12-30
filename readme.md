@@ -31,6 +31,7 @@ Source Code:
 
 ![Screenshot of copy sheet](https://raw.github.com/neoneye/newton-commander/master/source/docs/screenshot001.jpg)
 ![Screenshot of child-process running as root](https://raw.github.com/neoneye/newton-commander/master/source/docs/screenshot002.jpg)
+![Screenshot showing that resource-fork is still used on Mavericks](https://raw.github.com/neoneye/newton-commander/master/source/docs/screenshot003.jpg)
 
 
 # Build Instructions
