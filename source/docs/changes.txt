@@ -1,3 +1,22 @@
+2013-12-30 Simon Strandgaard
+
+    * Migrated to CocoaPods from a huge chaotic monolith Xcode project with subprojects.
+	I have splitted it up into different 5 cocoapod repositories.
+	This has introduced lots of warnings.
+	
+	* Now uses fts_read() to traverse the file system.
+	This is kind of a set back, because fts_read() cannot show "cloaked" files.
+	In the past I used getdirentries() which can show "cloaked" files.
+	However getdirentries() is deprecated and also requires 32bit inodes preprocessor defines.
+	I don't like that Apple uses "cloak" to hide things!
+	
+	* I have made a PSMTabBarControl cocoapod that uses ARC.
+	No more any warnings about PSMTabBarControl using garbage collection.
+	
+	* With CocoaPods it is much easier to control what happens when archiving.
+	So it was easy to create a .zip file containing the app.
+	Released version 0.1.0 - The first .zip file ever available to the public.
+	
 2013-12-18 Simon Strandgaard
 
     * Migrated to ARC.
