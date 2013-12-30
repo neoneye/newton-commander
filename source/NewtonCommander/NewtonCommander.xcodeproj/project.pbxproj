@@ -619,7 +619,7 @@
 				IBC_PLUGIN_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "Newton Commander";
 				USER_HEADER_SEARCH_PATHS = "../**";
 			};
@@ -642,7 +642,7 @@
 				IBC_PLUGIN_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "Newton Commander";
 				USER_HEADER_SEARCH_PATHS = "../**";
 			};
