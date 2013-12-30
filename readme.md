@@ -10,6 +10,14 @@ A dual tab file manager for Mac OS X.
 [Release notes](https://github.com/neoneye/newton-commander/releases/tag/0.1.0)
 
 
+1. Unzip it.
+2. Try open it. (It should fail because Mavericks blocks unsigned apps)
+3. Open your Mac System Preferences
+4. Go to the "Security & Privacy" panel.
+5. It should say "Newton Commander.app" was blocked from opening because it is not from an identified developer.
+6. Choose "Open Anyway".
+
+
 # Overview
 
 Features:
