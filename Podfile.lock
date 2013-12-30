@@ -1,5 +1,5 @@
 PODS:
-  - newton-commander-browse (0.1.10):
+  - newton-commander-browse (0.1.11):
     - newton-commander-quark
   - newton-commander-quark (0.1.4)
   - newton-commander-ui (0.1.5):
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/neoneye/PSMTabBarControl.git
 
 SPEC CHECKSUMS:
-  newton-commander-browse: e42c38a813c9e066f1a4e4229ec78e1fb3522be5
+  newton-commander-browse: aa3ff7ec6feb8b1653195f4545a85c806a93a320
   newton-commander-quark: 39899165bb7edd1383d903ac5e2b9f4e75948417
   newton-commander-ui: e85714b685d12f34a131a020ddc814943f532901
   PSMTabBarControl: 0f3ea3df39e8a9a0e52b7341bf66bba729863560
