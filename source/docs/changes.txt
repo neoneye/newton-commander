@@ -1,3 +1,11 @@
+2013-12-31 Simon Strandgaard
+
+	* Eliminated a painful 10 second delay when starting a worker process. 
+	There was no delay before Mavericks. On Mavericks the Bonjour/DNS lookup takes 5 seconds.
+	I do 2 lookups, one in the parent process and another in the child process. 
+	Adding up to 10 seconds.
+	Released version 0.1.1 - The second .zip file ever available to the public.
+
 2013-12-30 Simon Strandgaard
 
     * Migrated to CocoaPods from a huge chaotic monolith Xcode project with subprojects.
