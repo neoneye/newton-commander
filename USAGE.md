@@ -60,5 +60,5 @@
 | CMD-Down       | Opens the selected row(s) |
 | CMD-G          | Specify a path to go to   |
 | CMD-,          | Open preferences          |
-| CMD-F,         | Reveal in Finder          |
-| CMD-R,         | Reload tab                |
+| CMD-F          | Reveal in Finder          |
+| CMD-R          | Reload tab                |
