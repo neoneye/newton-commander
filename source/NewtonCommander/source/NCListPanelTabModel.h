@@ -3,10 +3,11 @@
 //  Newton Commander
 //
 #import <Cocoa/Cocoa.h>
+#import "PSMTabViewItemIdentifier.h"
 
 @class NCListTabController;
 
-@interface NCListPanelTabModel : NSObject {
+@interface NCListPanelTabModel : NSObject <PSMTabViewItemIdentifier> {
 	NCListTabController*  m_controller;
 	BOOL						_isProcessing;
 	NSImage					*m_icon;

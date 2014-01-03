@@ -65,8 +65,6 @@ You can start showing the file size and absolute path.
 - *Difficulty level: Easy programming skills*
 - Located in the [PSMTabBarControl repository](https://github.com/neoneye/PSMTabBarControl).
 
-There are a number of warnings.
-
 Migrate it to use bundle_resources in the `PSMTabBarControl.podspec`
 
 

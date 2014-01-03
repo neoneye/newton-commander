@@ -4,7 +4,7 @@ PODS:
   - newton-commander-quark (0.1.5)
   - newton-commander-ui (0.1.6):
     - newton-commander-browse
-  - PSMTabBarControl (1.0.3)
+  - PSMTabBarControl (1.0.4)
 
 DEPENDENCIES:
   - newton-commander-browse
@@ -20,6 +20,6 @@ SPEC CHECKSUMS:
   newton-commander-browse: 0be08c82fd1f01bb706b12a4926abb193088d071
   newton-commander-quark: d150d7cca840798ffce5df2e68401644adc315ba
   newton-commander-ui: 61bd25e9acbdc9a66e582b4a989a43c84ea91de4
-  PSMTabBarControl: 8fe88b3018fda740e455e42913a3af43bbc5db10
+  PSMTabBarControl: 784f191bd29703d07460feb34f9d696d3c6d66e7
 
 COCOAPODS: 0.29.0
