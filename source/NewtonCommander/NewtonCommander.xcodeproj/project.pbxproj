@@ -20,7 +20,6 @@
 		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; };
 		4222E12A11E39F3B0040E6D4 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 4222E12811E39F3B0040E6D4 /* Credits.html */; };
 		42271DF911CFF09400E5FFE1 /* NCMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42271DF811CFF09400E5FFE1 /* NCMainWindow.m */; };
-		423451FF123E962700FDAAA5 /* PermissionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423451FD123E962700FDAAA5 /* PermissionSheet.xib */; };
 		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
 		424B58D8120BED8400B20152 /* icon_create.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D7120BED8400B20152 /* icon_create.pdf */; };
@@ -36,7 +35,6 @@
 		428DD04911EBBB510048B3C6 /* icon_move.png in Resources */ = {isa = PBXBuildFile; fileRef = 428DD04811EBBB510048B3C6 /* icon_move.png */; };
 		4295BD27121203D900DEDCDE /* icon_eye.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD26121203D900DEDCDE /* icon_eye.pdf */; };
 		4295BD2B121204B500DEDCDE /* icon_reload.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4295BD2A121204B500DEDCDE /* icon_reload.pdf */; };
-		42C0E78B1215AC71005C6EA0 /* CopySheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C0E7891215AC71005C6EA0 /* CopySheet.xib */; };
 		42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155011155B09C000A0547 /* QuickLook.framework */; };
 		42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C155211155B1B3000A0547 /* Quartz.framework */; };
 		42C21A34112DB561007097ED /* InfoPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C21A32112DB561007097ED /* InfoPanel.xib */; };
@@ -51,7 +49,6 @@
 		42C21E9C11479F26007097ED /* NCToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C21E9B11479F26007097ED /* NCToolbar.m */; };
 		42D159131161622B00F66068 /* NewtonCommander.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42D159121161622B00F66068 /* NewtonCommander.icns */; };
 		42D15AF6116D1D3C00F66068 /* NCTabArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D15AF5116D1D3C00F66068 /* NCTabArray.m */; };
-		42D449F41216EDF600CB5BF5 /* MoveSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D449F21216EDF600CB5BF5 /* MoveSheet.xib */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		8E6025E3A4724DEB9F1C344C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163361FD76D44F7BD42672C /* libPods.a */; };
@@ -117,7 +114,6 @@
 		4222E12911E39F3B0040E6D4 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/Credits.html; sourceTree = "<group>"; };
 		42271DF711CFF09400E5FFE1 /* NCMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindow.h; sourceTree = "<group>"; };
 		42271DF811CFF09400E5FFE1 /* NCMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMainWindow.m; sourceTree = "<group>"; };
-		423451FE123E962700FDAAA5 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PermissionSheet.xib; sourceTree = "<group>"; };
 		423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Nothing to see here. Move along."; path = "deploy_resources/Nothing to see here. Move along."; sourceTree = "<group>"; };
 		424B58D3120BED4400B20152 /* icon_remove.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_remove.pdf; path = images/icon_remove.pdf; sourceTree = "<group>"; };
 		424B58D7120BED8400B20152 /* icon_create.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_create.pdf; path = images/icon_create.pdf; sourceTree = "<group>"; };
@@ -139,7 +135,6 @@
 		4295BD26121203D900DEDCDE /* icon_eye.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_eye.pdf; path = images/icon_eye.pdf; sourceTree = "<group>"; };
 		4295BD2A121204B500DEDCDE /* icon_reload.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_reload.pdf; path = images/icon_reload.pdf; sourceTree = "<group>"; };
 		42BA70991861FAA60083C2D3 /* NCPanelControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPanelControllerDelegate.h; sourceTree = "<group>"; };
-		42C0E78A1215AC71005C6EA0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/CopySheet.xib; sourceTree = "<group>"; };
 		42C155011155B09C000A0547 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		42C155211155B1B3000A0547 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		42C21A33112DB561007097ED /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/InfoPanel.xib; sourceTree = "<group>"; };
@@ -163,7 +158,6 @@
 		42D159121161622B00F66068 /* NewtonCommander.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = NewtonCommander.icns; path = images/NewtonCommander.icns; sourceTree = "<group>"; };
 		42D15AF4116D1D3C00F66068 /* NCTabArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTabArray.h; sourceTree = "<group>"; };
 		42D15AF5116D1D3C00F66068 /* NCTabArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTabArray.m; sourceTree = "<group>"; };
-		42D449F31216EDF600CB5BF5 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MoveSheet.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Newton Commander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Newton Commander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F03D45E3A45413FBD3C2D61 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../../Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -276,7 +270,6 @@
 			children = (
 				423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */,
 				4282555C123ABF0600EA3618 /* Newton Commander Help */,
-				42C0E7891215AC71005C6EA0 /* CopySheet.xib */,
 				4289AC4B120EC3940073AC9B /* install.sh */,
 				4222E12811E39F3B0040E6D4 /* Credits.html */,
 				427A8B3611DF2FEB00DE7391 /* ListPanel.xib */,
@@ -292,8 +285,6 @@
 				42C21A3C112DB6B1007097ED /* ViewPanel.xib */,
 				42222AD811D75C6600475062 /* ListPanelTab.xib */,
 				42010E0C1206BC2B0002191E /* HelpPanel.xib */,
-				42D449F21216EDF600CB5BF5 /* MoveSheet.xib */,
-				423451FD123E962700FDAAA5 /* PermissionSheet.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -403,9 +394,6 @@
 				42071EEA12120E9900977D06 /* icon_info.pdf in Resources */,
 				42071EF2121210AF00977D06 /* icon_gear.pdf in Resources */,
 				42071EFA1212115D00977D06 /* icon_pencil.pdf in Resources */,
-				42C0E78B1215AC71005C6EA0 /* CopySheet.xib in Resources */,
-				42D449F41216EDF600CB5BF5 /* MoveSheet.xib in Resources */,
-				423451FF123E962700FDAAA5 /* PermissionSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,14 +507,6 @@
 			name = Credits.html;
 			sourceTree = "<group>";
 		};
-		423451FD123E962700FDAAA5 /* PermissionSheet.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				423451FE123E962700FDAAA5 /* English */,
-			);
-			name = PermissionSheet.xib;
-			sourceTree = "<group>";
-		};
 		425A7CBF11987E2F008C328E /* TestViews.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -559,14 +539,6 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		42C0E7891215AC71005C6EA0 /* CopySheet.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42C0E78A1215AC71005C6EA0 /* English */,
-			);
-			name = CopySheet.xib;
-			sourceTree = "<group>";
-		};
 		42C21A32112DB561007097ED /* InfoPanel.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -581,14 +553,6 @@
 				42C21A3D112DB6B1007097ED /* English */,
 			);
 			name = ViewPanel.xib;
-			sourceTree = "<group>";
-		};
-		42D449F21216EDF600CB5BF5 /* MoveSheet.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42D449F31216EDF600CB5BF5 /* English */,
-			);
-			name = MoveSheet.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
