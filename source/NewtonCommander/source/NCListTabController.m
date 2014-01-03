@@ -16,8 +16,6 @@
 #import "NCVolumeStatus.h"
 #import "NCListPanelTabModel.h"
 #import "NCListerCounter.h"
-#import "VerticalLayoutView.h"
-
 
 
 @interface NCListTabController ()
