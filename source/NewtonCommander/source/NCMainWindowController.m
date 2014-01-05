@@ -692,20 +692,10 @@
 	[sheet setTargetDir:[other_panel workingDir]];
 	[sheet setNames:[active_panel selectedNamesOrCurrentName]];
 	[sheet setCopyOperation:[active_panel copyOperation]];
-	[sheet setDelegate:self];
-	[sheet beginSheetForWindow:[self window]];
+	[sheet beginSheetForWindow:[self window] completionHandler:^{
+		LOG_DEBUG(@"copy sheet did close");
+	}];
 }
-
--(void)copySheetDidClose:(NCCopySheet*)sheet {
-	// LOG_DEBUG(@"transfer sheet did close");
-	[sheet setCopyOperation:nil];
-}
-
--(void)copySheetDidFinish:(NCCopySheet*)sheet {
-	// LOG_DEBUG(@"transfer sheet did copy to target pane");
-	[[self otherPanel] reload];
-}
-
 
 -(IBAction)moveAction:(id)sender {
 	NCListPanelController* active_panel = [self activePanel];
@@ -721,8 +711,9 @@
 	[sheet setTargetDir:[other_panel workingDir]];
 	[sheet setNames:[active_panel selectedNamesOrCurrentName]];
 	[sheet setMoveOperation:[active_panel moveOperation]];
-	[sheet setDelegate:self];
-	[sheet beginSheetForWindow:[self window]];
+	[sheet beginSheetForWindow:[self window] completionHandler:^{
+		LOG_DEBUG(@"move sheet did close");
+	}];
 }
 
 
