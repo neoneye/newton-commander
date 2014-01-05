@@ -687,14 +687,15 @@
 		return;
 	}
 	
-	NCCopySheet* sheet = [NCCopySheet shared];
-	[sheet setSourceDir:[active_panel workingDir]];
-	[sheet setTargetDir:[other_panel workingDir]];
-	[sheet setNames:[active_panel selectedNamesOrCurrentName]];
-	[sheet setCopyOperation:[active_panel copyOperation]];
-	[sheet beginSheetForWindow:[self window] completionHandler:^{
-		LOG_DEBUG(@"copy sheet did close");
-	}];
+	[NCCopySheet beginSheetForWindow:self.window
+						   operation:[active_panel copyOperation]
+						   sourceDir:[active_panel workingDir]
+						   targetDir:[other_panel workingDir]
+							   names:[active_panel selectedNamesOrCurrentName]
+				   completionHandler:
+	 ^{
+		 LOG_DEBUG(@"copy sheet did close");
+	 }];
 }
 
 -(IBAction)moveAction:(id)sender {
@@ -706,14 +707,15 @@
 		return;
 	}
 	
-	NCMoveSheet* sheet = [NCMoveSheet shared];
-	[sheet setSourceDir:[active_panel workingDir]];
-	[sheet setTargetDir:[other_panel workingDir]];
-	[sheet setNames:[active_panel selectedNamesOrCurrentName]];
-	[sheet setMoveOperation:[active_panel moveOperation]];
-	[sheet beginSheetForWindow:[self window] completionHandler:^{
-		LOG_DEBUG(@"move sheet did close");
-	}];
+	[NCMoveSheet beginSheetForWindow:self.window
+						   operation:[active_panel moveOperation]
+						   sourceDir:[active_panel workingDir]
+						   targetDir:[other_panel workingDir]
+							   names:[active_panel selectedNamesOrCurrentName]
+				   completionHandler:
+	 ^{
+		 LOG_DEBUG(@"move sheet did close");
+	 }];
 }
 
 
