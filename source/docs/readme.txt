@@ -11,11 +11,20 @@ http://qc-dev.blogspot.com/2010/07/installing-helper-tool.html
 https://devforums.apple.com/thread/112174
 
 
-copy+move sheets must work.. by using the Worker component and satisfy the copymove tests
-
-
-
 == Secondary TODOes
+
+Move tab from active panel to inactive panel.
+What hot key should I pick for this?
+ 
+
+F1 inspector
+
+
+Change permissions sheet
+
+
+Exercise the copymove tests to see if copy/move satisfies the tests.
+
 
 duplicate folder
 I use this a lot at my job, instead I use the Finder for this. CMD-D
@@ -26,17 +35,6 @@ CMD Arrow-Right to do the same.
 
 
 delete a single file/folder, should preserver the Y position of the cursor
-
-
-F1 inspector
-
-
-Change permissions sheet
-
-
-Rework NSConnection code between parent process and child process to use NSXPCConnection.
-Not sure if this allows us to run as a different user. 
-Create a proof of concept, where the child process runs as a different user.
 
 
 faster navigation.. navigating to parent dir is incredibly slow, compared to navigating into a subdir.
@@ -62,16 +60,6 @@ But what if you have read-access and there is a directory that your user don't h
 Why have I never tried out the SFAuthorizationView ?
 http://developer.apple.com/library/mac/#documentation/Security/Reference/SecurityInterfaceFramework/Classes/SFAuthorizationView_Class/Reference/Reference.html
 http://www.bdunagan.com/2009/12/13/system-preferences-pane-lock/
-
-
-PSMTabBarControl uses a non NSString instance that it passes around, instead
-of the expected NSString. I gotta rework the code so it doesn't generate warnings.
-Really difficult to solve because "identifier" is supposed to be a string, but PSMTabBar is using it for other types of classes. And it uses bindings too, which makes it harder to determine wether the code side bad side effects.
-Perhaps I should write to PSM himself and ask how to approach it. Maybe he has a few great idea.. he is a genius. 
-
-
-Don't use .xib files nor .storyboard files.
-It's difficult to see what has been changed in a commit.
 
 
 NSFileVersion support. Introduce a column that shows how many version exists of a file.

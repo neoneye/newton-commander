@@ -10,7 +10,7 @@ F2                     -
 F3                     -
 F4                     -
 F5                     Copy selected items
-F6                     -
+F6                     Move selected items
 F7                     Create directory
 F8  or  DELETE         Delete selected items
 SHIFT F1               -
