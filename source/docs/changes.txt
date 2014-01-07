@@ -1,3 +1,10 @@
+2014-01-07 Simon Strandgaard
+
+	* Implemented the move operation (the F6 hot key).
+	I wanted to do this years ago when I implemented the move operation, but I never
+	found time for doing it. It took my whole vinter vacation to get to a point
+	where I could finally implement the move operation.
+
 2013-12-31 Simon Strandgaard
 
 	* Eliminated a painful 10 second delay when starting a worker process. 
