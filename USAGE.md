@@ -35,7 +35,7 @@
 | Shortcut       | Action                                     |
 |:---------------|:-------------------------------------------|
 | F5             | Copy files                                 |
-| F6             | Move files (not implemented yet)           |
+| F6             | Move files                                 |
 | SHIFT-F6       | Rename file                                |
 | F7             | Create folder                              |
 | SHIFT-F7       | Create empty file                          |
