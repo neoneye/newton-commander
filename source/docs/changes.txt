@@ -1,3 +1,7 @@
+2014-01-08 Simon Strandgaard
+
+	* The move sheet can now show an alert when something went wrong during the move operation.
+
 2014-01-07 Simon Strandgaard
 
 	* Implemented the move operation (the F6 hot key).
