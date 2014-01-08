@@ -5,9 +5,9 @@ A dual-pane file manager with tabs for Mac OS X.
 
 # Download
 
-[Newton Commander.zip](https://github.com/neoneye/newton-commander/releases/download/0.3.0/Newton.Commander.zip)
+[Newton Commander.zip](https://github.com/neoneye/newton-commander/releases/download/0.3.1/Newton.Commander.zip)
 
-[Release notes](https://github.com/neoneye/newton-commander/releases/tag/0.3.0)
+[Release notes](https://github.com/neoneye/newton-commander/releases/tag/0.3.1)
 
 
 1. Unzip it.
