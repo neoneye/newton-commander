@@ -1,3 +1,7 @@
+2014-01-09 Simon Strandgaard
+
+	* Improved error handling when moving files.
+
 2014-01-08 Simon Strandgaard
 
 	* The move sheet can now show an alert when something went wrong during the move operation.
