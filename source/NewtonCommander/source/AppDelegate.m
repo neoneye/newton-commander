@@ -240,8 +240,7 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
     assert(bundle != NULL);
 
     {
-		CFStringRef exe_name = CFSTR("install.sh");
-	    CFURLRef url_to_exe = CFBundleCopyAuxiliaryExecutableURL(bundle, exe_name);
+	    CFURLRef url_to_exe = CFBundleCopyResourceURL(bundle, CFSTR("install"), CFSTR("sh"), NULL);
 	    Boolean success = CFURLGetFileSystemRepresentation(
 			url_to_exe, true, (UInt8*)path_install, path_capacity);
 		assert(success);
