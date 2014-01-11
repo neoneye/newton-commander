@@ -29,15 +29,6 @@ that would cause NC to change directory so it's at the same path as the Finder.
 Perhaps change path of the active tab.
 
 
-# Open current dir in a Terminal
-
-- *Difficulty level: Medium programming skills*
-- It's not located any where yet. Place it where you see fit.
-
-Often it is useful to create a new terminal and `cd` to the path shown in the UI.
-
-
-
 # F1 key = Inspect file properties
 
 - *Difficulty level: Medium programming skills*
