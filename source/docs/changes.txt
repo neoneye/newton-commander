@@ -1,3 +1,7 @@
+2014-01-11 Simon Strandgaard
+
+	* Added "Open in Terminal".
+
 2014-01-09 Simon Strandgaard
 
 	* Improved error handling when moving files.

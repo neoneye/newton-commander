@@ -73,7 +73,7 @@ ARROW_RIGHT            Show right action menu
 CMD C                  Copy absolute paths for the selected items to clipboard
 SHIFT CMD C            Copy names of the selected items to clipboard
 CMD G                  Go to the folder
-
+CMD SHIFT T            Open in Terminal
 
 
 Gestures

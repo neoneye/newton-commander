@@ -423,8 +423,6 @@ create "ncmd" commandline tool.. similar to TextMate's "mate" command.
 
 create preferences pane for installing / uninstalling the "ncmd" command.
 
-Open path in terminal
-
 Open files in diff tool
 
 About window with donate button.

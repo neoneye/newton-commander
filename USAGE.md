@@ -62,3 +62,8 @@
 | CMD-,          | Open preferences          |
 | CMD-F          | Reveal in Finder          |
 | CMD-R          | Reload tab                |
+| CMD-OPT-F      | Toggle fullscreen mode    |
+| CMD-SHIFT-T    | Open in Terminal          |
+
+
+
