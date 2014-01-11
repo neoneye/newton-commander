@@ -34,6 +34,8 @@
 #import "NCCopyOperationProtocol.h"
 #import "NSArray+PrependPath.h"
 #import <objc/runtime.h>
+#import <ScriptingBridge/ScriptingBridge.h>
+#import "Terminal.h"
 
 
 //#define CUSTOM_WINDOW_BACKGROUND
@@ -849,6 +851,28 @@
 		return;
 	}
 	[panel enterRenameMode];
+}
+
+-(IBAction)openInTerminal:(id)sender {
+	NCListPanelController* active_panel = [self activePanel];
+	if(!active_panel) {
+		LOG_DEBUG(@"open in terminal is not possible, since there is no active panel");
+		return;
+	}
+	[self openTerminalWithPath:[active_panel workingDir]];
+}
+
+-(BOOL)openTerminalWithPath:(NSString*)aPath {
+	@try {
+		TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
+        [terminal activate];
+		[terminal open:[NSArray arrayWithObject:aPath]];
+		return YES;
+	} @catch(id ue) {
+		return NO;
+	} @finally {
+		return NO;
+	}
 }
 
 @end

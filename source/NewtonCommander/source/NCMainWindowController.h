@@ -40,4 +40,6 @@
 -(IBAction)gotoFolderAction:(id)sender;
 -(IBAction)renameAction:(id)sender;
 
+-(IBAction)openInTerminal:(id)sender;
+
 @end

@@ -23,6 +23,8 @@
 		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
 		424B58D8120BED8400B20152 /* icon_create.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D7120BED8400B20152 /* icon_create.pdf */; };
+		4255ABF0188118C300320B67 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4255ABEF188118C300320B67 /* ScriptingBridge.framework */; };
+		4255ABF918812C8800320B67 /* Terminal.app in Sources */ = {isa = PBXBuildFile; fileRef = 4255ABF818812C8800320B67 /* Terminal.app */; };
 		425A7CC411987E2F008C328E /* VolumeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A7CC111987E2F008C328E /* VolumeInfo.xib */; };
 		427A8B3811DF2FEB00DE7391 /* ListPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427A8B3611DF2FEB00DE7391 /* ListPanel.xib */; };
 		4282544B12382E3A00EA3618 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4282544A12382E3A00EA3618 /* Carbon.framework */; };
@@ -53,6 +55,20 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		8E6025E3A4724DEB9F1C344C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163361FD76D44F7BD42672C /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		4255ABF318811BA400320B67 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		423EAF9613D199D1007A5897 /* CopyFiles */ = {
@@ -118,6 +134,9 @@
 		424B58D3120BED4400B20152 /* icon_remove.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_remove.pdf; path = images/icon_remove.pdf; sourceTree = "<group>"; };
 		424B58D7120BED8400B20152 /* icon_create.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_create.pdf; path = images/icon_create.pdf; sourceTree = "<group>"; };
 		424D3CD618706E3B00C94D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4255ABED1881184400320B67 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = System/Library/Frameworks/AppleScriptKit.framework; sourceTree = SDKROOT; };
+		4255ABEF188118C300320B67 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		4255ABF818812C8800320B67 /* Terminal.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Terminal.app; path = ../../../../../../Applications/Utilities/Terminal.app; sourceTree = "<group>"; };
 		425A7CC011987E2F008C328E /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/TestViews.xib; sourceTree = "<group>"; };
 		425A7CC211987E2F008C328E /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/VolumeInfo.xib; sourceTree = "<group>"; };
 		427A8B3711DF2FEB00DE7391 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ListPanel.xib; sourceTree = "<group>"; };
@@ -168,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4255ABF0188118C300320B67 /* ScriptingBridge.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				42C155021155B09C000A0547 /* QuickLook.framework in Frameworks */,
 				42C155221155B1B3000A0547 /* Quartz.framework in Frameworks */,
@@ -256,6 +276,7 @@
 		29B97314FDCFA39411CA2CEA /* TestNCToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				4255ABF818812C8800320B67 /* Terminal.app */,
 				080E96DDFE201D6D7F000001 /* source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -292,6 +313,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4255ABEF188118C300320B67 /* ScriptingBridge.framework */,
+				4255ABED1881184400320B67 /* AppleScriptKit.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				424D3CD618706E3B00C94D60 /* Foundation.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -334,6 +357,7 @@
 				42712CE718708EB6007BA3A9 /* ShellScript */,
 			);
 			buildRules = (
+				4255ABF318811BA400320B67 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -451,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4255ABF918812C8800320B67 /* Terminal.app in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */,
 				428AB2C0110E44B600708EDB /* NCMainWindowController.m in Sources */,
@@ -565,13 +590,11 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = newcmd_prefix.pch;
-				HEADER_SEARCH_PATHS = "";
 				IBC_OVERRIDING_PLUGINS_AND_FRAMEWORKS_DIR = "";
 				IBC_PLUGINS = "";
 				IBC_PLUGIN_SEARCH_PATHS = "";
@@ -590,11 +613,9 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = newcmd_prefix.pch;
-				HEADER_SEARCH_PATHS = "";
 				IBC_OVERRIDING_PLUGINS_AND_FRAMEWORKS_DIR = "";
 				IBC_PLUGINS = "";
 				IBC_PLUGIN_SEARCH_PATHS = "";
