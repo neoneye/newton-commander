@@ -29,6 +29,15 @@ that would cause NC to change directory so it's at the same path as the Finder.
 Perhaps change path of the active tab.
 
 
+# Software update
+
+- *Difficulty level: Medium programming skills*
+
+Integrate with [Sparkle](https://github.com/andymatuschak/Sparkle).
+The main branch of Sparkle doesn't work with Xcode 5.
+You may have to try out different forks and find one that works.
+
+
 # F1 key = Inspect file properties
 
 - *Difficulty level: Medium programming skills*
