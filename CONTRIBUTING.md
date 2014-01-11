@@ -4,7 +4,7 @@ Pull requests are much appreciated. Here's a quick guide:
 
 1. Fork the repo.
 
-2. Follow the [Build Instructions](https://github.com/neoneye/newton-commander/blob/master/readme.md) and [let me know](https://twitter.com/neoneye) if you managed to compile it or not.
+2. Follow the [Build Instructions](https://github.com/neoneye/newton-commander/blob/master/BUILD_INSTRUCTIONS.md) and [let me know](https://twitter.com/neoneye) if you managed to compile it or not.
 
 3. Make your changes.
 
