@@ -18,6 +18,15 @@ At this point you're waiting on me. I like to at least comment on, if not accept
 Here are possible starting points thats that doesn't require that you know every corner of NC.
 
 
+# Double click to change directory
+
+- *Difficulty level: Easy programming skills*
+- I think it's in the `NCLister.m` in the `newton-commander-ui` repository.
+
+In Finder you can double click on a folder to change directory.
+In NC you can only change directory using the Enter key.
+
+
 # Drag and drop on the NC icon
 
 - *Difficulty level: Easy programming skills*
