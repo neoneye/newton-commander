@@ -38,11 +38,12 @@
 -(void)gatherInfo:(NCListPanelController*)listPanel {
 	NSString* name = [listPanel currentName];
 	LOG_DEBUG(@"gatherInfo for name: %@", name);
+	[self performSelector:@selector(updateName:) withObject:name afterDelay:0];
+}
 
-	NSArray* keys = [NSArray arrayWithObjects:@"name", nil];
-	NSArray* objects = [NSArray arrayWithObjects:name, nil];
-	NSDictionary* dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];	
-	
+-(void)updateName:(NSString*)name {
+	NSString *nameToShow = [NSString stringWithFormat:@"%@", name];
+	NSDictionary *dict = @{@"name": nameToShow};
 	[self.infoView setDict:dict];
 }
 

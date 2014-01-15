@@ -317,7 +317,7 @@
 		[self replaceLeftView: [l view]];
 		[self replaceRightView:[r view]];
 		[m_list_panel_controller_left activatePanel:self];
-		// [m_help_panel_controller_right gatherInfo:m_list_panel_controller_left];
+		[m_help_panel_controller_right gatherInfo:m_list_panel_controller_left];
 		return;
 	}
 
@@ -326,7 +326,7 @@
 		[self replaceLeftView: [l view]];
 		[self replaceRightView:[r view]];
 		[m_list_panel_controller_right activatePanel:self];
-		// [m_help_panel_controller_left gatherInfo:m_list_panel_controller_right];
+		[m_help_panel_controller_left gatherInfo:m_list_panel_controller_right];
 		return;
 	}
 
