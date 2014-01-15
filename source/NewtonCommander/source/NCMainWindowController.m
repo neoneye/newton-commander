@@ -336,7 +336,9 @@
 		[self replaceLeftView: [l view]];
 		[self replaceRightView:[r view]];
 		[m_list_panel_controller_left activatePanel:self];
-		m_info_panel_controller_right.infoView.filename = [m_list_panel_controller_left currentName];
+		NSString *path = [m_list_panel_controller_left workingDir];
+		path = [path stringByAppendingPathComponent:[m_list_panel_controller_left currentName]];
+		[m_info_panel_controller_right.infoView analyzePath:path];
 		return;
 	}
 
@@ -345,7 +347,9 @@
 		[self replaceLeftView: [l view]];
 		[self replaceRightView:[r view]];
 		[m_list_panel_controller_right activatePanel:self];
-		m_info_panel_controller_left.infoView.filename = [m_list_panel_controller_right currentName];
+		NSString *path = [m_list_panel_controller_right workingDir];
+		path = [path stringByAppendingPathComponent:[m_list_panel_controller_right currentName]];
+		[m_info_panel_controller_left.infoView analyzePath:path];
 		return;
 	}
 
