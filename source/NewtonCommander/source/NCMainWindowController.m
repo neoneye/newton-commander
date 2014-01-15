@@ -13,6 +13,7 @@
 #import "NCHelpPanelController.h"     
 #import "NCInfoPanelController.h"     
 #import "NCViewPanelController.h"     
+#import "NCInfoView.h"
 #import "NCDualPane.h"
 #import "NCDualPaneState.h"
 #import "NCDualPaneStateList.h"
@@ -335,6 +336,7 @@
 		[self replaceLeftView: [l view]];
 		[self replaceRightView:[r view]];
 		[m_list_panel_controller_left activatePanel:self];
+		m_info_panel_controller_right.infoView.filename = [m_list_panel_controller_left currentName];
 		return;
 	}
 
@@ -343,6 +345,7 @@
 		[self replaceLeftView: [l view]];
 		[self replaceRightView:[r view]];
 		[m_list_panel_controller_right activatePanel:self];
+		m_info_panel_controller_left.infoView.filename = [m_list_panel_controller_right currentName];
 		return;
 	}
 
