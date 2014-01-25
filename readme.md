@@ -1,6 +1,8 @@
 # Newton Commander
 
-A dual-pane file manager with tabs for Mac OS X.
+A dual-pane file manager with tabs for Mac OS X, inspired by [Total Commander](http://www.ghisler.com/)
+
+> _Newton Commander is still in the very early stages of development, all bug reports, feature requests, and general feedback are greatly appreciated!_
 
 
 # Download
