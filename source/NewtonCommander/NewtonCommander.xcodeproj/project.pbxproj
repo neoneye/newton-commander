@@ -15,6 +15,7 @@
 		42071EEA12120E9900977D06 /* icon_info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EE912120E9900977D06 /* icon_info.pdf */; };
 		42071EF2121210AF00977D06 /* icon_gear.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EF1121210AF00977D06 /* icon_gear.pdf */; };
 		42071EFA1212115D00977D06 /* icon_pencil.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42071EF91212115D00977D06 /* icon_pencil.pdf */; };
+		420E593E1A6B00F600A54416 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* readme.txt */; };
 		42222ADA11D75C6600475062 /* ListPanelTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42222AD811D75C6600475062 /* ListPanelTab.xib */; };
 		42222B1E11D766F000475062 /* NCListPanelTabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222B1D11D766F000475062 /* NCListPanelTabModel.m */; };
 		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; };
@@ -119,7 +120,7 @@
 		4222E12911E39F3B0040E6D4 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/Credits.html; sourceTree = "<group>"; };
 		42271DF711CFF09400E5FFE1 /* NCMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindow.h; sourceTree = "<group>"; };
 		42271DF811CFF09400E5FFE1 /* NCMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMainWindow.m; sourceTree = "<group>"; };
-		423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Nothing to see here. Move along."; path = "deploy_resources/Nothing to see here. Move along."; sourceTree = "<group>"; };
+		423EAF9713D19A54007A5897 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = deploy_resources/readme.txt; sourceTree = "<group>"; };
 		424B58D3120BED4400B20152 /* icon_remove.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_remove.pdf; path = images/icon_remove.pdf; sourceTree = "<group>"; };
 		424B58D7120BED8400B20152 /* icon_create.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = icon_create.pdf; path = images/icon_create.pdf; sourceTree = "<group>"; };
 		424D3CD618706E3B00C94D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -278,7 +279,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */,
+				423EAF9713D19A54007A5897 /* readme.txt */,
 				4282555C123ABF0600EA3618 /* Newton Commander Help */,
 				4289AC4B120EC3940073AC9B /* install.sh */,
 				4222E12811E39F3B0040E6D4 /* Credits.html */,
@@ -402,6 +403,7 @@
 				427A8B3811DF2FEB00DE7391 /* ListPanel.xib in Resources */,
 				4222E12A11E39F3B0040E6D4 /* Credits.html in Resources */,
 				428DD03B11EBB43B0048B3C6 /* icon_copy.png in Resources */,
+				420E593E1A6B00F600A54416 /* readme.txt in Resources */,
 				428DD04911EBBB510048B3C6 /* icon_move.png in Resources */,
 				42010E0E1206BC2B0002191E /* HelpPanel.xib in Resources */,
 				424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */,
