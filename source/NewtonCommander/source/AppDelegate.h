@@ -12,6 +12,8 @@
 	IBOutlet NSMenu* m_bookmarks_menu;
 }
 
++(AppDelegate*)shared;
+
 +(NSString*)pathToWorker;
 
 

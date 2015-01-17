@@ -157,6 +157,12 @@ static void * const kNCUserDefaultBookmarkItemsContext = (void*)&kNCUserDefaultB
 	return self;
 }
 
++(AppDelegate*)shared {
+	AppDelegate *instance = (AppDelegate*)[NSApp delegate];
+	NSAssert([instance isKindOfClass:[AppDelegate class]], @"NSApp.delegate must be an instance of AppDelegate");
+	return instance;
+}
+
 -(void)test {
 #if 0
 	struct dirent* dp = NULL;

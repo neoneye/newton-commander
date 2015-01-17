@@ -281,11 +281,11 @@
 		return;
 	}
 	if(tag == 500) {
-		[[NSApp delegate] showLeftMenuPaneInPreferencesPanel:self];
+		[AppDelegate.shared showLeftMenuPaneInPreferencesPanel:self];
 		return;
 	}
 	if(tag == 501) {
-		[[NSApp delegate] showRightMenuPaneInPreferencesPanel:self];
+		[AppDelegate.shared showRightMenuPaneInPreferencesPanel:self];
 		return;
 	}
 }
