@@ -20,7 +20,6 @@
 		42222C6211D7DDA900475062 /* NCListTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42222C6111D7DDA900475062 /* NCListTabController.m */; };
 		4222E12A11E39F3B0040E6D4 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 4222E12811E39F3B0040E6D4 /* Credits.html */; };
 		42271DF911CFF09400E5FFE1 /* NCMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 42271DF811CFF09400E5FFE1 /* NCMainWindow.m */; };
-		423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */ = {isa = PBXBuildFile; fileRef = 423EAF9713D19A54007A5897 /* Nothing to see here. Move along. */; };
 		424B58D4120BED4400B20152 /* icon_remove.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D3120BED4400B20152 /* icon_remove.pdf */; };
 		424B58D8120BED8400B20152 /* icon_create.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 424B58D7120BED8400B20152 /* icon_create.pdf */; };
 		4255ABF0188118C300320B67 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4255ABEF188118C300320B67 /* ScriptingBridge.framework */; };
@@ -71,16 +70,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		423EAF9613D199D1007A5897 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 1;
-			files = (
-				423EAF9913D19A6E007A5897 /* Nothing to see here. Move along. in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		425D7E7611C55A4400F9A9A6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,7 +341,6 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				428AAF78110C789800708EDB /* Copy Frameworks */,
 				425D7E7611C55A4400F9A9A6 /* CopyFiles */,
-				423EAF9613D199D1007A5897 /* CopyFiles */,
 				9DC76CF6A7794DB9BFC056FF /* Copy Pods Resources */,
 				42712CE718708EB6007BA3A9 /* ShellScript */,
 			);
