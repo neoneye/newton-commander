@@ -1,8 +1,8 @@
-Newton Commander - File manager
-Copyright 2010 - Opcoders.com
+Newton Commander - Dual Pane File Manager for Mac OS X
+Copyright 2010-2015, Simon Strandgaard
 
-Made By Opcoders
-http://opcoders.com/
+Homepage
+https://github.com/neoneye/newton-commander
 
 
 It's a commander. You already know how to use it. If you have experience with another commander
